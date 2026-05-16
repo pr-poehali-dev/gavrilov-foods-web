@@ -1,15 +1,15 @@
 import { useEffect, useRef, useState } from "react";
 import Icon from "@/components/ui/icon";
 
-const HERO_IMG = "https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/files/74221c1a-4fe9-4b25-af67-63ea3543dc90.jpg";
-const PRODUCTS_IMG = "https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/files/9991fbab-3a2a-4aab-911d-0cda6d7dfa78.jpg";
-const FACTORY_IMG = "https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/files/5e63661f-3c48-4482-aa35-c2a266bc4afa.jpg";
+// Real farm photos — Gavrilov Organic Foods
+const HERO_IMG = "https://cdn.poehali.dev/files/4b5a57a3-7cdf-406e-8457-7140c7ed102e.jpg"; // buckwheat field in bloom
+const PRODUCTS_IMG = "https://cdn.poehali.dev/files/f11386c9-4001-4940-9b3c-a7cd36827549.jpg"; // big bags in warehouse
+const FACTORY_IMG = "https://cdn.poehali.dev/files/3bb96d82-4e91-49da-a437-a8e84c943f7e.jpg"; // processing equipment
 
-// User-provided reference images
-const REF_CONTACT = "https://cdn.poehali.dev/files/aa315ecd-ab40-456e-b4e3-27b8a8922be0.jpg";
-const REF_PRIVATE = "https://cdn.poehali.dev/files/0dc49575-4061-408b-9f51-31d7d8b71e0f.jpg";
-const REF_PROCESS = "https://cdn.poehali.dev/files/5d670f13-e5c4-4296-b948-3734028870d0.jpg";
-const REF_EXPORT = "https://cdn.poehali.dev/files/6091b637-471c-4c76-8754-e23440225289.jpg";
+const REF_CONTACT = "https://cdn.poehali.dev/files/943c789b-d4ed-418a-a36d-f3c15e7272ea.jpg"; // owner in field
+const REF_PRIVATE = "https://cdn.poehali.dev/files/98d43280-321a-4078-bb4e-2cd8a7e71f5e.jpg"; // packaged goods on pallets
+const REF_PROCESS = "https://cdn.poehali.dev/files/6b617da2-3106-4871-b5ff-2d574abb7a34.jpg"; // sowing in field
+const REF_EXPORT = "https://cdn.poehali.dev/files/431dd6c0-d618-4737-aaca-53e45662be51.jpg"; // KAMAZ truck
 
 const navLinks = [
   { label: "About", href: "#about" },
@@ -128,12 +128,12 @@ const labelSteps = [
 ];
 
 const galleryImages = [
-  { src: HERO_IMG, label: "Own Fields" },
-  { src: PRODUCTS_IMG, label: "Products" },
-  { src: FACTORY_IMG, label: "Processing" },
-  { src: REF_EXPORT, label: "Export" },
-  { src: REF_PROCESS, label: "From Field" },
-  { src: REF_PRIVATE, label: "Private Label" },
+  { src: "https://cdn.poehali.dev/files/4b5a57a3-7cdf-406e-8457-7140c7ed102e.jpg", label: "Own Fields" },
+  { src: "https://cdn.poehali.dev/files/f11386c9-4001-4940-9b3c-a7cd36827549.jpg", label: "Products" },
+  { src: "https://cdn.poehali.dev/files/3bb96d82-4e91-49da-a437-a8e84c943f7e.jpg", label: "Processing" },
+  { src: "https://cdn.poehali.dev/files/431dd6c0-d618-4737-aaca-53e45662be51.jpg", label: "Export" },
+  { src: "https://cdn.poehali.dev/files/6b617da2-3106-4871-b5ff-2d574abb7a34.jpg", label: "From Field" },
+  { src: "https://cdn.poehali.dev/files/98d43280-321a-4078-bb4e-2cd8a7e71f5e.jpg", label: "Private Label" },
 ];
 
 function useScrollReveal() {
@@ -268,8 +268,8 @@ export default function Index() {
         {/* Main hero image block */}
         <div style={{ position: "relative", minHeight: "calc(100vh - 64px)", overflow: "hidden" }}>
           <img
-            src="https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/files/6341fdb7-7079-43b0-b75c-5c9825af902a.jpg"
-            alt="Gavrilov Foods grain silos"
+            src="https://cdn.poehali.dev/files/a5f5c174-b8c4-4672-a63e-0e1cacdd75f6.jpg"
+            alt="Gavrilov Foods buckwheat field"
             style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "center" }}
           />
           {/* Gradient: strong left dark → transparent right */}
@@ -524,7 +524,7 @@ export default function Index() {
                   className="absolute inset-x-0 top-0 z-10 h-16 pointer-events-none"
                   style={{ background: "linear-gradient(to bottom, #fff 0%, transparent 100%)" }}
                 />
-                <img src="https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/files/b8d2d916-8dce-4c6e-b197-7f7a24a273b8.jpg" alt="Export ship" className="w-full h-full object-cover" style={{ borderBottomLeftRadius: 16, borderBottomRightRadius: 16 }} />
+                <img src="https://cdn.poehali.dev/files/431dd6c0-d618-4737-aaca-53e45662be51.jpg" alt="KAMAZ grain truck" className="w-full h-full object-cover" style={{ borderBottomLeftRadius: 16, borderBottomRightRadius: 16 }} />
               </div>
             </div>
 
@@ -590,7 +590,7 @@ export default function Index() {
                   className="absolute inset-x-0 top-0 z-10 h-16 pointer-events-none"
                   style={{ background: "linear-gradient(to bottom, #fff 0%, transparent 100%)" }}
                 />
-                <img src="https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/files/1694ef7b-4cbe-47de-89af-c109a17aa409.jpg" alt="Container truck" className="w-full h-full object-cover" style={{ borderBottomLeftRadius: 16, borderBottomRightRadius: 16 }} />
+                <img src="https://cdn.poehali.dev/files/74b2aea6-bad4-4065-98fb-2a8f79de5cfd.jpg" alt="KAMAZ front view" className="w-full h-full object-cover" style={{ borderBottomLeftRadius: 16, borderBottomRightRadius: 16 }} />
               </div>
             </div>
 
@@ -644,8 +644,8 @@ export default function Index() {
             {/* Right: full-bleed truck image */}
             <div className="relative reveal-right" style={{ minHeight: 420 }}>
               <img
-                src="https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/files/1694ef7b-4cbe-47de-89af-c109a17aa409.jpg"
-                alt="Logistics truck"
+                src="https://cdn.poehali.dev/files/28640fc0-8124-4c4f-94ca-37bdb050f058.jpg"
+                alt="John Deere tractor in field"
                 className="absolute inset-0 w-full h-full object-cover"
               />
               <div
@@ -1093,11 +1093,11 @@ export default function Index() {
               {/* Right: 5 image tiles with arrow */}
               <div className="grid grid-cols-5">
                 {[
-                  { img: HERO_IMG, label: "FARMLAND" },
-                  { img: FACTORY_IMG, label: "CLEANING & PROCESSING" },
-                  { img: PRODUCTS_IMG, label: "BIG BAG PACKAGING" },
-                  { img: "https://cdn.poehali.dev/files/aa315ecd-ab40-456e-b4e3-27b8a8922be0.jpg", label: "LOADING & SHIPPING" },
-                  { img: "https://cdn.poehali.dev/files/6091b637-471c-4c76-8754-e23440225289.jpg", label: "GLOBAL DELIVERY" },
+                  { img: "https://cdn.poehali.dev/files/4b5a57a3-7cdf-406e-8457-7140c7ed102e.jpg", label: "FARMLAND" },
+                  { img: "https://cdn.poehali.dev/files/3bb96d82-4e91-49da-a437-a8e84c943f7e.jpg", label: "CLEANING & PROCESSING" },
+                  { img: "https://cdn.poehali.dev/files/f11386c9-4001-4940-9b3c-a7cd36827549.jpg", label: "BIG BAG PACKAGING" },
+                  { img: "https://cdn.poehali.dev/files/431dd6c0-d618-4737-aaca-53e45662be51.jpg", label: "LOADING & SHIPPING" },
+                  { img: "https://cdn.poehali.dev/files/943c789b-d4ed-418a-a36d-f3c15e7272ea.jpg", label: "GLOBAL DELIVERY" },
                 ].map((t, i) => (
                   <div key={i} className="relative img-zoom overflow-hidden" style={{ minHeight: 160 }}>
                     <img src={t.img} alt={t.label} className="absolute inset-0 w-full h-full object-cover" />
@@ -1293,21 +1293,21 @@ export default function Index() {
           <div className="grid md:grid-cols-3 gap-5">
             {[
               {
-                img: "https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/files/de481272-bd65-4d8e-b8fe-9564b8f09e8b.jpg",
+                img: "https://cdn.poehali.dev/files/e43ef89f-fe22-4c5d-9966-3f78245a4cee.jpg", // packaging machine
                 title: "Advanced Packaging",
                 desc: "Modern equipment allows us to pack products from 200 g to 1000 g with high accuracy and product protection.",
                 btn: "Learn More",
                 target: "#products",
               },
               {
-                img: PRODUCTS_IMG,
+                img: "https://cdn.poehali.dev/files/98d43280-321a-4078-bb4e-2cd8a7e71f5e.jpg", // packaged goods
                 title: "Flexible Solutions",
                 desc: "We offer a wide range of packaging formats and private label options to support your brand.",
                 btn: "Learn More",
                 target: "#private-label",
               },
               {
-                img: "https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/files/e42071e6-cbc4-4ad0-b451-35723caa640d.jpg",
+                img: "https://cdn.poehali.dev/files/91652dc2-54a9-47e7-8b5f-fb8ec843b284.jpg", // big bags storage
                 title: "Large Volumes",
                 desc: "Our storage facilities and strong production capacity ensure stable supply and consistent quality.",
                 btn: "Contact Us",
@@ -1481,11 +1481,11 @@ export default function Index() {
             {/* 5-image strip with numbered labels */}
             <div className="grid grid-cols-5 gap-2" style={{ height: 200 }}>
               {[
-                { img: HERO_IMG, num: 1, label: "Carefully selected organic fields" },
-                { img: FACTORY_IMG, num: 2, label: "Modern cleaning & processing" },
-                { img: PRODUCTS_IMG, num: 3, label: "Quality packaging & labeling" },
-                { img: "https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/files/1694ef7b-4cbe-47de-89af-c109a17aa409.jpg", num: 4, label: "Reliable logistics & delivery" },
-                { img: "https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/files/b8d2d916-8dce-4c6e-b197-7f7a24a273b8.jpg", num: 5, label: "Export-ready shipments" },
+                { img: "https://cdn.poehali.dev/files/82314d50-2676-4645-a5e6-e829f18b0d3b.jpg", num: 1, label: "Carefully selected organic fields" },
+                { img: "https://cdn.poehali.dev/files/3bb96d82-4e91-49da-a437-a8e84c943f7e.jpg", num: 2, label: "Modern cleaning & processing" },
+                { img: "https://cdn.poehali.dev/files/e43ef89f-fe22-4c5d-9966-3f78245a4cee.jpg", num: 3, label: "Quality packaging & labeling" },
+                { img: "https://cdn.poehali.dev/files/431dd6c0-d618-4737-aaca-53e45662be51.jpg", num: 4, label: "Reliable logistics & delivery" },
+                { img: "https://cdn.poehali.dev/files/74b2aea6-bad4-4065-98fb-2a8f79de5cfd.jpg", num: 5, label: "Export-ready shipments" },
               ].map((t, i) => (
                 <div key={i} style={{ position: "relative", borderRadius: 8, overflow: "hidden" }}>
                   <img
@@ -1575,25 +1575,25 @@ export default function Index() {
             <div className="grid grid-cols-2 gap-3">
               {[
                 {
-                  img: "https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/files/93680fe2-8384-4ab5-939b-0116b8242f8b.jpg",
+                  img: "https://cdn.poehali.dev/files/e43ef89f-fe22-4c5d-9966-3f78245a4cee.jpg", // packaging machine TEKO
                   icon: "ShoppingBag", title: "Retail Packaging",
                   size: "250 g – 5 kg",
                   desc: "Custom design and printing options for your brand.",
                 },
                 {
-                  img: "https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/files/84e498d6-90d3-4d72-bdea-1f9f12a84e44.jpg",
+                  img: "https://cdn.poehali.dev/files/de1e27a0-f677-4f7c-b4f6-f54a3d8c5abc.jpg", // big bags in storage
                   icon: "Package2", title: "Big Bags",
                   size: "500 – 1,000 kg",
                   desc: "Industrial bulk packaging for large volume supply.",
                 },
                 {
-                  img: "https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/files/320d0af1-cc96-4c8a-8938-59ea8f5a0e13.jpg",
+                  img: "https://cdn.poehali.dev/files/431dd6c0-d618-4737-aaca-53e45662be51.jpg", // KAMAZ truck
                   icon: "Container", title: "FCL Container Supply",
                   size: "20 ft / 40 ft",
                   desc: "Full container shipments for safe and efficient delivery.",
                 },
                 {
-                  img: "https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/files/3b00e3f5-ea75-4712-9b21-5f3c9c5b6246.jpg",
+                  img: "https://cdn.poehali.dev/files/98d43280-321a-4078-bb4e-2cd8a7e71f5e.jpg", // packed goods on pallets
                   icon: "Tag", title: "Private Label",
                   size: "Concept → Shelf-ready",
                   desc: "From product selection to ready-to-sell packaging.",
@@ -1803,11 +1803,11 @@ export default function Index() {
             {/* Large photos row */}
             <div className="gallery-photos-row" style={{ display: "grid", gridTemplateColumns: "repeat(5,1fr)", gap: 4, height: 200 }}>
               {[
-                HERO_IMG,
-                "https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/files/6ba6ab19-4325-41ef-a364-f4b77bfe6de1.jpg",
-                FACTORY_IMG,
-                PRODUCTS_IMG,
-                "https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/files/0e4fa66e-1281-4390-ad56-c439a1bba5a8.jpg",
+                "https://cdn.poehali.dev/files/4b5a57a3-7cdf-406e-8457-7140c7ed102e.jpg", // buckwheat field
+                "https://cdn.poehali.dev/files/155c8c27-6d57-4864-911f-cac81473d289.jpg", // buckwheat field 2
+                "https://cdn.poehali.dev/files/3bb96d82-4e91-49da-a437-a8e84c943f7e.jpg", // John Deere
+                "https://cdn.poehali.dev/files/f11386c9-4001-4940-9b3c-a7cd36827549.jpg", // big bags
+                "https://cdn.poehali.dev/files/431dd6c0-d618-4737-aaca-53e45662be51.jpg", // KAMAZ
               ].map((src, i) => (
                 <div key={i} style={{ borderRadius: 6, overflow: "hidden" }}>
                   <img src={src} alt="" style={{ width: "100%", height: "100%", objectFit: "cover", display: "block", transition: "transform 0.5s ease" }}
@@ -1821,11 +1821,11 @@ export default function Index() {
             {/* Small photos row */}
             <div className="gallery-photos-small-row" style={{ display: "grid", gridTemplateColumns: "repeat(5,1fr)", gap: 4, marginTop: 4, height: 110 }}>
               {[
-                "https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/files/56b82c77-4b6a-426b-b67d-2f0a68187ac4.jpg",
-                "https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/files/18e1a0f6-68a3-4045-a13d-deb86345fddf.jpg",
-                "https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/files/fc6cb2c8-2dcf-43d9-9d05-5c2e263fa58b.jpg",
-                "https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/files/de481272-bd65-4d8e-b8fe-9564b8f09e8b.jpg",
-                "https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/files/e42071e6-cbc4-4ad0-b451-35723caa640d.jpg",
+                "https://cdn.poehali.dev/files/ba04f7da-b43f-4f37-8145-e14b56221773.jpg", // Fendt tractor
+                "https://cdn.poehali.dev/files/e43ef89f-fe22-4c5d-9966-3f78245a4cee.jpg", // packaging machine
+                "https://cdn.poehali.dev/files/1da39392-8a8b-444d-ac48-cf1f2927deea.jpg", // grain dryer
+                "https://cdn.poehali.dev/files/da2cf99e-0ede-40d1-9533-e4434ebcdf01.jpg", // bags on pallets
+                "https://cdn.poehali.dev/files/ccd75ed3-8a64-4361-adc0-67abf9de6f0f.jpg", // bags warehouse
               ].map((src, i) => (
                 <div key={i} style={{ borderRadius: 6, overflow: "hidden" }}>
                   <img src={src} alt="" style={{ width: "100%", height: "100%", objectFit: "cover", display: "block", transition: "transform 0.5s ease" }}
@@ -1874,10 +1874,10 @@ export default function Index() {
 
             {/* 4 wide photos */}
             {[
-              "https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/files/56b82c77-4b6a-426b-b67d-2f0a68187ac4.jpg",
-              "https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/files/e42071e6-cbc4-4ad0-b451-35723caa640d.jpg",
-              "https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/files/0e4fa66e-1281-4390-ad56-c439a1bba5a8.jpg",
-              "https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/files/b8d2d916-8dce-4c6e-b197-7f7a24a273b8.jpg",
+              "https://cdn.poehali.dev/files/51ae26bd-c7fe-480a-9f36-813ad383270f.jpg", // Kirovets tractor + truck
+              "https://cdn.poehali.dev/files/8d03071c-03b0-44e5-a0b2-f9c3e6caf88e.jpg", // owner with Kirovets
+              "https://cdn.poehali.dev/files/adfab279-52dd-4dc8-beb1-1d55cb2b0a2f.jpg", // sowing machine
+              "https://cdn.poehali.dev/files/3efd98e0-a84f-449a-aebd-9379d7fa092e.jpg", // BTZ tractor
             ].map((src, i) => (
               <div key={i} style={{ overflow: "hidden" }}>
                 <img src={src} alt="" style={{ width: "100%", height: "100%", objectFit: "cover", display: "block", transition: "transform 0.5s ease" }}
@@ -2107,10 +2107,10 @@ export default function Index() {
         {/* ── 4 wide photos strip ── */}
         <div style={{ display: "grid", gridTemplateColumns: "repeat(4,1fr)", height: 200 }}>
           {[
-            "https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/files/6ba6ab19-4325-41ef-a364-f4b77bfe6de1.jpg",
-            FACTORY_IMG,
-            "https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/files/e42071e6-cbc4-4ad0-b451-35723caa640d.jpg",
-            "https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/files/b8d2d916-8dce-4c6e-b197-7f7a24a273b8.jpg",
+            "https://cdn.poehali.dev/files/943c789b-d4ed-418a-a36d-f3c15e7272ea.jpg", // owner in field
+            "https://cdn.poehali.dev/files/3bb96d82-4e91-49da-a437-a8e84c943f7e.jpg", // John Deere
+            "https://cdn.poehali.dev/files/de1e27a0-f677-4f7c-b4f6-f54a3d8c5abc.jpg", // big bags
+            "https://cdn.poehali.dev/files/431dd6c0-d618-4737-aaca-53e45662be51.jpg", // KAMAZ
           ].map((src, i) => (
             <div key={i} style={{ overflow: "hidden" }}>
               <img src={src} alt="" style={{ width: "100%", height: "100%", objectFit: "cover", display: "block", transition: "transform 0.5s ease" }}
