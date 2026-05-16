@@ -158,20 +158,11 @@ function useScrollReveal() {
 
 function Logo() {
   return (
-    <div className="flex items-center gap-3">
-      <div
-        className="w-10 h-10 rounded-full flex items-center justify-center border border-[var(--gf-gold)]"
-        style={{ background: "var(--gf-dark)" }}
-      >
-        <Icon name="Wheat" size={18} style={{ color: "var(--gf-gold)" }} />
-      </div>
-      <div>
-        <div className="font-cormorant font-bold text-lg leading-none tracking-wide" style={{ color: "inherit" }}>
-          GAVRILOV
-        </div>
-        <div className="font-montserrat text-[9px] tracking-[0.25em] uppercase opacity-70">FOODS</div>
-      </div>
-    </div>
+    <img
+      src="https://cdn.poehali.dev/files/98580a98-5226-4433-8666-a0e8765c865c.png"
+      alt="Gavrilov Organic Foods"
+      style={{ height: 52, width: "auto", objectFit: "contain" }}
+    />
   );
 }
 
@@ -704,11 +695,15 @@ export default function Index() {
                   <img src={p.img} alt={p.name} className="w-full h-full object-cover" />
                   {p.organic && (
                     <div
-                      className="absolute top-2 right-2 w-8 h-8 rounded-full flex items-center justify-center"
-                      style={{ background: "#3d7a3d" }}
-                      title="Organic available"
+                      className="absolute top-2 right-2 flex items-center justify-center"
+                      style={{ background: "#fff", borderRadius: 4, padding: "2px 4px", boxShadow: "0 1px 4px rgba(0,0,0,0.18)" }}
+                      title="EU Organic Certified"
                     >
-                      <Icon name="Leaf" size={14} style={{ color: "#fff" }} />
+                      <img
+                        src="https://cdn.poehali.dev/files/e0686aa0-2df7-454a-b318-5e843ea52142.png"
+                        alt="EU Organic"
+                        style={{ width: 32, height: 26, objectFit: "contain" }}
+                      />
                     </div>
                   )}
                 </div>
@@ -723,8 +718,16 @@ export default function Index() {
                   </div>
 
                   <div className="space-y-1.5">
-                    <div className="flex items-start gap-1.5">
-                      <Icon name="Leaf" size={12} style={{ color: "var(--gf-text-light)", marginTop: 2, flexShrink: 0 }} />
+                    <div className="flex items-center gap-1.5">
+                      {p.organic ? (
+                        <img
+                          src="https://cdn.poehali.dev/files/e0686aa0-2df7-454a-b318-5e843ea52142.png"
+                          alt="EU Organic"
+                          style={{ width: 22, height: 18, objectFit: "contain", flexShrink: 0 }}
+                        />
+                      ) : (
+                        <Icon name="Leaf" size={12} style={{ color: "var(--gf-text-light)", flexShrink: 0 }} />
+                      )}
                       <span className="text-[11px] leading-tight" style={{ color: "var(--gf-text-light)", fontFamily: "Montserrat" }}>
                         {p.organic ? "Organic available" : "Conventional"}
                       </span>

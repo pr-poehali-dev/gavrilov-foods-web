@@ -9,14 +9,12 @@ export default function Terms() {
       {/* Header */}
       <div style={{ background: "var(--gf-dark)", padding: "20px 0" }}>
         <div style={{ maxWidth: 900, margin: "0 auto", padding: "0 24px", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
-          <a href="/" style={{ display: "flex", alignItems: "center", gap: 12, textDecoration: "none" }}>
-            <div style={{ width: 36, height: 36, borderRadius: "50%", border: "1px solid var(--gf-gold)", background: "var(--gf-dark)", display: "flex", alignItems: "center", justifyContent: "center" }}>
-              <Icon name="Wheat" size={16} style={{ color: "var(--gf-gold)" }} />
-            </div>
-            <div>
-              <div style={{ fontFamily: "Cormorant Garamond, serif", fontWeight: 700, fontSize: 16, color: "#fff", lineHeight: 1 }}>GAVRILOV</div>
-              <div style={{ fontFamily: "Montserrat", fontSize: 8, letterSpacing: "0.25em", textTransform: "uppercase", color: "rgba(255,255,255,0.5)" }}>FOODS</div>
-            </div>
+          <a href="/" style={{ display: "flex", alignItems: "center", textDecoration: "none" }}>
+            <img
+              src="https://cdn.poehali.dev/files/98580a98-5226-4433-8666-a0e8765c865c.png"
+              alt="Gavrilov Organic Foods"
+              style={{ height: 46, width: "auto", objectFit: "contain" }}
+            />
           </a>
           <a href="/" style={{ display: "flex", alignItems: "center", gap: 6, color: "rgba(255,255,255,0.6)", textDecoration: "none", fontSize: 13 }}>
             <Icon name="ArrowLeft" size={15} />
