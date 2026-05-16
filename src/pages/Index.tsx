@@ -441,118 +441,145 @@ export default function Index() {
           </div>
 
           {/* 4 cards */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
+
             {/* Card 1 — Production */}
-            <div className="reveal flex flex-col" style={{ background: "#fff", border: "1px solid rgba(0,0,0,0.07)", borderRadius: 4 }} data-delay="0">
-              <div className="p-6 flex-1">
+            <div className="reveal relative overflow-hidden flex flex-col" data-delay="0"
+              style={{ background: "#fff", borderRadius: 16, border: "1px solid rgba(0,0,0,0.07)", minHeight: 480 }}
+            >
+              <div className="p-6 pb-0 relative z-10">
                 <div className="flex items-center gap-3 mb-5">
-                  <div className="w-10 h-10 flex items-center justify-center" style={{ background: "var(--gf-gold)" }}>
+                  <div className="w-10 h-10 flex items-center justify-center rounded-lg" style={{ background: "var(--gf-gold)" }}>
                     <Icon name="Tractor" size={18} style={{ color: "#0e1a0f" }} />
                   </div>
                   <span className="font-montserrat font-bold text-[12px] uppercase tracking-widest" style={{ color: "var(--gf-dark)" }}>Production</span>
                 </div>
-                <div className="space-y-4">
+                <div className="space-y-3.5">
                   <div>
-                    <div className="font-cormorant text-3xl font-semibold" style={{ color: "var(--gf-gold)" }}>10,000 ha</div>
+                    <div className="font-cormorant text-[28px] font-semibold leading-none" style={{ color: "var(--gf-gold)" }}>10,000 ha</div>
                     <div className="text-[12px] font-montserrat mt-0.5" style={{ color: "var(--gf-text-light)" }}>own farmland – full field-to-shelf control</div>
                   </div>
                   <div>
-                    <div className="font-cormorant text-2xl font-semibold" style={{ color: "var(--gf-gold)" }}>10,000–15,000 MT</div>
+                    <div className="font-cormorant text-[22px] font-semibold leading-none" style={{ color: "var(--gf-gold)" }}>10,000–15,000 MT</div>
                     <div className="text-[12px] font-montserrat mt-0.5" style={{ color: "var(--gf-text-light)" }}>annual grain & pulse output</div>
                   </div>
                   <div>
-                    <div className="font-cormorant text-2xl font-semibold" style={{ color: "var(--gf-gold)" }}>200 MT / mo</div>
+                    <div className="font-cormorant text-[22px] font-semibold leading-none" style={{ color: "var(--gf-gold)" }}>200 MT / mo</div>
                     <div className="text-[12px] font-montserrat mt-0.5" style={{ color: "var(--gf-text-light)" }}>processing capacity – groats, flour, flakes</div>
                   </div>
                   <div>
-                    <div className="font-cormorant text-2xl font-semibold" style={{ color: "var(--gf-gold)" }}>5,000 m²</div>
+                    <div className="font-cormorant text-[22px] font-semibold leading-none" style={{ color: "var(--gf-gold)" }}>5,000 m²</div>
                     <div className="text-[12px] font-montserrat mt-0.5" style={{ color: "var(--gf-text-light)" }}>own warehouse & storage facilities</div>
                   </div>
                 </div>
               </div>
-              <div className="img-zoom h-44 overflow-hidden" style={{ borderBottomLeftRadius: 4, borderBottomRightRadius: 4 }}>
-                <img src={HERO_IMG} alt="Farmland" className="w-full h-full object-cover" />
+              {/* Fade into image */}
+              <div className="flex-1 relative mt-6" style={{ minHeight: 160 }}>
+                <div
+                  className="absolute inset-x-0 top-0 z-10 h-16 pointer-events-none"
+                  style={{ background: "linear-gradient(to bottom, #fff 0%, transparent 100%)" }}
+                />
+                <img src={HERO_IMG} alt="Farmland" className="w-full h-full object-cover" style={{ borderBottomLeftRadius: 16, borderBottomRightRadius: 16 }} />
               </div>
             </div>
 
             {/* Card 2 — Export */}
-            <div className="reveal flex flex-col" style={{ background: "#fff", border: "1px solid rgba(0,0,0,0.07)", borderRadius: 4 }} data-delay="80">
-              <div className="p-6 flex-1">
+            <div className="reveal relative overflow-hidden flex flex-col" data-delay="100"
+              style={{ background: "#fff", borderRadius: 16, border: "1px solid rgba(0,0,0,0.07)", minHeight: 480 }}
+            >
+              <div className="p-6 pb-0 relative z-10">
                 <div className="flex items-center gap-3 mb-5">
-                  <div className="w-10 h-10 flex items-center justify-center" style={{ background: "var(--gf-gold)" }}>
+                  <div className="w-10 h-10 flex items-center justify-center rounded-lg" style={{ background: "var(--gf-gold)" }}>
                     <Icon name="Globe" size={18} style={{ color: "#0e1a0f" }} />
                   </div>
                   <span className="font-montserrat font-bold text-[12px] uppercase tracking-widest" style={{ color: "var(--gf-dark)" }}>Export</span>
                 </div>
-                <div className="space-y-4">
+                <div className="space-y-3.5">
                   <div>
-                    <div className="font-cormorant text-3xl font-semibold" style={{ color: "var(--gf-gold)" }}>3+ regions</div>
+                    <div className="font-cormorant text-[28px] font-semibold leading-none" style={{ color: "var(--gf-gold)" }}>3+ regions</div>
                     <div className="text-[12px] font-montserrat mt-0.5" style={{ color: "var(--gf-text-light)" }}>China, Europe, Serbia & growing</div>
                   </div>
                   <div>
-                    <div className="font-cormorant text-2xl font-semibold" style={{ color: "var(--gf-gold)" }}>5,000–10,000 MT</div>
+                    <div className="font-cormorant text-[22px] font-semibold leading-none" style={{ color: "var(--gf-gold)" }}>5,000–10,000 MT</div>
                     <div className="text-[12px] font-montserrat mt-0.5" style={{ color: "var(--gf-text-light)" }}>annual export volume</div>
                   </div>
                 </div>
               </div>
-              <div className="img-zoom h-44 overflow-hidden" style={{ borderBottomLeftRadius: 4, borderBottomRightRadius: 4 }}>
-                <img src="https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/files/b8d2d916-8dce-4c6e-b197-7f7a24a273b8.jpg" alt="Export ship" className="w-full h-full object-cover" />
+              <div className="flex-1 relative mt-6" style={{ minHeight: 200 }}>
+                <div
+                  className="absolute inset-x-0 top-0 z-10 h-16 pointer-events-none"
+                  style={{ background: "linear-gradient(to bottom, #fff 0%, transparent 100%)" }}
+                />
+                <img src="https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/files/b8d2d916-8dce-4c6e-b197-7f7a24a273b8.jpg" alt="Export ship" className="w-full h-full object-cover" style={{ borderBottomLeftRadius: 16, borderBottomRightRadius: 16 }} />
               </div>
             </div>
 
             {/* Card 3 — Packaging */}
-            <div className="reveal flex flex-col" style={{ background: "#fff", border: "1px solid rgba(0,0,0,0.07)", borderRadius: 4 }} data-delay="160">
-              <div className="p-6 flex-1">
+            <div className="reveal relative overflow-hidden flex flex-col" data-delay="200"
+              style={{ background: "#fff", borderRadius: 16, border: "1px solid rgba(0,0,0,0.07)", minHeight: 480 }}
+            >
+              <div className="p-6 pb-0 relative z-10">
                 <div className="flex items-center gap-3 mb-5">
-                  <div className="w-10 h-10 flex items-center justify-center" style={{ background: "var(--gf-gold)" }}>
+                  <div className="w-10 h-10 flex items-center justify-center rounded-lg" style={{ background: "var(--gf-gold)" }}>
                     <Icon name="Package" size={18} style={{ color: "#0e1a0f" }} />
                   </div>
                   <span className="font-montserrat font-bold text-[12px] uppercase tracking-widest" style={{ color: "var(--gf-dark)" }}>Packaging</span>
                 </div>
-                <div className="space-y-4">
+                <div className="space-y-3.5">
                   <div>
-                    <div className="font-cormorant text-3xl font-semibold" style={{ color: "var(--gf-gold)" }}>250 g – 5 kg</div>
+                    <div className="font-cormorant text-[28px] font-semibold leading-none" style={{ color: "var(--gf-gold)" }}>250 g – 5 kg</div>
                     <div className="text-[12px] font-montserrat mt-0.5" style={{ color: "var(--gf-text-light)" }}>retail packs, private label available</div>
                   </div>
                   <div>
-                    <div className="font-cormorant text-2xl font-semibold" style={{ color: "var(--gf-gold)" }}>25 / 50 kg</div>
+                    <div className="font-cormorant text-[22px] font-semibold leading-none" style={{ color: "var(--gf-gold)" }}>25 / 50 kg</div>
                     <div className="text-[12px] font-montserrat mt-0.5" style={{ color: "var(--gf-text-light)" }}>standard bags for trade & distribution</div>
                   </div>
                   <div>
-                    <div className="font-cormorant text-2xl font-semibold" style={{ color: "var(--gf-gold)" }}>500–1,000 kg</div>
+                    <div className="font-cormorant text-[22px] font-semibold leading-none" style={{ color: "var(--gf-gold)" }}>500–1,000 kg</div>
                     <div className="text-[12px] font-montserrat mt-0.5" style={{ color: "var(--gf-text-light)" }}>big bags for bulk & industrial buyers</div>
                   </div>
                 </div>
               </div>
-              <div className="img-zoom h-44 overflow-hidden" style={{ borderBottomLeftRadius: 4, borderBottomRightRadius: 4 }}>
-                <img src={PRODUCTS_IMG} alt="Packaging" className="w-full h-full object-cover" />
+              <div className="flex-1 relative mt-6" style={{ minHeight: 180 }}>
+                <div
+                  className="absolute inset-x-0 top-0 z-10 h-16 pointer-events-none"
+                  style={{ background: "linear-gradient(to bottom, #fff 0%, transparent 100%)" }}
+                />
+                <img src={PRODUCTS_IMG} alt="Packaging" className="w-full h-full object-cover" style={{ borderBottomLeftRadius: 16, borderBottomRightRadius: 16 }} />
               </div>
             </div>
 
             {/* Card 4 — MOQ & Orders */}
-            <div className="reveal flex flex-col" style={{ background: "#fff", border: "1px solid rgba(0,0,0,0.07)", borderRadius: 4 }} data-delay="240">
-              <div className="p-6 flex-1">
+            <div className="reveal relative overflow-hidden flex flex-col" data-delay="300"
+              style={{ background: "#fff", borderRadius: 16, border: "1px solid rgba(0,0,0,0.07)", minHeight: 480 }}
+            >
+              <div className="p-6 pb-0 relative z-10">
                 <div className="flex items-center gap-3 mb-5">
-                  <div className="w-10 h-10 flex items-center justify-center" style={{ background: "var(--gf-gold)" }}>
+                  <div className="w-10 h-10 flex items-center justify-center rounded-lg" style={{ background: "var(--gf-gold)" }}>
                     <Icon name="ClipboardList" size={18} style={{ color: "#0e1a0f" }} />
                   </div>
                   <span className="font-montserrat font-bold text-[12px] uppercase tracking-widest" style={{ color: "var(--gf-dark)" }}>MOQ & Orders</span>
                 </div>
-                <div className="space-y-4">
+                <div className="space-y-3.5">
                   <div>
-                    <div className="font-cormorant text-3xl font-semibold" style={{ color: "var(--gf-gold)" }}>1 MT</div>
+                    <div className="font-cormorant text-[28px] font-semibold leading-none" style={{ color: "var(--gf-gold)" }}>1 MT</div>
                     <div className="text-[12px] font-montserrat mt-0.5" style={{ color: "var(--gf-text-light)" }}>minimum order quantity</div>
                   </div>
                   <div>
-                    <div className="font-cormorant text-2xl font-semibold" style={{ color: "var(--gf-gold)" }}>20 / 40 ft</div>
+                    <div className="font-cormorant text-[22px] font-semibold leading-none" style={{ color: "var(--gf-gold)" }}>20 / 40 ft</div>
                     <div className="text-[12px] font-montserrat mt-0.5" style={{ color: "var(--gf-text-light)" }}>full container options available</div>
                   </div>
                 </div>
               </div>
-              <div className="img-zoom h-44 overflow-hidden" style={{ borderBottomLeftRadius: 4, borderBottomRightRadius: 4 }}>
-                <img src="https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/files/1694ef7b-4cbe-47de-89af-c109a17aa409.jpg" alt="Container truck" className="w-full h-full object-cover" />
+              <div className="flex-1 relative mt-6" style={{ minHeight: 220 }}>
+                <div
+                  className="absolute inset-x-0 top-0 z-10 h-16 pointer-events-none"
+                  style={{ background: "linear-gradient(to bottom, #fff 0%, transparent 100%)" }}
+                />
+                <img src="https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/files/1694ef7b-4cbe-47de-89af-c109a17aa409.jpg" alt="Container truck" className="w-full h-full object-cover" style={{ borderBottomLeftRadius: 16, borderBottomRightRadius: 16 }} />
               </div>
             </div>
+
           </div>
         </div>
       </section>
