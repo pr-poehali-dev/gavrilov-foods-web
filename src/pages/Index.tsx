@@ -2171,9 +2171,7 @@ export default function Index() {
         {/* Bottom bar */}
         <div style={{ borderTop: "1px solid rgba(255,255,255,0.08)", padding: "14px 0" }}>
           <div className="max-w-7xl mx-auto px-6" style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
-            <div style={{ fontFamily: "Montserrat", fontSize: 12, color: "rgba(255,255,255,0.3)" }}>
-              © 2024 Gavrilov Foods
-            </div>
+            <div style={{ fontFamily: "Montserrat", fontSize: 12, color: "rgba(255,255,255,0.3)" }}>© 2026 Gavrilov Foods</div>
             <div style={{ display: "flex", gap: 24 }}>
               {["Privacy Policy", "Terms & Conditions"].map((l, i) => (
                 <button key={i} style={{ fontFamily: "Montserrat", fontSize: 12, color: "rgba(255,255,255,0.3)", background: "none", border: "none", cursor: "pointer" }}>{l}</button>
