@@ -24,46 +24,74 @@ const navLinks = [
 
 const products = [
   {
-    name: "Buckwheat",
-    nameRu: "Гречиха",
-    desc: "EU certified organic. Available in 200g–1000g retail bags and 500–1000kg big bags.",
-    tag: "BESTSELLER",
-    icon: "Wheat",
+    name: "BUCKWHEAT",
+    organic: true,
+    packaging: "25 / 50 kg bags or big bags",
+    moq: "from 1 MT",
+    img: "https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/files/49906ef7-211c-4d64-beae-004e3518ef74.jpg",
   },
   {
-    name: "Soybeans",
-    nameRu: "Соя",
-    desc: "Non-GMO, high-protein. FCL container supply available for industrial buyers.",
-    tag: "EXPORT READY",
-    icon: "Circle",
+    name: "GREEN BUCKWHEAT",
+    organic: true,
+    packaging: "25 / 50 kg bags or big bags",
+    moq: "from 1 MT",
+    img: "https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/files/bb689ed8-ee56-4684-b396-e560a076588f.jpg",
   },
   {
-    name: "Lentils",
-    nameRu: "Чечевица",
-    desc: "Green & red varieties. Strict quality control at every stage of production.",
-    tag: "ORGANIC",
-    icon: "Layers",
+    name: "BUCKWHEAT FLOUR",
+    organic: true,
+    packaging: "25 kg bags",
+    moq: "from 1 MT",
+    img: "https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/files/5aa6f984-f5f5-4f4e-afe2-85e236e0a871.jpg",
   },
   {
-    name: "Peas",
-    nameRu: "Горох",
-    desc: "Field & garden peas. Flexible packaging from 250g retail to bulk big bags.",
-    tag: "CERTIFIED",
-    icon: "Leaf",
+    name: "OAT FLAKES",
+    organic: true,
+    packaging: "25 kg bags",
+    moq: "from 1 MT",
+    img: "https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/files/4e313381-f7ae-4934-8263-19f31994775f.jpg",
   },
   {
-    name: "Oats",
-    nameRu: "Овёс",
-    desc: "Premium quality, gluten-free certified options available. Global delivery.",
-    tag: "POPULAR",
-    icon: "Sprout",
+    name: "FLAXSEED",
+    organic: true,
+    packaging: "25 / 50 kg bags or big bags",
+    moq: "from 1 MT",
+    img: "https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/files/6221103e-8fac-42c6-acda-82f48776aa1b.jpg",
   },
   {
-    name: "Sunflower",
-    nameRu: "Подсолнечник",
-    desc: "Seeds and oil. 20/40 ft container supply. EU documentation ready.",
-    tag: "NEW",
-    icon: "Sun",
+    name: "RED LENTILS",
+    organic: false,
+    packaging: "25 / 50 kg bags",
+    moq: "from 1 MT",
+    img: "https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/files/22e07f78-6ce7-4769-a3ff-370062a13ca2.jpg",
+  },
+  {
+    name: "YELLOW PEAS",
+    organic: false,
+    packaging: "25 / 50 kg bags",
+    moq: "from 1 MT",
+    img: "https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/files/98344303-4a85-427d-9dca-54dc796d32cd.jpg",
+  },
+  {
+    name: "CHICKPEAS",
+    organic: false,
+    packaging: "25 / 50 kg bags",
+    moq: "from 1 MT",
+    img: "https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/files/99258109-655c-4c20-a367-ff9baefaa524.jpg",
+  },
+  {
+    name: "GREEN PEAS",
+    organic: false,
+    packaging: "25 / 50 kg bags",
+    moq: "from 1 MT",
+    img: "https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/files/0f6296ad-99b5-4123-9acc-3349c6210930.jpg",
+  },
+  {
+    name: "WHEAT",
+    organic: false,
+    packaging: "25 / 50 kg bags or big bags",
+    moq: "from 1 MT",
+    img: "https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/files/d8ce42e3-3088-4de2-83f1-662af34b4f05.jpg",
   },
 ];
 
@@ -392,84 +420,207 @@ export default function Index() {
       </section>
 
       {/* ═══════════════ PRODUCTS ═══════════════ */}
-      <section id="products" className="py-28" style={{ background: "#fff" }}>
+      <section id="products" className="py-20" style={{ background: "var(--gf-cream)" }}>
         <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16 reveal">
-            <div className="section-label justify-center mb-5" style={{ justifyContent: "center" }}>
+
+          {/* Header */}
+          <div className="text-center mb-12 reveal">
+            <div className="flex items-center justify-center gap-4 mb-4">
+              <span style={{ display: "block", width: 40, height: 1, background: "var(--gf-gold)" }} />
               <span style={{ color: "var(--gf-gold)", fontSize: "11px", letterSpacing: "0.2em", fontFamily: "Montserrat", fontWeight: 600, textTransform: "uppercase" }}>
-                — Our Products —
+                Our Products
               </span>
+              <span style={{ display: "block", width: 40, height: 1, background: "var(--gf-gold)" }} />
             </div>
             <h2
-              className="font-cormorant font-light"
-              style={{ fontSize: "clamp(36px, 4vw, 56px)", color: "var(--gf-dark)" }}
+              className="font-cormorant font-semibold leading-tight mb-3"
+              style={{ fontSize: "clamp(32px, 4vw, 52px)", color: "var(--gf-dark)" }}
             >
-              Premium Grains for{" "}
-              <span style={{ color: "var(--gf-gold)", fontStyle: "italic" }}>Global Markets</span>
+              Wide range of grains, pulses<br />and oilseeds for global markets
             </h2>
+            <p className="text-sm" style={{ color: "var(--gf-text-light)", fontFamily: "Montserrat" }}>
+              Carefully selected. Consistent quality. Flexible supply.
+            </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {/* Product grid — 5 columns */}
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
             {products.map((p, i) => (
               <div
                 key={i}
-                className="product-card reveal"
-                data-delay={String(i * 80)}
-                style={{
-                  background: "var(--gf-cream)",
-                  border: "1px solid rgba(0,0,0,0.06)",
-                }}
+                className="product-card reveal bg-white"
+                data-delay={String(i * 50)}
+                style={{ border: "1px solid rgba(0,0,0,0.07)" }}
               >
-                <div className="p-7">
-                  <div className="flex items-start justify-between mb-5">
+                {/* Product image */}
+                <div className="relative img-zoom aspect-square overflow-hidden">
+                  <img src={p.img} alt={p.name} className="w-full h-full object-cover" />
+                  {p.organic && (
                     <div
-                      className="w-12 h-12 rounded-full flex items-center justify-center"
-                      style={{ background: "var(--gf-dark)", color: "var(--gf-gold)" }}
+                      className="absolute top-2 right-2 w-8 h-8 rounded-full flex items-center justify-center"
+                      style={{ background: "#3d7a3d" }}
+                      title="Organic available"
                     >
-                      <Icon name={p.icon} size={20} />
+                      <Icon name="Leaf" size={14} style={{ color: "#fff" }} />
                     </div>
-                    <span
-                      className="text-[10px] font-bold tracking-widest px-3 py-1"
-                      style={{ background: "rgba(201,151,58,0.12)", color: "var(--gf-gold)", fontFamily: "Montserrat" }}
-                    >
-                      {p.tag}
-                    </span>
-                  </div>
+                  )}
+                </div>
+
+                {/* Info */}
+                <div className="p-3">
                   <div
-                    className="font-cormorant text-2xl font-semibold mb-1"
+                    className="font-montserrat font-bold text-[12px] tracking-wide mb-3"
                     style={{ color: "var(--gf-dark)" }}
                   >
                     {p.name}
                   </div>
-                  <div className="text-xs mb-3 font-montserrat" style={{ color: "var(--gf-gold)" }}>
-                    {p.nameRu}
+
+                  <div className="space-y-1.5">
+                    <div className="flex items-start gap-1.5">
+                      <Icon name="Leaf" size={12} style={{ color: "var(--gf-text-light)", marginTop: 2, flexShrink: 0 }} />
+                      <span className="text-[11px] leading-tight" style={{ color: "var(--gf-text-light)", fontFamily: "Montserrat" }}>
+                        {p.organic ? "Organic available" : "Conventional"}
+                      </span>
+                    </div>
+                    <div className="flex items-start gap-1.5">
+                      <Icon name="Package" size={12} style={{ color: "var(--gf-text-light)", marginTop: 2, flexShrink: 0 }} />
+                      <span className="text-[11px] leading-tight" style={{ color: "var(--gf-text-light)", fontFamily: "Montserrat" }}>
+                        {p.packaging}
+                      </span>
+                    </div>
                   </div>
-                  <p className="text-sm leading-relaxed" style={{ color: "var(--gf-text-light)" }}>
-                    {p.desc}
-                  </p>
-                </div>
-                <div
-                  className="px-7 py-4 flex items-center justify-between"
-                  style={{ borderTop: "1px solid rgba(0,0,0,0.06)" }}
-                >
-                  <button
-                    className="text-xs font-semibold uppercase tracking-widest flex items-center gap-1 transition-colors hover:opacity-70"
-                    style={{ color: "var(--gf-gold)", fontFamily: "Montserrat" }}
-                    onClick={() => document.querySelector("#contact")?.scrollIntoView({ behavior: "smooth" })}
-                  >
-                    Request Quote <Icon name="ArrowRight" size={13} />
-                  </button>
+
+                  <div className="mt-3 pt-2.5" style={{ borderTop: "1px solid rgba(0,0,0,0.06)" }}>
+                    <span className="text-[11px] font-montserrat" style={{ color: "var(--gf-text-light)" }}>MOQ </span>
+                    <span className="text-[12px] font-bold font-montserrat" style={{ color: "var(--gf-gold)" }}>
+                      {p.moq}
+                    </span>
+                  </div>
                 </div>
               </div>
             ))}
           </div>
 
-          {/* Products hero image */}
-          <div className="mt-12 reveal">
-            <div className="img-zoom aspect-[21/6] overflow-hidden">
-              <img src={PRODUCTS_IMG} alt="Gavrilov Products" className="w-full h-full object-cover" />
+          {/* Features bar */}
+          <div
+            className="mt-12 py-8 px-6 reveal"
+            style={{ background: "#fff", border: "1px solid rgba(0,0,0,0.06)" }}
+          >
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+              {[
+                { icon: "ShieldCheck", title: "Premium Quality", desc: "Strict quality control at every stage" },
+                { icon: "Package", title: "Flexible Packaging", desc: "Retail packs, bags, big bags and bulk" },
+                { icon: "Tag", title: "Private Label", desc: "We produce under your brand" },
+                { icon: "Truck", title: "Stable Supply", desc: "Reliable volumes and on-time delivery" },
+                { icon: "FileText", title: "Document Support", desc: "Full export documentation support" },
+                { icon: "DollarSign", title: "Competitive Prices", desc: "Best value for long-term partnerships" },
+              ].map((f, i) => (
+                <div key={i} className="flex flex-col items-start gap-2">
+                  <Icon name={f.icon} size={28} style={{ color: "var(--gf-dark)", strokeWidth: 1.2 }} />
+                  <div className="font-montserrat font-bold text-[11px] uppercase tracking-wide" style={{ color: "var(--gf-dark)" }}>
+                    {f.title}
+                  </div>
+                  <div className="text-[11px] leading-relaxed" style={{ color: "var(--gf-text-light)", fontFamily: "Montserrat" }}>
+                    {f.desc}
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
+
+          {/* Supply chain block */}
+          <div className="mt-8 grid lg:grid-cols-2 gap-0 reveal" style={{ border: "1px solid rgba(0,0,0,0.07)" }}>
+            {/* Left text */}
+            <div className="p-8 flex flex-col justify-between" style={{ background: "#fff" }}>
+              <div>
+                <div className="text-[10px] font-bold uppercase tracking-widest mb-3 font-montserrat" style={{ color: "var(--gf-gold)" }}>
+                  From Field to Shipment
+                </div>
+                <h3
+                  className="font-cormorant font-semibold leading-tight mb-4"
+                  style={{ fontSize: "clamp(26px, 3vw, 38px)", color: "var(--gf-dark)" }}
+                >
+                  Full control of the supply chain
+                </h3>
+                <p className="text-[13px] leading-relaxed mb-6" style={{ color: "var(--gf-text-light)", fontFamily: "Montserrat" }}>
+                  We control every step — from farming and processing to storage and delivery. This ensures consistent quality, traceability and reliability for our partners worldwide.
+                </p>
+              </div>
+              <button
+                className="btn-outline-dark self-start"
+                onClick={() => document.querySelector("#about")?.scrollIntoView({ behavior: "smooth" })}
+              >
+                Learn More About Us <Icon name="ArrowRight" size={15} />
+              </button>
+            </div>
+
+            {/* Right: 4 image tiles */}
+            <div className="grid grid-cols-2">
+              {[
+                { img: HERO_IMG, icon: "Wheat", label: "Our Fields", desc: "Carefully managed for quality and yield" },
+                { img: FACTORY_IMG, icon: "Settings", label: "Processing", desc: "Modern equipment for cleaning and sorting" },
+                { img: PRODUCTS_IMG, icon: "Package", label: "Storage", desc: "Safe storage in our warehouses" },
+                { img: "https://cdn.poehali.dev/files/aa315ecd-ab40-456e-b4e3-27b8a8922be0.jpg", icon: "Truck", label: "Shipment", desc: "Reliable logistics to global destinations" },
+              ].map((t, i) => (
+                <div key={i} className="relative aspect-square img-zoom overflow-hidden">
+                  <img src={t.img} alt={t.label} className="w-full h-full object-cover" style={{ opacity: 0.7 }} />
+                  <div
+                    className="absolute inset-0 flex flex-col justify-end p-4"
+                    style={{ background: "linear-gradient(to top, rgba(14,26,15,0.85) 0%, transparent 60%)" }}
+                  >
+                    <div
+                      className="w-7 h-7 rounded-full flex items-center justify-center mb-2"
+                      style={{ background: "rgba(201,151,58,0.25)", border: "1px solid var(--gf-gold)" }}
+                    >
+                      <Icon name={t.icon} size={13} style={{ color: "var(--gf-gold)" }} />
+                    </div>
+                    <div className="text-white font-bold text-[11px] uppercase tracking-wide font-montserrat">
+                      {t.label}
+                    </div>
+                    <div className="text-white/60 text-[10px] font-montserrat leading-tight mt-0.5">
+                      {t.desc}
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Download catalog CTA */}
+          <div
+            className="mt-8 p-8 flex flex-col md:flex-row items-center justify-between gap-6 reveal"
+            style={{ background: "#fff", border: "1px solid rgba(0,0,0,0.07)" }}
+          >
+            <div className="flex items-center gap-6">
+              <div
+                className="w-16 h-16 rounded-full flex items-center justify-center flex-shrink-0"
+                style={{ background: "var(--gf-dark)" }}
+              >
+                <Icon name="BookOpen" size={26} style={{ color: "var(--gf-gold)" }} />
+              </div>
+              <div>
+                <div className="font-cormorant font-semibold text-2xl mb-1" style={{ color: "var(--gf-dark)" }}>
+                  Download Product Catalog
+                </div>
+                <div className="text-[13px]" style={{ color: "var(--gf-text-light)", fontFamily: "Montserrat" }}>
+                  Get detailed specifications, packaging options, MOQ and availability.
+                </div>
+              </div>
+            </div>
+            <div className="flex flex-col items-center gap-1 flex-shrink-0">
+              <button
+                className="btn-gold"
+                onClick={() => document.querySelector("#contact")?.scrollIntoView({ behavior: "smooth" })}
+              >
+                <Icon name="Download" size={16} />
+                Download Catalog PDF
+              </button>
+              <span className="text-[10px] font-montserrat" style={{ color: "var(--gf-text-light)" }}>
+                PDF • Updated regularly
+              </span>
+            </div>
+          </div>
+
         </div>
       </section>
 
