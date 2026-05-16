@@ -1885,190 +1885,299 @@ export default function Index() {
       </section>
 
       {/* ═══════════════ CONTACT ═══════════════ */}
-      <section id="contact" className="py-28 grain-overlay" style={{ background: "var(--gf-dark)" }}>
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid lg:grid-cols-2 gap-16">
-            {/* Left: info */}
-            <div className="reveal-left">
-              <div className="section-label mb-6" style={{ color: "var(--gf-gold)" }}>
-                <span style={{ color: "var(--gf-gold)", fontSize: "11px", letterSpacing: "0.2em", fontFamily: "Montserrat", fontWeight: 600, textTransform: "uppercase" }}>
-                  Contact Us
-                </span>
-              </div>
-              <h2
-                className="font-cormorant font-light text-white leading-tight mb-6"
-                style={{ fontSize: "clamp(36px, 4vw, 58px)" }}
-              >
-                Let's Build a{" "}
-                <span style={{ color: "var(--gf-gold)", fontStyle: "italic" }}>Strong Partnership</span>
-              </h2>
-              <p className="text-white/55 text-[15px] leading-relaxed mb-10">
-                Our export team is ready to provide you with a competitive offer and support you at every step of cooperation.
-              </p>
+      <section id="contact" style={{ background: "var(--gf-cream)" }}>
 
-              <div className="space-y-6">
+        {/* ── Hero top: title + truck image ── */}
+        <div style={{ position: "relative", minHeight: 280, overflow: "hidden" }}>
+          <img
+            src="https://cdn.poehali.dev/files/aa315ecd-ab40-456e-b4e3-27b8a8922be0.jpg"
+            alt="Export truck"
+            style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover" }}
+          />
+          <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to right, rgba(245,240,232,1) 0%, rgba(245,240,232,0.92) 40%, rgba(245,240,232,0.3) 75%, transparent 100%)" }} />
+          <div className="max-w-7xl mx-auto px-6" style={{ position: "relative", zIndex: 1, paddingTop: 48, paddingBottom: 32 }}>
+            <h2 style={{ fontFamily: "Cormorant Garamond, serif", fontSize: "clamp(38px, 5vw, 66px)", fontWeight: 400, color: "var(--gf-dark)", lineHeight: 1.1, marginBottom: 12 }}>
+              Request<br />
+              <span style={{ color: "var(--gf-gold)", fontStyle: "italic" }}>Export Offer</span>
+            </h2>
+            <div style={{ width: 40, height: 2, background: "var(--gf-gold)", marginBottom: 14 }} />
+            <p style={{ fontFamily: "Montserrat", fontSize: 14, color: "var(--gf-text-light)", lineHeight: 1.65, maxWidth: 380 }}>
+              Tell us about your needs and our export team will send you a competitive offer <strong style={{ color: "var(--gf-dark)" }}>within 24 hours.</strong>
+            </p>
+          </div>
+        </div>
+
+        {/* ── 4 contact info blocks ── */}
+        <div style={{ background: "var(--gf-cream-2)", borderTop: "1px solid rgba(0,0,0,0.07)", borderBottom: "1px solid rgba(0,0,0,0.07)" }}>
+          <div className="max-w-7xl mx-auto px-6" style={{ display: "grid", gridTemplateColumns: "repeat(4,1fr)", gap: 0 }}>
+            {[
+              { icon: "Phone", label: "Phone / WhatsApp", value: "+7 903 790 17 95", sub: "Mon – Fri: 9:00 – 18:00 (MSK)" },
+              { icon: "Mail", label: "Email", value: "gavrilovfoods.export@gmail.com", sub: "We reply within 24 hours" },
+              { icon: "MapPin", label: "Location", value: "Smolensk Region, Russia", sub: "EU export documentation available" },
+              { icon: "Globe", label: "Export Markets", value: null, sub: null, markets: true },
+            ].map((c, i) => (
+              <div key={i} style={{ padding: "20px 24px", borderRight: i < 3 ? "1px solid rgba(0,0,0,0.07)" : "none", display: "flex", alignItems: "flex-start", gap: 12 }}>
+                <div style={{ width: 40, height: 40, borderRadius: "50%", background: "var(--gf-dark)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
+                  <Icon name={c.icon} size={17} style={{ color: "var(--gf-gold)" }} />
+                </div>
+                <div>
+                  <div style={{ fontFamily: "Montserrat", fontSize: 10, fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.1em", color: "var(--gf-text-light)", marginBottom: 3 }}>{c.label}</div>
+                  {c.markets ? (
+                    <div style={{ display: "flex", flexDirection: "column", gap: 3 }}>
+                      <div style={{ fontFamily: "Montserrat", fontSize: 13, color: "var(--gf-dark)", display: "flex", alignItems: "center", gap: 6 }}>🇪🇺 Europe</div>
+                      <div style={{ fontFamily: "Montserrat", fontSize: 13, color: "var(--gf-dark)", display: "flex", alignItems: "center", gap: 6 }}>🇨🇳 China</div>
+                    </div>
+                  ) : (
+                    <>
+                      <div style={{ fontFamily: "Montserrat", fontSize: 13, fontWeight: 600, color: "var(--gf-dark)", marginBottom: 2 }}>{c.value}</div>
+                      <div style={{ fontFamily: "Montserrat", fontSize: 11, color: "var(--gf-text-light)" }}>{c.sub}</div>
+                    </>
+                  )}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* ── Main form block ── */}
+        <div style={{ background: "var(--gf-dark)", padding: "40px 0" }}>
+          <div className="max-w-7xl mx-auto px-6">
+            <h3 style={{ fontFamily: "Cormorant Garamond, serif", fontSize: 32, fontWeight: 400, color: "#fff", marginBottom: 24 }}>
+              Send us your request
+            </h3>
+
+            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 16 }}>
+              {/* Column 1 */}
+              <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
                 {[
-                  { icon: "Phone", label: "Phone / WhatsApp", value: "+7 903 790 17 95", sub: "Mon – Fri: 9:00 – 18:00 (MSK)" },
-                  { icon: "Mail", label: "Email", value: "gavrilovfoods.export@gmail.com", sub: "We reply within 24 hours" },
-                  { icon: "MapPin", label: "Location", value: "Smolensk Region, Russia", sub: "EU export documentation available" },
-                ].map((c, i) => (
-                  <div key={i} className="flex items-start gap-4">
-                    <div
-                      className="w-11 h-11 rounded-full flex items-center justify-center flex-shrink-0"
-                      style={{ background: "rgba(201,151,58,0.15)", border: "1px solid rgba(201,151,58,0.3)" }}
-                    >
-                      <Icon name={c.icon} size={18} style={{ color: "var(--gf-gold)" }} />
-                    </div>
-                    <div>
-                      <div className="text-white/40 text-xs uppercase tracking-widest mb-1 font-montserrat">
-                        {c.label}
-                      </div>
-                      <div className="text-white font-semibold text-[15px]">{c.value}</div>
-                      <div className="text-white/40 text-xs mt-0.5">{c.sub}</div>
-                    </div>
+                  { label: "Name *", type: "text", placeholder: "Your name" },
+                  { label: "Email *", type: "email", placeholder: "your@email.com" },
+                  { label: "Phone / WhatsApp *", type: "tel", placeholder: "+1 000 000 0000" },
+                  { label: "Company *", type: "text", placeholder: "Company name" },
+                ].map((f, i) => (
+                  <div key={i}>
+                    <label style={{ fontFamily: "Montserrat", fontSize: 10, fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.1em", color: "var(--gf-gold)", display: "block", marginBottom: 5 }}>{f.label}</label>
+                    <input type={f.type} placeholder={f.placeholder} style={{ width: "100%", padding: "10px 14px", background: "rgba(255,255,255,0.06)", border: "1px solid rgba(255,255,255,0.12)", color: "#fff", fontFamily: "Montserrat", fontSize: 13, outline: "none", boxSizing: "border-box" }} />
                   </div>
                 ))}
               </div>
 
-              {/* Trust badges */}
-              <div className="mt-10 grid grid-cols-2 gap-4">
+              {/* Column 2 */}
+              <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
                 {[
-                  { icon: "Percent", label: "Best Wholesale Prices" },
-                  { icon: "RefreshCw", label: "Stable Supply All Year" },
-                  { icon: "Award", label: "Quality You Can Rely On" },
-                  { icon: "Handshake", label: "Long-term Partnership" },
-                ].map((b, i) => (
-                  <div key={i} className="flex items-center gap-2">
-                    <Icon name={b.icon} size={14} style={{ color: "var(--gf-gold)" }} />
-                    <span className="text-white/55 text-xs font-montserrat">{b.label}</span>
+                  { label: "Product of Interest *", type: "select", placeholder: "Select product", opts: ["Buckwheat", "Green Buckwheat", "Buckwheat Flour", "Oat Flakes", "Red Lentils", "Yellow Peas", "Chickpeas", "Wheat"] },
+                  { label: "Packaging Type *", type: "select", placeholder: "Select packaging", opts: ["250g – 5kg retail bags", "25 / 50 kg bags", "500–1000 kg Big Bags", "20 ft container", "40 ft container"] },
+                  { label: "Estimated Volume *", type: "select", placeholder: "Select volume", opts: ["1–5 MT", "5–20 MT", "20–100 MT", "100+ MT", "Full container (FCL)"] },
+                  { label: "Destination Country *", type: "text", placeholder: "e.g. Germany, UAE, Brazil" },
+                ].map((f, i) => (
+                  <div key={i}>
+                    <label style={{ fontFamily: "Montserrat", fontSize: 10, fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.1em", color: "var(--gf-gold)", display: "block", marginBottom: 5 }}>{f.label}</label>
+                    {f.type === "select" ? (
+                      <select style={{ width: "100%", padding: "10px 14px", background: "rgba(255,255,255,0.06)", border: "1px solid rgba(255,255,255,0.12)", color: "rgba(255,255,255,0.6)", fontFamily: "Montserrat", fontSize: 13, outline: "none", cursor: "pointer", appearance: "auto", boxSizing: "border-box" }}>
+                        <option value="" style={{ background: "#1a2e1b" }}>{f.placeholder}</option>
+                        {f.opts?.map(o => <option key={o} value={o} style={{ background: "#1a2e1b" }}>{o}</option>)}
+                      </select>
+                    ) : (
+                      <input type="text" placeholder={f.placeholder} style={{ width: "100%", padding: "10px 14px", background: "rgba(255,255,255,0.06)", border: "1px solid rgba(255,255,255,0.12)", color: "#fff", fontFamily: "Montserrat", fontSize: 13, outline: "none", boxSizing: "border-box" }} />
+                    )}
                   </div>
                 ))}
+              </div>
+
+              {/* Column 3: textarea + trust icons */}
+              <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
+                <div style={{ flex: 1 }}>
+                  <label style={{ fontFamily: "Montserrat", fontSize: 10, fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.1em", color: "var(--gf-gold)", display: "block", marginBottom: 5 }}>Message *</label>
+                  <textarea placeholder="Volume, packaging, destination country, any specific requirements..." rows={7} style={{ width: "100%", padding: "10px 14px", background: "rgba(255,255,255,0.06)", border: "1px solid rgba(255,255,255,0.12)", color: "#fff", fontFamily: "Montserrat", fontSize: 13, outline: "none", resize: "none", boxSizing: "border-box", lineHeight: 1.6 }} />
+                </div>
+                {/* 4 trust icons */}
+                <div style={{ display: "grid", gridTemplateColumns: "repeat(4,1fr)", gap: 8, textAlign: "center" }}>
+                  {[
+                    { icon: "ShieldCheck", label: "Quality You Can Trust" },
+                    { icon: "Truck", label: "On-Time Delivery" },
+                    { icon: "DollarSign", label: "Competitive Prices" },
+                    { icon: "Handshake", label: "Long-term Partnership" },
+                  ].map((t, i) => (
+                    <div key={i}>
+                      <Icon name={t.icon} size={22} style={{ color: "rgba(255,255,255,0.5)", strokeWidth: 1.2 }} />
+                      <div style={{ fontFamily: "Montserrat", fontSize: 9, color: "rgba(255,255,255,0.35)", marginTop: 4, lineHeight: 1.3 }}>{t.label}</div>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
 
-            {/* Right: form */}
-            <div className="reveal-right">
-              <div
-                className="p-8"
-                style={{ background: "rgba(255,255,255,0.04)", border: "1px solid rgba(201,151,58,0.2)" }}
+            {/* CTA buttons */}
+            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12, marginTop: 20 }}>
+              <button className="btn-gold" style={{ justifyContent: "center", fontSize: 13, padding: "14px 24px" }}>
+                Request Export Offer <Icon name="ArrowRight" size={16} />
+              </button>
+              <a
+                href="https://wa.me/79037901795"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 8, padding: "14px 24px", border: "1.5px solid rgba(255,255,255,0.25)", color: "#fff", fontFamily: "Montserrat", fontWeight: 600, fontSize: 13, letterSpacing: "0.06em", textTransform: "uppercase", textDecoration: "none", transition: "border-color 0.2s" }}
               >
-                <div className="text-xs font-semibold uppercase tracking-widest mb-2 font-montserrat" style={{ color: "var(--gf-gold)" }}>
-                  — Get a Quote —
-                </div>
-                <h3 className="font-cormorant text-2xl font-light text-white mb-1">
-                  Request{" "}
-                  <span style={{ color: "var(--gf-gold)", fontStyle: "italic" }}>Export Offer</span>
-                </h3>
-                <p className="text-white/40 text-xs mb-8 font-montserrat">
-                  Fill in the form and we'll get back to you within 24 hours with a detailed offer tailored to your needs.
-                </p>
-
-                <div className="space-y-4">
-                  {[
-                    { label: "Your Name", type: "text", placeholder: "John Smith" },
-                    { label: "Company", type: "text", placeholder: "Import Co. Ltd" },
-                    { label: "Country", type: "text", placeholder: "Germany, China, UAE..." },
-                    { label: "Email", type: "email", placeholder: "john@company.com" },
-                    { label: "Phone / WhatsApp", type: "tel", placeholder: "+49 123 456 789" },
-                  ].map((f, i) => (
-                    <div key={i}>
-                      <label className="block text-white/50 text-[11px] uppercase tracking-widest mb-1.5 font-montserrat">
-                        {f.label}
-                      </label>
-                      <input
-                        type={f.type}
-                        placeholder={f.placeholder}
-                        className="w-full px-4 py-3 text-sm text-white placeholder-white/20 outline-none focus:border-[var(--gf-gold)] transition-colors font-montserrat"
-                        style={{
-                          background: "rgba(255,255,255,0.05)",
-                          border: "1px solid rgba(255,255,255,0.1)",
-                        }}
-                      />
-                    </div>
-                  ))}
-
-                  <div>
-                    <label className="block text-white/50 text-[11px] uppercase tracking-widest mb-1.5 font-montserrat">
-                      Products & Volume (optional)
-                    </label>
-                    <textarea
-                      placeholder="Buckwheat 20t, Lentils 5t..."
-                      rows={3}
-                      className="w-full px-4 py-3 text-sm text-white placeholder-white/20 outline-none resize-none transition-colors font-montserrat"
-                      style={{
-                        background: "rgba(255,255,255,0.05)",
-                        border: "1px solid rgba(255,255,255,0.1)",
-                      }}
-                    />
-                  </div>
-                </div>
-
-                <div className="flex gap-3 mt-6">
-                  <button className="btn-gold flex-1 justify-center">
-                    Request Export Offer <Icon name="ArrowRight" size={16} />
-                  </button>
-                </div>
-                <a
-                  href="https://wa.me/79037901795"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn-outline-white w-full mt-3 justify-center"
-                  style={{ display: "flex" }}
-                >
-                  <Icon name="MessageCircle" size={16} />
-                  Chat with Export Team
-                </a>
-              </div>
+                <Icon name="MessageCircle" size={18} style={{ color: "#25D366" }} />
+                WhatsApp Export Manager
+              </a>
             </div>
           </div>
         </div>
+
+        {/* ── 5 feature badges ── */}
+        <div style={{ background: "#fff", borderTop: "1px solid rgba(0,0,0,0.07)", borderBottom: "1px solid rgba(0,0,0,0.07)" }}>
+          <div className="max-w-7xl mx-auto px-6" style={{ display: "grid", gridTemplateColumns: "repeat(5,1fr)", gap: 0 }}>
+            {[
+              { img: "https://cdn.poehali.dev/files/e0686aa0-2df7-454a-b318-5e843ea52142.png", isImg: true, title: "EU Organic Certified", desc: "Certified organic products for global markets." },
+              { icon: "Package", title: "MOQ from 1 MT", desc: "Flexible minimum order quantity from 1 MT." },
+              { icon: "Tag", title: "Private Label", desc: "Custom packaging and private label solutions." },
+              { icon: "FileText", title: "Export Support", desc: "Full documentation and logistics support at every step." },
+              { icon: "Clock", title: "Fast Response", desc: "We reply within 24 hours on business days." },
+            ].map((b, i) => (
+              <div key={i} style={{ padding: "20px 20px", borderRight: i < 4 ? "1px solid rgba(0,0,0,0.07)" : "none", display: "flex", alignItems: "flex-start", gap: 12 }}>
+                {b.isImg ? (
+                  <img src={b.img} alt="EU Organic" style={{ width: 36, height: 28, objectFit: "contain", flexShrink: 0, marginTop: 4 }} />
+                ) : (
+                  <Icon name={b.icon!} size={28} style={{ color: "var(--gf-dark)", strokeWidth: 1.1, flexShrink: 0 }} />
+                )}
+                <div>
+                  <div style={{ fontFamily: "Montserrat", fontWeight: 700, fontSize: 11, textTransform: "uppercase", letterSpacing: "0.06em", color: "var(--gf-dark)", marginBottom: 4 }}>{b.title}</div>
+                  <div style={{ fontFamily: "Montserrat", fontSize: 11, color: "var(--gf-text-light)", lineHeight: 1.4 }}>{b.desc}</div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* ── 4 wide photos strip ── */}
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(4,1fr)", height: 200 }}>
+          {[
+            "https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/files/6ba6ab19-4325-41ef-a364-f4b77bfe6de1.jpg",
+            FACTORY_IMG,
+            "https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/files/e42071e6-cbc4-4ad0-b451-35723caa640d.jpg",
+            "https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/files/b8d2d916-8dce-4c6e-b197-7f7a24a273b8.jpg",
+          ].map((src, i) => (
+            <div key={i} style={{ overflow: "hidden" }}>
+              <img src={src} alt="" style={{ width: "100%", height: "100%", objectFit: "cover", display: "block", transition: "transform 0.5s ease" }}
+                onMouseEnter={e => (e.currentTarget.style.transform = "scale(1.06)")}
+                onMouseLeave={e => (e.currentTarget.style.transform = "scale(1)")}
+              />
+            </div>
+          ))}
+        </div>
+
       </section>
 
       {/* ═══════════════ FOOTER ═══════════════ */}
-      <footer style={{ background: "#0a1509", borderTop: "1px solid rgba(201,151,58,0.15)" }}>
-        <div className="max-w-7xl mx-auto px-6 py-12">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-8">
-            <div className="text-white">
-              <Logo />
-              <p className="mt-3 text-white/35 text-xs max-w-xs leading-relaxed font-montserrat">
-                Premium organic grain export from Smolensk Region, Russia. EU certified. Worldwide supply.
-              </p>
+      <footer style={{ background: "var(--gf-dark)" }}>
+        {/* Main footer grid */}
+        <div className="max-w-7xl mx-auto px-6" style={{ paddingTop: 48, paddingBottom: 32 }}>
+          <div style={{ display: "grid", gridTemplateColumns: "1.4fr 1fr 1fr 1.2fr 0.8fr", gap: 40 }}>
+
+            {/* Col 1: Logo + about */}
+            <div>
+              <div className="text-white mb-4"><Logo /></div>
+              <div style={{ fontFamily: "Montserrat", fontSize: 12, color: "rgba(255,255,255,0.45)", lineHeight: 1.7, marginBottom: 16 }}>
+                Farm-to-export grain supplier<br />
+                Organic grains, pulses & oilseeds<br />
+                EU-certified production
+              </div>
+              <div style={{ fontFamily: "Montserrat", fontSize: 12, fontWeight: 600, color: "rgba(255,255,255,0.6)", marginBottom: 4 }}>Smolensk Region, Russia</div>
+              <div style={{ fontFamily: "Montserrat", fontSize: 12, color: "rgba(255,255,255,0.4)", marginBottom: 20 }}>Working with importers worldwide<br />to deliver quality and value.</div>
+              {/* Social icons */}
+              <div style={{ display: "flex", gap: 10 }}>
+                {[
+                  { icon: "Linkedin", href: "#" },
+                  { icon: "MessageCircle", href: "https://wa.me/79037901795" },
+                  { icon: "Mail", href: "mailto:gavrilovfoods.export@gmail.com" },
+                ].map((s, i) => (
+                  <a key={i} href={s.href} target="_blank" rel="noopener noreferrer"
+                    style={{ width: 34, height: 34, borderRadius: "50%", border: "1px solid rgba(255,255,255,0.2)", display: "flex", alignItems: "center", justifyContent: "center", transition: "border-color 0.2s" }}>
+                    <Icon name={s.icon} size={15} style={{ color: "rgba(255,255,255,0.5)" }} />
+                  </a>
+                ))}
+              </div>
             </div>
 
-            <div className="flex flex-wrap gap-x-10 gap-y-3 justify-center">
-              {navLinks.map((l) => (
-                <button
-                  key={l.label}
-                  onClick={() => scrollTo(l.href)}
-                  className="text-white/35 hover:text-white/70 text-xs uppercase tracking-widest transition-colors font-montserrat"
-                >
-                  {l.label}
-                </button>
-              ))}
+            {/* Col 2: Quick links */}
+            <div>
+              <div style={{ fontFamily: "Montserrat", fontWeight: 700, fontSize: 11, textTransform: "uppercase", letterSpacing: "0.12em", color: "rgba(255,255,255,0.5)", marginBottom: 16 }}>Quick Links</div>
+              <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
+                {["About Us", "Our Products", "Organic", "Export", "Certifications", "Private Label", "Gallery", "Contact"].map((l, i) => {
+                  const hrefs = ["#about", "#products", "#organic", "#export", "#certifications", "#private-label", "#gallery", "#contact"];
+                  return (
+                    <button key={i} onClick={() => scrollTo(hrefs[i])}
+                      style={{ fontFamily: "Montserrat", fontSize: 13, color: "rgba(255,255,255,0.5)", textAlign: "left", background: "none", border: "none", cursor: "pointer", padding: 0, transition: "color 0.2s" }}
+                      onMouseEnter={e => (e.currentTarget.style.color = "#fff")}
+                      onMouseLeave={e => (e.currentTarget.style.color = "rgba(255,255,255,0.5)")}
+                    >{l}</button>
+                  );
+                })}
+              </div>
             </div>
 
-            <div className="text-right">
-              <div className="text-white/70 text-sm font-semibold font-montserrat">+7 903 790 17 95</div>
-              <div className="text-white/35 text-xs mt-1">gavrilovfoods.export@gmail.com</div>
-              <div className="text-white/35 text-xs mt-0.5">www.gavrilovfoods.com</div>
+            {/* Col 3: Export markets + map */}
+            <div>
+              <div style={{ fontFamily: "Montserrat", fontWeight: 700, fontSize: 11, textTransform: "uppercase", letterSpacing: "0.12em", color: "rgba(255,255,255,0.5)", marginBottom: 16 }}>Export Markets</div>
+              <div style={{ display: "flex", flexDirection: "column", gap: 8, marginBottom: 20 }}>
+                <div style={{ fontFamily: "Montserrat", fontSize: 14, color: "#fff", display: "flex", alignItems: "center", gap: 8 }}>🇪🇺 Europe</div>
+                <div style={{ fontFamily: "Montserrat", fontSize: 14, color: "#fff", display: "flex", alignItems: "center", gap: 8 }}>🇨🇳 China</div>
+              </div>
+              {/* Simple world map placeholder */}
+              <div style={{ background: "rgba(255,255,255,0.04)", borderRadius: 6, padding: "12px", border: "1px solid rgba(255,255,255,0.08)", textAlign: "center" }}>
+                <Icon name="Globe" size={48} style={{ color: "rgba(201,151,58,0.3)", strokeWidth: 0.8 }} />
+              </div>
             </div>
-          </div>
 
-          {/* Bottom bar */}
-          <div
-            className="mt-10 pt-6 flex flex-col md:flex-row items-center justify-between gap-4"
-            style={{ borderTop: "1px solid rgba(255,255,255,0.06)" }}
-          >
-            <div className="flex flex-wrap justify-center gap-6">
-              {["Reliable Quality", "Transparent Process", "Sustainable Production", "Global Standards", "Long-term Partnership"].map((t, i) => (
-                <div key={i} className="flex items-center gap-1.5 text-white/25 text-xs font-montserrat">
-                  <Icon name="Check" size={11} style={{ color: "var(--gf-gold)", opacity: 0.5 }} />
-                  {t}
+            {/* Col 4: Contact */}
+            <div>
+              <div style={{ fontFamily: "Montserrat", fontWeight: 700, fontSize: 11, textTransform: "uppercase", letterSpacing: "0.12em", color: "rgba(255,255,255,0.5)", marginBottom: 16 }}>Contact</div>
+              <div style={{ display: "flex", flexDirection: "column", gap: 12, marginBottom: 20 }}>
+                <a href="tel:+79037901795" style={{ display: "flex", alignItems: "center", gap: 10, textDecoration: "none" }}>
+                  <Icon name="Phone" size={15} style={{ color: "var(--gf-gold)", flexShrink: 0 }} />
+                  <span style={{ fontFamily: "Montserrat", fontSize: 13, color: "#fff" }}>+7 903 790 17 95</span>
+                </a>
+                <a href="mailto:gavrilovfoods.export@gmail.com" style={{ display: "flex", alignItems: "center", gap: 10, textDecoration: "none" }}>
+                  <Icon name="Mail" size={15} style={{ color: "var(--gf-gold)", flexShrink: 0 }} />
+                  <span style={{ fontFamily: "Montserrat", fontSize: 12, color: "rgba(255,255,255,0.6)" }}>gavrilovfoods.export@gmail.com</span>
+                </a>
+                <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
+                  <Icon name="MapPin" size={15} style={{ color: "var(--gf-gold)", flexShrink: 0 }} />
+                  <span style={{ fontFamily: "Montserrat", fontSize: 13, color: "rgba(255,255,255,0.6)" }}>Smolensk Region, Russia</span>
                 </div>
-              ))}
+              </div>
+              <a href="https://wa.me/79037901795" target="_blank" rel="noopener noreferrer"
+                style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 8, padding: "11px 18px", background: "#25D366", color: "#fff", fontFamily: "Montserrat", fontWeight: 700, fontSize: 12, textDecoration: "none", borderRadius: 4, marginBottom: 10 }}>
+                <Icon name="MessageCircle" size={16} />
+                WhatsApp Export Manager
+              </a>
+              <button
+                onClick={() => document.querySelector("#contact")?.scrollIntoView({ behavior: "smooth" })}
+                style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 8, padding: "11px 18px", background: "transparent", border: "1.5px solid rgba(255,255,255,0.25)", color: "rgba(255,255,255,0.7)", fontFamily: "Montserrat", fontWeight: 600, fontSize: 12, cursor: "pointer", width: "100%", borderRadius: 4 }}>
+                <Icon name="Download" size={15} />
+                Download Catalog PDF
+              </button>
             </div>
-            <div className="text-white/20 text-xs font-montserrat">
+
+            {/* Col 5: grain photo */}
+            <div style={{ borderRadius: 8, overflow: "hidden" }}>
+              <img src={PRODUCTS_IMG} alt="Grains" style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
+            </div>
+
+          </div>
+        </div>
+
+        {/* Bottom bar */}
+        <div style={{ borderTop: "1px solid rgba(255,255,255,0.08)", padding: "14px 0" }}>
+          <div className="max-w-7xl mx-auto px-6" style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+            <div style={{ fontFamily: "Montserrat", fontSize: 12, color: "rgba(255,255,255,0.3)" }}>
               © 2024 Gavrilov Foods
+            </div>
+            <div style={{ display: "flex", gap: 24 }}>
+              {["Privacy Policy", "Terms & Conditions"].map((l, i) => (
+                <button key={i} style={{ fontFamily: "Montserrat", fontSize: 12, color: "rgba(255,255,255,0.3)", background: "none", border: "none", cursor: "pointer" }}>{l}</button>
+              ))}
             </div>
           </div>
         </div>
