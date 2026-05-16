@@ -593,9 +593,7 @@ export default function Index() {
                       .querySelector("#contact")
                       ?.scrollIntoView({ behavior: "smooth" })
                   }
-                >
-                  Request Export Offer
-                </button>
+                >Request a Quote</button>
               </div>
             </div>
           </div>
