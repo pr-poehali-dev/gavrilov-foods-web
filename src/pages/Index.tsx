@@ -1700,45 +1700,172 @@ export default function Index() {
       </section>
 
       {/* ═══════════════ GALLERY ═══════════════ */}
-      <section id="gallery" className="py-20" style={{ background: "var(--gf-cream)" }}>
+      <section id="gallery" className="py-20" style={{ background: "#fff" }}>
         <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-12 reveal">
-            <div className="section-label justify-center mb-4" style={{ justifyContent: "center" }}>
-              <span style={{ color: "var(--gf-gold)", fontSize: "11px", letterSpacing: "0.2em", fontFamily: "Montserrat", fontWeight: 600, textTransform: "uppercase" }}>
-                — Gallery —
-              </span>
+
+          {/* ── Row 1: Hero banner ── */}
+          <div className="reveal mb-6" style={{ position: "relative", borderRadius: 10, overflow: "hidden", minHeight: 220 }}>
+            <img src={HERO_IMG} alt="From Farm to Export" style={{ width: "100%", height: 220, objectFit: "cover", display: "block" }} />
+            <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to right, rgba(14,26,15,0.88) 0%, rgba(14,26,15,0.5) 50%, transparent 100%)" }} />
+            <div style={{ position: "absolute", inset: 0, display: "flex", alignItems: "center" }}>
+              <div style={{ padding: "0 40px", maxWidth: 480 }}>
+                <h2 style={{ fontFamily: "Cormorant Garamond, serif", fontSize: "clamp(28px, 3.5vw, 46px)", fontWeight: 400, color: "#fff", lineHeight: 1.15, marginBottom: 6 }}>
+                  From Farm to Export —<br />
+                  <span style={{ color: "var(--gf-gold)", fontStyle: "italic" }}>Full Control at Every Stage</span>
+                </h2>
+                <p style={{ fontFamily: "Montserrat", fontSize: 13, color: "rgba(255,255,255,0.6)", lineHeight: 1.6 }}>
+                  We own our farmland, control the entire production process and ensure reliable quality behind every shipment.
+                </p>
+              </div>
+              {/* 4 stat boxes */}
+              <div style={{ marginLeft: "auto", display: "grid", gridTemplateColumns: "repeat(4,1fr)", gap: 0, background: "rgba(255,255,255,0.06)", backdropFilter: "blur(4px)" }}>
+                {[
+                  { icon: "Wheat", val: "10,000 ha", label: "Own Farmland" },
+                  { icon: "Warehouse", val: "5,000 m²", label: "Warehouse Capacity" },
+                  { icon: "Settings", val: "Modern", label: "Processing Equipment" },
+                  { icon: "Globe", val: "Export-Ready", label: "Packaging & Logistics" },
+                ].map((s, i) => (
+                  <div key={i} style={{ padding: "20px 22px", textAlign: "center", borderLeft: i > 0 ? "1px solid rgba(255,255,255,0.1)" : "none" }}>
+                    <Icon name={s.icon} size={26} style={{ color: "var(--gf-gold)", strokeWidth: 1.2, marginBottom: 6 }} />
+                    <div style={{ fontFamily: "Cormorant Garamond, serif", fontSize: 20, fontWeight: 600, color: "var(--gf-gold)", lineHeight: 1 }}>{s.val}</div>
+                    <div style={{ fontFamily: "Montserrat", fontSize: 10, color: "rgba(255,255,255,0.5)", textTransform: "uppercase", letterSpacing: "0.08em", marginTop: 4 }}>{s.label}</div>
+                  </div>
+                ))}
+              </div>
             </div>
-            <h2
-              className="font-cormorant font-light"
-              style={{ fontSize: "clamp(32px, 4vw, 52px)", color: "var(--gf-dark)" }}
-            >
-              Our Fields & <span style={{ color: "var(--gf-gold)", fontStyle: "italic" }}>Facilities</span>
-            </h2>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
-            {galleryImages.map((g, i) => (
-              <div
-                key={i}
-                className="img-zoom reveal aspect-[4/3]"
-                data-delay={String(i * 60)}
+          {/* ── Row 2: 5-step process + 5 large photos ── */}
+          <div className="reveal mb-4">
+            {/* Step labels */}
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(5,1fr)", gap: 4, marginBottom: 6 }}>
+              {[
+                { num: 1, title: "Own Farmland", desc: "Fertile fields and sustainable farming practices." },
+                { num: 2, title: "Harvesting", desc: "Modern machinery and experienced team." },
+                { num: 3, title: "Cleaning & Processing", desc: "Advanced cleaning, sorting and product processing." },
+                { num: 4, title: "Storage & Export Packaging", desc: "Safe storage and strong export packaging." },
+                { num: 5, title: "Container Loading & Export", desc: "Careful loading and on-time delivery to global markets." },
+              ].map((s, i) => (
+                <div key={i} style={{ display: "flex", alignItems: "flex-start", gap: 8 }}>
+                  <div style={{ width: 26, height: 26, borderRadius: "50%", background: "var(--gf-gold)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0, fontFamily: "Montserrat", fontWeight: 700, fontSize: 11, color: "#0e1a0f" }}>
+                    {s.num}
+                  </div>
+                  <div>
+                    {i < 4 && <Icon name="ArrowRight" size={12} style={{ color: "var(--gf-gold)", opacity: 0.5, marginBottom: 2 }} />}
+                    <div style={{ fontFamily: "Montserrat", fontWeight: 700, fontSize: 11, color: "var(--gf-dark)", marginBottom: 2 }}>{s.title}</div>
+                    <div style={{ fontFamily: "Montserrat", fontSize: 10, color: "var(--gf-text-light)", lineHeight: 1.4 }}>{s.desc}</div>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* Large photos row */}
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(5,1fr)", gap: 4, height: 200 }}>
+              {[
+                HERO_IMG,
+                "https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/files/6ba6ab19-4325-41ef-a364-f4b77bfe6de1.jpg",
+                FACTORY_IMG,
+                PRODUCTS_IMG,
+                "https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/files/0e4fa66e-1281-4390-ad56-c439a1bba5a8.jpg",
+              ].map((src, i) => (
+                <div key={i} style={{ borderRadius: 6, overflow: "hidden" }}>
+                  <img src={src} alt="" style={{ width: "100%", height: "100%", objectFit: "cover", display: "block", transition: "transform 0.5s ease" }}
+                    onMouseEnter={e => (e.currentTarget.style.transform = "scale(1.06)")}
+                    onMouseLeave={e => (e.currentTarget.style.transform = "scale(1)")}
+                  />
+                </div>
+              ))}
+            </div>
+
+            {/* Small photos row */}
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(5,1fr)", gap: 4, marginTop: 4, height: 110 }}>
+              {[
+                "https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/files/56b82c77-4b6a-426b-b67d-2f0a68187ac4.jpg",
+                "https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/files/18e1a0f6-68a3-4045-a13d-deb86345fddf.jpg",
+                "https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/files/fc6cb2c8-2dcf-43d9-9d05-5c2e263fa58b.jpg",
+                "https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/files/de481272-bd65-4d8e-b8fe-9564b8f09e8b.jpg",
+                "https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/files/e42071e6-cbc4-4ad0-b451-35723caa640d.jpg",
+              ].map((src, i) => (
+                <div key={i} style={{ borderRadius: 6, overflow: "hidden" }}>
+                  <img src={src} alt="" style={{ width: "100%", height: "100%", objectFit: "cover", display: "block", transition: "transform 0.5s ease" }}
+                    onMouseEnter={e => (e.currentTarget.style.transform = "scale(1.06)")}
+                    onMouseLeave={e => (e.currentTarget.style.transform = "scale(1)")}
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* ── Row 3: Dark trust block + 4 wide photos ── */}
+          <div className="reveal" style={{ display: "grid", gridTemplateColumns: "320px 1fr 1fr 1fr 1fr", gap: 4, borderRadius: 10, overflow: "hidden", minHeight: 220 }}>
+            {/* Dark left: Why Buyers Trust */}
+            <div style={{ background: "var(--gf-dark)", padding: "28px 24px", display: "flex", flexDirection: "column", justifyContent: "space-between" }}>
+              <div>
+                <h3 style={{ fontFamily: "Cormorant Garamond, serif", fontSize: 22, fontWeight: 400, color: "#fff", marginBottom: 16 }}>
+                  Why Buyers Trust Gavrilov Foods
+                </h3>
+                <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
+                  {[
+                    { icon: "Wheat", title: "Own Farmland", desc: "Full control from seed to Harvest" },
+                    { icon: "ShieldCheck", title: "Quality & Safety", desc: "Modern equipment and strict quality control." },
+                    { icon: "ScanLine", title: "Full Traceability", desc: "Transparent and traceable supply chain." },
+                    { icon: "Globe", title: "Export Experience", desc: "Reliable export packaging and logistics." },
+                    { icon: "Leaf", title: "EU Organic Available", desc: "Certified organic products for global markets." },
+                  ].map((t, i) => (
+                    <div key={i} style={{ display: "flex", alignItems: "flex-start", gap: 8 }}>
+                      <Icon name={t.icon} size={13} style={{ color: "var(--gf-gold)", marginTop: 2, flexShrink: 0 }} />
+                      <div>
+                        <span style={{ fontFamily: "Montserrat", fontSize: 10, fontWeight: 700, color: "rgba(255,255,255,0.7)" }}>{t.title} </span>
+                        <span style={{ fontFamily: "Montserrat", fontSize: 10, color: "rgba(255,255,255,0.35)" }}>{t.desc}</span>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+              <button
+                className="btn-gold"
+                style={{ marginTop: 16, fontSize: 11, padding: "10px 16px" }}
+                onClick={() => document.querySelector("#contact")?.scrollIntoView({ behavior: "smooth" })}
               >
-                <img
-                  src={g.src}
-                  alt={g.label}
-                  className="w-full h-full object-cover"
+                Request a Quote <Icon name="ArrowRight" size={13} />
+              </button>
+            </div>
+
+            {/* 4 wide photos */}
+            {[
+              "https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/files/56b82c77-4b6a-426b-b67d-2f0a68187ac4.jpg",
+              "https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/files/e42071e6-cbc4-4ad0-b451-35723caa640d.jpg",
+              "https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/files/0e4fa66e-1281-4390-ad56-c439a1bba5a8.jpg",
+              "https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/files/b8d2d916-8dce-4c6e-b197-7f7a24a273b8.jpg",
+            ].map((src, i) => (
+              <div key={i} style={{ overflow: "hidden" }}>
+                <img src={src} alt="" style={{ width: "100%", height: "100%", objectFit: "cover", display: "block", transition: "transform 0.5s ease" }}
+                  onMouseEnter={e => (e.currentTarget.style.transform = "scale(1.06)")}
+                  onMouseLeave={e => (e.currentTarget.style.transform = "scale(1)")}
                 />
-                <div
-                  className="absolute bottom-0 left-0 right-0 px-4 py-3"
-                  style={{ background: "linear-gradient(to top, rgba(14,26,15,0.8), transparent)" }}
-                >
-                  <span className="text-white text-xs font-montserrat font-semibold uppercase tracking-widest">
-                    {g.label}
-                  </span>
+              </div>
+            ))}
+          </div>
+
+          {/* ── Row 4: Bottom trust strip ── */}
+          <div className="reveal mt-6" style={{ display: "grid", gridTemplateColumns: "repeat(5,1fr)", gap: 0, background: "var(--gf-cream)", borderRadius: 8 }}>
+            {[
+              { icon: "ShieldCheck", title: "Reliable Supply", desc: "Stable volumes and on-time delivery." },
+              { icon: "Award", title: "Certified Quality", desc: "EU Organic certification available." },
+              { icon: "Package", title: "Flexible Solutions", desc: "Custom packaging for your brand." },
+              { icon: "Globe", title: "Global Standards", desc: "We meet international food safety standards." },
+              { icon: "Handshake", title: "Long-term Partnership", desc: "Built on trust, quality and transparency." },
+            ].map((t, i) => (
+              <div key={i} style={{ padding: "20px 18px", borderLeft: i > 0 ? "1px solid rgba(0,0,0,0.07)" : "none", display: "flex", alignItems: "flex-start", gap: 12 }}>
+                <Icon name={t.icon} size={26} style={{ color: "var(--gf-dark)", strokeWidth: 1.1, flexShrink: 0 }} />
+                <div>
+                  <div style={{ fontFamily: "Montserrat", fontWeight: 700, fontSize: 11, color: "var(--gf-dark)", marginBottom: 3 }}>{t.title}</div>
+                  <div style={{ fontFamily: "Montserrat", fontSize: 11, color: "var(--gf-text-light)", lineHeight: 1.4 }}>{t.desc}</div>
                 </div>
               </div>
             ))}
           </div>
+
         </div>
       </section>
 
