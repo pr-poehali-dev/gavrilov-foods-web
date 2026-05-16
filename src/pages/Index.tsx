@@ -1458,6 +1458,158 @@ export default function Index() {
         </div>
       </section>
 
+      {/* ═══════════════ CERTIFICATIONS ═══════════════ */}
+      <section id="certifications" className="py-20" style={{ background: "var(--gf-cream-2)" }}>
+        <div className="max-w-7xl mx-auto px-6">
+
+          {/* Header */}
+          <div className="text-center mb-10 reveal">
+            <div className="flex items-center justify-center gap-4 mb-4">
+              <span style={{ display: "block", width: 36, height: 1, background: "var(--gf-gold)" }} />
+              <span style={{ color: "var(--gf-gold)", fontSize: "11px", letterSpacing: "0.2em", fontFamily: "Montserrat", fontWeight: 700, textTransform: "uppercase" }}>
+                Certifications
+              </span>
+              <span style={{ display: "block", width: 36, height: 1, background: "var(--gf-gold)" }} />
+            </div>
+            <h2 className="font-cormorant font-light" style={{ fontSize: "clamp(32px, 4vw, 56px)", color: "var(--gf-dark)" }}>
+              Quality You Can Trust
+            </h2>
+          </div>
+
+          {/* ── Main row: EU cert left + Packaging right ── */}
+          <div className="grid lg:grid-cols-2 gap-4 mb-4 reveal">
+
+            {/* Left: EU Organic card */}
+            <div style={{ background: "#fff", border: "1px solid rgba(0,0,0,0.07)", borderRadius: 10, padding: "28px 28px 24px" }}>
+              {/* Badge */}
+              <div className="flex items-center gap-4 mb-6 p-4" style={{ background: "var(--gf-cream)", borderRadius: 8, border: "1px solid rgba(0,0,0,0.06)" }}>
+                <img
+                  src="https://cdn.poehali.dev/files/e0686aa0-2df7-454a-b318-5e843ea52142.png"
+                  alt="EU Organic Certified"
+                  style={{ width: 56, height: 44, objectFit: "contain", flexShrink: 0 }}
+                />
+                <div>
+                  <div className="font-montserrat font-bold text-[13px] mb-0.5" style={{ color: "var(--gf-dark)" }}>EU Organic Certified</div>
+                  <div className="text-[11px] font-montserrat" style={{ color: "var(--gf-text-light)" }}>European Organic Certification</div>
+                </div>
+              </div>
+
+              {/* Checkmarks */}
+              <div className="space-y-2.5 mb-6">
+                {[
+                  "EU Organic Certified",
+                  "Traceable from field to final product",
+                  "Sustainable farming practices",
+                  "Available for selected products only",
+                ].map((item, i) => (
+                  <div key={i} className="flex items-center gap-2.5">
+                    <div className="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0" style={{ background: "#3d7a3d" }}>
+                      <Icon name="Check" size={11} style={{ color: "#fff" }} />
+                    </div>
+                    <span className="text-[13px] font-montserrat" style={{ color: "var(--gf-text)" }}>{item}</span>
+                  </div>
+                ))}
+              </div>
+
+              {/* Organic available for list */}
+              <div style={{ borderTop: "1px solid rgba(0,0,0,0.06)", paddingTop: 16 }}>
+                <div className="font-montserrat font-semibold text-[12px] mb-2" style={{ color: "var(--gf-dark)" }}>Organic available for:</div>
+                <ul className="space-y-1">
+                  {["Buckwheat", "Green Buckwheat", "Buckwheat Flour", "Oat Flakes"].map((p, i) => (
+                    <li key={i} className="flex items-center gap-2 text-[12px] font-montserrat" style={{ color: "var(--gf-text-light)" }}>
+                      <span style={{ color: "var(--gf-gold)" }}>•</span> {p}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+
+            {/* Right: Packaging & Supply */}
+            <div style={{ background: "#fff", border: "1px solid rgba(0,0,0,0.07)", borderRadius: 10, padding: "28px 28px 24px" }}>
+              <div className="font-montserrat font-bold text-[13px] uppercase tracking-wide mb-1" style={{ color: "var(--gf-dark)" }}>
+                Packaging & Supply
+              </div>
+              <div className="text-[12px] font-montserrat mb-8" style={{ color: "var(--gf-text-light)" }}>
+                Flexible solutions for different needs
+              </div>
+
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+                {[
+                  { icon: "Package", title: "Retail Packaging", size: "250 g – 5 kg", desc: "Custom options available" },
+                  { icon: "Boxes", title: "Industrial Packaging", size: "25 kg / 50 kg bags", desc: "High quality packaging" },
+                  { icon: "Container", title: "Bulk Supply", size: "500 – 1,000 kg\nBig Bags", desc: "For large volume orders" },
+                  { icon: "Truck", title: "Container Shipping", size: "20 ft / 40 ft", desc: "Safe and secure delivery" },
+                ].map((p, i) => (
+                  <div key={i} className="flex flex-col items-center text-center gap-2">
+                    <div
+                      className="w-12 h-12 flex items-center justify-center mb-1"
+                      style={{ border: "1.5px solid rgba(0,0,0,0.12)", borderRadius: 8 }}
+                    >
+                      <Icon name={p.icon} size={22} style={{ color: "var(--gf-dark)", strokeWidth: 1.2 }} />
+                    </div>
+                    <div className="font-montserrat font-bold text-[11px] uppercase tracking-wide" style={{ color: "var(--gf-dark)" }}>{p.title}</div>
+                    <div className="font-cormorant text-[16px] font-semibold leading-tight" style={{ color: "var(--gf-gold)", whiteSpace: "pre-line" }}>{p.size}</div>
+                    <div className="text-[11px] font-montserrat leading-snug" style={{ color: "var(--gf-text-light)" }}>{p.desc}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* ── From Field to Your Business ── */}
+          <div className="reveal">
+            <div className="flex items-center justify-center gap-4 mb-5">
+              <span style={{ display: "block", width: 36, height: 1, background: "var(--gf-gold)" }} />
+              <span style={{ color: "var(--gf-gold)", fontSize: "11px", letterSpacing: "0.2em", fontFamily: "Montserrat", fontWeight: 700, textTransform: "uppercase" }}>
+                From Field to Your Business
+              </span>
+              <span style={{ display: "block", width: 36, height: 1, background: "var(--gf-gold)" }} />
+            </div>
+
+            {/* 5-image strip with numbered labels */}
+            <div className="grid grid-cols-5 gap-2" style={{ height: 200 }}>
+              {[
+                { img: HERO_IMG, num: 1, label: "Carefully selected organic fields" },
+                { img: FACTORY_IMG, num: 2, label: "Modern cleaning & processing" },
+                { img: PRODUCTS_IMG, num: 3, label: "Quality packaging & labeling" },
+                { img: "https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/files/1694ef7b-4cbe-47de-89af-c109a17aa409.jpg", num: 4, label: "Reliable logistics & delivery" },
+                { img: "https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/files/b8d2d916-8dce-4c6e-b197-7f7a24a273b8.jpg", num: 5, label: "Export-ready shipments" },
+              ].map((t, i) => (
+                <div key={i} style={{ position: "relative", borderRadius: 8, overflow: "hidden" }}>
+                  <img
+                    src={t.img}
+                    alt={t.label}
+                    style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
+                  />
+                  {/* Dark overlay */}
+                  <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, rgba(14,26,15,0.85) 0%, rgba(14,26,15,0.1) 60%)" }} />
+                  {/* Number badge */}
+                  <div
+                    style={{
+                      position: "absolute", top: 10, left: 10,
+                      width: 24, height: 24, borderRadius: "50%",
+                      background: "rgba(255,255,255,0.2)",
+                      border: "1px solid rgba(255,255,255,0.5)",
+                      display: "flex", alignItems: "center", justifyContent: "center",
+                      fontFamily: "Montserrat", fontWeight: 700, fontSize: 11, color: "#fff",
+                    }}
+                  >
+                    {t.num}
+                  </div>
+                  {/* Label */}
+                  <div style={{ position: "absolute", bottom: 10, left: 10, right: 10 }}>
+                    <div style={{ color: "#fff", fontFamily: "Montserrat", fontSize: 10, fontWeight: 600, lineHeight: 1.3 }}>
+                      {t.label}
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+        </div>
+      </section>
+
       {/* ═══════════════ GALLERY ═══════════════ */}
       <section id="gallery" className="py-20" style={{ background: "var(--gf-cream)" }}>
         <div className="max-w-7xl mx-auto px-6">
