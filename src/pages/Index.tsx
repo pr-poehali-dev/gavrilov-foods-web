@@ -806,52 +806,244 @@ export default function Index() {
       </section>
 
       {/* ═══════════════ ORGANIC / CERTIFICATIONS ═══════════════ */}
-      <section id="organic" className="py-28" style={{ background: "#fff" }}>
+      <section id="organic" className="py-16" style={{ background: "var(--gf-cream)" }}>
         <div className="max-w-7xl mx-auto px-6">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <div className="reveal-left">
-              <div className="img-zoom aspect-square max-w-sm">
-                <img
-                  src={HERO_IMG}
-                  alt="Organic Fields"
-                  className="w-full h-full object-cover"
-                />
+
+          {/* ── Row 1: Hero left + Certified right ── */}
+          <div className="grid lg:grid-cols-2 gap-6 mb-6">
+
+            {/* Left: dark hero card */}
+            <div
+              className="relative rounded-sm overflow-hidden reveal-left"
+              style={{ minHeight: 340 }}
+            >
+              <img
+                src={HERO_IMG}
+                alt="Organic Fields"
+                className="absolute inset-0 w-full h-full object-cover"
+                style={{ opacity: 0.55 }}
+              />
+              <div
+                className="absolute inset-0"
+                style={{ background: "linear-gradient(135deg, rgba(14,26,15,0.92) 40%, rgba(14,26,15,0.55) 100%)" }}
+              />
+              <div className="relative z-10 p-10 flex flex-col justify-between h-full" style={{ minHeight: 340 }}>
+                <div>
+                  <div className="text-[10px] font-bold uppercase tracking-widest mb-4 font-montserrat" style={{ color: "var(--gf-gold)" }}>
+                    Organic & Conventional
+                  </div>
+                  <h2
+                    className="font-cormorant font-semibold text-white leading-tight mb-4"
+                    style={{ fontSize: "clamp(32px, 3.5vw, 52px)" }}
+                  >
+                    Organic &<br />
+                    <span style={{ color: "var(--gf-gold)", fontStyle: "italic" }}>Conventional Options</span>
+                  </h2>
+                  <div className="w-10 h-0.5 mb-5" style={{ background: "var(--gf-gold)" }} />
+                  <p className="text-white/65 text-[14px] leading-relaxed max-w-xs font-montserrat">
+                    We meet your needs with flexibility and care at every step.
+                  </p>
+                </div>
+
+                {/* Bottom info box */}
+                <div
+                  className="mt-8 flex items-center gap-4 p-4"
+                  style={{ border: "1px solid rgba(201,151,58,0.4)", background: "rgba(201,151,58,0.07)" }}
+                >
+                  <Icon name="Leaf" size={28} style={{ color: "var(--gf-gold)", flexShrink: 0 }} />
+                  <p className="text-white/75 text-[13px] leading-snug font-montserrat">
+                    Organic & Conventional options available —<br />we meet your needs with flexibility and care.
+                  </p>
+                </div>
               </div>
             </div>
-            <div className="reveal-right">
-              <div className="section-label mb-6">Organic & Certifications</div>
-              <h2
-                className="font-cormorant font-light leading-tight mb-6"
-                style={{ fontSize: "clamp(32px, 3vw, 50px)", color: "var(--gf-dark)" }}
-              >
-                EU Organic Certified
-                <br />
-                <span style={{ color: "var(--gf-gold)", fontStyle: "italic" }}>for Global Markets</span>
-              </h2>
-              <p className="text-[15px] leading-relaxed mb-8" style={{ color: "var(--gf-text-light)" }}>
-                Our products meet the highest international food safety and organic standards. All export documentation is handled professionally and quickly.
-              </p>
 
-              <div className="space-y-4">
+            {/* Right: certified panel */}
+            <div className="reveal-right flex flex-col gap-5">
+              {/* Top label */}
+              <div className="flex items-center gap-3">
+                <span style={{ color: "var(--gf-gold)", fontSize: "11px", letterSpacing: "0.2em", fontFamily: "Montserrat", fontWeight: 700, textTransform: "uppercase" }}>
+                  Certified Organic
+                </span>
+                <span style={{ display: "block", width: 40, height: 1, background: "var(--gf-gold)" }} />
+              </div>
+
+              <h2
+                className="font-cormorant leading-tight"
+                style={{ fontSize: "clamp(30px, 3vw, 48px)", color: "var(--gf-dark)", fontWeight: 400 }}
+              >
+                Healthy products —<br />
+                <span style={{ fontStyle: "italic", fontWeight: 400 }}>healthy planet</span>
+              </h2>
+
+              {/* Checkmarks */}
+              <div className="space-y-3">
                 {[
-                  { icon: "ShieldCheck", title: "EU Organic Certification", desc: "Certified organic products for global markets." },
-                  { icon: "FlaskConical", title: "Lab Tested Quality", desc: "Every batch tested and documented." },
-                  { icon: "FileCheck", title: "Food Safety Standards", desc: "HACCP and international compliance." },
-                  { icon: "Globe", title: "Export Documentation", desc: "Full EU export docs handled within 24h." },
-                ].map((c, i) => (
-                  <div key={i} className="flex items-start gap-4 p-4" style={{ background: "var(--gf-cream)", border: "1px solid rgba(0,0,0,0.05)" }}>
+                  "EU Organic Certified",
+                  "Traceable from field to final product",
+                  "Sustainable farming practices",
+                  "Available in organic grains, pulses and oilseeds",
+                ].map((item, i) => (
+                  <div key={i} className="flex items-center gap-3">
                     <div
-                      className="w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0"
+                      className="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0"
                       style={{ background: "var(--gf-dark)" }}
                     >
-                      <Icon name={c.icon} size={16} style={{ color: "var(--gf-gold)" }} />
+                      <Icon name="Check" size={13} style={{ color: "var(--gf-gold)" }} />
                     </div>
-                    <div>
-                      <div className="font-montserrat text-sm font-semibold mb-1" style={{ color: "var(--gf-dark)" }}>
-                        {c.title}
+                    <span className="text-[14px] font-montserrat" style={{ color: "var(--gf-text)" }}>{item}</span>
+                  </div>
+                ))}
+              </div>
+
+              {/* EU Organic certified badge */}
+              <div
+                className="flex items-center gap-4 p-4 mt-2"
+                style={{ background: "#fff", border: "1px solid rgba(0,0,0,0.07)" }}
+              >
+                <img
+                  src="https://cdn.poehali.dev/files/e0686aa0-2df7-454a-b318-5e843ea52142.png"
+                  alt="EU Organic Certified"
+                  className="w-16 h-12 object-contain flex-shrink-0"
+                />
+                <div>
+                  <div className="font-montserrat font-bold text-[13px] uppercase tracking-wide mb-0.5" style={{ color: "var(--gf-dark)" }}>
+                    EU Organic Certified
+                  </div>
+                  <div className="text-[12px] font-montserrat" style={{ color: "var(--gf-text-light)" }}>
+                    Available in organic grains, pulses and oilseeds
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* ── Row 2: Organic products grid ── */}
+          <div className="mb-6 reveal">
+            <div className="flex items-center gap-4 mb-5 justify-center">
+              <span style={{ display: "block", width: 40, height: 1, background: "var(--gf-gold)" }} />
+              <span style={{ color: "var(--gf-gold)", fontSize: "11px", letterSpacing: "0.2em", fontFamily: "Montserrat", fontWeight: 700, textTransform: "uppercase" }}>
+                Our Organic Products
+              </span>
+              <span style={{ display: "block", width: 40, height: 1, background: "var(--gf-gold)" }} />
+            </div>
+
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+              {/* 4 organic product cards */}
+              {[
+                { name: "BUCKWHEAT", packaging: "25 kg / 50 kg / Big Bag", img: "https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/files/49906ef7-211c-4d64-beae-004e3518ef74.jpg" },
+                { name: "GREEN BUCKWHEAT", packaging: "25 kg / 50 kg / Big Bag", img: "https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/files/bb689ed8-ee56-4684-b396-e560a076588f.jpg" },
+                { name: "BUCKWHEAT FLOUR", packaging: "25 kg bags", img: "https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/files/5aa6f984-f5f5-4f4e-afe2-85e236e0a871.jpg" },
+                { name: "OAT FLAKES", packaging: "25 kg / 50 kg / Big Bag", img: "https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/files/4e313381-f7ae-4934-8263-19f31994775f.jpg" },
+              ].map((p, i) => (
+                <div key={i} className="product-card bg-white" style={{ border: "1px solid rgba(0,0,0,0.07)" }}>
+                  <div className="relative aspect-[4/3] img-zoom overflow-hidden">
+                    <img src={p.img} alt={p.name} className="w-full h-full object-cover" />
+                    <img
+                      src="https://cdn.poehali.dev/files/e0686aa0-2df7-454a-b318-5e843ea52142.png"
+                      alt="EU Organic"
+                      className="absolute top-2 right-2 w-8 h-8 object-contain"
+                    />
+                  </div>
+                  <div className="p-3">
+                    <div className="font-montserrat font-bold text-[11px] tracking-wide mb-2" style={{ color: "var(--gf-dark)" }}>
+                      {p.name}
+                    </div>
+                    <div className="flex items-center gap-1.5 mb-1">
+                      <Icon name="Leaf" size={11} style={{ color: "var(--gf-text-light)", flexShrink: 0 }} />
+                      <span className="text-[11px] font-montserrat" style={{ color: "var(--gf-text-light)" }}>Organic</span>
+                    </div>
+                    <div className="flex items-center gap-1.5 mb-2">
+                      <Icon name="Package" size={11} style={{ color: "var(--gf-text-light)", flexShrink: 0 }} />
+                      <span className="text-[11px] font-montserrat" style={{ color: "var(--gf-text-light)" }}>{p.packaging}</span>
+                    </div>
+                    <div className="text-[11px] font-bold font-montserrat" style={{ color: "var(--gf-gold)" }}>
+                      MOQ from 1 MT
+                    </div>
+                  </div>
+                </div>
+              ))}
+
+              {/* 5th: Conventional range card */}
+              <div
+                className="product-card flex flex-col justify-between p-5"
+                style={{ background: "#fff", border: "1px solid rgba(0,0,0,0.07)" }}
+              >
+                <div>
+                  <div className="font-montserrat font-bold text-[12px] uppercase tracking-wide mb-4" style={{ color: "var(--gf-dark)" }}>
+                    Conventional Range
+                  </div>
+                  <Icon name="Wheat" size={36} style={{ color: "var(--gf-dark)", strokeWidth: 1, marginBottom: 12 }} />
+                  <p className="text-[12px] leading-relaxed font-montserrat mb-4" style={{ color: "var(--gf-text-light)" }}>
+                    We also supply a wide range of conventional grains, pulses and oilseeds. Consistent quality. Reliable supply.
+                  </p>
+                </div>
+                <button
+                  className="btn-outline-dark text-[11px] py-2.5 px-4 w-full justify-center"
+                  onClick={() => document.querySelector("#products")?.scrollIntoView({ behavior: "smooth" })}
+                >
+                  View All Products <Icon name="ArrowRight" size={13} />
+                </button>
+              </div>
+            </div>
+          </div>
+
+          {/* ── Row 3: From Field to Your Table ── */}
+          <div className="reveal" style={{ background: "#fff", border: "1px solid rgba(0,0,0,0.07)" }}>
+            <div className="p-6 border-b" style={{ borderColor: "rgba(0,0,0,0.06)" }}>
+              <div className="text-center">
+                <div className="flex items-center justify-center gap-3 mb-1">
+                  <span style={{ color: "var(--gf-gold)", fontSize: "11px", letterSpacing: "0.2em", fontFamily: "Montserrat", fontWeight: 700, textTransform: "uppercase" }}>
+                    From Field to Your Table
+                  </span>
+                </div>
+                <p className="text-[13px] font-montserrat" style={{ color: "var(--gf-text-light)" }}>
+                  Full control of the supply chain ensures consistent quality, traceability and reliability.
+                </p>
+              </div>
+            </div>
+
+            <div className="grid lg:grid-cols-2">
+              {/* Left: 5 icons */}
+              <div className="p-6 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-5 items-start border-r" style={{ borderColor: "rgba(0,0,0,0.06)" }}>
+                {[
+                  { icon: "Sun", title: "10,000 ha", desc: "own farmland full control" },
+                  { icon: "Tractor", title: "Carefully", desc: "cultivated and harvested" },
+                  { icon: "Factory", title: "Modern", desc: "processing facilities" },
+                  { icon: "ScanLine", title: "Strict quality", desc: "control at every stage" },
+                  { icon: "Ship", title: "Reliable", desc: "logistics to global markets" },
+                ].map((f, i) => (
+                  <div key={i} className="flex flex-col items-center text-center gap-2">
+                    <Icon name={f.icon} size={32} style={{ color: "var(--gf-dark)", strokeWidth: 1.2 }} />
+                    <div className="font-montserrat font-bold text-[11px]" style={{ color: "var(--gf-dark)" }}>{f.title}</div>
+                    <div className="text-[10px] font-montserrat leading-tight" style={{ color: "var(--gf-text-light)" }}>{f.desc}</div>
+                  </div>
+                ))}
+              </div>
+
+              {/* Right: 5 image tiles with arrow */}
+              <div className="grid grid-cols-5">
+                {[
+                  { img: HERO_IMG, label: "FARMLAND" },
+                  { img: FACTORY_IMG, label: "CLEANING & PROCESSING" },
+                  { img: PRODUCTS_IMG, label: "BIG BAG PACKAGING" },
+                  { img: "https://cdn.poehali.dev/files/aa315ecd-ab40-456e-b4e3-27b8a8922be0.jpg", label: "LOADING & SHIPPING" },
+                  { img: "https://cdn.poehali.dev/files/6091b637-471c-4c76-8754-e23440225289.jpg", label: "GLOBAL DELIVERY" },
+                ].map((t, i) => (
+                  <div key={i} className="relative img-zoom overflow-hidden" style={{ minHeight: 160 }}>
+                    <img src={t.img} alt={t.label} className="absolute inset-0 w-full h-full object-cover" />
+                    <div className="absolute inset-0" style={{ background: "rgba(14,26,15,0.5)" }} />
+                    {i < 4 && (
+                      <div
+                        className="absolute right-0 top-1/2 -translate-y-1/2 z-10 w-6 h-6 rounded-full flex items-center justify-center"
+                        style={{ background: "var(--gf-gold)", transform: "translateY(-50%) translateX(50%)" }}
+                      >
+                        <Icon name="ChevronRight" size={13} style={{ color: "#0e1a0f" }} />
                       </div>
-                      <div className="text-xs" style={{ color: "var(--gf-text-light)" }}>
-                        {c.desc}
+                    )}
+                    <div className="absolute bottom-0 left-0 right-0 p-2 z-10">
+                      <div className="text-white font-montserrat font-bold text-[9px] uppercase tracking-wide leading-tight text-center">
+                        {t.label}
                       </div>
                     </div>
                   </div>
@@ -859,6 +1051,44 @@ export default function Index() {
               </div>
             </div>
           </div>
+
+          {/* ── Row 4: Download CTA ── */}
+          <div
+            className="mt-6 p-6 flex flex-col md:flex-row items-center justify-between gap-6 reveal"
+            style={{ background: "#fff", border: "1px solid rgba(0,0,0,0.07)" }}
+          >
+            <div className="flex items-center gap-5">
+              <div
+                className="w-14 h-14 rounded-full flex items-center justify-center flex-shrink-0"
+                style={{ background: "var(--gf-dark)" }}
+              >
+                <Icon name="FileText" size={22} style={{ color: "var(--gf-gold)" }} />
+              </div>
+              <div>
+                <div className="font-cormorant font-semibold text-xl mb-0.5" style={{ color: "var(--gf-dark)" }}>
+                  Download Organic Certificate / Specification
+                </div>
+                <div className="text-[12px] font-montserrat" style={{ color: "var(--gf-text-light)" }}>
+                  Get documentation, specifications and availability for organic products.
+                </div>
+              </div>
+            </div>
+            <div className="flex items-center gap-4 flex-shrink-0">
+              <button
+                className="btn-gold"
+                onClick={() => document.querySelector("#contact")?.scrollIntoView({ behavior: "smooth" })}
+              >
+                <Icon name="Download" size={16} />
+                Download Documents
+              </button>
+              <img
+                src={PRODUCTS_IMG}
+                alt=""
+                className="w-24 h-16 object-cover rounded-sm hidden md:block"
+              />
+            </div>
+          </div>
+
         </div>
       </section>
 
