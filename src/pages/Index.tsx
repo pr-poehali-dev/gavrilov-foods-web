@@ -1307,20 +1307,44 @@ export default function Index() {
 
             <div className="grid grid-cols-3 gap-3" style={{ height: 320 }}>
               {/* Left — combine */}
-              <div className="img-zoom overflow-hidden" style={{ borderRadius: 10 }}>
-                <img src="https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/files/6ba6ab19-4325-41ef-a364-f4b77bfe6de1.jpg" alt="Harvesting" className="w-full h-full object-cover" />
+              <div style={{ borderRadius: 10, overflow: "hidden", position: "relative" }}>
+                <img
+                  src="https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/files/6ba6ab19-4325-41ef-a364-f4b77bfe6de1.jpg"
+                  alt="Harvesting"
+                  style={{ width: "100%", height: "100%", objectFit: "cover", display: "block", transition: "transform 0.6s ease" }}
+                  onMouseEnter={e => (e.currentTarget.style.transform = "scale(1.05)")}
+                  onMouseLeave={e => (e.currentTarget.style.transform = "scale(1)")}
+                />
               </div>
               {/* Center — fields */}
-              <div className="img-zoom overflow-hidden" style={{ borderRadius: 10 }}>
-                <img src={HERO_IMG} alt="Fields" className="w-full h-full object-cover" />
+              <div style={{ borderRadius: 10, overflow: "hidden", position: "relative" }}>
+                <img
+                  src={HERO_IMG}
+                  alt="Fields"
+                  style={{ width: "100%", height: "100%", objectFit: "cover", display: "block", transition: "transform 0.6s ease" }}
+                  onMouseEnter={e => (e.currentTarget.style.transform = "scale(1.05)")}
+                  onMouseLeave={e => (e.currentTarget.style.transform = "scale(1)")}
+                />
               </div>
               {/* Right — two stacked */}
-              <div className="grid grid-rows-2 gap-3">
-                <div className="img-zoom overflow-hidden" style={{ borderRadius: 10 }}>
-                  <img src={PRODUCTS_IMG} alt="Big bags storage" className="w-full h-full object-cover" />
+              <div className="grid grid-rows-2 gap-3" style={{ height: 320 }}>
+                <div style={{ borderRadius: 10, overflow: "hidden", position: "relative" }}>
+                  <img
+                    src={PRODUCTS_IMG}
+                    alt="Big bags storage"
+                    style={{ width: "100%", height: "100%", objectFit: "cover", display: "block", transition: "transform 0.6s ease" }}
+                    onMouseEnter={e => (e.currentTarget.style.transform = "scale(1.05)")}
+                    onMouseLeave={e => (e.currentTarget.style.transform = "scale(1)")}
+                  />
                 </div>
-                <div className="img-zoom overflow-hidden" style={{ borderRadius: 10 }}>
-                  <img src="https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/files/e42071e6-cbc4-4ad0-b451-35723caa640d.jpg" alt="Warehouse" className="w-full h-full object-cover" />
+                <div style={{ borderRadius: 10, overflow: "hidden", position: "relative" }}>
+                  <img
+                    src="https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/files/e42071e6-cbc4-4ad0-b451-35723caa640d.jpg"
+                    alt="Warehouse"
+                    style={{ width: "100%", height: "100%", objectFit: "cover", display: "block", transition: "transform 0.6s ease" }}
+                    onMouseEnter={e => (e.currentTarget.style.transform = "scale(1.05)")}
+                    onMouseLeave={e => (e.currentTarget.style.transform = "scale(1)")}
+                  />
                 </div>
               </div>
             </div>
@@ -1328,7 +1352,7 @@ export default function Index() {
 
           {/* ── 6-step process ── */}
           <div className="mb-10 reveal" style={{ background: "var(--gf-cream)", borderRadius: 12, padding: "32px 28px" }}>
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
               {[
                 { num: "01", title: "Farming", desc: "Cultivation of healthy and strong crops on fertile fields." },
                 { num: "02", title: "Harvesting", desc: "Timely harvesting with modern agricultural machinery." },
@@ -1339,10 +1363,10 @@ export default function Index() {
               ].map((s, i) => (
                 <div key={i} className="flex flex-col">
                   <div className="flex items-center gap-2 mb-2">
-                    <span className="font-montserrat text-[11px] font-light" style={{ color: "var(--gf-text-light)" }}>{s.num}</span>
+                    <span className="font-montserrat text-[13px]" style={{ color: "var(--gf-text-light)" }}>{s.num}</span>
                     {i < 5 && <Icon name="ArrowRight" size={12} style={{ color: "var(--gf-gold)", opacity: 0.5 }} />}
                   </div>
-                  <div className="font-montserrat font-bold text-[12px] uppercase tracking-wide mb-1.5" style={{ color: "var(--gf-dark)" }}>
+                  <div className="font-montserrat font-bold text-[11px] uppercase tracking-wide mb-1.5" style={{ color: "var(--gf-dark)" }}>
                     {s.title}
                   </div>
                   <div className="text-[11px] leading-relaxed font-montserrat" style={{ color: "var(--gf-text-light)" }}>
@@ -1354,42 +1378,57 @@ export default function Index() {
           </div>
 
           {/* ── 3 bottom cards ── */}
-          <div className="grid md:grid-cols-3 gap-4 reveal">
+          <div className="grid md:grid-cols-3 gap-5">
             {[
               {
                 img: "https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/files/de481272-bd65-4d8e-b8fe-9564b8f09e8b.jpg",
                 title: "Advanced Packaging",
                 desc: "Modern equipment allows us to pack products from 200 g to 1000 g with high accuracy and product protection.",
                 btn: "Learn More",
+                target: "#products",
               },
               {
                 img: PRODUCTS_IMG,
                 title: "Flexible Solutions",
                 desc: "We offer a wide range of packaging formats and private label options to support your brand.",
                 btn: "Learn More",
+                target: "#private-label",
               },
               {
                 img: "https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/files/e42071e6-cbc4-4ad0-b451-35723caa640d.jpg",
                 title: "Large Volumes",
                 desc: "Our storage facilities and strong production capacity ensure stable supply and consistent quality.",
                 btn: "Contact Us",
+                target: "#contact",
               },
             ].map((c, i) => (
-              <div key={i} className="reveal flex flex-col overflow-hidden" data-delay={String(i * 80)}
-                style={{ background: "var(--gf-cream)", borderRadius: 10, border: "1px solid rgba(0,0,0,0.06)" }}>
-                <div className="img-zoom aspect-[4/3] overflow-hidden">
-                  <img src={c.img} alt={c.title} className="w-full h-full object-cover" />
+              <div
+                key={i}
+                className="reveal"
+                data-delay={String(i * 80)}
+                style={{ background: "var(--gf-cream)", borderRadius: 10, border: "1px solid rgba(0,0,0,0.06)", overflow: "hidden", display: "flex", flexDirection: "column" }}
+              >
+                {/* Fixed-height image, no absolute positioning */}
+                <div style={{ height: 220, overflow: "hidden", flexShrink: 0 }}>
+                  <img
+                    src={c.img}
+                    alt={c.title}
+                    style={{ width: "100%", height: "100%", objectFit: "cover", display: "block", transition: "transform 0.6s ease" }}
+                    onMouseEnter={e => (e.currentTarget.style.transform = "scale(1.05)")}
+                    onMouseLeave={e => (e.currentTarget.style.transform = "scale(1)")}
+                  />
                 </div>
-                <div className="p-5 flex flex-col flex-1">
+                <div style={{ padding: "20px", display: "flex", flexDirection: "column", flex: 1 }}>
                   <div className="font-montserrat font-bold text-[12px] uppercase tracking-widest mb-2" style={{ color: "var(--gf-dark)" }}>
                     {c.title}
                   </div>
-                  <p className="text-[12px] leading-relaxed font-montserrat mb-5 flex-1" style={{ color: "var(--gf-text-light)" }}>
+                  <p className="text-[12px] leading-relaxed font-montserrat mb-5" style={{ color: "var(--gf-text-light)", flex: 1 }}>
                     {c.desc}
                   </p>
                   <button
-                    className="btn-outline-dark text-[11px] py-2.5 px-5 self-start"
-                    onClick={() => document.querySelector(i === 2 ? "#contact" : "#products")?.scrollIntoView({ behavior: "smooth" })}
+                    className="btn-outline-dark text-[11px] py-2.5 px-5"
+                    style={{ alignSelf: "flex-start" }}
+                    onClick={() => document.querySelector(c.target)?.scrollIntoView({ behavior: "smooth" })}
                   >
                     {c.btn}
                   </button>
