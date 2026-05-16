@@ -1074,7 +1074,7 @@ export default function Index() {
 
             <div className="grid lg:grid-cols-2">
               {/* Left: 5 icons */}
-              <div className="p-6 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-5 items-start border-r" style={{ borderColor: "rgba(0,0,0,0.06)" }}>
+              <div className="p-6 grid grid-cols-3 sm:grid-cols-5 gap-4 items-start border-r" style={{ borderColor: "rgba(0,0,0,0.06)" }}>
                 {[
                   { icon: "Sun", title: "10,000 ha", desc: "own farmland full control" },
                   { icon: "Tractor", title: "Carefully", desc: "cultivated and harvested" },
@@ -1083,40 +1083,42 @@ export default function Index() {
                   { icon: "Ship", title: "Reliable", desc: "logistics to global markets" },
                 ].map((f, i) => (
                   <div key={i} className="flex flex-col items-center text-center gap-2">
-                    <Icon name={f.icon} size={32} style={{ color: "var(--gf-dark)", strokeWidth: 1.2 }} />
+                    <Icon name={f.icon} size={28} style={{ color: "var(--gf-dark)", strokeWidth: 1.2 }} />
                     <div className="font-montserrat font-bold text-[11px]" style={{ color: "var(--gf-dark)" }}>{f.title}</div>
                     <div className="text-[10px] font-montserrat leading-tight" style={{ color: "var(--gf-text-light)" }}>{f.desc}</div>
                   </div>
                 ))}
               </div>
 
-              {/* Right: 5 image tiles with arrow */}
-              <div className="grid grid-cols-5">
-                {[
-                  { img: "https://cdn.poehali.dev/files/4b5a57a3-7cdf-406e-8457-7140c7ed102e.jpg", label: "FARMLAND" },
-                  { img: "https://cdn.poehali.dev/files/3bb96d82-4e91-49da-a437-a8e84c943f7e.jpg", label: "CLEANING & PROCESSING" },
-                  { img: "https://cdn.poehali.dev/files/f11386c9-4001-4940-9b3c-a7cd36827549.jpg", label: "BIG BAG PACKAGING" },
-                  { img: "https://cdn.poehali.dev/files/05634d7e-dba6-4487-8817-f8c6ecf1bf05.jpg", label: "LOADING & SHIPPING" },
-                  { img: "https://cdn.poehali.dev/files/0ef79656-d415-44e0-82f1-f24accc00604.jpg", label: "GLOBAL DELIVERY" },
-                ].map((t, i) => (
-                  <div key={i} className="relative img-zoom overflow-hidden" style={{ minHeight: 160 }}>
-                    <img src={t.img} alt={t.label} className="absolute inset-0 w-full h-full object-cover" />
-                    <div className="absolute inset-0" style={{ background: "rgba(14,26,15,0.5)" }} />
-                    {i < 4 && (
-                      <div
-                        className="absolute right-0 top-1/2 -translate-y-1/2 z-10 w-6 h-6 rounded-full flex items-center justify-center"
-                        style={{ background: "var(--gf-gold)", transform: "translateY(-50%) translateX(50%)" }}
-                      >
-                        <Icon name="ChevronRight" size={13} style={{ color: "#0e1a0f" }} />
-                      </div>
-                    )}
-                    <div className="absolute bottom-0 left-0 right-0 p-2 z-10">
-                      <div className="text-white font-montserrat font-bold text-[9px] uppercase tracking-wide leading-tight text-center">
-                        {t.label}
+              {/* Right: 5 image tiles — horizontal scroll on mobile */}
+              <div className="overflow-x-auto">
+                <div style={{ display: "grid", gridTemplateColumns: "repeat(5, minmax(130px, 1fr))", minWidth: 420 }}>
+                  {[
+                    { img: "https://cdn.poehali.dev/files/4b5a57a3-7cdf-406e-8457-7140c7ed102e.jpg", label: "FARMLAND" },
+                    { img: "https://cdn.poehali.dev/files/3bb96d82-4e91-49da-a437-a8e84c943f7e.jpg", label: "CLEANING & PROCESSING" },
+                    { img: "https://cdn.poehali.dev/files/f11386c9-4001-4940-9b3c-a7cd36827549.jpg", label: "BIG BAG PACKAGING" },
+                    { img: "https://cdn.poehali.dev/files/6ebe549e-c65d-458a-9a25-7388c52a2e06.jpg", label: "LOADING & SHIPPING" },
+                    { img: "https://cdn.poehali.dev/files/0ef79656-d415-44e0-82f1-f24accc00604.jpg", label: "GLOBAL DELIVERY" },
+                  ].map((t, i) => (
+                    <div key={i} className="relative img-zoom overflow-hidden" style={{ height: 180 }}>
+                      <img src={t.img} alt={t.label} className="absolute inset-0 w-full h-full object-cover" />
+                      <div className="absolute inset-0" style={{ background: "rgba(14,26,15,0.5)" }} />
+                      {i < 4 && (
+                        <div
+                          className="absolute right-0 top-1/2 z-10 w-5 h-5 rounded-full hidden sm:flex items-center justify-center"
+                          style={{ background: "var(--gf-gold)", transform: "translateY(-50%) translateX(50%)" }}
+                        >
+                          <Icon name="ChevronRight" size={11} style={{ color: "#0e1a0f" }} />
+                        </div>
+                      )}
+                      <div className="absolute bottom-0 left-0 right-0 px-2 py-3 z-10" style={{ background: "linear-gradient(to top, rgba(14,26,15,0.85) 0%, transparent 100%)" }}>
+                        <div className="text-white font-montserrat font-bold uppercase leading-tight text-center" style={{ fontSize: 9, letterSpacing: "0.06em" }}>
+                          {t.label}
+                        </div>
                       </div>
                     </div>
-                  </div>
-                ))}
+                  ))}
+                </div>
               </div>
             </div>
           </div>
@@ -2087,7 +2089,7 @@ export default function Index() {
 
         {/* ── 5 feature badges ── */}
         <div style={{ background: "#fff", borderTop: "1px solid rgba(0,0,0,0.07)", borderBottom: "1px solid rgba(0,0,0,0.07)" }}>
-          <div className="max-w-7xl mx-auto px-6" style={{ display: "grid", gridTemplateColumns: "repeat(5,1fr)", gap: 0 }}>
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5">
             {[
               { img: "https://cdn.poehali.dev/files/e0686aa0-2df7-454a-b318-5e843ea52142.png", isImg: true, title: "EU Organic Certified", desc: "Certified organic products for global markets." },
               { icon: "Package", title: "MOQ from 1 MT", desc: "Flexible minimum order quantity from 1 MT." },
@@ -2095,15 +2097,15 @@ export default function Index() {
               { icon: "FileText", title: "Export Support", desc: "Full documentation and logistics support at every step." },
               { icon: "Clock", title: "Fast Response", desc: "We reply within 24 hours on business days." },
             ].map((b, i) => (
-              <div key={i} style={{ padding: "20px 20px", borderRight: i < 4 ? "1px solid rgba(0,0,0,0.07)" : "none", display: "flex", alignItems: "flex-start", gap: 12 }}>
+              <div key={i} style={{ padding: "16px 16px", borderRight: "none", borderBottom: "1px solid rgba(0,0,0,0.07)", display: "flex", alignItems: "flex-start", gap: 10 }}>
                 {b.isImg ? (
-                  <img src={b.img} alt="EU Organic" style={{ width: 36, height: 28, objectFit: "contain", flexShrink: 0, marginTop: 4 }} />
+                  <img src={(b as {img: string; isImg: boolean; title: string; desc: string}).img} alt="EU Organic" style={{ width: 32, height: 26, objectFit: "contain", flexShrink: 0, marginTop: 3 }} />
                 ) : (
-                  <Icon name={b.icon!} size={28} style={{ color: "var(--gf-dark)", strokeWidth: 1.1, flexShrink: 0 }} />
+                  <Icon name={(b as {icon: string; title: string; desc: string}).icon} size={24} style={{ color: "var(--gf-dark)", strokeWidth: 1.1, flexShrink: 0 }} />
                 )}
                 <div>
-                  <div style={{ fontFamily: "Montserrat", fontWeight: 700, fontSize: 11, textTransform: "uppercase", letterSpacing: "0.06em", color: "var(--gf-dark)", marginBottom: 4 }}>{b.title}</div>
-                  <div style={{ fontFamily: "Montserrat", fontSize: 11, color: "var(--gf-text-light)", lineHeight: 1.4 }}>{b.desc}</div>
+                  <div style={{ fontFamily: "Montserrat", fontWeight: 700, fontSize: 10, textTransform: "uppercase", letterSpacing: "0.06em", color: "var(--gf-dark)", marginBottom: 3 }}>{b.title}</div>
+                  <div style={{ fontFamily: "Montserrat", fontSize: 10, color: "var(--gf-text-light)", lineHeight: 1.4 }}>{b.desc}</div>
                 </div>
               </div>
             ))}
