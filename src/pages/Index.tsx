@@ -259,109 +259,136 @@ export default function Index() {
       </header>
 
       {/* ═══════════════ HERO ═══════════════ */}
-      <section
-        id="hero"
-        className="relative min-h-screen flex items-end grain-overlay"
-        style={{ background: "var(--gf-dark)" }}
-      >
-        <div className="absolute inset-0 img-zoom">
-          <img
-            src={HERO_IMG}
-            alt="Gavrilov Fields"
-            className="w-full h-full object-cover"
-            style={{ opacity: 0.45 }}
-          />
-        </div>
-        <div
-          className="absolute inset-0"
-          style={{
-            background: "linear-gradient(to top, rgba(14,26,15,0.95) 0%, rgba(14,26,15,0.3) 50%, rgba(14,26,15,0.6) 100%)",
-          }}
-        />
+      <section id="hero" style={{ position: "relative", background: "#0d1a0e" }}>
 
-        <div className="relative z-10 max-w-7xl mx-auto px-6 pb-20 pt-32 w-full">
-          <div className="max-w-3xl">
-            <div className="section-label mb-6 animate-fade-up">From Smolensk Region to the World</div>
-            <h1
-              className="font-cormorant font-light leading-[1.05] mb-6 text-white animate-fade-up delay-100"
-              style={{ fontSize: "clamp(52px, 7vw, 96px)" }}
-            >
-              Premium Grain
-              <br />
-              <span style={{ color: "var(--gf-gold)", fontStyle: "italic" }}>Export</span> Partner
-            </h1>
-            <p
-              className="text-white/65 font-montserrat font-light mb-10 max-w-xl animate-fade-up delay-200"
-              style={{ fontSize: "16px", lineHeight: "1.75" }}
-            >
-              We grow, process and export premium organic grains — buckwheat, soybeans, lentils and more.
-              EU certified. 10,000 ha own farmland. Worldwide supply.
-            </p>
-            <div className="flex flex-wrap gap-4 animate-fade-up delay-300">
-              <button className="btn-gold" onClick={() => document.querySelector("#contact")?.scrollIntoView({ behavior: "smooth" })}>
-                Request Export Offer <Icon name="ArrowRight" size={16} />
-              </button>
-              <button className="btn-outline-white" onClick={() => document.querySelector("#products")?.scrollIntoView({ behavior: "smooth" })}>
-                View Products
-              </button>
+        {/* Fixed floating buttons right side */}
+        <div style={{ position: "fixed", right: 0, top: "50%", transform: "translateY(-50%)", zIndex: 100, display: "flex", flexDirection: "column", gap: 4 }}>
+          <button
+            onClick={() => document.querySelector("#contact")?.scrollIntoView({ behavior: "smooth" })}
+            style={{ background: "var(--gf-dark)", color: "#fff", border: "none", cursor: "pointer", padding: "14px 12px", display: "flex", flexDirection: "column", alignItems: "center", gap: 6, width: 72, textAlign: "center" }}
+          >
+            <Icon name="FileText" size={20} style={{ color: "var(--gf-gold)" }} />
+            <span style={{ fontFamily: "Montserrat", fontSize: 9, fontWeight: 600, lineHeight: 1.3, color: "#fff" }}>Download<br />Company<br />Profile</span>
+          </button>
+          <a
+            href="https://wa.me/79037901795"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ background: "#25D366", color: "#fff", textDecoration: "none", padding: "14px 12px", display: "flex", flexDirection: "column", alignItems: "center", gap: 6, width: 72, textAlign: "center" }}
+          >
+            <Icon name="MessageCircle" size={20} style={{ color: "#fff" }} />
+            <span style={{ fontFamily: "Montserrat", fontSize: 9, fontWeight: 600, lineHeight: 1.3 }}>WhatsApp<br />Export<br />Manager</span>
+          </a>
+        </div>
+
+        {/* Main hero image block */}
+        <div style={{ position: "relative", minHeight: "calc(100vh - 64px)", overflow: "hidden" }}>
+          <img
+            src="https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/files/6341fdb7-7079-43b0-b75c-5c9825af902a.jpg"
+            alt="Gavrilov Foods grain silos"
+            style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "center" }}
+          />
+          {/* Gradient: strong left dark → transparent right */}
+          <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to right, rgba(10,16,10,0.97) 0%, rgba(10,16,10,0.82) 40%, rgba(10,16,10,0.35) 70%, rgba(10,16,10,0.1) 100%)" }} />
+          <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, rgba(10,16,10,0.6) 0%, transparent 40%)" }} />
+
+          {/* Content */}
+          <div className="max-w-7xl mx-auto px-6" style={{ position: "relative", zIndex: 2, paddingTop: 80, paddingBottom: 48, minHeight: "calc(100vh - 64px)", display: "flex", flexDirection: "column", justifyContent: "center" }}>
+            <div style={{ maxWidth: 560 }}>
+              {/* Label */}
+              <div className="animate-fade-up" style={{ fontFamily: "Montserrat", fontWeight: 700, fontSize: 11, letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--gf-gold)", marginBottom: 16 }}>
+                Farm to Export
+              </div>
+
+              {/* H1 */}
+              <h1 className="animate-fade-up delay-100" style={{ fontFamily: "Montserrat", fontWeight: 800, fontSize: "clamp(36px, 5vw, 68px)", lineHeight: 1.1, color: "#fff", marginBottom: 0 }}>
+                EU Certified<br />
+                <span style={{ color: "var(--gf-gold)" }}>Organic & Conventional</span><br />
+                Grain Supplier
+              </h1>
+
+              {/* Underline */}
+              <div className="animate-fade-up delay-200" style={{ width: 48, height: 2, background: "var(--gf-gold)", margin: "20px 0" }} />
+
+              {/* Subtitle */}
+              <p className="animate-fade-up delay-200" style={{ fontFamily: "Montserrat", fontSize: 15, color: "rgba(255,255,255,0.7)", lineHeight: 1.65, marginBottom: 24 }}>
+                Reliable Russian grains, pulses & oilseeds<br />for international markets.
+              </p>
+
+              {/* 6 checkmarks in 2 cols */}
+              <div className="animate-fade-up delay-300" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "8px 24px", marginBottom: 32 }}>
+                {[
+                  "EU Organic Certified",
+                  "Direct from Producer",
+                  "Flexible Logistics",
+                  "Full Export Support",
+                  "Bulk & Private Label",
+                  "Quality You Can Trust",
+                ].map((item, i) => (
+                  <div key={i} style={{ display: "flex", alignItems: "center", gap: 8 }}>
+                    <div style={{ width: 18, height: 18, borderRadius: "50%", background: "rgba(201,151,58,0.25)", border: "1px solid var(--gf-gold)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
+                      <Icon name="Check" size={10} style={{ color: "var(--gf-gold)" }} />
+                    </div>
+                    <span style={{ fontFamily: "Montserrat", fontSize: 13, color: "rgba(255,255,255,0.8)" }}>{item}</span>
+                  </div>
+                ))}
+              </div>
+
+              {/* Buttons */}
+              <div className="animate-fade-up delay-400" style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
+                <button
+                  className="btn-gold"
+                  onClick={() => document.querySelector("#products")?.scrollIntoView({ behavior: "smooth" })}
+                >
+                  View Products <Icon name="ArrowRight" size={16} />
+                </button>
+                <button
+                  className="btn-outline-white"
+                  onClick={() => document.querySelector("#contact")?.scrollIntoView({ behavior: "smooth" })}
+                >
+                  Request Export Offer
+                </button>
+              </div>
             </div>
           </div>
-
-          {/* Stats bar */}
-          <div
-            className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-px animate-fade-up delay-500"
-            style={{ borderTop: "1px solid rgba(201,151,58,0.25)" }}
-          >
-            {[
-              { val: "10,000 ha", label: "Own Farmland" },
-              { val: "5,000 m²", label: "Warehouse" },
-              { val: "20+ countries", label: "Export Markets" },
-              { val: "EU Certified", label: "Organic" },
-            ].map((s, i) => (
-              <div key={i} className="pt-6 pr-8">
-                <div className="font-cormorant font-semibold text-3xl" style={{ color: "var(--gf-gold)" }}>
-                  {s.val}
-                </div>
-                <div className="text-white/50 text-xs uppercase tracking-widest mt-1 font-montserrat">
-                  {s.label}
-                </div>
-              </div>
-            ))}
-          </div>
         </div>
 
-        {/* Scroll indicator */}
-        <div className="absolute bottom-8 right-8 z-10 animate-fade-up delay-700">
-          <div className="flex flex-col items-center gap-2">
-            <div className="text-white/30 text-[10px] uppercase tracking-widest font-montserrat">Scroll</div>
-            <div className="w-px h-12 bg-gradient-to-b from-transparent via-gold to-transparent" style={{ background: "linear-gradient(to bottom, transparent, var(--gf-gold), transparent)" }} />
+        {/* ── Bottom stats bar ── */}
+        <div style={{ background: "rgba(8,14,8,0.97)", borderTop: "1px solid rgba(201,151,58,0.2)" }}>
+          <div className="max-w-7xl mx-auto px-6">
+            <div style={{ display: "grid", gridTemplateColumns: "1.4fr 1fr 1.3fr 1.3fr 1fr", gap: 0 }}>
+              {/* EU Organic block */}
+              <div style={{ padding: "18px 20px 18px 0", borderRight: "1px solid rgba(255,255,255,0.08)", display: "flex", alignItems: "center", gap: 14 }}>
+                <img
+                  src="https://cdn.poehali.dev/files/e0686aa0-2df7-454a-b318-5e843ea52142.png"
+                  alt="EU Organic"
+                  style={{ width: 48, height: 38, objectFit: "contain", flexShrink: 0 }}
+                />
+                <div>
+                  <div style={{ fontFamily: "Montserrat", fontWeight: 700, fontSize: 10, textTransform: "uppercase", letterSpacing: "0.1em", color: "var(--gf-gold)", marginBottom: 2 }}>EU Organic Certified</div>
+                  <div style={{ fontFamily: "Montserrat", fontSize: 10, color: "rgba(255,255,255,0.45)", lineHeight: 1.4 }}>Full traceability<br />Farm → Processing → Export</div>
+                </div>
+              </div>
+
+              {/* 4 stats */}
+              {[
+                { icon: "Tractor", val: "10,000+ ha", label: "Farmland" },
+                { icon: "Warehouse", val: "10,000 – 15,000 MT", label: "Annual Production" },
+                { icon: "Ship", val: "5,000 – 10,000 MT", label: "Annual Export Volume" },
+                { icon: "Globe", val: "EXPORT MARKETS", label: "Europe & China" },
+              ].map((s, i) => (
+                <div key={i} style={{ padding: "18px 20px", borderRight: i < 3 ? "1px solid rgba(255,255,255,0.08)" : "none", display: "flex", alignItems: "center", gap: 12 }}>
+                  <Icon name={s.icon} size={28} style={{ color: "var(--gf-gold)", strokeWidth: 1.2, flexShrink: 0 }} />
+                  <div>
+                    <div style={{ fontFamily: "Montserrat", fontWeight: 700, fontSize: 13, color: "var(--gf-gold)", lineHeight: 1.1 }}>{s.val}</div>
+                    <div style={{ fontFamily: "Montserrat", fontSize: 10, color: "rgba(255,255,255,0.5)", marginTop: 3, textTransform: "uppercase", letterSpacing: "0.06em" }}>{s.label}</div>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
-
-      {/* ═══════════════ TRUST BAR ═══════════════ */}
-      <div style={{ background: "var(--gf-dark-2)" }}>
-        <div className="max-w-7xl mx-auto px-6 py-5">
-          <div className="flex flex-wrap justify-between gap-6">
-            {trustItems.map((t, i) => (
-              <div key={i} className="flex items-center gap-3 reveal" data-delay={String(i * 80)}>
-                <div
-                  className="w-9 h-9 rounded-full flex items-center justify-center flex-shrink-0"
-                  style={{ background: "rgba(201,151,58,0.15)", border: "1px solid rgba(201,151,58,0.3)" }}
-                >
-                  <Icon name={t.icon} size={15} style={{ color: "var(--gf-gold)" }} />
-                </div>
-                <div>
-                  <div className="text-white text-xs font-semibold uppercase tracking-wide font-montserrat">
-                    {t.label}
-                  </div>
-                  <div className="text-white/45 text-xs">{t.desc}</div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
 
       {/* ═══════════════ ABOUT ═══════════════ */}
       <section id="about" className="py-28" style={{ background: "var(--gf-cream)" }}>
