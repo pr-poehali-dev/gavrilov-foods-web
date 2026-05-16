@@ -1921,7 +1921,7 @@ export default function Index() {
           <div className="max-w-7xl mx-auto px-6" style={{ position: "relative", zIndex: 1, paddingTop: 48, paddingBottom: 32 }}>
             <h2 style={{ fontFamily: "Cormorant Garamond, serif", fontSize: "clamp(36px, 5vw, 66px)", fontWeight: 400, color: "var(--gf-dark)", lineHeight: 1.1, marginBottom: 12 }}>
               Request<br />
-              <span style={{ color: "var(--gf-gold)", fontStyle: "italic" }}>Export Offer</span>
+              <span style={{ color: "var(--gf-gold)", fontStyle: "italic" }}>Request a Quote</span>
             </h2>
             <div style={{ width: 40, height: 2, background: "var(--gf-gold)", marginBottom: 14 }} />
             <p style={{ fontFamily: "Montserrat", fontSize: 14, color: "var(--gf-dark)", lineHeight: 1.65, maxWidth: 420 }}>
