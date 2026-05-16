@@ -179,6 +179,7 @@ export default function Index() {
   useScrollReveal();
   const [mobileOpen, setMobileOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [agreed, setAgreed] = useState(false);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 60);
@@ -2007,16 +2008,44 @@ export default function Index() {
               </div>
             </div>
 
+            {/* Checkbox agreement */}
+            <div style={{ marginTop: 16, display: "flex", alignItems: "flex-start", gap: 10 }}>
+              <div
+                onClick={() => setAgreed(!agreed)}
+                style={{
+                  width: 18, height: 18, borderRadius: 3, border: `1.5px solid ${agreed ? "var(--gf-gold)" : "rgba(255,255,255,0.3)"}`,
+                  background: agreed ? "var(--gf-gold)" : "transparent",
+                  display: "flex", alignItems: "center", justifyContent: "center",
+                  cursor: "pointer", flexShrink: 0, marginTop: 1, transition: "all 0.2s"
+                }}
+              >
+                {agreed && <Icon name="Check" size={11} style={{ color: "#0e1a0f" }} />}
+              </div>
+              <span style={{ fontFamily: "Montserrat", fontSize: 12, color: "rgba(255,255,255,0.5)", lineHeight: 1.5 }}>
+                I agree to the{" "}
+                <a href="/privacy-policy" target="_blank" style={{ color: "var(--gf-gold)", textDecoration: "underline" }}>Privacy Policy</a>
+                {" "}and{" "}
+                <a href="/terms" target="_blank" style={{ color: "var(--gf-gold)", textDecoration: "underline" }}>Terms & Conditions</a>
+                {" "}of Gavrilov Foods and consent to the processing of my personal data for export inquiry purposes.
+              </span>
+            </div>
+
             {/* CTA buttons */}
-            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12, marginTop: 20 }}>
-              <button className="btn-gold" style={{ justifyContent: "center", fontSize: 13, padding: "14px 24px" }}>
+            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12, marginTop: 14 }}>
+              <button
+                className="btn-gold"
+                style={{ justifyContent: "center", fontSize: 13, padding: "14px 24px", opacity: agreed ? 1 : 0.4, cursor: agreed ? "pointer" : "not-allowed" }}
+                disabled={!agreed}
+                title={!agreed ? "Please accept the Privacy Policy and Terms to continue" : ""}
+              >
                 Request Export Offer <Icon name="ArrowRight" size={16} />
               </button>
               <a
-                href="https://wa.me/79037901795"
+                href={agreed ? "https://wa.me/79037901795" : undefined}
+                onClick={!agreed ? (e) => e.preventDefault() : undefined}
                 target="_blank"
                 rel="noopener noreferrer"
-                style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 8, padding: "14px 24px", border: "1.5px solid rgba(255,255,255,0.25)", color: "#fff", fontFamily: "Montserrat", fontWeight: 600, fontSize: 13, letterSpacing: "0.06em", textTransform: "uppercase", textDecoration: "none", transition: "border-color 0.2s" }}
+                style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 8, padding: "14px 24px", border: "1.5px solid rgba(255,255,255,0.25)", color: "#fff", fontFamily: "Montserrat", fontWeight: 600, fontSize: 13, letterSpacing: "0.06em", textTransform: "uppercase", textDecoration: "none", transition: "all 0.2s", opacity: agreed ? 1 : 0.4, cursor: agreed ? "pointer" : "not-allowed" }}
               >
                 <Icon name="MessageCircle" size={18} style={{ color: "#25D366" }} />
                 WhatsApp Export Manager
@@ -2087,16 +2116,14 @@ export default function Index() {
               <div style={{ fontFamily: "Montserrat", fontSize: 12, color: "rgba(255,255,255,0.4)", marginBottom: 20 }}>Working with importers worldwide<br />to deliver quality and value.</div>
               {/* Social icons */}
               <div style={{ display: "flex", gap: 10 }}>
-                {[
-                  { icon: "Linkedin", href: "#" },
-                  { icon: "MessageCircle", href: "https://wa.me/79037901795" },
-                  { icon: "Mail", href: "mailto:gavrilovfoods.export@gmail.com" },
-                ].map((s, i) => (
-                  <a key={i} href={s.href} target="_blank" rel="noopener noreferrer"
-                    style={{ width: 34, height: 34, borderRadius: "50%", border: "1px solid rgba(255,255,255,0.2)", display: "flex", alignItems: "center", justifyContent: "center", transition: "border-color 0.2s" }}>
-                    <Icon name={s.icon} size={15} style={{ color: "rgba(255,255,255,0.5)" }} />
-                  </a>
-                ))}
+                <a href="https://wa.me/79037901795" target="_blank" rel="noopener noreferrer"
+                  style={{ width: 34, height: 34, borderRadius: "50%", border: "1px solid rgba(255,255,255,0.2)", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                  <Icon name="MessageCircle" size={15} style={{ color: "rgba(255,255,255,0.5)" }} />
+                </a>
+                <a href="mailto:gavrilovfoods.export@gmail.com"
+                  style={{ width: 34, height: 34, borderRadius: "50%", border: "1px solid rgba(255,255,255,0.2)", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                  <Icon name="Mail" size={15} style={{ color: "rgba(255,255,255,0.5)" }} />
+                </a>
               </div>
             </div>
 
