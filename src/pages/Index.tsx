@@ -1476,83 +1476,83 @@ export default function Index() {
             </h2>
           </div>
 
-          {/* ── Main row: EU cert left + Packaging right ── */}
-          <div className="grid lg:grid-cols-2 gap-4 mb-4 reveal">
+          {/* ── Main row: единый белый блок EU cert + Packaging ── */}
+          <div className="reveal mb-4" style={{ background: "#fff", border: "1px solid rgba(0,0,0,0.08)", borderRadius: 10, overflow: "hidden" }}>
+            <div style={{ display: "grid", gridTemplateColumns: "1fr 1.6fr" }}>
 
-            {/* Left: EU Organic card */}
-            <div style={{ background: "#fff", border: "1px solid rgba(0,0,0,0.07)", borderRadius: 10, padding: "28px 28px 24px" }}>
-              {/* Badge */}
-              <div className="flex items-center gap-4 mb-6 p-4" style={{ background: "var(--gf-cream)", borderRadius: 8, border: "1px solid rgba(0,0,0,0.06)" }}>
-                <img
-                  src="https://cdn.poehali.dev/files/e0686aa0-2df7-454a-b318-5e843ea52142.png"
-                  alt="EU Organic Certified"
-                  style={{ width: 56, height: 44, objectFit: "contain", flexShrink: 0 }}
-                />
-                <div>
-                  <div className="font-montserrat font-bold text-[13px] mb-0.5" style={{ color: "var(--gf-dark)" }}>EU Organic Certified</div>
-                  <div className="text-[11px] font-montserrat" style={{ color: "var(--gf-text-light)" }}>European Organic Certification</div>
+              {/* Left: EU Organic */}
+              <div style={{ padding: "28px 28px 28px", borderRight: "1px solid rgba(0,0,0,0.08)" }}>
+                {/* EU badge row */}
+                <div className="flex items-center gap-3 mb-5" style={{ background: "var(--gf-cream)", borderRadius: 8, padding: "12px 14px", border: "1px solid rgba(0,0,0,0.06)" }}>
+                  <img
+                    src="https://cdn.poehali.dev/files/e0686aa0-2df7-454a-b318-5e843ea52142.png"
+                    alt="EU Organic"
+                    style={{ width: 40, height: 32, objectFit: "contain", flexShrink: 0 }}
+                  />
+                  <div>
+                    <div style={{ fontFamily: "Montserrat", fontWeight: 700, fontSize: 12, color: "var(--gf-dark)" }}>EU Organic Certified</div>
+                    <div style={{ fontFamily: "Montserrat", fontSize: 10, color: "var(--gf-text-light)", marginTop: 1 }}>European Organic Certification</div>
+                  </div>
+                </div>
+
+                {/* Checkmarks */}
+                <div style={{ display: "flex", flexDirection: "column", gap: 10, marginBottom: 20 }}>
+                  {[
+                    "EU Organic Certified",
+                    "Traceable from field to final product",
+                    "Sustainable farming practices",
+                    "Available for selected products only",
+                  ].map((item, i) => (
+                    <div key={i} style={{ display: "flex", alignItems: "center", gap: 10 }}>
+                      <div style={{ width: 18, height: 18, borderRadius: "50%", background: "#3d7a3d", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
+                        <Icon name="Check" size={10} style={{ color: "#fff" }} />
+                      </div>
+                      <span style={{ fontFamily: "Montserrat", fontSize: 12, color: "var(--gf-text)" }}>{item}</span>
+                    </div>
+                  ))}
+                </div>
+
+                {/* Organic list */}
+                <div style={{ borderTop: "1px solid rgba(0,0,0,0.06)", paddingTop: 14 }}>
+                  <div style={{ fontFamily: "Montserrat", fontWeight: 600, fontSize: 12, color: "var(--gf-dark)", marginBottom: 8 }}>
+                    Organic available for:
+                  </div>
+                  {["Buckwheat", "Green Buckwheat", "Buckwheat Flour", "Oat Flakes"].map((p, i) => (
+                    <div key={i} style={{ fontFamily: "Montserrat", fontSize: 12, color: "var(--gf-text-light)", marginBottom: 4, display: "flex", gap: 8 }}>
+                      <span style={{ color: "var(--gf-gold)" }}>•</span>{p}
+                    </div>
+                  ))}
                 </div>
               </div>
 
-              {/* Checkmarks */}
-              <div className="space-y-2.5 mb-6">
-                {[
-                  "EU Organic Certified",
-                  "Traceable from field to final product",
-                  "Sustainable farming practices",
-                  "Available for selected products only",
-                ].map((item, i) => (
-                  <div key={i} className="flex items-center gap-2.5">
-                    <div className="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0" style={{ background: "#3d7a3d" }}>
-                      <Icon name="Check" size={11} style={{ color: "#fff" }} />
-                    </div>
-                    <span className="text-[13px] font-montserrat" style={{ color: "var(--gf-text)" }}>{item}</span>
-                  </div>
-                ))}
-              </div>
+              {/* Right: Packaging & Supply */}
+              <div style={{ padding: "28px 32px 28px" }}>
+                <div style={{ fontFamily: "Montserrat", fontWeight: 700, fontSize: 13, textTransform: "uppercase", letterSpacing: "0.06em", color: "var(--gf-dark)", marginBottom: 4 }}>
+                  Packaging & Supply
+                </div>
+                <div style={{ fontFamily: "Montserrat", fontSize: 12, color: "var(--gf-text-light)", marginBottom: 32 }}>
+                  Flexible solutions for different needs
+                </div>
 
-              {/* Organic available for list */}
-              <div style={{ borderTop: "1px solid rgba(0,0,0,0.06)", paddingTop: 16 }}>
-                <div className="font-montserrat font-semibold text-[12px] mb-2" style={{ color: "var(--gf-dark)" }}>Organic available for:</div>
-                <ul className="space-y-1">
-                  {["Buckwheat", "Green Buckwheat", "Buckwheat Flour", "Oat Flakes"].map((p, i) => (
-                    <li key={i} className="flex items-center gap-2 text-[12px] font-montserrat" style={{ color: "var(--gf-text-light)" }}>
-                      <span style={{ color: "var(--gf-gold)" }}>•</span> {p}
-                    </li>
+                <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 24 }}>
+                  {[
+                    { icon: "Package", title: "Retail Packaging", size: "250 g – 5 kg", desc: "Custom options available" },
+                    { icon: "Boxes", title: "Industrial Packaging", size: "25 kg / 50 kg bags", desc: "High quality packaging" },
+                    { icon: "Container", title: "Bulk Supply", size: "500 – 1,000 kg\nBig Bags", desc: "For large volume orders" },
+                    { icon: "Truck", title: "Container Shipping", size: "20 ft / 40 ft", desc: "Safe and secure delivery" },
+                  ].map((p, i) => (
+                    <div key={i} style={{ display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center", gap: 6 }}>
+                      <div style={{ width: 52, height: 52, border: "1.5px solid rgba(0,0,0,0.1)", borderRadius: 8, display: "flex", alignItems: "center", justifyContent: "center", marginBottom: 4 }}>
+                        <Icon name={p.icon} size={24} style={{ color: "var(--gf-dark)", strokeWidth: 1.1 }} />
+                      </div>
+                      <div style={{ fontFamily: "Montserrat", fontWeight: 700, fontSize: 11, textTransform: "uppercase", letterSpacing: "0.04em", color: "var(--gf-dark)" }}>{p.title}</div>
+                      <div style={{ fontFamily: "Cormorant Garamond, serif", fontSize: 17, fontWeight: 600, color: "var(--gf-gold)", lineHeight: 1.25, whiteSpace: "pre-line" }}>{p.size}</div>
+                      <div style={{ fontFamily: "Montserrat", fontSize: 11, color: "var(--gf-text-light)", lineHeight: 1.4 }}>{p.desc}</div>
+                    </div>
                   ))}
-                </ul>
-              </div>
-            </div>
-
-            {/* Right: Packaging & Supply */}
-            <div style={{ background: "#fff", border: "1px solid rgba(0,0,0,0.07)", borderRadius: 10, padding: "28px 28px 24px" }}>
-              <div className="font-montserrat font-bold text-[13px] uppercase tracking-wide mb-1" style={{ color: "var(--gf-dark)" }}>
-                Packaging & Supply
-              </div>
-              <div className="text-[12px] font-montserrat mb-8" style={{ color: "var(--gf-text-light)" }}>
-                Flexible solutions for different needs
+                </div>
               </div>
 
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-                {[
-                  { icon: "Package", title: "Retail Packaging", size: "250 g – 5 kg", desc: "Custom options available" },
-                  { icon: "Boxes", title: "Industrial Packaging", size: "25 kg / 50 kg bags", desc: "High quality packaging" },
-                  { icon: "Container", title: "Bulk Supply", size: "500 – 1,000 kg\nBig Bags", desc: "For large volume orders" },
-                  { icon: "Truck", title: "Container Shipping", size: "20 ft / 40 ft", desc: "Safe and secure delivery" },
-                ].map((p, i) => (
-                  <div key={i} className="flex flex-col items-center text-center gap-2">
-                    <div
-                      className="w-12 h-12 flex items-center justify-center mb-1"
-                      style={{ border: "1.5px solid rgba(0,0,0,0.12)", borderRadius: 8 }}
-                    >
-                      <Icon name={p.icon} size={22} style={{ color: "var(--gf-dark)", strokeWidth: 1.2 }} />
-                    </div>
-                    <div className="font-montserrat font-bold text-[11px] uppercase tracking-wide" style={{ color: "var(--gf-dark)" }}>{p.title}</div>
-                    <div className="font-cormorant text-[16px] font-semibold leading-tight" style={{ color: "var(--gf-gold)", whiteSpace: "pre-line" }}>{p.size}</div>
-                    <div className="text-[11px] font-montserrat leading-snug" style={{ color: "var(--gf-text-light)" }}>{p.desc}</div>
-                  </div>
-                ))}
-              </div>
             </div>
           </div>
 
