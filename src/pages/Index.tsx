@@ -524,7 +524,7 @@ export default function Index() {
                   className="absolute inset-x-0 top-0 z-10 h-16 pointer-events-none"
                   style={{ background: "linear-gradient(to bottom, #fff 0%, transparent 100%)" }}
                 />
-                <img src="https://cdn.poehali.dev/files/74b2aea6-bad4-4065-98fb-2a8f79de5cfd.jpg" alt="KAMAZ front export" className="w-full h-full object-cover" style={{ borderBottomLeftRadius: 16, borderBottomRightRadius: 16 }} />
+                <img src="https://cdn.poehali.dev/files/e99123ff-3cb5-49ff-bdc5-2be03363b2b0.jpg" alt="Grain shipment harvest" className="w-full h-full object-cover" style={{ borderBottomLeftRadius: 16, borderBottomRightRadius: 16 }} />
               </div>
             </div>
 
@@ -1096,8 +1096,8 @@ export default function Index() {
                   { img: "https://cdn.poehali.dev/files/4b5a57a3-7cdf-406e-8457-7140c7ed102e.jpg", label: "FARMLAND" },
                   { img: "https://cdn.poehali.dev/files/3bb96d82-4e91-49da-a437-a8e84c943f7e.jpg", label: "CLEANING & PROCESSING" },
                   { img: "https://cdn.poehali.dev/files/f11386c9-4001-4940-9b3c-a7cd36827549.jpg", label: "BIG BAG PACKAGING" },
-                  { img: "https://cdn.poehali.dev/files/431dd6c0-d618-4737-aaca-53e45662be51.jpg", label: "LOADING & SHIPPING" },
-                  { img: "https://cdn.poehali.dev/files/943c789b-d4ed-418a-a36d-f3c15e7272ea.jpg", label: "GLOBAL DELIVERY" },
+                  { img: "https://cdn.poehali.dev/files/05634d7e-dba6-4487-8817-f8c6ecf1bf05.jpg", label: "LOADING & SHIPPING" },
+                  { img: "https://cdn.poehali.dev/files/0ef79656-d415-44e0-82f1-f24accc00604.jpg", label: "GLOBAL DELIVERY" },
                 ].map((t, i) => (
                   <div key={i} className="relative img-zoom overflow-hidden" style={{ minHeight: 160 }}>
                     <img src={t.img} alt={t.label} className="absolute inset-0 w-full h-full object-cover" />
@@ -1143,13 +1143,15 @@ export default function Index() {
               </div>
             </div>
             <div className="flex items-center gap-4 flex-shrink-0">
-              <button
+              <a
+                href="/docs/organic-cert.pdf"
+                download
                 className="btn-gold"
-                onClick={() => document.querySelector("#contact")?.scrollIntoView({ behavior: "smooth" })}
+                style={{ textDecoration: "none", display: "inline-flex", alignItems: "center", gap: 8 }}
               >
                 <Icon name="Download" size={16} />
                 Download Documents
-              </button>
+              </a>
               <img
                 src={PRODUCTS_IMG}
                 alt=""
@@ -1937,8 +1939,8 @@ export default function Index() {
         <div style={{ background: "var(--gf-cream-2)", borderTop: "1px solid rgba(0,0,0,0.07)", borderBottom: "1px solid rgba(0,0,0,0.07)" }}>
           <div className="contact-info-bar max-w-7xl mx-auto px-6" style={{ display: "grid", gridTemplateColumns: "repeat(4,1fr)", gap: 0 }}>
             {[
-              { icon: "Phone", label: "Phone / WhatsApp", value: "+7 903 790 17 95", sub: "Mon – Fri: 9:00 – 18:00 (MSK)" },
-              { icon: "Mail", label: "Email", value: "gavrilovfoods.export@gmail.com", sub: "We reply within 24 hours" },
+              { icon: "Phone", label: "Phone / WhatsApp", value: "+7 903 790 17 95", sub: "Mon – Fri: 9:00 – 18:00 (MSK)", href: "tel:+79037901795" },
+              { icon: "Mail", label: "Email", value: "gavrilovfoods.export@gmail.com", sub: "We reply within 24 hours", href: "mailto:gavrilovfoods.export@gmail.com" },
               { icon: "MapPin", label: "Location", value: "Smolensk Region, Russia", sub: "EU export documentation available" },
               { icon: "Globe", label: "Export Markets", value: null, sub: null, markets: true },
             ].map((c, i) => (
@@ -1955,7 +1957,11 @@ export default function Index() {
                     </div>
                   ) : (
                     <>
-                      <div style={{ fontFamily: "Montserrat", fontSize: 13, fontWeight: 600, color: "var(--gf-dark)", marginBottom: 2 }}>{c.value}</div>
+                      {"href" in c && c.href ? (
+                        <a href={c.href} style={{ fontFamily: "Montserrat", fontSize: 13, fontWeight: 600, color: "var(--gf-dark)", marginBottom: 2, textDecoration: "none", display: "block" }}>{c.value}</a>
+                      ) : (
+                        <div style={{ fontFamily: "Montserrat", fontSize: 13, fontWeight: 600, color: "var(--gf-dark)", marginBottom: 2 }}>{c.value}</div>
+                      )}
                       <div style={{ fontFamily: "Montserrat", fontSize: 11, color: "var(--gf-text-light)" }}>{c.sub}</div>
                     </>
                   )}
@@ -2206,12 +2212,13 @@ export default function Index() {
                 <Icon name="MessageCircle" size={16} />
                 WhatsApp Export Manager
               </a>
-              <button
-                onClick={() => document.querySelector("#contact")?.scrollIntoView({ behavior: "smooth" })}
-                style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 8, padding: "11px 18px", background: "transparent", border: "1.5px solid rgba(255,255,255,0.25)", color: "rgba(255,255,255,0.7)", fontFamily: "Montserrat", fontWeight: 600, fontSize: 12, cursor: "pointer", width: "100%", borderRadius: 4 }}>
+              <a
+                href="/docs/catalog.pdf"
+                download
+                style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 8, padding: "11px 18px", background: "transparent", border: "1.5px solid rgba(255,255,255,0.25)", color: "rgba(255,255,255,0.7)", fontFamily: "Montserrat", fontWeight: 600, fontSize: 12, width: "100%", borderRadius: 4, textDecoration: "none" }}>
                 <Icon name="Download" size={15} />
                 Download Catalog PDF
-              </button>
+              </a>
             </div>
 
             {/* Col 5: grain photo */}
