@@ -261,25 +261,18 @@ export default function Index() {
       {/* ═══════════════ HERO ═══════════════ */}
       <section id="hero" style={{ position: "relative", background: "#0d1a0e" }}>
 
-        {/* Fixed floating buttons right side */}
-        <div style={{ position: "fixed", right: 0, top: "50%", transform: "translateY(-50%)", zIndex: 100, display: "flex", flexDirection: "column", gap: 4 }}>
-          <button
-            onClick={() => document.querySelector("#contact")?.scrollIntoView({ behavior: "smooth" })}
-            style={{ background: "var(--gf-dark)", color: "#fff", border: "none", cursor: "pointer", padding: "14px 12px", display: "flex", flexDirection: "column", alignItems: "center", gap: 6, width: 72, textAlign: "center" }}
-          >
-            <Icon name="FileText" size={20} style={{ color: "var(--gf-gold)" }} />
-            <span style={{ fontFamily: "Montserrat", fontSize: 9, fontWeight: 600, lineHeight: 1.3, color: "#fff" }}>Download<br />Company<br />Profile</span>
-          </button>
-          <a
-            href="https://wa.me/79037901795"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{ background: "#25D366", color: "#fff", textDecoration: "none", padding: "14px 12px", display: "flex", flexDirection: "column", alignItems: "center", gap: 6, width: 72, textAlign: "center" }}
-          >
-            <Icon name="MessageCircle" size={20} style={{ color: "#fff" }} />
-            <span style={{ fontFamily: "Montserrat", fontSize: 9, fontWeight: 600, lineHeight: 1.3 }}>WhatsApp<br />Export<br />Manager</span>
-          </a>
-        </div>
+        {/* Fixed WhatsApp button — bottom right */}
+        <a
+          href="https://wa.me/79037901795"
+          target="_blank"
+          rel="noopener noreferrer"
+          title="WhatsApp Export Manager"
+          style={{ position: "fixed", right: 20, bottom: 24, zIndex: 200, width: 52, height: 52, borderRadius: "50%", background: "#25D366", display: "flex", alignItems: "center", justifyContent: "center", boxShadow: "0 4px 20px rgba(37,211,102,0.45)", transition: "transform 0.2s, box-shadow 0.2s" }}
+          onMouseEnter={e => { (e.currentTarget as HTMLElement).style.transform = "scale(1.1)"; }}
+          onMouseLeave={e => { (e.currentTarget as HTMLElement).style.transform = "scale(1)"; }}
+        >
+          <Icon name="MessageCircle" size={26} style={{ color: "#fff" }} />
+        </a>
 
         {/* Main hero image block */}
         <div style={{ position: "relative", minHeight: "calc(100vh - 64px)", overflow: "hidden" }}>
@@ -293,7 +286,7 @@ export default function Index() {
           <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, rgba(10,16,10,0.6) 0%, transparent 40%)" }} />
 
           {/* Content */}
-          <div className="max-w-7xl mx-auto px-6" style={{ position: "relative", zIndex: 2, paddingTop: 80, paddingBottom: 48, minHeight: "calc(100vh - 64px)", display: "flex", flexDirection: "column", justifyContent: "center" }}>
+          <div className="hero-content max-w-7xl mx-auto px-6" style={{ position: "relative", zIndex: 2, paddingTop: 80, paddingBottom: 48, minHeight: "calc(100vh - 64px)", display: "flex", flexDirection: "column", justifyContent: "center" }}>
             <div style={{ maxWidth: 560 }}>
               {/* Label */}
               <div className="animate-fade-up" style={{ fontFamily: "Montserrat", fontWeight: 700, fontSize: 11, letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--gf-gold)", marginBottom: 16 }}>
@@ -301,7 +294,7 @@ export default function Index() {
               </div>
 
               {/* H1 */}
-              <h1 className="animate-fade-up delay-100" style={{ fontFamily: "Montserrat", fontWeight: 800, fontSize: "clamp(36px, 5vw, 68px)", lineHeight: 1.1, color: "#fff", marginBottom: 0 }}>
+              <h1 className="animate-fade-up delay-100" style={{ fontFamily: "Montserrat", fontWeight: 800, fontSize: "clamp(28px, 5vw, 68px)", lineHeight: 1.1, color: "#fff", marginBottom: 0 }}>
                 EU Certified<br />
                 <span style={{ color: "var(--gf-gold)" }}>Organic & Conventional</span><br />
                 Grain Supplier
@@ -311,12 +304,12 @@ export default function Index() {
               <div className="animate-fade-up delay-200" style={{ width: 48, height: 2, background: "var(--gf-gold)", margin: "20px 0" }} />
 
               {/* Subtitle */}
-              <p className="animate-fade-up delay-200" style={{ fontFamily: "Montserrat", fontSize: 15, color: "rgba(255,255,255,0.7)", lineHeight: 1.65, marginBottom: 24 }}>
-                Reliable Russian grains, pulses & oilseeds<br />for international markets.
+              <p className="animate-fade-up delay-200" style={{ fontFamily: "Montserrat", fontSize: 14, color: "rgba(255,255,255,0.7)", lineHeight: 1.65, marginBottom: 24 }}>
+                Reliable Russian grains, pulses & oilseeds for international markets.
               </p>
 
               {/* 6 checkmarks in 2 cols */}
-              <div className="animate-fade-up delay-300" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "8px 24px", marginBottom: 32 }}>
+              <div className="hero-checks animate-fade-up delay-300" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "8px 24px", marginBottom: 28 }}>
                 {[
                   "EU Organic Certified",
                   "Direct from Producer",
@@ -335,15 +328,17 @@ export default function Index() {
               </div>
 
               {/* Buttons */}
-              <div className="animate-fade-up delay-400" style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
+              <div className="hero-buttons animate-fade-up delay-400" style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
                 <button
                   className="btn-gold"
+                  style={{ flex: "1 1 auto", justifyContent: "center", minWidth: 0 }}
                   onClick={() => document.querySelector("#products")?.scrollIntoView({ behavior: "smooth" })}
                 >
                   View Products <Icon name="ArrowRight" size={16} />
                 </button>
                 <button
                   className="btn-outline-white"
+                  style={{ flex: "1 1 auto", justifyContent: "center", minWidth: 0 }}
                   onClick={() => document.querySelector("#contact")?.scrollIntoView({ behavior: "smooth" })}
                 >
                   Request Export Offer
@@ -356,7 +351,7 @@ export default function Index() {
         {/* ── Bottom stats bar ── */}
         <div style={{ background: "rgba(8,14,8,0.97)", borderTop: "1px solid rgba(201,151,58,0.2)" }}>
           <div className="max-w-7xl mx-auto px-6">
-            <div style={{ display: "grid", gridTemplateColumns: "1.4fr 1fr 1.3fr 1.3fr 1fr", gap: 0 }}>
+            <div className="hero-stats-bar" style={{ display: "grid", gridTemplateColumns: "1.4fr 1fr 1.3fr 1.3fr 1fr", gap: 0 }}>
               {/* EU Organic block */}
               <div style={{ padding: "18px 20px 18px 0", borderRight: "1px solid rgba(255,255,255,0.08)", display: "flex", alignItems: "center", gap: 14 }}>
                 <img
@@ -1937,7 +1932,7 @@ export default function Index() {
 
         {/* ── 4 contact info blocks ── */}
         <div style={{ background: "var(--gf-cream-2)", borderTop: "1px solid rgba(0,0,0,0.07)", borderBottom: "1px solid rgba(0,0,0,0.07)" }}>
-          <div className="max-w-7xl mx-auto px-6" style={{ display: "grid", gridTemplateColumns: "repeat(4,1fr)", gap: 0 }}>
+          <div className="contact-info-bar max-w-7xl mx-auto px-6" style={{ display: "grid", gridTemplateColumns: "repeat(4,1fr)", gap: 0 }}>
             {[
               { icon: "Phone", label: "Phone / WhatsApp", value: "+7 903 790 17 95", sub: "Mon – Fri: 9:00 – 18:00 (MSK)" },
               { icon: "Mail", label: "Email", value: "gavrilovfoods.export@gmail.com", sub: "We reply within 24 hours" },
@@ -1974,7 +1969,7 @@ export default function Index() {
               Send us your request
             </h3>
 
-            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 16 }}>
+            <div className="contact-form-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 16 }}>
               {/* Column 1 */}
               <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
                 {[
@@ -2058,7 +2053,7 @@ export default function Index() {
             </div>
 
             {/* CTA buttons */}
-            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12, marginTop: 14 }}>
+            <div className="contact-cta-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12, marginTop: 14 }}>
               <button
                 className="btn-gold"
                 style={{ justifyContent: "center", fontSize: 13, padding: "14px 24px", opacity: agreed ? 1 : 0.4, cursor: agreed ? "pointer" : "not-allowed" }}
@@ -2129,7 +2124,7 @@ export default function Index() {
       <footer style={{ background: "var(--gf-dark)" }}>
         {/* Main footer grid */}
         <div className="max-w-7xl mx-auto px-6" style={{ paddingTop: 48, paddingBottom: 32 }}>
-          <div style={{ display: "grid", gridTemplateColumns: "1.4fr 1fr 1fr 1.2fr 0.8fr", gap: 40 }}>
+          <div className="footer-main-grid" style={{ display: "grid", gridTemplateColumns: "1.4fr 1fr 1fr 1.2fr 0.8fr", gap: 40 }}>
 
             {/* Col 1: Logo + about */}
             <div>
@@ -2217,7 +2212,7 @@ export default function Index() {
             </div>
 
             {/* Col 5: grain photo */}
-            <div style={{ borderRadius: 8, overflow: "hidden" }}>
+            <div className="footer-photo-col" style={{ borderRadius: 8, overflow: "hidden" }}>
               <img src={PRODUCTS_IMG} alt="Grains" style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
             </div>
 
@@ -2226,12 +2221,11 @@ export default function Index() {
 
         {/* Bottom bar */}
         <div style={{ borderTop: "1px solid rgba(255,255,255,0.08)", padding: "14px 0" }}>
-          <div className="max-w-7xl mx-auto px-6" style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
-            <div style={{ fontFamily: "Montserrat", fontSize: 12, color: "rgba(255,255,255,0.3)" }}>© 2026 Gavrilov Foods</div>
+          <div className="footer-bottom max-w-7xl mx-auto px-6" style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+            <div style={{ fontFamily: "Montserrat", fontSize: 12, color: "rgba(255,255,255,0.3)" }}>© 2024 Gavrilov Foods</div>
             <div style={{ display: "flex", gap: 24 }}>
-              {["Privacy Policy", "Terms & Conditions"].map((l, i) => (
-                <button key={i} style={{ fontFamily: "Montserrat", fontSize: 12, color: "rgba(255,255,255,0.3)", background: "none", border: "none", cursor: "pointer" }}>{l}</button>
-              ))}
+              <a href="/privacy-policy" target="_blank" style={{ fontFamily: "Montserrat", fontSize: 12, color: "rgba(255,255,255,0.3)", textDecoration: "none" }}>Privacy Policy</a>
+              <a href="/terms" target="_blank" style={{ fontFamily: "Montserrat", fontSize: 12, color: "rgba(255,255,255,0.3)", textDecoration: "none" }}>Terms & Conditions</a>
             </div>
           </div>
         </div>
