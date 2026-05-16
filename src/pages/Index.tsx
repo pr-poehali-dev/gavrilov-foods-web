@@ -419,6 +419,203 @@ export default function Index() {
         </div>
       </section>
 
+      {/* ═══════════════ PROOF OF SCALE ═══════════════ */}
+      <section className="py-20" style={{ background: "var(--gf-cream-2)" }}>
+        <div className="max-w-7xl mx-auto px-6">
+
+          {/* Header */}
+          <div className="text-center mb-10 reveal">
+            <div className="flex items-center justify-center gap-4 mb-4">
+              <span style={{ display: "block", width: 40, height: 1, background: "var(--gf-gold)" }} />
+              <span style={{ color: "var(--gf-gold)", fontSize: "11px", letterSpacing: "0.2em", fontFamily: "Montserrat", fontWeight: 700, textTransform: "uppercase" }}>
+                Proof of Scale
+              </span>
+              <span style={{ display: "block", width: 40, height: 1, background: "var(--gf-gold)" }} />
+            </div>
+            <h2 className="font-cormorant font-light mb-3" style={{ fontSize: "clamp(30px, 4vw, 52px)", color: "var(--gf-dark)" }}>
+              Real numbers behind every shipment
+            </h2>
+            <p className="text-sm font-montserrat" style={{ color: "var(--gf-text-light)" }}>
+              Transparent volumes. Reliable supply. Global reach.
+            </p>
+          </div>
+
+          {/* 4 cards */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+            {/* Card 1 — Production */}
+            <div className="reveal flex flex-col" style={{ background: "#fff", border: "1px solid rgba(0,0,0,0.07)", borderRadius: 4 }} data-delay="0">
+              <div className="p-6 flex-1">
+                <div className="flex items-center gap-3 mb-5">
+                  <div className="w-10 h-10 flex items-center justify-center" style={{ background: "var(--gf-gold)" }}>
+                    <Icon name="Tractor" size={18} style={{ color: "#0e1a0f" }} />
+                  </div>
+                  <span className="font-montserrat font-bold text-[12px] uppercase tracking-widest" style={{ color: "var(--gf-dark)" }}>Production</span>
+                </div>
+                <div className="space-y-4">
+                  <div>
+                    <div className="font-cormorant text-3xl font-semibold" style={{ color: "var(--gf-gold)" }}>10,000 ha</div>
+                    <div className="text-[12px] font-montserrat mt-0.5" style={{ color: "var(--gf-text-light)" }}>own farmland – full field-to-shelf control</div>
+                  </div>
+                  <div>
+                    <div className="font-cormorant text-2xl font-semibold" style={{ color: "var(--gf-gold)" }}>10,000–15,000 MT</div>
+                    <div className="text-[12px] font-montserrat mt-0.5" style={{ color: "var(--gf-text-light)" }}>annual grain & pulse output</div>
+                  </div>
+                  <div>
+                    <div className="font-cormorant text-2xl font-semibold" style={{ color: "var(--gf-gold)" }}>200 MT / mo</div>
+                    <div className="text-[12px] font-montserrat mt-0.5" style={{ color: "var(--gf-text-light)" }}>processing capacity – groats, flour, flakes</div>
+                  </div>
+                  <div>
+                    <div className="font-cormorant text-2xl font-semibold" style={{ color: "var(--gf-gold)" }}>5,000 m²</div>
+                    <div className="text-[12px] font-montserrat mt-0.5" style={{ color: "var(--gf-text-light)" }}>own warehouse & storage facilities</div>
+                  </div>
+                </div>
+              </div>
+              <div className="img-zoom h-44 overflow-hidden" style={{ borderBottomLeftRadius: 4, borderBottomRightRadius: 4 }}>
+                <img src={HERO_IMG} alt="Farmland" className="w-full h-full object-cover" />
+              </div>
+            </div>
+
+            {/* Card 2 — Export */}
+            <div className="reveal flex flex-col" style={{ background: "#fff", border: "1px solid rgba(0,0,0,0.07)", borderRadius: 4 }} data-delay="80">
+              <div className="p-6 flex-1">
+                <div className="flex items-center gap-3 mb-5">
+                  <div className="w-10 h-10 flex items-center justify-center" style={{ background: "var(--gf-gold)" }}>
+                    <Icon name="Globe" size={18} style={{ color: "#0e1a0f" }} />
+                  </div>
+                  <span className="font-montserrat font-bold text-[12px] uppercase tracking-widest" style={{ color: "var(--gf-dark)" }}>Export</span>
+                </div>
+                <div className="space-y-4">
+                  <div>
+                    <div className="font-cormorant text-3xl font-semibold" style={{ color: "var(--gf-gold)" }}>3+ regions</div>
+                    <div className="text-[12px] font-montserrat mt-0.5" style={{ color: "var(--gf-text-light)" }}>China, Europe, Serbia & growing</div>
+                  </div>
+                  <div>
+                    <div className="font-cormorant text-2xl font-semibold" style={{ color: "var(--gf-gold)" }}>5,000–10,000 MT</div>
+                    <div className="text-[12px] font-montserrat mt-0.5" style={{ color: "var(--gf-text-light)" }}>annual export volume</div>
+                  </div>
+                </div>
+              </div>
+              <div className="img-zoom h-44 overflow-hidden" style={{ borderBottomLeftRadius: 4, borderBottomRightRadius: 4 }}>
+                <img src="https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/files/b8d2d916-8dce-4c6e-b197-7f7a24a273b8.jpg" alt="Export ship" className="w-full h-full object-cover" />
+              </div>
+            </div>
+
+            {/* Card 3 — Packaging */}
+            <div className="reveal flex flex-col" style={{ background: "#fff", border: "1px solid rgba(0,0,0,0.07)", borderRadius: 4 }} data-delay="160">
+              <div className="p-6 flex-1">
+                <div className="flex items-center gap-3 mb-5">
+                  <div className="w-10 h-10 flex items-center justify-center" style={{ background: "var(--gf-gold)" }}>
+                    <Icon name="Package" size={18} style={{ color: "#0e1a0f" }} />
+                  </div>
+                  <span className="font-montserrat font-bold text-[12px] uppercase tracking-widest" style={{ color: "var(--gf-dark)" }}>Packaging</span>
+                </div>
+                <div className="space-y-4">
+                  <div>
+                    <div className="font-cormorant text-3xl font-semibold" style={{ color: "var(--gf-gold)" }}>250 g – 5 kg</div>
+                    <div className="text-[12px] font-montserrat mt-0.5" style={{ color: "var(--gf-text-light)" }}>retail packs, private label available</div>
+                  </div>
+                  <div>
+                    <div className="font-cormorant text-2xl font-semibold" style={{ color: "var(--gf-gold)" }}>25 / 50 kg</div>
+                    <div className="text-[12px] font-montserrat mt-0.5" style={{ color: "var(--gf-text-light)" }}>standard bags for trade & distribution</div>
+                  </div>
+                  <div>
+                    <div className="font-cormorant text-2xl font-semibold" style={{ color: "var(--gf-gold)" }}>500–1,000 kg</div>
+                    <div className="text-[12px] font-montserrat mt-0.5" style={{ color: "var(--gf-text-light)" }}>big bags for bulk & industrial buyers</div>
+                  </div>
+                </div>
+              </div>
+              <div className="img-zoom h-44 overflow-hidden" style={{ borderBottomLeftRadius: 4, borderBottomRightRadius: 4 }}>
+                <img src={PRODUCTS_IMG} alt="Packaging" className="w-full h-full object-cover" />
+              </div>
+            </div>
+
+            {/* Card 4 — MOQ & Orders */}
+            <div className="reveal flex flex-col" style={{ background: "#fff", border: "1px solid rgba(0,0,0,0.07)", borderRadius: 4 }} data-delay="240">
+              <div className="p-6 flex-1">
+                <div className="flex items-center gap-3 mb-5">
+                  <div className="w-10 h-10 flex items-center justify-center" style={{ background: "var(--gf-gold)" }}>
+                    <Icon name="ClipboardList" size={18} style={{ color: "#0e1a0f" }} />
+                  </div>
+                  <span className="font-montserrat font-bold text-[12px] uppercase tracking-widest" style={{ color: "var(--gf-dark)" }}>MOQ & Orders</span>
+                </div>
+                <div className="space-y-4">
+                  <div>
+                    <div className="font-cormorant text-3xl font-semibold" style={{ color: "var(--gf-gold)" }}>1 MT</div>
+                    <div className="text-[12px] font-montserrat mt-0.5" style={{ color: "var(--gf-text-light)" }}>minimum order quantity</div>
+                  </div>
+                  <div>
+                    <div className="font-cormorant text-2xl font-semibold" style={{ color: "var(--gf-gold)" }}>20 / 40 ft</div>
+                    <div className="text-[12px] font-montserrat mt-0.5" style={{ color: "var(--gf-text-light)" }}>full container options available</div>
+                  </div>
+                </div>
+              </div>
+              <div className="img-zoom h-44 overflow-hidden" style={{ borderBottomLeftRadius: 4, borderBottomRightRadius: 4 }}>
+                <img src="https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/files/1694ef7b-4cbe-47de-89af-c109a17aa409.jpg" alt="Container truck" className="w-full h-full object-cover" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ═══════════════ LOGISTICS & INFRASTRUCTURE ═══════════════ */}
+      <section className="relative overflow-hidden" style={{ background: "var(--gf-cream)" }}>
+        <div className="max-w-7xl mx-auto">
+          <div className="grid lg:grid-cols-2">
+            {/* Left content */}
+            <div className="py-16 px-6 lg:px-12 reveal-left">
+              <div className="text-[10px] font-bold uppercase tracking-widest mb-4 font-montserrat" style={{ color: "var(--gf-gold)" }}>
+                Logistics & Infrastructure
+              </div>
+              <h2
+                className="font-cormorant font-light leading-tight mb-5"
+                style={{ fontSize: "clamp(34px, 4vw, 56px)", color: "var(--gf-dark)" }}
+              >
+                From field<br />to your warehouse
+              </h2>
+              <p className="text-[14px] leading-relaxed mb-10 max-w-sm font-montserrat" style={{ color: "var(--gf-text-light)" }}>
+                We control every step of the supply chain to ensure quality, traceability and on-time delivery.
+              </p>
+
+              {/* 4 features */}
+              <div className="grid grid-cols-2 gap-8 mb-10">
+                {[
+                  { icon: "Warehouse", title: "Own Storage", desc: "Modern elevators and warehouses with capacity for safe storage." },
+                  { icon: "Factory", title: "Processing", desc: "Advanced equipment for cleaning, sorting and processing grains and pulses." },
+                  { icon: "ShieldCheck", title: "Quality Control", desc: "In-house lab testing at every stage to meet international standards." },
+                  { icon: "Truck", title: "Reliable Logistics", desc: "Experienced team and trusted partners for worldwide delivery." },
+                ].map((f, i) => (
+                  <div key={i} className="flex flex-col items-center text-center gap-2">
+                    <Icon name={f.icon} size={40} style={{ color: "var(--gf-dark)", strokeWidth: 1 }} />
+                    <div className="font-montserrat font-bold text-[11px] uppercase tracking-wider" style={{ color: "var(--gf-dark)" }}>{f.title}</div>
+                    <div className="text-[11px] leading-relaxed font-montserrat" style={{ color: "var(--gf-text-light)" }}>{f.desc}</div>
+                  </div>
+                ))}
+              </div>
+
+              <button
+                className="btn-gold"
+                onClick={() => document.querySelector("#contact")?.scrollIntoView({ behavior: "smooth" })}
+              >
+                Work With Us <Icon name="ArrowRight" size={16} />
+              </button>
+            </div>
+
+            {/* Right: full-bleed truck image */}
+            <div className="relative reveal-right" style={{ minHeight: 420 }}>
+              <img
+                src="https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/files/1694ef7b-4cbe-47de-89af-c109a17aa409.jpg"
+                alt="Logistics truck"
+                className="absolute inset-0 w-full h-full object-cover"
+              />
+              <div
+                className="absolute inset-0"
+                style={{ background: "linear-gradient(to right, var(--gf-cream) 0%, transparent 30%)" }}
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ═══════════════ PRODUCTS ═══════════════ */}
       <section id="products" className="py-20" style={{ background: "var(--gf-cream)" }}>
         <div className="max-w-7xl mx-auto px-6">
