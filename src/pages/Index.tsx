@@ -1387,7 +1387,7 @@ export default function Index() {
 
           {/* ── Main row: единый белый блок EU cert + Packaging ── */}
           <div className="reveal mb-4" style={{ background: "#fff", border: "1px solid rgba(0,0,0,0.08)", borderRadius: 10, overflow: "hidden" }}>
-            <div style={{ display: "grid", gridTemplateColumns: "1fr 1.6fr" }}>
+            <div className="cert-inner-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1.6fr" }}>
 
               {/* Left: EU Organic */}
               <div style={{ padding: "28px 28px 28px", borderRight: "1px solid rgba(0,0,0,0.08)" }}>
@@ -1443,7 +1443,7 @@ export default function Index() {
                   Flexible solutions for different needs
                 </div>
 
-                <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 24 }}>
+                <div className="cert-packaging-icons" style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 24 }}>
                   {[
                     { icon: "Package", title: "Retail Packaging", size: "250 g – 5 kg", desc: "Custom options available" },
                     { icon: "Boxes", title: "Industrial Packaging", size: "25 kg / 50 kg bags", desc: "High quality packaging" },
@@ -1746,7 +1746,7 @@ export default function Index() {
             </div>
 
             {/* Bottom: 4 white stat boxes */}
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(4,1fr)", background: "var(--gf-cream-2)", borderRadius: "0 0 10px 10px", border: "1px solid rgba(0,0,0,0.07)", borderTop: "none" }}>
+            <div className="gallery-stats-4col" style={{ display: "grid", gridTemplateColumns: "repeat(4,1fr)", background: "var(--gf-cream-2)", borderRadius: "0 0 10px 10px", border: "1px solid rgba(0,0,0,0.07)", borderTop: "none" }}>
               {[
                 { icon: "Wheat", val: "10,000 ha", label: "Own Farmland" },
                 { icon: "Warehouse", val: "5,000 m²", label: "Warehouse Capacity" },
@@ -1767,7 +1767,7 @@ export default function Index() {
           {/* ── Row 2: 5-step process + 5 large photos ── */}
           <div className="reveal mb-4">
             {/* Step labels with arrows between */}
-            <div style={{ display: "grid", gridTemplateColumns: "1fr auto 1fr auto 1fr auto 1fr auto 1fr", gap: "0 8px", marginBottom: 8, alignItems: "start" }}>
+            <div className="gallery-steps-auto" style={{ display: "grid", gridTemplateColumns: "1fr auto 1fr auto 1fr auto 1fr auto 1fr", gap: "0 8px", marginBottom: 8, alignItems: "start" }}>
               {[
                 { num: 1, title: "Own Farmland", desc: "Fertile fields and sustainable farming practices." },
                 { num: 2, title: "Harvesting", desc: "Modern machinery and experienced team." },
@@ -1788,7 +1788,7 @@ export default function Index() {
                 );
                 if (i < 4) {
                   return [card, (
-                    <div key={`arrow-${i}`} style={{ display: "flex", alignItems: "flex-start", paddingTop: 7 }}>
+                    <div key={`arrow-${i}`} className="gallery-step-arrow" style={{ display: "flex", alignItems: "flex-start", paddingTop: 7 }}>
                       <Icon name="ArrowRight" size={16} style={{ color: "var(--gf-gold)" }} />
                     </div>
                   )];
@@ -1798,7 +1798,7 @@ export default function Index() {
             </div>
 
             {/* Large photos row */}
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(5,1fr)", gap: 4, height: 200 }}>
+            <div className="gallery-photos-row" style={{ display: "grid", gridTemplateColumns: "repeat(5,1fr)", gap: 4, height: 200 }}>
               {[
                 HERO_IMG,
                 "https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/files/6ba6ab19-4325-41ef-a364-f4b77bfe6de1.jpg",
@@ -1816,7 +1816,7 @@ export default function Index() {
             </div>
 
             {/* Small photos row */}
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(5,1fr)", gap: 4, marginTop: 4, height: 110 }}>
+            <div className="gallery-photos-small-row" style={{ display: "grid", gridTemplateColumns: "repeat(5,1fr)", gap: 4, marginTop: 4, height: 110 }}>
               {[
                 "https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/files/56b82c77-4b6a-426b-b67d-2f0a68187ac4.jpg",
                 "https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/files/18e1a0f6-68a3-4045-a13d-deb86345fddf.jpg",
@@ -1886,7 +1886,7 @@ export default function Index() {
           </div>
 
           {/* ── Row 4: Bottom trust strip ── */}
-          <div className="reveal mt-6" style={{ display: "grid", gridTemplateColumns: "repeat(5,1fr)", gap: 0, background: "var(--gf-cream)", borderRadius: 8 }}>
+          <div className="gallery-trust-5col reveal mt-6" style={{ display: "grid", gridTemplateColumns: "repeat(5,1fr)", gap: 0, background: "var(--gf-cream)", borderRadius: 8 }}>
             {[
               { icon: "ShieldCheck", title: "Reliable Supply", desc: "Stable volumes and on-time delivery." },
               { icon: "Award", title: "Certified Quality", desc: "EU Organic certification available." },
@@ -1911,21 +1911,21 @@ export default function Index() {
       <section id="contact" style={{ background: "var(--gf-cream)" }}>
 
         {/* ── Hero top: title + truck image ── */}
-        <div style={{ position: "relative", minHeight: 280, overflow: "hidden" }}>
+        <div className="contact-hero-section" style={{ position: "relative", minHeight: 280, overflow: "hidden" }}>
           <img
             src="https://cdn.poehali.dev/files/aa315ecd-ab40-456e-b4e3-27b8a8922be0.jpg"
             alt="Export truck"
             style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover" }}
           />
-          <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to right, rgba(245,240,232,1) 0%, rgba(245,240,232,0.92) 40%, rgba(245,240,232,0.3) 75%, transparent 100%)" }} />
+          <div className="contact-hero-overlay" style={{ position: "absolute", inset: 0, background: "linear-gradient(to right, rgba(245,240,232,1) 0%, rgba(245,240,232,0.95) 50%, rgba(245,240,232,0.5) 80%, transparent 100%)" }} />
           <div className="max-w-7xl mx-auto px-6" style={{ position: "relative", zIndex: 1, paddingTop: 48, paddingBottom: 32 }}>
-            <h2 style={{ fontFamily: "Cormorant Garamond, serif", fontSize: "clamp(38px, 5vw, 66px)", fontWeight: 400, color: "var(--gf-dark)", lineHeight: 1.1, marginBottom: 12 }}>
+            <h2 style={{ fontFamily: "Cormorant Garamond, serif", fontSize: "clamp(36px, 5vw, 66px)", fontWeight: 400, color: "var(--gf-dark)", lineHeight: 1.1, marginBottom: 12 }}>
               Request<br />
               <span style={{ color: "var(--gf-gold)", fontStyle: "italic" }}>Export Offer</span>
             </h2>
             <div style={{ width: 40, height: 2, background: "var(--gf-gold)", marginBottom: 14 }} />
-            <p style={{ fontFamily: "Montserrat", fontSize: 14, color: "var(--gf-text-light)", lineHeight: 1.65, maxWidth: 380 }}>
-              Tell us about your needs and our export team will send you a competitive offer <strong style={{ color: "var(--gf-dark)" }}>within 24 hours.</strong>
+            <p style={{ fontFamily: "Montserrat", fontSize: 14, color: "var(--gf-dark)", lineHeight: 1.65, maxWidth: 420 }}>
+              Tell us about your needs and our export team will send you a competitive offer <strong>within 24 hours.</strong>
             </p>
           </div>
         </div>
