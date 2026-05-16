@@ -268,8 +268,8 @@ export default function Index() {
         {/* Main hero image block */}
         <div style={{ position: "relative", minHeight: "calc(100vh - 64px)", overflow: "hidden" }}>
           <img
-            src="https://cdn.poehali.dev/files/a5f5c174-b8c4-4672-a63e-0e1cacdd75f6.jpg"
-            alt="Gavrilov Foods buckwheat field"
+            src="https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/files/6341fdb7-7079-43b0-b75c-5c9825af902a.jpg"
+            alt="Gavrilov Foods grain silos"
             style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "center" }}
           />
           {/* Gradient: strong left dark → transparent right */}
@@ -493,7 +493,7 @@ export default function Index() {
                   className="absolute inset-x-0 top-0 z-10 h-16 pointer-events-none"
                   style={{ background: "linear-gradient(to bottom, #fff 0%, transparent 100%)" }}
                 />
-                <img src={HERO_IMG} alt="Farmland" className="w-full h-full object-cover" style={{ borderBottomLeftRadius: 16, borderBottomRightRadius: 16 }} />
+                <img src="https://cdn.poehali.dev/files/4b5a57a3-7cdf-406e-8457-7140c7ed102e.jpg" alt="Own farmland" className="w-full h-full object-cover" style={{ borderBottomLeftRadius: 16, borderBottomRightRadius: 16 }} />
               </div>
             </div>
 
@@ -524,7 +524,7 @@ export default function Index() {
                   className="absolute inset-x-0 top-0 z-10 h-16 pointer-events-none"
                   style={{ background: "linear-gradient(to bottom, #fff 0%, transparent 100%)" }}
                 />
-                <img src="https://cdn.poehali.dev/files/431dd6c0-d618-4737-aaca-53e45662be51.jpg" alt="KAMAZ grain truck" className="w-full h-full object-cover" style={{ borderBottomLeftRadius: 16, borderBottomRightRadius: 16 }} />
+                <img src="https://cdn.poehali.dev/files/74b2aea6-bad4-4065-98fb-2a8f79de5cfd.jpg" alt="KAMAZ front export" className="w-full h-full object-cover" style={{ borderBottomLeftRadius: 16, borderBottomRightRadius: 16 }} />
               </div>
             </div>
 
@@ -559,7 +559,7 @@ export default function Index() {
                   className="absolute inset-x-0 top-0 z-10 h-16 pointer-events-none"
                   style={{ background: "linear-gradient(to bottom, #fff 0%, transparent 100%)" }}
                 />
-                <img src={PRODUCTS_IMG} alt="Packaging" className="w-full h-full object-cover" style={{ borderBottomLeftRadius: 16, borderBottomRightRadius: 16 }} />
+                <img src="https://cdn.poehali.dev/files/de1e27a0-f677-4f7c-b4f6-f54a3d8c5abc.jpg" alt="Big bags packaging" className="w-full h-full object-cover" style={{ borderBottomLeftRadius: 16, borderBottomRightRadius: 16 }} />
               </div>
             </div>
 
@@ -590,7 +590,7 @@ export default function Index() {
                   className="absolute inset-x-0 top-0 z-10 h-16 pointer-events-none"
                   style={{ background: "linear-gradient(to bottom, #fff 0%, transparent 100%)" }}
                 />
-                <img src="https://cdn.poehali.dev/files/74b2aea6-bad4-4065-98fb-2a8f79de5cfd.jpg" alt="KAMAZ front view" className="w-full h-full object-cover" style={{ borderBottomLeftRadius: 16, borderBottomRightRadius: 16 }} />
+                <img src="https://cdn.poehali.dev/files/4c755ac3-62a0-4ed1-b83b-e53189373f3f.jpg" alt="Kirovets tractor" className="w-full h-full object-cover" style={{ borderBottomLeftRadius: 16, borderBottomRightRadius: 16 }} />
               </div>
             </div>
 
@@ -1221,8 +1221,8 @@ export default function Index() {
               {/* Left — combine */}
               <div style={{ borderRadius: 10, overflow: "hidden", position: "relative" }}>
                 <img
-                  src="https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/files/6ba6ab19-4325-41ef-a364-f4b77bfe6de1.jpg"
-                  alt="Harvesting"
+                  src="https://cdn.poehali.dev/files/a6468418-4211-4d99-84c8-c706aca290f7.jpg"
+                  alt="Combine harvester"
                   style={{ width: "100%", height: "100%", objectFit: "cover", display: "block", transition: "transform 0.6s ease" }}
                   onMouseEnter={e => (e.currentTarget.style.transform = "scale(1.05)")}
                   onMouseLeave={e => (e.currentTarget.style.transform = "scale(1)")}
@@ -1251,8 +1251,8 @@ export default function Index() {
                 </div>
                 <div style={{ borderRadius: 10, overflow: "hidden", position: "relative" }}>
                   <img
-                    src="https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/files/e42071e6-cbc4-4ad0-b451-35723caa640d.jpg"
-                    alt="Warehouse"
+                    src="https://cdn.poehali.dev/files/da2cf99e-0ede-40d1-9533-e4434ebcdf01.jpg"
+                    alt="Grain warehouse"
                     style={{ width: "100%", height: "100%", objectFit: "cover", display: "block", transition: "transform 0.6s ease" }}
                     onMouseEnter={e => (e.currentTarget.style.transform = "scale(1.05)")}
                     onMouseLeave={e => (e.currentTarget.style.transform = "scale(1)")}
@@ -1681,10 +1681,10 @@ export default function Index() {
 
             {/* 4 photos */}
             {[
-              PRODUCTS_IMG,
-              "https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/files/84e498d6-90d3-4d72-bdea-1f9f12a84e44.jpg",
-              "https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/files/1694ef7b-4cbe-47de-89af-c109a17aa409.jpg",
-              "https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/files/b8d2d916-8dce-4c6e-b197-7f7a24a273b8.jpg",
+              "https://cdn.poehali.dev/files/4b5a57a3-7cdf-406e-8457-7140c7ed102e.jpg", // own fields — 10,000 ha
+              "https://cdn.poehali.dev/files/e43ef89f-fe22-4c5d-9966-3f78245a4cee.jpg", // packaging machine — quality
+              "https://cdn.poehali.dev/files/431dd6c0-d618-4737-aaca-53e45662be51.jpg", // KAMAZ — export experience
+              "https://cdn.poehali.dev/files/98d43280-321a-4078-bb4e-2cd8a7e71f5e.jpg", // packed pallets — long-term
             ].map((img, i) => (
               <div key={i} style={{ overflow: "hidden", minHeight: 260 }}>
                 <img src={img} alt="" style={{ width: "100%", height: "100%", objectFit: "cover", display: "block", transition: "transform 0.5s ease" }}
@@ -1916,8 +1916,8 @@ export default function Index() {
         {/* ── Hero top: title + truck image ── */}
         <div className="contact-hero-section" style={{ position: "relative", minHeight: 280, overflow: "hidden" }}>
           <img
-            src="https://cdn.poehali.dev/files/aa315ecd-ab40-456e-b4e3-27b8a8922be0.jpg"
-            alt="Export truck"
+            src="https://cdn.poehali.dev/files/e5bbdd87-0b54-459a-ae6e-68a3aa59bbe0.jpg"
+            alt="Owner in grain field"
             style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover" }}
           />
           <div className="contact-hero-overlay" style={{ position: "absolute", inset: 0, background: "linear-gradient(to right, rgba(245,240,232,1) 0%, rgba(245,240,232,0.95) 50%, rgba(245,240,232,0.5) 80%, transparent 100%)" }} />
