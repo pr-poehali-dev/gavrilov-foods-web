@@ -848,120 +848,6 @@ export default function Index() {
         </div>
       </section>
 
-      {/* ═══════════════ PRIVATE LABEL ═══════════════ */}
-      <section id="private-label" className="py-28" style={{ background: "var(--gf-cream-2)" }}>
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid lg:grid-cols-2 gap-16 items-start">
-            <div className="reveal-left">
-              <div className="section-label mb-6">Private Label</div>
-              <h2
-                className="font-cormorant font-light leading-tight mb-6"
-                style={{ fontSize: "clamp(36px, 4vw, 58px)", color: "var(--gf-dark)" }}
-              >
-                Your Brand,
-                <br />
-                <span style={{ color: "var(--gf-gold)", fontStyle: "italic" }}>Our Quality</span>
-              </h2>
-              <p className="text-[15px] leading-relaxed mb-8" style={{ color: "var(--gf-text-light)" }}>
-                From concept to shelf-ready packaging — we produce premium grain products under your brand for retailers, distributors and private importers worldwide.
-              </p>
-
-              <div className="flex flex-wrap gap-4 mb-10">
-                {["Custom packaging design", "Your brand, your label", "All product types available", "Retail & wholesale volumes", "EU Organic certification possible"].map((f, i) => (
-                  <div key={i} className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wide" style={{ color: "var(--gf-text-light)", fontFamily: "Montserrat" }}>
-                    <Icon name="Check" size={13} style={{ color: "var(--gf-gold)" }} />
-                    {f}
-                  </div>
-                ))}
-              </div>
-
-              <button
-                className="btn-outline-dark"
-                onClick={() => document.querySelector("#contact")?.scrollIntoView({ behavior: "smooth" })}
-              >
-                Request Private Label Proposal <Icon name="ArrowRight" size={15} />
-              </button>
-
-              {/* Process steps */}
-              <div className="mt-12">
-                <div className="text-xs font-semibold uppercase tracking-widest mb-6 font-montserrat" style={{ color: "var(--gf-text-light)" }}>
-                  Our Private Label Process
-                </div>
-                <div className="flex items-center gap-2 flex-wrap">
-                  {labelSteps.map((s, i) => (
-                    <div key={i} className="flex items-center gap-2">
-                      <div className="flex items-center gap-2">
-                        <div
-                          className="w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold"
-                          style={{ background: "var(--gf-dark)", color: "var(--gf-gold)", fontFamily: "Montserrat" }}
-                        >
-                          {i + 1}
-                        </div>
-                        <span className="text-xs font-montserrat" style={{ color: "var(--gf-text-light)" }}>
-                          {s.title}
-                        </span>
-                      </div>
-                      {i < labelSteps.length - 1 && (
-                        <Icon name="ArrowRight" size={12} style={{ color: "var(--gf-gold)", opacity: 0.5 }} />
-                      )}
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-
-            <div className="reveal-right">
-              <div className="grid grid-cols-2 gap-4">
-                {privateLabel.map((p, i) => (
-                  <div
-                    key={i}
-                    className="product-card p-5"
-                    style={{ background: "#fff", border: "1px solid rgba(0,0,0,0.06)" }}
-                  >
-                    <div
-                      className="w-10 h-10 rounded-full flex items-center justify-center mb-4"
-                      style={{ background: "var(--gf-dark)", color: "var(--gf-gold)" }}
-                    >
-                      <Icon name={p.icon} size={18} />
-                    </div>
-                    <div className="font-cormorant text-lg font-semibold mb-1" style={{ color: "var(--gf-dark)" }}>
-                      {p.title}
-                    </div>
-                    <div className="text-xs mb-2 font-montserrat font-semibold" style={{ color: "var(--gf-gold)" }}>
-                      {p.size}
-                    </div>
-                    <p className="text-xs leading-relaxed" style={{ color: "var(--gf-text-light)" }}>
-                      {p.desc}
-                    </p>
-                  </div>
-                ))}
-              </div>
-
-              <div
-                className="mt-4 p-6"
-                style={{ background: "var(--gf-dark)", color: "white" }}
-              >
-                <div className="grid grid-cols-2 gap-6">
-                  {[
-                    { val: "10,000 ha", label: "Own farmland" },
-                    { val: "Consistent", label: "Quality control" },
-                    { val: "EU + China", label: "Export experience" },
-                    { val: "Long-term", label: "Cooperation" },
-                  ].map((s, i) => (
-                    <div key={i}>
-                      <div className="font-cormorant text-xl font-semibold" style={{ color: "var(--gf-gold)" }}>
-                        {s.val}
-                      </div>
-                      <div className="text-white/50 text-xs mt-0.5">{s.label}</div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* ═══════════════ ORGANIC / CERTIFICATIONS ═══════════════ */}
       <section id="organic" className="py-16" style={{ background: "var(--gf-cream)" }}>
         <div className="max-w-7xl mx-auto px-6">
@@ -1604,6 +1490,209 @@ export default function Index() {
                   </div>
                 </div>
               ))}
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      {/* ═══════════════ PRIVATE LABEL ═══════════════ */}
+      <section id="private-label" className="py-20" style={{ background: "var(--gf-cream)" }}>
+        <div className="max-w-7xl mx-auto px-6">
+
+          {/* ── Row 1: Left text + Right 2x2 grid ── */}
+          <div className="grid lg:grid-cols-2 gap-6 mb-8 reveal">
+
+            {/* Left: text */}
+            <div className="flex flex-col justify-between" style={{ background: "var(--gf-cream)", paddingRight: 8 }}>
+              <div>
+                <div className="flex items-center gap-3 mb-5">
+                  <span style={{ color: "var(--gf-gold)", fontSize: "11px", letterSpacing: "0.2em", fontFamily: "Montserrat", fontWeight: 700, textTransform: "uppercase" }}>
+                    Private Label
+                  </span>
+                  <span style={{ display: "block", width: 32, height: 1, background: "var(--gf-gold)" }} />
+                </div>
+                <h2 className="font-cormorant leading-tight mb-5" style={{ fontSize: "clamp(42px, 5vw, 68px)", color: "var(--gf-dark)", fontWeight: 400 }}>
+                  Your Brand,<br />
+                  <span style={{ color: "var(--gf-gold)", fontStyle: "italic" }}>Our Quality</span>
+                </h2>
+                <p className="font-montserrat text-[14px] leading-relaxed mb-7" style={{ color: "var(--gf-text-light)" }}>
+                  From concept to shelf-ready packaging — we produce premium grain products under your brand for retailers, distributors and private importers worldwide.
+                </p>
+
+                {/* 5 features */}
+                <div className="grid grid-cols-3 gap-x-5 gap-y-5 mb-8">
+                  {[
+                    { icon: "LayoutTemplate", label: "Custom packaging design" },
+                    { icon: "Tag", label: "Your brand, your label" },
+                    { icon: "Layers", label: "All product types available" },
+                    { icon: "Store", label: "Retail & wholesale volumes" },
+                    { icon: "Leaf", label: "EU Organic certification possible" },
+                  ].map((f, i) => (
+                    <div key={i} className="flex flex-col items-center text-center gap-1.5">
+                      <Icon name={f.icon} size={22} style={{ color: "var(--gf-dark)", strokeWidth: 1.2 }} />
+                      <span style={{ fontFamily: "Montserrat", fontSize: 10, color: "var(--gf-text-light)", lineHeight: 1.3 }}>{f.label}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <button
+                className="btn-outline-dark self-start"
+                onClick={() => document.querySelector("#contact")?.scrollIntoView({ behavior: "smooth" })}
+              >
+                Request Private Label Proposal <Icon name="ArrowRight" size={15} />
+              </button>
+            </div>
+
+            {/* Right: 2x2 photo+info grid */}
+            <div className="grid grid-cols-2 gap-3">
+              {[
+                {
+                  img: "https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/files/93680fe2-8384-4ab5-939b-0116b8242f8b.jpg",
+                  icon: "ShoppingBag", title: "Retail Packaging",
+                  size: "250 g – 5 kg",
+                  desc: "Custom design and printing options for your brand.",
+                },
+                {
+                  img: "https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/files/84e498d6-90d3-4d72-bdea-1f9f12a84e44.jpg",
+                  icon: "Package2", title: "Big Bags",
+                  size: "500 – 1,000 kg",
+                  desc: "Industrial bulk packaging for large volume supply.",
+                },
+                {
+                  img: "https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/files/320d0af1-cc96-4c8a-8938-59ea8f5a0e13.jpg",
+                  icon: "Container", title: "FCL Container Supply",
+                  size: "20 ft / 40 ft",
+                  desc: "Full container shipments for safe and efficient delivery.",
+                },
+                {
+                  img: "https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/files/3b00e3f5-ea75-4712-9b21-5f3c9c5b6246.jpg",
+                  icon: "Tag", title: "Private Label",
+                  size: "Concept → Shelf-ready",
+                  desc: "From product selection to ready-to-sell packaging.",
+                },
+              ].map((c, i) => (
+                <div key={i} style={{ background: "#fff", border: "1px solid rgba(0,0,0,0.07)", borderRadius: 8, overflow: "hidden" }}>
+                  {/* Image */}
+                  <div style={{ height: 140, overflow: "hidden", position: "relative" }}>
+                    <img src={c.img} alt={c.title} style={{ width: "100%", height: "100%", objectFit: "cover", display: "block", transition: "transform 0.5s ease" }}
+                      onMouseEnter={e => (e.currentTarget.style.transform = "scale(1.06)")}
+                      onMouseLeave={e => (e.currentTarget.style.transform = "scale(1)")}
+                    />
+                  </div>
+                  {/* Info */}
+                  <div style={{ padding: "14px 14px 12px" }}>
+                    <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 6 }}>
+                      <div style={{ width: 32, height: 32, borderRadius: "50%", background: "var(--gf-dark)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
+                        <Icon name={c.icon} size={14} style={{ color: "var(--gf-gold)" }} />
+                      </div>
+                      <div style={{ fontFamily: "Cormorant Garamond, serif", fontSize: 16, fontWeight: 600, color: "var(--gf-dark)" }}>{c.title}</div>
+                    </div>
+                    <div style={{ fontFamily: "Montserrat", fontSize: 11, fontWeight: 700, color: "var(--gf-gold)", marginBottom: 3 }}>{c.size}</div>
+                    <div style={{ fontFamily: "Montserrat", fontSize: 11, color: "var(--gf-text-light)", lineHeight: 1.4 }}>{c.desc}</div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* ── Row 2: Our Private Label Process ── */}
+          <div className="reveal" style={{ borderTop: "1px solid rgba(0,0,0,0.07)", paddingTop: 32 }}>
+            <div className="flex items-center justify-center gap-4 mb-8">
+              <span style={{ display: "block", width: 36, height: 1, background: "var(--gf-gold)" }} />
+              <span style={{ color: "var(--gf-gold)", fontSize: "11px", letterSpacing: "0.2em", fontFamily: "Montserrat", fontWeight: 700, textTransform: "uppercase" }}>
+                Our Private Label Process
+              </span>
+              <span style={{ display: "block", width: 36, height: 1, background: "var(--gf-gold)" }} />
+            </div>
+
+            <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
+              {[
+                { icon: "Wheat", num: 1, title: "Product Selection", desc: "Choose from our wide range of grains, pulses and oilseeds." },
+                { icon: "Palette", num: 2, title: "Packaging & Design", desc: "We create packaging design that represents your brand." },
+                { icon: "ShieldCheck", num: 3, title: "Certification & Labeling", desc: "EU Organic certification available. All labeling requirements covered." },
+                { icon: "Factory", num: 4, title: "Production & Quality Control", desc: "Modern facilities and strict quality control at every stage." },
+                { icon: "Ship", num: 5, title: "Container Shipment", desc: "Full container loads delivered to your port on time." },
+              ].map((s, i) => (
+                <div key={i} className="flex flex-col items-center text-center">
+                  <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 10 }}>
+                    <div style={{ width: 44, height: 44, borderRadius: "50%", background: "var(--gf-dark)", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                      <Icon name={s.icon} size={18} style={{ color: "var(--gf-gold)" }} />
+                    </div>
+                    <div style={{ fontFamily: "Cormorant Garamond, serif", fontSize: 36, fontWeight: 300, color: "var(--gf-dark)", lineHeight: 1 }}>{s.num}</div>
+                    {i < 4 && <Icon name="ArrowRight" size={14} style={{ color: "var(--gf-gold)", opacity: 0.4, display: "none" }} />}
+                  </div>
+                  <div style={{ fontFamily: "Montserrat", fontWeight: 700, fontSize: 11, textTransform: "uppercase", letterSpacing: "0.05em", color: "var(--gf-dark)", marginBottom: 6 }}>{s.title}</div>
+                  <div style={{ fontFamily: "Montserrat", fontSize: 11, color: "var(--gf-text-light)", lineHeight: 1.4 }}>{s.desc}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* ── Row 3: Reliable Partner dark block + 4 photos ── */}
+          <div className="grid md:grid-cols-5 gap-0 mt-8 reveal" style={{ borderRadius: 10, overflow: "hidden" }}>
+            {/* Dark left */}
+            <div style={{ background: "var(--gf-dark)", padding: "32px 28px", gridColumn: "span 1" }}>
+              <h3 className="font-cormorant text-white leading-tight mb-6" style={{ fontSize: "clamp(22px, 2.5vw, 30px)", fontWeight: 400 }}>
+                Reliable Partner for Your Brand
+              </h3>
+              <div className="space-y-5">
+                {[
+                  { icon: "Wheat", val: "10,000 ha", sub: "Own farmland", desc: "Full control over raw materials" },
+                  { icon: "ShieldCheck", val: "Consistent", sub: "Quality", desc: "Strict standards and laboratory control" },
+                  { icon: "Globe", val: "Export", sub: "Experience", desc: "Exporting to Europe and China" },
+                  { icon: "Handshake", val: "Long-term", sub: "Cooperation", desc: "Flexible approach and personal care" },
+                ].map((s, i) => (
+                  <div key={i}>
+                    <div style={{ fontFamily: "Cormorant Garamond, serif", fontSize: 18, fontWeight: 600, color: "var(--gf-gold)" }}>{s.val}</div>
+                    <div style={{ fontFamily: "Montserrat", fontSize: 10, fontWeight: 700, textTransform: "uppercase", color: "rgba(255,255,255,0.6)", marginBottom: 1 }}>{s.sub}</div>
+                    <div style={{ fontFamily: "Montserrat", fontSize: 10, color: "rgba(255,255,255,0.4)", lineHeight: 1.3 }}>{s.desc}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* 4 photos */}
+            {[
+              PRODUCTS_IMG,
+              "https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/files/84e498d6-90d3-4d72-bdea-1f9f12a84e44.jpg",
+              "https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/files/1694ef7b-4cbe-47de-89af-c109a17aa409.jpg",
+              "https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/files/b8d2d916-8dce-4c6e-b197-7f7a24a273b8.jpg",
+            ].map((img, i) => (
+              <div key={i} style={{ overflow: "hidden", minHeight: 260 }}>
+                <img src={img} alt="" style={{ width: "100%", height: "100%", objectFit: "cover", display: "block", transition: "transform 0.5s ease" }}
+                  onMouseEnter={e => (e.currentTarget.style.transform = "scale(1.06)")}
+                  onMouseLeave={e => (e.currentTarget.style.transform = "scale(1)")}
+                />
+              </div>
+            ))}
+          </div>
+
+          {/* ── Row 4: Bottom CTA ── */}
+          <div className="mt-6 reveal" style={{ background: "#fff", border: "1px solid rgba(0,0,0,0.07)", borderRadius: 10, padding: "24px 28px" }}>
+            <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+              <div className="flex items-center gap-5">
+                <div style={{ width: 52, height: 52, borderRadius: "50%", background: "var(--gf-dark)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
+                  <Icon name="Wheat" size={22} style={{ color: "var(--gf-gold)", strokeWidth: 1.2 }} />
+                </div>
+                <div>
+                  <div style={{ fontFamily: "Cormorant Garamond, serif", fontSize: 22, fontWeight: 400, color: "var(--gf-dark)", marginBottom: 2 }}>
+                    Let's create something great together
+                  </div>
+                  <div style={{ fontFamily: "Montserrat", fontSize: 12, color: "var(--gf-text-light)" }}>
+                    Tell us about your needs and we will prepare a custom solution for your business.
+                  </div>
+                </div>
+              </div>
+              <div className="flex flex-col items-end gap-1 flex-shrink-0">
+                <button className="btn-gold" onClick={() => document.querySelector("#contact")?.scrollIntoView({ behavior: "smooth" })}>
+                  Get Your Custom Offer <Icon name="ArrowRight" size={16} />
+                </button>
+                <div style={{ fontFamily: "Montserrat", fontSize: 10, color: "var(--gf-text-light)", textAlign: "right" }}>
+                  info@gavrilovfoods.com &nbsp;•&nbsp; www.gavrilovfoods.com
+                </div>
+              </div>
             </div>
           </div>
 
