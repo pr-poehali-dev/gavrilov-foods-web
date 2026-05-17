@@ -593,7 +593,9 @@ export default function Index() {
                       .querySelector("#contact")
                       ?.scrollIntoView({ behavior: "smooth" })
                   }
-                >Request a Quote</button>
+                >
+                  Request a Quote
+                </button>
               </div>
             </div>
           </div>
@@ -919,7 +921,9 @@ export default function Index() {
                     <div
                       className="font-cormorant text-[28px] font-semibold leading-none"
                       style={{ color: "var(--gf-gold)" }}
-                    >10,000 + ha</div>
+                    >
+                      10,000 + ha
+                    </div>
                     <div
                       className="text-[12px] font-montserrat mt-0.5"
                       style={{ color: "var(--gf-text-light)" }}
@@ -2149,7 +2153,9 @@ export default function Index() {
                       fontWeight: 700,
                       textTransform: "uppercase",
                     }}
-                  >FULL SUPPLY CHAIN CONTROL</span>
+                  >
+                    FULL SUPPLY CHAIN CONTROL
+                  </span>
                 </div>
                 <p
                   className="text-[13px] font-montserrat"
@@ -3690,7 +3696,7 @@ export default function Index() {
                 {[
                   {
                     icon: "Wheat",
-                    val: "10,000 ha",
+                    val: "10,000+ ha",
                     sub: "Own farmland",
                     desc: "Full control over raw materials",
                   },
