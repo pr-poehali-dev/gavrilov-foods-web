@@ -4080,9 +4080,7 @@ export default function Index() {
                     color: "var(--gf-text-light)",
                     textAlign: "right",
                   }}
-                >
-                  info@gavrilovfoods.com &nbsp;•&nbsp; www.gavrilovfoods.com
-                </div>
+                >gavrilovfoods.export@gmail.com  •  gavrilovfarm.ru</div>
               </div>
             </div>
           </div>
