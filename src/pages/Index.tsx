@@ -921,7 +921,9 @@ export default function Index() {
                     <div
                       className="font-cormorant text-[28px] font-semibold leading-none"
                       style={{ color: "var(--gf-gold)" }}
-                    >10,000 ha</div>
+                    >
+                      10,000 ha
+                    </div>
                     <div
                       className="text-[12px] font-montserrat mt-0.5"
                       style={{ color: "var(--gf-text-light)" }}
@@ -2179,7 +2181,7 @@ export default function Index() {
                   },
                   {
                     icon: "Tractor",
-                    title: "Carefully",
+                    title: "Direct Farming",
                     desc: "cultivated and harvested",
                   },
                   {
@@ -2195,7 +2197,7 @@ export default function Index() {
                   {
                     icon: "Ship",
                     title: "Reliable",
-                    desc: "logistics to global markets",
+                    desc: "export logistics & container shipments",
                   },
                 ].map((f, i) => (
                   <div
