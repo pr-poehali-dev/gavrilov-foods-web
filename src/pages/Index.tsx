@@ -1842,9 +1842,7 @@ export default function Index() {
                     className="w-10 h-0.5 mb-5"
                     style={{ background: "var(--gf-gold)" }}
                   />
-                  <p className="text-white/65 text-[14px] leading-relaxed max-w-xs font-montserrat">
-                    We meet your needs with flexibility and care at every step.
-                  </p>
+                  <p className="text-white/65 text-[14px] leading-relaxed max-w-xs font-montserrat">We meet your needs with flexibility and care at every step, adapting schedules and processes to your requirements while maintaining strict quality control.</p>
                 </div>
 
                 {/* Bottom info box */}
