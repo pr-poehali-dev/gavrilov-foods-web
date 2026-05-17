@@ -2435,24 +2435,24 @@ export default function Index() {
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
                 {[
                   {
-                    icon: "Leaf",
-                    title: "Organic Fields",
-                    desc: "Fertile land and careful cultivation",
+                    icon: "Sprout",
+                    title: "Advanced Cultivation",
+                    desc: "Precision farming, soil monitoring, and sustainable crop management",
                   },
                   {
-                    icon: "ShieldCheck",
-                    title: "Quality Control",
-                    desc: "Field inspections and strict standards",
+                    icon: "FileCheck",
+                    title: "Export Compliance",
+                    desc: "Phytosanitary certification, pesticide testing, and market-specific documentation",
                   },
                   {
-                    icon: "Settings",
-                    title: "Modern Equipment",
-                    desc: "Advanced machinery and technologies",
+                    icon: "Package",
+                    title: "Processing & Packaging",
+                    desc: "Sorting, cleaning, and retail-ready packing to extend shelf life",
                   },
                   {
-                    icon: "Globe",
-                    title: "Global Supply",
-                    desc: "Reliable logistics and on-time delivery",
+                    icon: "Container",
+                    title: "Container Shipments",
+                    desc: "Refrigerated container logistics, route planning, and on-time delivery",
                   },
                 ].map((p, i) => (
                   <div key={i}>
