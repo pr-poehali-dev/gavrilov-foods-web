@@ -1774,7 +1774,9 @@ export default function Index() {
                     .querySelector("#contact")
                     ?.scrollIntoView({ behavior: "smooth" })
                 }
-              >GET PRODUCT CATALOG</button>
+              >
+                GET PRODUCT CATALOG
+              </button>
               <span
                 className="text-[10px] font-montserrat"
                 style={{ color: "var(--gf-text-light)" }}
@@ -1839,7 +1841,11 @@ export default function Index() {
                     className="w-10 h-0.5 mb-5"
                     style={{ background: "var(--gf-gold)" }}
                   />
-                  <p className="text-white/65 text-[14px] leading-relaxed max-w-xs font-montserrat">We meet your needs with flexibility and care at every step, adapting schedules and processes to your requirements while maintaining strict quality control.</p>
+                  <p className="text-white/65 text-[14px] leading-relaxed max-w-xs font-montserrat">
+                    We meet your needs with flexibility and care at every step,
+                    adapting schedules and processes to your requirements while
+                    maintaining strict quality control.
+                  </p>
                 </div>
 
                 {/* Bottom info box */}
@@ -1896,7 +1902,9 @@ export default function Index() {
                   color: "var(--gf-dark)",
                   fontWeight: 400,
                 }}
-              >EU Certified Organic Products</h2>
+              >
+                EU Certified Organic Products
+              </h2>
 
               {/* Checkmarks */}
               <div className="space-y-3">
@@ -2690,14 +2698,14 @@ export default function Index() {
             {[
               {
                 img: "https://cdn.poehali.dev/files/e43ef89f-fe22-4c5d-9966-3f78245a4cee.jpg", // packaging machine
-                title: "Processing & Packaging",
+                title: "Retail & Private Label Packaging",
                 desc: "Automated sorting lines and multi-format packaging: retail pouches, 25–50 kg bags, and 1,000 kg big bags with moisture-barrier lining.",
                 btn: "Our Products",
                 target: "#products",
               },
               {
                 img: "https://cdn.poehali.dev/files/98d43280-321a-4078-bb4e-2cd8a7e71f5e.jpg", // packaged goods
-                title: "Export Standards & Docs",
+                title: "Flexible Packaging Formats",
                 desc: "We handle phytosanitary certificates, pesticide residue testing, and all market-specific documentation for EU, UK, and Middle East buyers.",
                 btn: "Private Label",
                 target: "#private-label",
@@ -3158,10 +3166,23 @@ export default function Index() {
             <img
               src="https://cdn.poehali.dev/files/138b276f-d17d-42ca-ac90-e76889009b9a.png"
               alt="USDA Organic"
-              style={{ width: 72, height: 72, objectFit: "contain", flexShrink: 0, opacity: 0.55 }}
+              style={{
+                width: 72,
+                height: 72,
+                objectFit: "contain",
+                flexShrink: 0,
+                opacity: 0.55,
+              }}
             />
             <div style={{ flex: 1 }}>
-              <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 6 }}>
+              <div
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: 10,
+                  marginBottom: 6,
+                }}
+              >
                 <div
                   style={{
                     fontFamily: "Montserrat",
@@ -3200,7 +3221,9 @@ export default function Index() {
                   maxWidth: 560,
                 }}
               >
-                We are currently completing the USDA NOP certification process. Certification is expected by July 2026, enabling us to supply USDA Organic–labelled products to the US market.
+                We are currently completing the USDA NOP certification process.
+                Certification is expected by July 2026, enabling us to supply
+                USDA Organic–labelled products to the US market.
               </div>
             </div>
           </div>
