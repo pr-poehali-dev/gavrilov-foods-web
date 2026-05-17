@@ -1689,7 +1689,7 @@ export default function Index() {
                   desc: "Modern equipment for cleaning and sorting",
                 },
                 {
-                  img: PRODUCTS_IMG,
+                  img: "https://cdn.poehali.dev/files/fa420cdb-c1a0-490e-a2ea-6b3197b248b7.jpg",
                   icon: "Package",
                   label: "Storage",
                   desc: "Controlled storage capacity for stable supply",
