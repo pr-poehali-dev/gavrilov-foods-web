@@ -1840,7 +1840,7 @@ export default function Index() {
                     className="text-[10px] font-bold uppercase tracking-widest mb-4 font-montserrat"
                     style={{ color: "var(--gf-gold)" }}
                   >
-                    Organic & Conventional
+                    EU Organic Certified Supplier
                   </div>
                   <h2
                     className="font-cormorant font-semibold text-white leading-tight mb-4"
@@ -1850,7 +1850,7 @@ export default function Index() {
                     <span
                       style={{ color: "var(--gf-gold)", fontStyle: "italic" }}
                     >
-                      Conventional Options
+                      Conventional Supply
                     </span>
                   </h2>
                   <div
@@ -4308,115 +4308,30 @@ export default function Index() {
             </div>
           </div>
 
-          {/* ── Row 3: Dark trust block + 4 wide photos ── */}
+          {/* ── Row 3: Why Buyers Trust — full-width dark panel ── */}
           <div
             className="reveal"
             style={{
-              display: "grid",
-              gridTemplateColumns: "320px 1fr 1fr 1fr 1fr",
-              gap: 4,
+              background: "var(--gf-dark)",
               borderRadius: 10,
-              overflow: "hidden",
-              minHeight: 220,
+              padding: "32px 36px",
             }}
           >
-            {/* Dark left: Why Buyers Trust */}
-            <div
-              style={{
-                background: "var(--gf-dark)",
-                padding: "28px 24px",
-                display: "flex",
-                flexDirection: "column",
-                justifyContent: "space-between",
-              }}
-            >
-              <div>
-                <h3
-                  style={{
-                    fontFamily: "Cormorant Garamond, serif",
-                    fontSize: 22,
-                    fontWeight: 400,
-                    color: "#fff",
-                    marginBottom: 16,
-                  }}
-                >
-                  Why Buyers Trust Gavrilov Foods
-                </h3>
-                <div
-                  style={{ display: "flex", flexDirection: "column", gap: 10 }}
-                >
-                  {[
-                    {
-                      icon: "Wheat",
-                      title: "Own Farmland",
-                      desc: "Full control from seed to Harvest",
-                    },
-                    {
-                      icon: "ShieldCheck",
-                      title: "Quality & Safety",
-                      desc: "Modern equipment and strict quality control.",
-                    },
-                    {
-                      icon: "ScanLine",
-                      title: "Full Traceability",
-                      desc: "Transparent and traceable supply chain.",
-                    },
-                    {
-                      icon: "Globe",
-                      title: "Export Experience",
-                      desc: "Reliable export packaging and logistics.",
-                    },
-                    {
-                      icon: "Leaf",
-                      title: "EU Organic Available",
-                      desc: "Certified organic products for global markets.",
-                    },
-                  ].map((t, i) => (
-                    <div
-                      key={i}
-                      style={{
-                        display: "flex",
-                        alignItems: "flex-start",
-                        gap: 8,
-                      }}
-                    >
-                      <Icon
-                        name={t.icon}
-                        size={13}
-                        style={{
-                          color: "var(--gf-gold)",
-                          marginTop: 2,
-                          flexShrink: 0,
-                        }}
-                      />
-                      <div>
-                        <span
-                          style={{
-                            fontFamily: "Montserrat",
-                            fontSize: 10,
-                            fontWeight: 700,
-                            color: "rgba(255,255,255,0.7)",
-                          }}
-                        >
-                          {t.title}{" "}
-                        </span>
-                        <span
-                          style={{
-                            fontFamily: "Montserrat",
-                            fontSize: 10,
-                            color: "rgba(255,255,255,0.35)",
-                          }}
-                        >
-                          {t.desc}
-                        </span>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
+            <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6 mb-6">
+              <h3
+                style={{
+                  fontFamily: "Cormorant Garamond, serif",
+                  fontSize: "clamp(22px, 2.5vw, 30px)",
+                  fontWeight: 400,
+                  color: "#fff",
+                  margin: 0,
+                }}
+              >
+                Why Buyers Trust Gavrilov Foods
+              </h3>
               <button
                 className="btn-gold"
-                style={{ marginTop: 16, fontSize: 11, padding: "10px 16px" }}
+                style={{ fontSize: 11, padding: "10px 20px", flexShrink: 0 }}
                 onClick={() =>
                   document
                     .querySelector("#contact")
@@ -4426,34 +4341,74 @@ export default function Index() {
                 Request a Quote <Icon name="ArrowRight" size={13} />
               </button>
             </div>
-
-            {/* 4 wide photos */}
-            {[
-              "https://cdn.poehali.dev/files/51ae26bd-c7fe-480a-9f36-813ad383270f.jpg", // Kirovets tractor + truck
-              "https://cdn.poehali.dev/files/8d03071c-03b0-44e5-a0b2-f9c3e6caf88e.jpg", // owner with Kirovets
-              "https://cdn.poehali.dev/files/adfab279-52dd-4dc8-beb1-1d55cb2b0a2f.jpg", // sowing machine
-              "https://cdn.poehali.dev/files/3efd98e0-a84f-449a-aebd-9379d7fa092e.jpg", // BTZ tractor
-            ].map((src, i) => (
-              <div key={i} style={{ overflow: "hidden" }}>
-                <img
-                  src={src}
-                  alt=""
+            <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
+              {[
+                {
+                  icon: "Wheat",
+                  title: "Own Farmland",
+                  desc: "10,000+ ha — full control from seed to harvest",
+                },
+                {
+                  icon: "ShieldCheck",
+                  title: "Quality Control",
+                  desc: "In-house lab testing at every stage",
+                },
+                {
+                  icon: "ScanLine",
+                  title: "Full Traceability",
+                  desc: "Transparent, field-to-shipment supply chain",
+                },
+                {
+                  icon: "Leaf",
+                  title: "EU Organic Certified",
+                  desc: "Certified organic products for selected categories",
+                },
+                {
+                  icon: "Globe",
+                  title: "Export Experience",
+                  desc: "International markets, phytosanitary docs, FCL",
+                },
+              ].map((t, i) => (
+                <div
+                  key={i}
                   style={{
-                    width: "100%",
-                    height: "100%",
-                    objectFit: "cover",
-                    display: "block",
-                    transition: "transform 0.5s ease",
+                    background: "rgba(255,255,255,0.05)",
+                    borderRadius: 8,
+                    padding: "16px 14px",
+                    border: "1px solid rgba(255,255,255,0.08)",
                   }}
-                  onMouseEnter={(e) =>
-                    (e.currentTarget.style.transform = "scale(1.06)")
-                  }
-                  onMouseLeave={(e) =>
-                    (e.currentTarget.style.transform = "scale(1)")
-                  }
-                />
-              </div>
-            ))}
+                >
+                  <Icon
+                    name={t.icon}
+                    size={18}
+                    style={{ color: "var(--gf-gold)", marginBottom: 8, strokeWidth: 1.3 }}
+                  />
+                  <div
+                    style={{
+                      fontFamily: "Montserrat",
+                      fontSize: 10,
+                      fontWeight: 700,
+                      textTransform: "uppercase",
+                      letterSpacing: "0.06em",
+                      color: "rgba(255,255,255,0.75)",
+                      marginBottom: 4,
+                    }}
+                  >
+                    {t.title}
+                  </div>
+                  <div
+                    style={{
+                      fontFamily: "Montserrat",
+                      fontSize: 10,
+                      color: "rgba(255,255,255,0.4)",
+                      lineHeight: 1.4,
+                    }}
+                  >
+                    {t.desc}
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
 
           {/* ── Row 4: Bottom trust strip ── */}
@@ -4469,29 +4424,29 @@ export default function Index() {
           >
             {[
               {
-                icon: "ShieldCheck",
-                title: "Reliable Supply",
-                desc: "Stable volumes and on-time delivery.",
-              },
-              {
-                icon: "Award",
-                title: "Certified Quality",
-                desc: "EU Organic certification available.",
+                icon: "Wheat",
+                title: "MOQ from 1 MT",
+                desc: "Flexible minimum order for any market.",
               },
               {
                 icon: "Package",
-                title: "Flexible Solutions",
-                desc: "Custom packaging for your brand.",
+                title: "Private Label Ready",
+                desc: "Custom packaging 250g – 1,000 kg big bags.",
               },
               {
-                icon: "Globe",
-                title: "Global Standards",
-                desc: "We meet international food safety standards.",
+                icon: "Leaf",
+                title: "EU Organic Certified",
+                desc: "Certified organic for selected product categories.",
               },
               {
-                icon: "Handshake",
-                title: "Long-term Partnership",
-                desc: "Built on trust, quality and transparency.",
+                icon: "FileText",
+                title: "Export Docs",
+                desc: "Phytosanitary, lab tests, certificates of origin.",
+              },
+              {
+                icon: "Tractor",
+                title: "Own Farmland",
+                desc: "10,000+ ha — direct producer, no middlemen.",
               },
             ].map((t, i) => (
               <div
