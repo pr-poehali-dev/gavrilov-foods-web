@@ -2409,9 +2409,7 @@ export default function Index() {
                     fontWeight: 700,
                     textTransform: "uppercase",
                   }}
-                >
-                  Our Process
-                </span>
+                >FULL SUPPLY CHAIN</span>
                 <Icon
                   name="Leaf"
                   size={14}
