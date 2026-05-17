@@ -1774,10 +1774,7 @@ export default function Index() {
                     .querySelector("#contact")
                     ?.scrollIntoView({ behavior: "smooth" })
                 }
-              >
-                <Icon name="Download" size={16} />
-                Download Catalog PDF
-              </button>
+              >GET PRODUCT CATALOG</button>
               <span
                 className="text-[10px] font-montserrat"
                 style={{ color: "var(--gf-text-light)" }}
