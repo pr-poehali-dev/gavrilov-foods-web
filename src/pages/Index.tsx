@@ -2327,7 +2327,7 @@ export default function Index() {
                   className="font-cormorant font-semibold text-xl mb-0.5"
                   style={{ color: "var(--gf-dark)" }}
                 >
-                  Download Organic Certificate / Specification
+                  Documents
                 </div>
                 <div
                   className="text-[12px] font-montserrat"
@@ -2338,7 +2338,7 @@ export default function Index() {
                 </div>
               </div>
             </div>
-            <div className="flex items-center gap-4 flex-shrink-0">
+            <div className="flex items-center gap-4 flex-shrink-0 flex-wrap">
               <a
                 href="/docs/organic-cert.pdf"
                 download
@@ -2351,7 +2351,21 @@ export default function Index() {
                 }}
               >
                 <Icon name="Download" size={16} />
-                Download Documents
+                Organic Certificate
+              </a>
+              <a
+                href="/docs/product-specification.pdf"
+                download
+                className="btn-gold"
+                style={{
+                  textDecoration: "none",
+                  display: "inline-flex",
+                  alignItems: "center",
+                  gap: 8,
+                }}
+              >
+                <Icon name="Download" size={16} />
+                Product Specification
               </a>
               <img
                 src={PRODUCTS_IMG}
