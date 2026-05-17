@@ -2708,98 +2708,213 @@ export default function Index() {
             </div>
           </div>
 
-          {/* ── 3 bottom cards ── */}
-          <div className="grid md:grid-cols-3 gap-5">
-            {[
-              {
-                img: "https://cdn.poehali.dev/files/e43ef89f-fe22-4c5d-9966-3f78245a4cee.jpg", // packaging machine
-                title: "Retail & Private Label Packaging",
-                desc: "Automated sorting lines and multi-format packaging: retail pouches, 25–50 kg bags, and 1,000 kg big bags with moisture-barrier lining.",
-                btn: "Our Products",
-                target: "#products",
-              },
-              {
-                img: "https://cdn.poehali.dev/files/98d43280-321a-4078-bb4e-2cd8a7e71f5e.jpg", // packaged goods
-                title: "Flexible Packaging Formats",
-                desc: "We handle phytosanitary certificates, pesticide residue testing, and all market-specific documentation for EU, UK, and Middle East buyers.",
-                btn: "Private Label",
-                target: "#private-label",
-              },
-              {
-                img: "https://cdn.poehali.dev/files/91652dc2-54a9-47e7-8b5f-fb8ec843b284.jpg", // big bags storage
-                title: "Container Logistics",
-                desc: "Up to 10,000 MT in storage. Refrigerated and standard container shipments with flexible Incoterms: EXW, FOB, CFR, DDP.",
-                btn: "Contact Us",
-                target: "#contact",
-              },
-            ].map((c, i) => (
-              <div
-                key={i}
-                className="reveal"
-                data-delay={String(i * 80)}
-                style={{
-                  background: "var(--gf-cream)",
-                  borderRadius: 10,
-                  border: "1px solid rgba(0,0,0,0.06)",
-                  overflow: "hidden",
-                  display: "flex",
-                  flexDirection: "column",
-                }}
-              >
-                {/* Fixed-height image, no absolute positioning */}
-                <div style={{ height: 220, overflow: "hidden", flexShrink: 0 }}>
-                  <img
-                    src={c.img}
-                    alt={c.title}
-                    style={{
-                      width: "100%",
-                      height: "100%",
-                      objectFit: "cover",
-                      display: "block",
-                      transition: "transform 0.6s ease",
-                    }}
-                    onMouseEnter={(e) =>
-                      (e.currentTarget.style.transform = "scale(1.05)")
-                    }
-                    onMouseLeave={(e) =>
-                      (e.currentTarget.style.transform = "scale(1)")
-                    }
-                  />
-                </div>
+          {/* ── Quality Packaging hero block ── */}
+          <div
+            className="reveal mb-6"
+            style={{
+              background: "#fff",
+              border: "1px solid rgba(0,0,0,0.07)",
+              borderRadius: 10,
+              overflow: "hidden",
+            }}
+          >
+            <div className="grid md:grid-cols-2">
+              {/* Left: text */}
+              <div style={{ padding: "36px 36px 36px" }}>
                 <div
-                  style={{
-                    padding: "20px",
-                    display: "flex",
-                    flexDirection: "column",
-                    flex: 1,
-                  }}
+                  className="flex items-center gap-2 mb-4"
+                  style={{ color: "var(--gf-gold)" }}
                 >
-                  <div
-                    className="font-montserrat font-bold text-[12px] uppercase tracking-widest mb-2"
-                    style={{ color: "var(--gf-dark)" }}
-                  >
-                    {c.title}
-                  </div>
-                  <p
-                    className="text-[12px] leading-relaxed font-montserrat mb-5"
-                    style={{ color: "var(--gf-text-light)", flex: 1 }}
-                  >
-                    {c.desc}
-                  </p>
-                  <button
-                    className="btn-outline-dark text-[11px] py-2.5 px-5"
-                    style={{ alignSelf: "flex-start" }}
-                    onClick={() =>
-                      document
-                        .querySelector(c.target)
-                        ?.scrollIntoView({ behavior: "smooth" })
-                    }
-                  >
-                    {c.btn}
-                  </button>
+                  <Icon name="Package" size={14} />
+                  <span className="font-montserrat font-bold text-[10px] uppercase tracking-widest">
+                    Packaging Solutions
+                  </span>
+                </div>
+                <h3
+                  className="font-cormorant leading-tight mb-4"
+                  style={{ fontSize: "clamp(28px, 3vw, 44px)", fontWeight: 400, color: "var(--gf-dark)" }}
+                >
+                  Quality Packaging.<br />Product Protection.
+                </h3>
+                <p className="font-montserrat text-[13px] leading-relaxed mb-6" style={{ color: "var(--gf-text-light)", maxWidth: 360 }}>
+                  We use modern equipment and high-quality materials to ensure safe packaging, accurate weight and long shelf life.
+                </p>
+                <div className="flex flex-wrap gap-4 mb-8">
+                  {[
+                    { icon: "Target", label: "High Accuracy" },
+                    { icon: "Shield", label: "Product Protection" },
+                    { icon: "ShieldCheck", label: "Quality Control" },
+                  ].map((f, i) => (
+                    <div key={i} className="flex items-center gap-2">
+                      <Icon name={f.icon} size={14} style={{ color: "var(--gf-gold)" }} />
+                      <span className="font-montserrat text-[11px] font-bold uppercase tracking-wide" style={{ color: "var(--gf-dark)" }}>{f.label}</span>
+                    </div>
+                  ))}
+                </div>
+                <button
+                  className="btn-gold text-[11px]"
+                  onClick={() => document.querySelector("#contact")?.scrollIntoView({ behavior: "smooth" })}
+                >
+                  Request Packaging Options <Icon name="ArrowRight" size={14} />
+                </button>
+                <div className="mt-6 pt-5" style={{ borderTop: "1px solid rgba(0,0,0,0.06)" }}>
+                  <div className="font-montserrat font-bold text-[10px] uppercase tracking-widest mb-1" style={{ color: "var(--gf-text-light)" }}>Packaging Range</div>
+                  <div className="font-cormorant text-[28px]" style={{ color: "var(--gf-gold)", fontWeight: 600 }}>200 g – 1,000 kg</div>
+                  <div className="font-montserrat text-[11px]" style={{ color: "var(--gf-text-light)" }}>Retail, wholesale and food service</div>
                 </div>
               </div>
-            ))}
+              {/* Right: photo */}
+              <div style={{ minHeight: 340, overflow: "hidden" }}>
+                <img
+                  src="https://cdn.poehali.dev/files/e43ef89f-fe22-4c5d-9966-3f78245a4cee.jpg"
+                  alt="Packaging equipment"
+                  style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
+                />
+              </div>
+            </div>
+          </div>
+
+          {/* ── Packaging Formats ── */}
+          <div
+            className="reveal mb-6"
+            style={{
+              background: "#fff",
+              border: "1px solid rgba(0,0,0,0.07)",
+              borderRadius: 10,
+              padding: "32px 28px",
+            }}
+          >
+            <div className="text-center mb-6">
+              <div className="flex items-center justify-center gap-4 mb-2">
+                <span style={{ display: "block", width: 36, height: 1, background: "var(--gf-gold)" }} />
+                <span className="font-montserrat font-bold text-[11px] uppercase tracking-widest" style={{ color: "var(--gf-gold)" }}>Packaging Formats</span>
+                <span style={{ display: "block", width: 36, height: 1, background: "var(--gf-gold)" }} />
+              </div>
+              <p className="font-montserrat text-[12px]" style={{ color: "var(--gf-text-light)" }}>A wide range of packaging options to meet your market needs.</p>
+            </div>
+            <div className="grid grid-cols-3 md:grid-cols-6 gap-4">
+              {[
+                { label: "200 g", sub: "Doypack / Bag" },
+                { label: "400 g", sub: "Doypack" },
+                { label: "500 g", sub: "Block bottom bag" },
+                { label: "800 g", sub: "Gusseted bag" },
+                { label: "1,000 g", sub: "Block bottom bag" },
+                { label: "Big Bags", sub: "500 – 1,000 kg" },
+              ].map((f, i) => (
+                <div key={i} className="flex flex-col items-center text-center gap-2 py-3 px-2" style={{ background: "var(--gf-cream)", borderRadius: 8 }}>
+                  <Icon name={i === 5 ? "Package2" : "Package"} size={28} style={{ color: "var(--gf-dark)", strokeWidth: 1 }} />
+                  <div className="font-cormorant font-semibold text-[18px]" style={{ color: "var(--gf-gold)" }}>{f.label}</div>
+                  <div className="font-montserrat text-[10px]" style={{ color: "var(--gf-text-light)" }}>{f.sub}</div>
+                </div>
+              ))}
+            </div>
+            <p className="text-center font-montserrat text-[11px] mt-4" style={{ color: "var(--gf-text-light)" }}>
+              <Icon name="Leaf" size={11} style={{ color: "var(--gf-gold)", display: "inline", marginRight: 4 }} />
+              Other weights and formats are available upon request.
+            </p>
+          </div>
+
+          {/* ── Private Label ── */}
+          <div
+            className="reveal mb-6"
+            style={{
+              background: "var(--gf-dark)",
+              borderRadius: 10,
+              overflow: "hidden",
+            }}
+          >
+            <div className="grid md:grid-cols-2 gap-0">
+              {/* Left */}
+              <div style={{ padding: "36px 36px" }}>
+                <div className="font-montserrat font-bold text-[10px] uppercase tracking-widest mb-3" style={{ color: "var(--gf-gold)" }}>Private Label</div>
+                <h3 className="font-cormorant text-white leading-tight mb-4" style={{ fontSize: "clamp(28px, 3vw, 42px)", fontWeight: 400 }}>
+                  Build Your Brand<br />
+                  <span style={{ color: "var(--gf-gold)", fontStyle: "italic" }}>With Us</span>
+                </h3>
+                <p className="font-montserrat text-[13px] leading-relaxed mb-6" style={{ color: "rgba(255,255,255,0.6)", maxWidth: 360 }}>
+                  We offer private label solutions with flexible design options to help your brand stand out.
+                </p>
+                <div className="space-y-3 mb-8">
+                  {[
+                    "Custom label design",
+                    "Different packaging materials",
+                    "Logo, colours and product information",
+                    "MOQ from 1 pallet",
+                  ].map((item, i) => (
+                    <div key={i} className="flex items-center gap-3">
+                      <Icon name="Check" size={12} style={{ color: "var(--gf-gold)", flexShrink: 0 }} />
+                      <span className="font-montserrat text-[12px]" style={{ color: "rgba(255,255,255,0.7)" }}>{item}</span>
+                    </div>
+                  ))}
+                </div>
+                <button
+                  className="btn-gold text-[11px]"
+                  onClick={() => document.querySelector("#private-label")?.scrollIntoView({ behavior: "smooth" })}
+                >
+                  Learn More <Icon name="ArrowRight" size={14} />
+                </button>
+              </div>
+              {/* Right: mock bags with logo */}
+              <div
+                className="flex items-center justify-center gap-4 py-10 px-8"
+                style={{ background: "rgba(255,255,255,0.04)" }}
+              >
+                {[
+                  { size: "h-48", opacity: 0.7 },
+                  { size: "h-56", opacity: 1 },
+                  { size: "h-44", opacity: 0.6 },
+                ].map((b, i) => (
+                  <div
+                    key={i}
+                    className={`relative flex flex-col items-center justify-center rounded-lg ${b.size}`}
+                    style={{
+                      width: 100,
+                      background: "rgba(255,255,255,0.92)",
+                      opacity: b.opacity,
+                      borderRadius: 8,
+                      padding: "12px 8px",
+                      border: "1px solid rgba(255,255,255,0.3)",
+                    }}
+                  >
+                    <img
+                      src="https://cdn.poehali.dev/files/a56e28f6-f68e-47b5-85b3-96e8100cf00e.png"
+                      alt="Gavrilov Organic Foods"
+                      style={{ width: 72, objectFit: "contain", marginBottom: 6 }}
+                    />
+                    <div className="font-montserrat text-[9px] text-center" style={{ color: "var(--gf-text-light)" }}>Buckwheat</div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* ── Why Partners Choose Us ── */}
+          <div
+            className="reveal"
+            style={{
+              background: "#fff",
+              border: "1px solid rgba(0,0,0,0.07)",
+              borderRadius: 10,
+              padding: "24px 28px",
+            }}
+          >
+            <div className="text-center mb-5">
+              <span className="font-montserrat font-bold text-[11px] uppercase tracking-widest" style={{ color: "var(--gf-text-light)" }}>Why Partners Choose Us</span>
+            </div>
+            <div className="grid grid-cols-2 md:grid-cols-5 gap-4 text-center">
+              {[
+                { icon: "Leaf", label: "Organic Certified" },
+                { icon: "Truck", label: "Reliable Supply" },
+                { icon: "Package", label: "Flexible Packaging" },
+                { icon: "Globe", label: "Global Delivery" },
+                { icon: "Headphones", label: "Dedicated Support" },
+              ].map((w, i) => (
+                <div key={i} className="flex flex-col items-center gap-2">
+                  <Icon name={w.icon} size={26} style={{ color: "var(--gf-dark)", strokeWidth: 1.1 }} />
+                  <span className="font-montserrat font-bold text-[10px] uppercase tracking-wide" style={{ color: "var(--gf-dark)" }}>{w.label}</span>
+                </div>
+              ))}
+            </div>
           </div>
 
           {/* ── Bottom trust bar ── */}
