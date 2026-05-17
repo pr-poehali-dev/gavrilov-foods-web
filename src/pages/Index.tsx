@@ -3,7 +3,7 @@ import Icon from "@/components/ui/icon";
 
 // Real farm photos — Gavrilov Organic Foods
 const HERO_IMG =
-  "https://cdn.poehali.dev/files/706018bf-0ff8-4cc0-a1c6-fac11c626e56.jpg"; // buckwheat field in bloom
+  "https://cdn.poehali.dev/files/a50c2663-5204-4576-bf27-5c915a5981ae.jpg"; // buckwheat field in bloom
 const PRODUCTS_IMG =
   "https://cdn.poehali.dev/files/f11386c9-4001-4940-9b3c-a7cd36827549.jpg"; // big bags in warehouse
 const FACTORY_IMG =
@@ -16,7 +16,7 @@ const REF_PRIVATE =
 const REF_PROCESS =
   "https://cdn.poehali.dev/files/6b617da2-3106-4871-b5ff-2d574abb7a34.jpg"; // sowing in field
 const REF_EXPORT =
-  "https://cdn.poehali.dev/files/431dd6c0-d618-4737-aaca-53e45662be51.jpg"; // KAMAZ truck
+  "https://cdn.poehali.dev/files/67bac509-ee17-498f-b58e-8f09c4af0a50.jpg"; // truck with big bags
 
 const navLinks = [
   { label: "About", href: "#about" },
@@ -222,7 +222,7 @@ const galleryImages = [
     label: "Processing",
   },
   {
-    src: "https://cdn.poehali.dev/files/431dd6c0-d618-4737-aaca-53e45662be51.jpg",
+    src: "https://cdn.poehali.dev/files/67bac509-ee17-498f-b58e-8f09c4af0a50.jpg",
     label: "Export",
   },
   {
@@ -3412,7 +3412,7 @@ export default function Index() {
                   label: "Quality packaging & labeling",
                 },
                 {
-                  img: "https://cdn.poehali.dev/files/431dd6c0-d618-4737-aaca-53e45662be51.jpg",
+                  img: "https://cdn.poehali.dev/files/0f193f1f-14c9-4f20-a6fb-9416edc6ee23.jpg",
                   num: 4,
                   label: "Reliable logistics & delivery",
                 },
@@ -4374,7 +4374,7 @@ export default function Index() {
                 "https://cdn.poehali.dev/files/155c8c27-6d57-4864-911f-cac81473d289.jpg", // buckwheat field 2
                 "https://cdn.poehali.dev/files/3bb96d82-4e91-49da-a437-a8e84c943f7e.jpg", // John Deere
                 "https://cdn.poehali.dev/files/f11386c9-4001-4940-9b3c-a7cd36827549.jpg", // big bags
-                "https://cdn.poehali.dev/files/431dd6c0-d618-4737-aaca-53e45662be51.jpg", // KAMAZ
+                "https://cdn.poehali.dev/files/0f193f1f-14c9-4f20-a6fb-9416edc6ee23.jpg", // truck with big bags
               ].map((src, i) => (
                 <div key={i} style={{ borderRadius: 6, overflow: "hidden" }}>
                   <img
@@ -5398,7 +5398,7 @@ export default function Index() {
             "https://cdn.poehali.dev/files/943c789b-d4ed-418a-a36d-f3c15e7272ea.jpg", // owner in field
             "https://cdn.poehali.dev/files/3bb96d82-4e91-49da-a437-a8e84c943f7e.jpg", // John Deere
             "https://cdn.poehali.dev/files/de1e27a0-f677-4f7c-b4f6-f54a3d8c5abc.jpg", // big bags
-            "https://cdn.poehali.dev/files/431dd6c0-d618-4737-aaca-53e45662be51.jpg", // KAMAZ
+            "https://cdn.poehali.dev/files/67bac509-ee17-498f-b58e-8f09c4af0a50.jpg", // truck with big bags
           ].map((src, i) => (
             <div key={i} style={{ overflow: "hidden" }}>
               <img
