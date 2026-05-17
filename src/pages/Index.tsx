@@ -2827,7 +2827,7 @@ export default function Index() {
           >
             <div className="grid md:grid-cols-2 gap-0">
               {/* Left */}
-              <div style={{ padding: "36px 36px" }}>
+              <div style={{ padding: "28px 24px" }}>
                 <div className="font-montserrat font-bold text-[10px] uppercase tracking-widest mb-3" style={{ color: "var(--gf-gold)" }}>Private Label</div>
                 <h3 className="font-cormorant text-white leading-tight mb-4" style={{ fontSize: "clamp(28px, 3vw, 42px)", fontWeight: 400 }}>
                   Build Your Brand<br />
@@ -2858,8 +2858,8 @@ export default function Index() {
               </div>
               {/* Right: mock bags with logo */}
               <div
-                className="flex items-end justify-center gap-4 py-10 px-8"
-                style={{ background: "rgba(255,255,255,0.04)" }}
+                className="flex items-end justify-center gap-4 py-8 px-6"
+                style={{ background: "rgba(255,255,255,0.04)", minHeight: 220 }}
               >
                 {[
                   { img: "https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/files/de6c1f7c-3135-4231-83fa-3da2076641e3.jpg", height: 170, opacity: 0.75 },
@@ -3290,11 +3290,9 @@ export default function Index() {
               borderRadius: 10,
               overflow: "hidden",
               padding: "24px 28px",
-              display: "flex",
-              alignItems: "center",
-              gap: 24,
             }}
           >
+            <div className="flex flex-col sm:flex-row sm:items-center gap-5">
             <img
               src="https://cdn.poehali.dev/files/138b276f-d17d-42ca-ac90-e76889009b9a.png"
               alt="USDA Organic"
@@ -3358,6 +3356,7 @@ export default function Index() {
                 USDA Organic–labelled products to the US market.
               </div>
             </div>
+            </div>
           </div>
 
           {/* ── From Field to Your Business ── */}
@@ -3394,7 +3393,8 @@ export default function Index() {
             </div>
 
             {/* 5-image strip with numbered labels */}
-            <div className="grid grid-cols-5 gap-2" style={{ height: 200 }}>
+            <div className="overflow-x-auto -mx-2 px-2">
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(5, minmax(140px, 1fr))", gap: 8, height: 220, minWidth: 600 }}>
               {[
                 {
                   img: "https://cdn.poehali.dev/files/82314d50-2676-4645-a5e6-e829f18b0d3b.jpg",
@@ -3455,18 +3455,17 @@ export default function Index() {
                       position: "absolute",
                       top: 10,
                       left: 10,
-                      width: 24,
-                      height: 24,
+                      width: 28,
+                      height: 28,
                       borderRadius: "50%",
-                      background: "rgba(255,255,255,0.2)",
-                      border: "1px solid rgba(255,255,255,0.5)",
+                      background: "var(--gf-gold)",
                       display: "flex",
                       alignItems: "center",
                       justifyContent: "center",
                       fontFamily: "Montserrat",
                       fontWeight: 700,
-                      fontSize: 11,
-                      color: "#fff",
+                      fontSize: 13,
+                      color: "#0e1a0f",
                     }}
                   >
                     {t.num}
@@ -3494,6 +3493,7 @@ export default function Index() {
                   </div>
                 </div>
               ))}
+            </div>
             </div>
           </div>
         </div>
@@ -4048,7 +4048,7 @@ export default function Index() {
                       marginBottom: 2,
                     }}
                   >
-                    Get Product Specifications & Pricing
+                    Get Product Specifications &amp; Pricing
                   </div>
                   <div
                     style={{
@@ -4073,18 +4073,13 @@ export default function Index() {
                 >
                   Get Your Custom Offer <Icon name="ArrowRight" size={16} />
                 </button>
-                <div
-                  style={{
-                    fontFamily: "Montserrat",
-                    fontSize: 10,
-                    color: "var(--gf-text-light)",
-                    textAlign: "right",
-                  }}
-                >gavrilovfoods.export@gmail.com  •  gavrilovfarm.ru</div>
+                <div className="font-montserrat text-[10px] text-right" style={{ color: "var(--gf-text-light)" }}>
+                  gavrilovfoods.export@gmail.com
+                </div>
               </div>
+                  •                </div>
             </div>
           </div>
-        </div>
       </section>
 
       {/* ═══════════════ GALLERY ═══════════════ */}
