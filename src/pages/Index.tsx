@@ -2476,41 +2476,55 @@ export default function Index() {
             </div>
           </div>
 
-          {/* ── Our Activities ── */}
+          {/* ── Production Chain Photos ── */}
           <div className="mb-10 reveal">
-            <div className="flex items-center justify-center gap-4 mb-6">
-              <span
+            {/* Field (large) + Combine + Processing + Storage */}
+            <div className="grid grid-cols-3 gap-3" style={{ height: 320 }}>
+              {/* Left — certified field (largest) */}
+              <div
                 style={{
-                  display: "block",
-                  width: 36,
-                  height: 1,
-                  background: "var(--gf-gold)",
-                }}
-              />
-              <span
-                style={{
-                  color: "var(--gf-gold)",
-                  fontSize: "11px",
-                  letterSpacing: "0.2em",
-                  fontFamily: "Montserrat",
-                  fontWeight: 700,
-                  textTransform: "uppercase",
+                  borderRadius: 10,
+                  overflow: "hidden",
+                  position: "relative",
                 }}
               >
-                Our Activities
-              </span>
-              <span
-                style={{
-                  display: "block",
-                  width: 36,
-                  height: 1,
-                  background: "var(--gf-gold)",
-                }}
-              />
-            </div>
-
-            <div className="grid grid-cols-3 gap-3" style={{ height: 320 }}>
-              {/* Left — combine */}
+                <img
+                  src={HERO_IMG}
+                  alt="Certified organic field"
+                  style={{
+                    width: "100%",
+                    height: "100%",
+                    objectFit: "cover",
+                    display: "block",
+                    transition: "transform 0.6s ease",
+                  }}
+                  onMouseEnter={(e) =>
+                    (e.currentTarget.style.transform = "scale(1.05)")
+                  }
+                  onMouseLeave={(e) =>
+                    (e.currentTarget.style.transform = "scale(1)")
+                  }
+                />
+                <div
+                  style={{
+                    position: "absolute",
+                    bottom: 12,
+                    left: 12,
+                    background: "rgba(14,26,15,0.72)",
+                    borderRadius: 5,
+                    padding: "4px 10px",
+                    fontFamily: "Montserrat",
+                    fontSize: 10,
+                    fontWeight: 700,
+                    letterSpacing: "0.1em",
+                    textTransform: "uppercase",
+                    color: "var(--gf-gold)",
+                  }}
+                >
+                  Certified Farmland
+                </div>
+              </div>
+              {/* Center — combine harvest */}
               <div
                 style={{
                   borderRadius: 10,
@@ -2535,34 +2549,26 @@ export default function Index() {
                     (e.currentTarget.style.transform = "scale(1)")
                   }
                 />
-              </div>
-              {/* Center — fields */}
-              <div
-                style={{
-                  borderRadius: 10,
-                  overflow: "hidden",
-                  position: "relative",
-                }}
-              >
-                <img
-                  src={HERO_IMG}
-                  alt="Fields"
+                <div
                   style={{
-                    width: "100%",
-                    height: "100%",
-                    objectFit: "cover",
-                    display: "block",
-                    transition: "transform 0.6s ease",
+                    position: "absolute",
+                    bottom: 12,
+                    left: 12,
+                    background: "rgba(14,26,15,0.72)",
+                    borderRadius: 5,
+                    padding: "4px 10px",
+                    fontFamily: "Montserrat",
+                    fontSize: 10,
+                    fontWeight: 700,
+                    letterSpacing: "0.1em",
+                    textTransform: "uppercase",
+                    color: "var(--gf-gold)",
                   }}
-                  onMouseEnter={(e) =>
-                    (e.currentTarget.style.transform = "scale(1.05)")
-                  }
-                  onMouseLeave={(e) =>
-                    (e.currentTarget.style.transform = "scale(1)")
-                  }
-                />
+                >
+                  Harvesting
+                </div>
               </div>
-              {/* Right — two stacked */}
+              {/* Right — processing + storage stacked */}
               <div className="grid grid-rows-2 gap-3" style={{ height: 320 }}>
                 <div
                   style={{
@@ -2572,8 +2578,8 @@ export default function Index() {
                   }}
                 >
                   <img
-                    src={PRODUCTS_IMG}
-                    alt="Big bags storage"
+                    src={FACTORY_IMG}
+                    alt="Processing equipment"
                     style={{
                       width: "100%",
                       height: "100%",
@@ -2588,6 +2594,24 @@ export default function Index() {
                       (e.currentTarget.style.transform = "scale(1)")
                     }
                   />
+                  <div
+                    style={{
+                      position: "absolute",
+                      bottom: 8,
+                      left: 10,
+                      background: "rgba(14,26,15,0.72)",
+                      borderRadius: 5,
+                      padding: "3px 8px",
+                      fontFamily: "Montserrat",
+                      fontSize: 10,
+                      fontWeight: 700,
+                      letterSpacing: "0.1em",
+                      textTransform: "uppercase",
+                      color: "var(--gf-gold)",
+                    }}
+                  >
+                    Processing
+                  </div>
                 </div>
                 <div
                   style={{
@@ -2597,8 +2621,8 @@ export default function Index() {
                   }}
                 >
                   <img
-                    src="https://cdn.poehali.dev/files/da2cf99e-0ede-40d1-9533-e4434ebcdf01.jpg"
-                    alt="Grain warehouse"
+                    src={PRODUCTS_IMG}
+                    alt="Big bag storage"
                     style={{
                       width: "100%",
                       height: "100%",
@@ -2613,6 +2637,24 @@ export default function Index() {
                       (e.currentTarget.style.transform = "scale(1)")
                     }
                   />
+                  <div
+                    style={{
+                      position: "absolute",
+                      bottom: 8,
+                      left: 10,
+                      background: "rgba(14,26,15,0.72)",
+                      borderRadius: 5,
+                      padding: "3px 8px",
+                      fontFamily: "Montserrat",
+                      fontSize: 10,
+                      fontWeight: 700,
+                      letterSpacing: "0.1em",
+                      textTransform: "uppercase",
+                      color: "var(--gf-gold)",
+                    }}
+                  >
+                    Storage
+                  </div>
                 </div>
               </div>
             </div>
