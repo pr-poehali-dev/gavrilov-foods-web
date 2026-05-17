@@ -2024,7 +2024,7 @@ export default function Index() {
                 {
                   name: "GREEN BUCKWHEAT",
                   packaging: "25 kg / 50 kg / Big Bag",
-                  img: "https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/files/bb689ed8-ee56-4684-b396-e560a076588f.jpg",
+                  img: "https://cdn.poehali.dev/files/72e6e07c-de60-4be9-8cd7-78cfed2c6de0.png",
                 },
                 {
                   name: "BUCKWHEAT FLOUR",
