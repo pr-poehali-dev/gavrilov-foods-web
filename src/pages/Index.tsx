@@ -1677,9 +1677,7 @@ export default function Index() {
                     .querySelector("#about")
                     ?.scrollIntoView({ behavior: "smooth" })
                 }
-              >
-                Learn More About Us <Icon name="ArrowRight" size={15} />
-              </button>
+              >REQUEST A QUOTE</button>
             </div>
 
             {/* Right: 4 image tiles */}
