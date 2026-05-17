@@ -188,9 +188,9 @@ const privateLabel = [
   },
   {
     icon: "Container",
-    title: "FCL Container Supply",
+    title: "Container Shipments",
     size: "20ft / 40ft",
-    desc: "Full container shipments for safe and efficient delivery.",
+    desc: "Full container loading (FCL) for safe and efficient global delivery.",
   },
   {
     icon: "Tag",
@@ -3438,9 +3438,7 @@ export default function Index() {
                   className="font-montserrat text-[14px] leading-relaxed mb-7"
                   style={{ color: "var(--gf-text-light)" }}
                 >
-                  From concept to shelf-ready packaging — we produce premium
-                  grain products under your brand for retailers, distributors
-                  and private importers worldwide.
+                  Private label production for retailers, distributors and importers worldwide — from product selection and packaging design to certified, shelf-ready delivery.
                 </p>
 
                 {/* 5 features */}
@@ -3513,11 +3511,11 @@ export default function Index() {
                   desc: "Industrial bulk packaging for large volume supply.",
                 },
                 {
-                  img: "https://cdn.poehali.dev/files/431dd6c0-d618-4737-aaca-53e45662be51.jpg", // KAMAZ truck
+                  img: "https://cdn.poehali.dev/files/6ebe549e-c65d-458a-9a25-7388c52a2e06.jpg", // container loading
                   icon: "Container",
-                  title: "FCL Container Supply",
+                  title: "Container Shipments",
                   size: "20 ft / 40 ft",
-                  desc: "Full container shipments for safe and efficient delivery.",
+                  desc: "Full container loading (FCL) for safe and efficient global delivery.",
                 },
                 {
                   img: "https://cdn.poehali.dev/files/98d43280-321a-4078-bb4e-2cd8a7e71f5e.jpg", // packed goods on pallets
