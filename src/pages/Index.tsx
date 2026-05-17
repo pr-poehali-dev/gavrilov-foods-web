@@ -1248,8 +1248,8 @@ export default function Index() {
                   }}
                 />
                 <img
-                  src="https://cdn.poehali.dev/files/4c755ac3-62a0-4ed1-b83b-e53189373f3f.jpg"
-                  alt="Kirovets tractor"
+                  src="https://cdn.poehali.dev/files/f086c655-d4e2-4ed8-a064-71baf53ae9a9.jpg"
+                  alt="Warehouse bags storage"
                   className="w-full h-full object-cover"
                   style={{
                     borderBottomLeftRadius: 16,
