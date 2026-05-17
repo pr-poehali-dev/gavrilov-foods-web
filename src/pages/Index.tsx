@@ -2794,15 +2794,17 @@ export default function Index() {
             </div>
             <div className="grid grid-cols-3 md:grid-cols-6 gap-4">
               {[
-                { label: "200 g", sub: "Doypack / Bag" },
-                { label: "400 g", sub: "Doypack" },
-                { label: "500 g", sub: "Block bottom bag" },
-                { label: "800 g", sub: "Gusseted bag" },
-                { label: "1,000 g", sub: "Block bottom bag" },
-                { label: "Big Bags", sub: "500 – 1,000 kg" },
+                { img: "https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/files/a84c41be-89d6-477d-bb1c-eccf7eb3ca68.jpg", label: "200 g", sub: "Doypack / Bag" },
+                { img: "https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/files/a8ba908b-29b3-4909-a311-6f9d5b6f741d.jpg", label: "400 g", sub: "Doypack" },
+                { img: "https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/files/ba5c8c80-9471-40fc-988a-9cc1602e35e0.jpg", label: "500 g", sub: "Block bottom bag" },
+                { img: "https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/files/2eede8e6-7448-4a13-b590-b41f6117a889.jpg", label: "800 g", sub: "Gusseted bag" },
+                { img: "https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/files/2c1a3bda-5c0e-4e53-a1de-3cac86529f89.jpg", label: "1,000 g", sub: "Block bottom bag" },
+                { img: "https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/files/4e6eddb4-c469-4776-90e3-d1e1129c099c.jpg", label: "Big Bags", sub: "500 – 1,000 kg" },
               ].map((f, i) => (
-                <div key={i} className="flex flex-col items-center text-center gap-2 py-3 px-2" style={{ background: "var(--gf-cream)", borderRadius: 8 }}>
-                  <Icon name={i === 5 ? "Package2" : "Package"} size={28} style={{ color: "var(--gf-dark)", strokeWidth: 1 }} />
+                <div key={i} className="flex flex-col items-center text-center gap-2 pb-3 px-2 pt-2" style={{ background: "var(--gf-cream)", borderRadius: 8 }}>
+                  <div style={{ height: 100, width: "100%", overflow: "hidden", borderRadius: 6 }}>
+                    <img src={f.img} alt={f.label} style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
+                  </div>
                   <div className="font-cormorant font-semibold text-[18px]" style={{ color: "var(--gf-gold)" }}>{f.label}</div>
                   <div className="font-montserrat text-[10px]" style={{ color: "var(--gf-text-light)" }}>{f.sub}</div>
                 </div>
@@ -2856,32 +2858,31 @@ export default function Index() {
               </div>
               {/* Right: mock bags with logo */}
               <div
-                className="flex items-center justify-center gap-4 py-10 px-8"
+                className="flex items-end justify-center gap-4 py-10 px-8"
                 style={{ background: "rgba(255,255,255,0.04)" }}
               >
                 {[
-                  { size: "h-48", opacity: 0.7 },
-                  { size: "h-56", opacity: 1 },
-                  { size: "h-44", opacity: 0.6 },
+                  { img: "https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/files/de6c1f7c-3135-4231-83fa-3da2076641e3.jpg", height: 170, opacity: 0.75 },
+                  { img: "https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/files/89914c63-13fb-4318-9106-820bfc590cf1.jpg", height: 210, opacity: 1 },
+                  { img: "https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/files/d44f8721-c347-4447-83b4-9db4db694851.jpg", height: 155, opacity: 0.7 },
                 ].map((b, i) => (
                   <div
                     key={i}
-                    className={`relative flex flex-col items-center justify-center rounded-lg ${b.size}`}
-                    style={{
-                      width: 100,
-                      background: "rgba(255,255,255,0.92)",
-                      opacity: b.opacity,
-                      borderRadius: 8,
-                      padding: "12px 8px",
-                      border: "1px solid rgba(255,255,255,0.3)",
-                    }}
+                    style={{ width: 110, height: b.height, opacity: b.opacity, borderRadius: 8, overflow: "hidden", position: "relative", flexShrink: 0 }}
                   >
                     <img
-                      src="https://cdn.poehali.dev/files/a56e28f6-f68e-47b5-85b3-96e8100cf00e.png"
-                      alt="Gavrilov Organic Foods"
-                      style={{ width: 72, objectFit: "contain", marginBottom: 6 }}
+                      src={b.img}
+                      alt="Gavrilov packaging"
+                      style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
                     />
-                    <div className="font-montserrat text-[9px] text-center" style={{ color: "var(--gf-text-light)" }}>Buckwheat</div>
+                    {/* Logo overlay */}
+                    <div style={{ position: "absolute", inset: 0, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", background: "rgba(255,255,255,0.15)" }}>
+                      <img
+                        src="https://cdn.poehali.dev/files/a56e28f6-f68e-47b5-85b3-96e8100cf00e.png"
+                        alt="Gavrilov Organic Foods"
+                        style={{ width: 72, objectFit: "contain" }}
+                      />
+                    </div>
                   </div>
                 ))}
               </div>
