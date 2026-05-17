@@ -106,7 +106,7 @@ const processSteps = [
   {
     num: "01",
     title: "Own Farmland",
-    desc: "10,000 ha of fertile fields. Full control from seed to harvest.",
+    desc: "10,000 + ha of fertile fields. Full control from seed to harvest.",
   },
   {
     num: "02",
@@ -593,7 +593,9 @@ export default function Index() {
                       .querySelector("#contact")
                       ?.scrollIntoView({ behavior: "smooth" })
                   }
-                >Request a Quote</button>
+                >
+                  Request a Quote
+                </button>
               </div>
             </div>
           </div>
@@ -919,7 +921,9 @@ export default function Index() {
                     <div
                       className="font-cormorant text-[28px] font-semibold leading-none"
                       style={{ color: "var(--gf-gold)" }}
-                    >10,000 + ha</div>
+                    >
+                      10,000 + ha
+                    </div>
                     <div
                       className="text-[12px] font-montserrat mt-0.5"
                       style={{ color: "var(--gf-text-light)" }}
@@ -2149,7 +2153,9 @@ export default function Index() {
                       fontWeight: 700,
                       textTransform: "uppercase",
                     }}
-                  >FULL SUPPLY CHAIN CONTROL</span>
+                  >
+                    FULL SUPPLY CHAIN CONTROL
+                  </span>
                 </div>
                 <p
                   className="text-[13px] font-montserrat"
@@ -2170,7 +2176,7 @@ export default function Index() {
                 {[
                   {
                     icon: "Sun",
-                    title: "10,000 ha",
+                    title: "10,000 + ha",
                     desc: "own farmland full control",
                   },
                   {
@@ -3690,7 +3696,7 @@ export default function Index() {
                 {[
                   {
                     icon: "Wheat",
-                    val: "10,000 ha",
+                    val: "10,000 + ha",
                     sub: "Own farmland",
                     desc: "Full control over raw materials",
                   },
@@ -3753,7 +3759,7 @@ export default function Index() {
 
             {/* 4 photos */}
             {[
-              "https://cdn.poehali.dev/files/4b5a57a3-7cdf-406e-8457-7140c7ed102e.jpg", // own fields — 10,000 ha
+              "https://cdn.poehali.dev/files/4b5a57a3-7cdf-406e-8457-7140c7ed102e.jpg", // own fields — 10,000 + ha
               "https://cdn.poehali.dev/files/e43ef89f-fe22-4c5d-9966-3f78245a4cee.jpg", // packaging machine — quality
               "https://cdn.poehali.dev/files/431dd6c0-d618-4737-aaca-53e45662be51.jpg", // KAMAZ — export experience
               "https://cdn.poehali.dev/files/98d43280-321a-4078-bb4e-2cd8a7e71f5e.jpg", // packed pallets — long-term
@@ -3949,7 +3955,7 @@ export default function Index() {
               }}
             >
               {[
-                { icon: "Wheat", val: "10,000 ha", label: "Own Farmland" },
+                { icon: "Wheat", val: "10,000 + ha", label: "Own Farmland" },
                 {
                   icon: "Warehouse",
                   val: "5,000 m²",
