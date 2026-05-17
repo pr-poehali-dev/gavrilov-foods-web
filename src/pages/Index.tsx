@@ -2395,7 +2395,7 @@ export default function Index() {
               className="absolute inset-0"
               style={{
                 background:
-                  "linear-gradient(to right, rgba(14,26,15,0.96) 0%, rgba(14,26,15,0.7) 55%, transparent 100%)",
+                  "linear-gradient(to right, rgba(14,26,15,0.98) 0%, rgba(14,26,15,0.88) 55%, rgba(14,26,15,0.55) 100%)",
               }}
             />
             <div className="relative z-10 p-10 md:p-14 max-w-2xl">
@@ -2468,7 +2468,7 @@ export default function Index() {
                     <div className="font-montserrat font-bold text-[10px] uppercase tracking-widest text-white mb-1">
                       {p.title}
                     </div>
-                    <div className="text-white/45 text-[11px] font-montserrat leading-snug">
+                    <div className="text-white/70 text-[11px] font-montserrat leading-snug">
                       {p.desc}
                     </div>
                   </div>
