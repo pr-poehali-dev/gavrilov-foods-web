@@ -1338,9 +1338,7 @@ export default function Index() {
                     .querySelector("#contact")
                     ?.scrollIntoView({ behavior: "smooth" })
                 }
-              >
-                Work With Us <Icon name="ArrowRight" size={16} />
-              </button>
+              >REQUEST A QUOTE</button>
             </div>
 
             {/* Right: full-bleed truck image */}
