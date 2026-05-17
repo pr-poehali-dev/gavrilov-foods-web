@@ -3141,6 +3141,70 @@ export default function Index() {
             </div>
           </div>
 
+          {/* ── USDA Coming Soon ── */}
+          <div
+            className="reveal mb-4"
+            style={{
+              background: "#fff",
+              border: "1px solid rgba(0,0,0,0.08)",
+              borderRadius: 10,
+              overflow: "hidden",
+              padding: "24px 28px",
+              display: "flex",
+              alignItems: "center",
+              gap: 24,
+            }}
+          >
+            <img
+              src="https://cdn.poehali.dev/files/138b276f-d17d-42ca-ac90-e76889009b9a.png"
+              alt="USDA Organic"
+              style={{ width: 72, height: 72, objectFit: "contain", flexShrink: 0, opacity: 0.55 }}
+            />
+            <div style={{ flex: 1 }}>
+              <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 6 }}>
+                <div
+                  style={{
+                    fontFamily: "Montserrat",
+                    fontWeight: 700,
+                    fontSize: 13,
+                    textTransform: "uppercase",
+                    letterSpacing: "0.06em",
+                    color: "var(--gf-dark)",
+                  }}
+                >
+                  USDA Organic / NOP Certification
+                </div>
+                <span
+                  style={{
+                    fontFamily: "Montserrat",
+                    fontSize: 10,
+                    fontWeight: 700,
+                    letterSpacing: "0.1em",
+                    textTransform: "uppercase",
+                    color: "#b07d2a",
+                    background: "rgba(176,125,42,0.10)",
+                    border: "1px solid rgba(176,125,42,0.25)",
+                    borderRadius: 4,
+                    padding: "2px 8px",
+                  }}
+                >
+                  Expected July 2026
+                </span>
+              </div>
+              <div
+                style={{
+                  fontFamily: "Montserrat",
+                  fontSize: 12,
+                  color: "var(--gf-text-light)",
+                  lineHeight: 1.6,
+                  maxWidth: 560,
+                }}
+              >
+                We are currently completing the USDA NOP certification process. Certification is expected by July 2026, enabling us to supply USDA Organic–labelled products to the US market.
+              </div>
+            </div>
+          </div>
+
           {/* ── From Field to Your Business ── */}
           <div className="reveal">
             <div className="flex items-center justify-center gap-4 mb-5">
