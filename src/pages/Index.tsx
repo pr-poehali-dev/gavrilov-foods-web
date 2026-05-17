@@ -3792,7 +3792,7 @@ export default function Index() {
                   icon: "Wheat",
                   val: "10,000 + ha",
                   title: "Own Farmland",
-                  desc: "Full control over raw materials — from certified fields to processing.",
+                  desc: "10,000+ ha of own certified farmland — full control from field to processing.",
                   img: "https://cdn.poehali.dev/files/4b5a57a3-7cdf-406e-8457-7140c7ed102e.jpg",
                 },
                 {
