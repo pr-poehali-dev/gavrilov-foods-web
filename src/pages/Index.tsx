@@ -3916,9 +3916,7 @@ export default function Index() {
                       color: "var(--gf-dark)",
                       marginBottom: 2,
                     }}
-                  >
-                    Let's create something great together
-                  </div>
+                  >Get Product Specifications & Pricing</div>
                   <div
                     style={{
                       fontFamily: "Montserrat",
