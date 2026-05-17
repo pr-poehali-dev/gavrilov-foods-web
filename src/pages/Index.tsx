@@ -410,8 +410,8 @@ export default function Index() {
           }}
         >
           <img
-            src="https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/files/6341fdb7-7079-43b0-b75c-5c9825af902a.jpg"
-            alt="Gavrilov Foods grain silos"
+            src="https://cdn.poehali.dev/files/f6ccade7-e37d-408f-825a-a483aa548a17.jpg"
+            alt="Gavrilov Foods buckwheat field"
             style={{
               position: "absolute",
               inset: 0,
