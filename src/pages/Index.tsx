@@ -2247,7 +2247,7 @@ export default function Index() {
                 >
                   {[
                     {
-                      img: "https://cdn.poehali.dev/files/4b5a57a3-7cdf-406e-8457-7140c7ed102e.jpg",
+                      img: "https://cdn.poehali.dev/files/4b9c64c5-d74c-4850-9a9b-8aac0bae6ef5.jpg",
                       label: "FARMLAND",
                     },
                     {
