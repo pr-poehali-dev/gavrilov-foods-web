@@ -817,10 +817,24 @@ export default function Index() {
                 />
                 <div className="img-zoom aspect-[4/3]">
                   <img
-                    src="https://cdn.poehali.dev/files/a20953d0-56af-4f27-9ad4-3d539dbda40c.png"
+                    src={FACTORY_IMG}
                     alt="Gavrilov Processing"
                     className="w-full h-full object-cover"
                   />
+                </div>
+                <div
+                  className="absolute bottom-0 left-0 px-6 py-4"
+                  style={{ background: "var(--gf-dark)", color: "white" }}
+                >
+                  <div
+                    className="font-cormorant text-xl font-semibold"
+                    style={{ color: "var(--gf-gold)" }}
+                  >
+                    Modern Equipment
+                  </div>
+                  <div className="text-white/60 text-xs mt-0.5 font-montserrat">
+                    Processing 200g – 1000kg formats
+                  </div>
                 </div>
               </div>
             </div>
