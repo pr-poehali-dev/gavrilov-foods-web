@@ -3,7 +3,7 @@ import Icon from "@/components/ui/icon";
 
 // Real farm photos — Gavrilov Organic Foods
 const HERO_IMG =
-  "https://cdn.poehali.dev/files/4b5a57a3-7cdf-406e-8457-7140c7ed102e.jpg"; // buckwheat field in bloom
+  "https://cdn.poehali.dev/files/706018bf-0ff8-4cc0-a1c6-fac11c626e56.jpg"; // buckwheat field in bloom
 const PRODUCTS_IMG =
   "https://cdn.poehali.dev/files/f11386c9-4001-4940-9b3c-a7cd36827549.jpg"; // big bags in warehouse
 const FACTORY_IMG =
@@ -3812,7 +3812,7 @@ export default function Index() {
                   val: "10,000 + ha",
                   title: "Own Farmland",
                   desc: "10,000+ ha of own certified farmland — full control from field to processing.",
-                  img: "https://cdn.poehali.dev/files/4b5a57a3-7cdf-406e-8457-7140c7ed102e.jpg",
+                  img: "https://cdn.poehali.dev/files/9e62a3ec-bd8c-4bf7-a996-eb835bef4401.jpg",
                 },
                 {
                   icon: "ShieldCheck",
