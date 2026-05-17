@@ -1268,8 +1268,8 @@ export default function Index() {
         style={{ background: "var(--gf-cream)" }}
       >
         <div className="max-w-7xl mx-auto">
-          <div className="grid lg:grid-cols-2">
-            {/* Left content */}
+          <div>
+            {/* Content */}
             <div className="py-16 px-6 lg:px-12 reveal-left">
               <div
                 className="text-[10px] font-bold uppercase tracking-widest mb-4 font-montserrat"
@@ -1287,7 +1287,7 @@ export default function Index() {
                 From Farm to Global Delivery
               </h2>
               <p
-                className="text-[14px] leading-relaxed mb-10 max-w-sm font-montserrat"
+                className="text-[14px] leading-relaxed mb-10 max-w-2xl font-montserrat"
                 style={{ color: "var(--gf-text-light)" }}
               >
                 From certified farmland to container loading — we own every
@@ -1297,7 +1297,7 @@ export default function Index() {
               </p>
 
               {/* 4 features */}
-              <div className="grid grid-cols-2 gap-8 mb-10">
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-10">
                 {[
                   {
                     icon: "Warehouse",
@@ -1357,21 +1357,6 @@ export default function Index() {
               </button>
             </div>
 
-            {/* Right: full-bleed truck image */}
-            <div className="relative reveal-right" style={{ minHeight: 420 }}>
-              <img
-                src="https://cdn.poehali.dev/files/28640fc0-8124-4c4f-94ca-37bdb050f058.jpg"
-                alt="John Deere tractor in field"
-                className="absolute inset-0 w-full h-full object-cover"
-              />
-              <div
-                className="absolute inset-0"
-                style={{
-                  background:
-                    "linear-gradient(to right, var(--gf-cream) 0%, transparent 30%)",
-                }}
-              />
-            </div>
           </div>
         </div>
       </section>
