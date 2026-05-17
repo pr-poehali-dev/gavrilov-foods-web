@@ -921,9 +921,7 @@ export default function Index() {
                     <div
                       className="font-cormorant text-[28px] font-semibold leading-none"
                       style={{ color: "var(--gf-gold)" }}
-                    >
-                      10,000 + ha
-                    </div>
+                    >10,000 ha</div>
                     <div
                       className="text-[12px] font-montserrat mt-0.5"
                       style={{ color: "var(--gf-text-light)" }}
