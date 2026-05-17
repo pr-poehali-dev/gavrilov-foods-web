@@ -2149,9 +2149,7 @@ export default function Index() {
                       fontWeight: 700,
                       textTransform: "uppercase",
                     }}
-                  >
-                    From Field to Your Table
-                  </span>
+                  >FULL SUPPLY CHAIN CONTROL</span>
                 </div>
                 <p
                   className="text-[13px] font-montserrat"
