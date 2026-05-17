@@ -1696,13 +1696,13 @@ export default function Index() {
                   img: PRODUCTS_IMG,
                   icon: "Package",
                   label: "Storage",
-                  desc: "Safe storage in our warehouses",
+                  desc: "Controlled storage capacity for stable supply",
                 },
                 {
                   img: "https://ybvgdlhrldbkfqiccxxo.supabase.co/storage/v1/object/public/1/remaing.jpg",
                   icon: "Truck",
                   label: "Shipment",
-                  desc: "Reliable logistics to global destinations",
+                  desc: "Export logistics & container shipments worldwide",
                 },
               ].map((t, i) => (
                 <div
