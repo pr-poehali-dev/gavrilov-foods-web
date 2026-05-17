@@ -3772,120 +3772,109 @@ export default function Index() {
             </div>
           </div>
 
-          {/* ── Row 3: Reliable Partner dark block + 4 photos ── */}
-          <div
-            className="grid md:grid-cols-5 gap-0 mt-8 reveal"
-            style={{ borderRadius: 10, overflow: "hidden" }}
-          >
-            {/* Dark left */}
-            <div
-              style={{
-                background: "var(--gf-dark)",
-                padding: "32px 28px",
-                gridColumn: "span 1",
-              }}
-            >
+          {/* ── Row 3: Why Trust Us — 2×2 cards ── */}
+          <div className="mt-8 reveal">
+            <div className="text-center mb-6">
               <h3
-                className="font-cormorant text-white leading-tight mb-6"
+                className="font-cormorant"
                 style={{
-                  fontSize: "clamp(22px, 2.5vw, 30px)",
+                  fontSize: "clamp(24px, 3vw, 36px)",
                   fontWeight: 400,
+                  color: "var(--gf-dark)",
                 }}
               >
-                Reliable Partner for Your Brand
+                Why Importers Trust Gavrilov Foods
               </h3>
-              <div className="space-y-5">
-                {[
-                  {
-                    icon: "Wheat",
-                    val: "10,000 + ha",
-                    sub: "Own farmland",
-                    desc: "Full control over raw materials",
-                  },
-                  {
-                    icon: "ShieldCheck",
-                    val: "Consistent",
-                    sub: "Quality",
-                    desc: "Strict standards and laboratory control",
-                  },
-                  {
-                    icon: "Globe",
-                    val: "Export",
-                    sub: "Experience",
-                    desc: "Exporting to Europe and China",
-                  },
-                  {
-                    icon: "Handshake",
-                    val: "Long-term",
-                    sub: "Cooperation",
-                    desc: "Flexible approach and personal care",
-                  },
-                ].map((s, i) => (
-                  <div key={i}>
-                    <div
+            </div>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              {[
+                {
+                  icon: "Wheat",
+                  val: "10,000 + ha",
+                  title: "Own Farmland",
+                  desc: "Full control over raw materials — from certified fields to processing.",
+                  img: "https://cdn.poehali.dev/files/4b5a57a3-7cdf-406e-8457-7140c7ed102e.jpg",
+                },
+                {
+                  icon: "ShieldCheck",
+                  val: "Strict",
+                  title: "Quality Control",
+                  desc: "In-house lab testing at every stage to meet international standards.",
+                  img: "https://cdn.poehali.dev/files/e43ef89f-fe22-4c5d-9966-3f78245a4cee.jpg",
+                },
+                {
+                  icon: "Tag",
+                  val: "Ready",
+                  title: "Private Label",
+                  desc: "Retail-ready packaging with custom design for your brand.",
+                  img: "https://cdn.poehali.dev/files/98d43280-321a-4078-bb4e-2cd8a7e71f5e.jpg",
+                },
+                {
+                  icon: "FileText",
+                  val: "Full",
+                  title: "Export Docs",
+                  desc: "Phytosanitary certificates, international experience with global markets.",
+                  img: "https://cdn.poehali.dev/files/6ebe549e-c65d-458a-9a25-7388c52a2e06.jpg",
+                },
+              ].map((c, i) => (
+                <div
+                  key={i}
+                  style={{
+                    background: "#fff",
+                    border: "1px solid rgba(0,0,0,0.07)",
+                    borderRadius: 10,
+                    overflow: "hidden",
+                  }}
+                >
+                  <div style={{ height: 130, overflow: "hidden" }}>
+                    <img
+                      src={c.img}
+                      alt={c.title}
                       style={{
-                        fontFamily: "Cormorant Garamond, serif",
-                        fontSize: 18,
-                        fontWeight: 600,
-                        color: "var(--gf-gold)",
+                        width: "100%",
+                        height: "100%",
+                        objectFit: "cover",
+                        display: "block",
+                        transition: "transform 0.5s ease",
                       }}
-                    >
-                      {s.val}
+                      onMouseEnter={(e) =>
+                        (e.currentTarget.style.transform = "scale(1.06)")
+                      }
+                      onMouseLeave={(e) =>
+                        (e.currentTarget.style.transform = "scale(1)")
+                      }
+                    />
+                  </div>
+                  <div style={{ padding: "16px 16px 18px" }}>
+                    <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 6 }}>
+                      <Icon name={c.icon} size={15} style={{ color: "var(--gf-gold)", flexShrink: 0 }} />
+                      <div
+                        style={{
+                          fontFamily: "Montserrat",
+                          fontWeight: 700,
+                          fontSize: 11,
+                          textTransform: "uppercase",
+                          letterSpacing: "0.06em",
+                          color: "var(--gf-dark)",
+                        }}
+                      >
+                        {c.title}
+                      </div>
                     </div>
                     <div
                       style={{
                         fontFamily: "Montserrat",
-                        fontSize: 10,
-                        fontWeight: 700,
-                        textTransform: "uppercase",
-                        color: "rgba(255,255,255,0.6)",
-                        marginBottom: 1,
+                        fontSize: 11,
+                        color: "var(--gf-text-light)",
+                        lineHeight: 1.5,
                       }}
                     >
-                      {s.sub}
-                    </div>
-                    <div
-                      style={{
-                        fontFamily: "Montserrat",
-                        fontSize: 10,
-                        color: "rgba(255,255,255,0.4)",
-                        lineHeight: 1.3,
-                      }}
-                    >
-                      {s.desc}
+                      {c.desc}
                     </div>
                   </div>
-                ))}
-              </div>
+                </div>
+              ))}
             </div>
-
-            {/* 4 photos */}
-            {[
-              "https://cdn.poehali.dev/files/4b5a57a3-7cdf-406e-8457-7140c7ed102e.jpg", // own fields — 10,000 + ha
-              "https://cdn.poehali.dev/files/e43ef89f-fe22-4c5d-9966-3f78245a4cee.jpg", // packaging machine — quality
-              "https://cdn.poehali.dev/files/431dd6c0-d618-4737-aaca-53e45662be51.jpg", // KAMAZ — export experience
-              "https://cdn.poehali.dev/files/98d43280-321a-4078-bb4e-2cd8a7e71f5e.jpg", // packed pallets — long-term
-            ].map((img, i) => (
-              <div key={i} style={{ overflow: "hidden", minHeight: 260 }}>
-                <img
-                  src={img}
-                  alt=""
-                  style={{
-                    width: "100%",
-                    height: "100%",
-                    objectFit: "cover",
-                    display: "block",
-                    transition: "transform 0.5s ease",
-                  }}
-                  onMouseEnter={(e) =>
-                    (e.currentTarget.style.transform = "scale(1.06)")
-                  }
-                  onMouseLeave={(e) =>
-                    (e.currentTarget.style.transform = "scale(1)")
-                  }
-                />
-              </div>
-            ))}
           </div>
 
           {/* ── Row 4: Bottom CTA ── */}
