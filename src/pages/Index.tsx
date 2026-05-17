@@ -1655,9 +1655,7 @@ export default function Index() {
                     fontSize: "clamp(26px, 3vw, 38px)",
                     color: "var(--gf-dark)",
                   }}
-                >
-                  Full control of the supply chain
-                </h3>
+                >From Farm to Export — Full Supply Chain Control</h3>
                 <p
                   className="text-[13px] leading-relaxed mb-6"
                   style={{
