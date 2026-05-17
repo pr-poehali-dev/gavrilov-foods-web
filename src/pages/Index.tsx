@@ -4603,13 +4603,13 @@ export default function Index() {
               },
               {
                 icon: "MapPin",
-                label: "Location",
-                value: "Smolensk Region, Russia",
-                sub: "EU export documentation available",
+                label: "Origin",
+                value: "Russia | EU Export Ready",
+                sub: "Phytosanitary & export documentation available",
               },
               {
                 icon: "Globe",
-                label: "Export Markets",
+                label: "Current Export Markets",
                 value: null,
                 sub: null,
                 markets: true,
