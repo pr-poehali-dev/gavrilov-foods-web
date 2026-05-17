@@ -668,7 +668,7 @@ export default function Index() {
 
               {/* 4 stats */}
               {[
-                { icon: "Tractor", val: "10,000+ ha", label: "Farmland" },
+                { icon: "Tractor", val: "10,000 ha", label: "Farmland" },
                 {
                   icon: "Warehouse",
                   val: "10,000 – 15,000 MT",
@@ -1273,7 +1273,9 @@ export default function Index() {
                   fontSize: "clamp(34px, 4vw, 56px)",
                   color: "var(--gf-dark)",
                 }}
-              >From Farm to Global Delivery</h2>
+              >
+                From Farm to Global Delivery
+              </h2>
               <p
                 className="text-[14px] leading-relaxed mb-10 max-w-sm font-montserrat"
                 style={{ color: "var(--gf-text-light)" }}
@@ -1338,7 +1340,9 @@ export default function Index() {
                     .querySelector("#contact")
                     ?.scrollIntoView({ behavior: "smooth" })
                 }
-              >REQUEST A QUOTE</button>
+              >
+                REQUEST A QUOTE
+              </button>
             </div>
 
             {/* Right: full-bleed truck image */}
@@ -2403,7 +2407,9 @@ export default function Index() {
                     fontWeight: 700,
                     textTransform: "uppercase",
                   }}
-                >FULL SUPPLY CHAIN</span>
+                >
+                  FULL SUPPLY CHAIN
+                </span>
                 <Icon
                   name="Leaf"
                   size={14}
@@ -2422,7 +2428,9 @@ export default function Index() {
                 TO EXPORT
               </h2>
               <p className="text-white/60 text-[14px] leading-relaxed mb-8 max-w-sm font-montserrat">
-                From seed to container — we manage the full cycle in-house: cultivation, post-harvest storage, processing, packaging, and certified export to international markets.
+                From seed to container — we manage the full cycle in-house:
+                cultivation, post-harvest storage, processing, packaging, and
+                certified export to international markets.
               </p>
               {/* 4 pillars */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
