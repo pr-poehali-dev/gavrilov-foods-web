@@ -1290,7 +1290,8 @@ export default function Index() {
                 className="text-[14px] leading-relaxed mb-10 max-w-sm font-montserrat"
                 style={{ color: "var(--gf-text-light)" }}
               >
-                From certified farmland to container loading — we own every stage: cultivation on 10,000+ ha, post-harvest storage up to 10,000 MT, in-house processing, and certified export logistics worldwide.
+                We control every step of the supply chain to ensure quality,
+                traceability and on-time delivery.
               </p>
 
               {/* 4 features */}
@@ -1298,23 +1299,23 @@ export default function Index() {
                 {[
                   {
                     icon: "Warehouse",
-                    title: "10,000 MT Storage",
-                    desc: "Temperature-controlled grain facilities with ventilation and quality monitoring.",
+                    title: "Own Storage",
+                    desc: "Modern elevators and warehouses with capacity for safe storage.",
                   },
                   {
                     icon: "Factory",
-                    title: "In-House Processing",
-                    desc: "Multi-stage cleaning, de-hulling and optical sorting to EU/USDA specs.",
+                    title: "Processing",
+                    desc: "Advanced equipment for cleaning, sorting and processing grains and pulses.",
                   },
                   {
-                    icon: "ScanLine",
-                    title: "Full Traceability",
-                    desc: "Field-to-shipment documentation, lab testing and phytosanitary certification.",
+                    icon: "ShieldCheck",
+                    title: "Quality Control",
+                    desc: "In-house lab testing at every stage to meet international standards.",
                   },
                   {
-                    icon: "Container",
-                    title: "Container Logistics",
-                    desc: "20/40 ft refrigerated and dry containers. FOB, CFR, DDP terms available.",
+                    icon: "Truck",
+                    title: "Reliable Logistics",
+                    desc: "Experienced team and trusted partners for worldwide delivery.",
                   },
                 ].map((f, i) => (
                   <div
