@@ -2631,7 +2631,7 @@ export default function Index() {
               {[
                 {
                   num: "01",
-                  title: "Farming",
+                  title: "Field",
                   desc: "Precision field management with soil monitoring and crop rotation across our own land.",
                 },
                 {
