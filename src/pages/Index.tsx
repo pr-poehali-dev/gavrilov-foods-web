@@ -2833,8 +2833,8 @@ export default function Index() {
                   Build Your Brand<br />
                   <span style={{ color: "var(--gf-gold)", fontStyle: "italic" }}>With Us</span>
                 </h3>
-                <p className="font-montserrat text-[13px] leading-relaxed mb-6 text-left" style={{ color: "rgba(255,255,255,0.6)", maxWidth: 360 }}>We offer private label solutions with 
-flexible design options 
+                <p className="font-montserrat text-[13px] leading-relaxed mb-6 text-left" style={{ color: "rgba(255,255,255,0.6)", maxWidth: 360 }}>We offer private label solutions 
+with flexible design options 
 to help your brand stand out.</p>
                 <div className="space-y-3 mb-8">
                   {[
