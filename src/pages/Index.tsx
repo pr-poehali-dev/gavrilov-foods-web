@@ -1273,11 +1273,7 @@ export default function Index() {
                   fontSize: "clamp(34px, 4vw, 56px)",
                   color: "var(--gf-dark)",
                 }}
-              >
-                From field
-                <br />
-                to your warehouse
-              </h2>
+              >From Farm to Global Delivery</h2>
               <p
                 className="text-[14px] leading-relaxed mb-10 max-w-sm font-montserrat"
                 style={{ color: "var(--gf-text-light)" }}
