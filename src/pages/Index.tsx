@@ -1290,7 +1290,10 @@ export default function Index() {
                 className="text-[14px] leading-relaxed mb-10 max-w-sm font-montserrat"
                 style={{ color: "var(--gf-text-light)" }}
               >
-                From certified farmland to container loading — we own every stage: cultivation on 10,000+ ha, post-harvest storage up to 10,000 MT, in-house processing, and certified export logistics worldwide.
+                From certified farmland to container loading — we own every
+                stage: cultivation on 10,000+ ha, post-harvest storage up to
+                10,000 MT, in-house processing, and certified export logistics
+                worldwide.
               </p>
 
               {/* 4 features */}
@@ -1553,7 +1556,11 @@ export default function Index() {
                       </span>
                     </div>
                     <div className="flex items-center gap-1">
-                      <Icon name="MapPin" size={10} style={{ color: "var(--gf-text-light)", flexShrink: 0 }} />
+                      <Icon
+                        name="MapPin"
+                        size={10}
+                        style={{ color: "var(--gf-text-light)", flexShrink: 0 }}
+                      />
                       <span
                         className="text-[10px] font-montserrat"
                         style={{ color: "var(--gf-text-light)" }}
@@ -1654,7 +1661,9 @@ export default function Index() {
                     fontSize: "clamp(26px, 3vw, 38px)",
                     color: "var(--gf-dark)",
                   }}
-                >From Farm to Export — Full Supply Chain Control</h3>
+                >
+                  From Farm to Export — Full Supply Chain Control
+                </h3>
                 <p
                   className="text-[13px] leading-relaxed mb-6"
                   style={{
@@ -1674,7 +1683,9 @@ export default function Index() {
                     .querySelector("#about")
                     ?.scrollIntoView({ behavior: "smooth" })
                 }
-              >REQUEST A QUOTE</button>
+              >
+                REQUEST A QUOTE
+              </button>
             </div>
 
             {/* Right: 4 image tiles */}
@@ -1858,7 +1869,10 @@ export default function Index() {
                     style={{ background: "var(--gf-gold)" }}
                   />
                   <p className="text-white/65 text-[14px] leading-relaxed max-w-xs font-montserrat">
-                    EU-certified organic and conventional product lines — grown on our own farmland in the Smolensk Region, processed in-house, and shipped wholesale to importers and distributors worldwide.
+                    EU-certified organic and conventional product lines — grown
+                    on our own farmland in the Smolensk Region, processed
+                    in-house, and shipped wholesale to importers and
+                    distributors worldwide.
                   </p>
                 </div>
 
@@ -2125,7 +2139,10 @@ export default function Index() {
                     className="text-[12px] leading-relaxed font-montserrat mb-4"
                     style={{ color: "var(--gf-text-light)" }}
                   >
-                    Stable export volumes of conventional grains, pulses and oilseeds. Standard packaging 25–50 kg bags and big bags. Export documentation, phytosanitary certificates, and FOB/DDP terms on request.
+                    Stable export volumes of conventional grains, pulses and
+                    oilseeds. Standard packaging 25–50 kg bags and big bags.
+                    Export documentation, phytosanitary certificates, and
+                    FOB/DDP terms on request.
                   </p>
                 </div>
                 <button
@@ -2955,7 +2972,7 @@ export default function Index() {
                     "EU Organic Certified",
                     "Traceable from field to final product",
                     "Sustainable farming practices",
-                    "Available for selected products only",
+                    "Available within our certified product range",
                   ].map((item, i) => (
                     <div
                       key={i}
@@ -3438,7 +3455,9 @@ export default function Index() {
                   className="font-montserrat text-[14px] leading-relaxed mb-7"
                   style={{ color: "var(--gf-text-light)" }}
                 >
-                  Private label production for retailers, distributors and importers worldwide — from product selection and packaging design to certified, shelf-ready delivery.
+                  Private label production for retailers, distributors and
+                  importers worldwide — from product selection and packaging
+                  design to certified, shelf-ready delivery.
                 </p>
 
                 {/* 5 features */}
@@ -3846,8 +3865,19 @@ export default function Index() {
                     />
                   </div>
                   <div style={{ padding: "16px 16px 18px" }}>
-                    <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 6 }}>
-                      <Icon name={c.icon} size={15} style={{ color: "var(--gf-gold)", flexShrink: 0 }} />
+                    <div
+                      style={{
+                        display: "flex",
+                        alignItems: "center",
+                        gap: 8,
+                        marginBottom: 6,
+                      }}
+                    >
+                      <Icon
+                        name={c.icon}
+                        size={15}
+                        style={{ color: "var(--gf-gold)", flexShrink: 0 }}
+                      />
                       <div
                         style={{
                           fontFamily: "Montserrat",
@@ -3916,7 +3946,9 @@ export default function Index() {
                       color: "var(--gf-dark)",
                       marginBottom: 2,
                     }}
-                  >Get Product Specifications & Pricing</div>
+                  >
+                    Get Product Specifications & Pricing
+                  </div>
                   <div
                     style={{
                       fontFamily: "Montserrat",
@@ -4379,7 +4411,11 @@ export default function Index() {
                   <Icon
                     name={t.icon}
                     size={18}
-                    style={{ color: "var(--gf-gold)", marginBottom: 8, strokeWidth: 1.3 }}
+                    style={{
+                      color: "var(--gf-gold)",
+                      marginBottom: 8,
+                      strokeWidth: 1.3,
+                    }}
                   />
                   <div
                     style={{
