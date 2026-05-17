@@ -2806,10 +2806,11 @@ export default function Index() {
             style={{ background: "var(--gf-dark)", borderRadius: 10 }}
           >
             {[
-              { icon: "Leaf", label: "100% Organic Certified" },
-              { icon: "FlaskConical", label: "Lab Tested Quality" },
-              { icon: "ShieldCheck", label: "Food Safety Standards" },
-              { icon: "Truck", label: "On-Time Delivery" },
+              { icon: "Leaf", label: "Organic & Conventional Supply" },
+              { icon: "ShieldCheck", label: "EU Organic Certified" },
+              { icon: "FileText", label: "Export Documentation Support" },
+              { icon: "Globe", label: "Reliable Global Delivery" },
+              { icon: "ClipboardList", label: "USDA Organic in Process" },
             ].map((b, i) => (
               <div key={i} className="flex items-center gap-2.5">
                 <Icon
