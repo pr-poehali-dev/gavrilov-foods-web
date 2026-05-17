@@ -35,6 +35,7 @@ const products = [
     organic: true,
     packaging: "25 / 50 kg bags or big bags",
     moq: "from 1 MT",
+    origin: "Smolensk Region, Russia",
     img: "https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/files/49906ef7-211c-4d64-beae-004e3518ef74.jpg",
   },
   {
@@ -42,13 +43,15 @@ const products = [
     organic: true,
     packaging: "25 / 50 kg bags or big bags",
     moq: "from 1 MT",
-    img: "https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/files/bb689ed8-ee56-4684-b396-e560a076588f.jpg",
+    origin: "Smolensk Region, Russia",
+    img: "https://cdn.poehali.dev/files/2feefebc-e7a3-4fa1-b4ae-04ae4dbecc3c.png",
   },
   {
     name: "BUCKWHEAT FLOUR",
     organic: true,
     packaging: "25 kg bags",
     moq: "from 1 MT",
+    origin: "Smolensk Region, Russia",
     img: "https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/files/5aa6f984-f5f5-4f4e-afe2-85e236e0a871.jpg",
   },
   {
@@ -56,6 +59,7 @@ const products = [
     organic: true,
     packaging: "25 kg bags",
     moq: "from 1 MT",
+    origin: "Smolensk Region, Russia",
     img: "https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/files/4e313381-f7ae-4934-8263-19f31994775f.jpg",
   },
   {
@@ -63,6 +67,7 @@ const products = [
     organic: true,
     packaging: "25 / 50 kg bags or big bags",
     moq: "from 1 MT",
+    origin: "Smolensk Region, Russia",
     img: "https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/files/6221103e-8fac-42c6-acda-82f48776aa1b.jpg",
   },
   {
@@ -70,6 +75,7 @@ const products = [
     organic: false,
     packaging: "25 / 50 kg bags",
     moq: "from 1 MT",
+    origin: "Russia",
     img: "https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/files/22e07f78-6ce7-4769-a3ff-370062a13ca2.jpg",
   },
   {
@@ -77,6 +83,7 @@ const products = [
     organic: false,
     packaging: "25 / 50 kg bags",
     moq: "from 1 MT",
+    origin: "Russia",
     img: "https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/files/98344303-4a85-427d-9dca-54dc796d32cd.jpg",
   },
   {
@@ -84,6 +91,7 @@ const products = [
     organic: false,
     packaging: "25 / 50 kg bags",
     moq: "from 1 MT",
+    origin: "Russia",
     img: "https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/files/99258109-655c-4c20-a367-ff9baefaa524.jpg",
   },
   {
@@ -91,6 +99,7 @@ const products = [
     organic: false,
     packaging: "25 / 50 kg bags",
     moq: "from 1 MT",
+    origin: "Russia",
     img: "https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/files/0f6296ad-99b5-4123-9acc-3349c6210930.jpg",
   },
   {
@@ -98,6 +107,7 @@ const products = [
     organic: false,
     packaging: "25 / 50 kg bags or big bags",
     moq: "from 1 MT",
+    origin: "Russia",
     img: "https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/files/d8ce42e3-3088-4de2-83f1-662af34b4f05.jpg",
   },
 ];
@@ -1529,18 +1539,29 @@ export default function Index() {
                     className="mt-3 pt-2.5"
                     style={{ borderTop: "1px solid rgba(0,0,0,0.06)" }}
                   >
-                    <span
-                      className="text-[11px] font-montserrat"
-                      style={{ color: "var(--gf-text-light)" }}
-                    >
-                      MOQ{" "}
-                    </span>
-                    <span
-                      className="text-[12px] font-bold font-montserrat"
-                      style={{ color: "var(--gf-gold)" }}
-                    >
-                      {p.moq}
-                    </span>
+                    <div className="mb-1.5">
+                      <span
+                        className="text-[11px] font-montserrat"
+                        style={{ color: "var(--gf-text-light)" }}
+                      >
+                        MOQ{" "}
+                      </span>
+                      <span
+                        className="text-[12px] font-bold font-montserrat"
+                        style={{ color: "var(--gf-gold)" }}
+                      >
+                        {p.moq}
+                      </span>
+                    </div>
+                    <div className="flex items-center gap-1">
+                      <Icon name="MapPin" size={10} style={{ color: "var(--gf-text-light)", flexShrink: 0 }} />
+                      <span
+                        className="text-[10px] font-montserrat"
+                        style={{ color: "var(--gf-text-light)" }}
+                      >
+                        {p.origin}
+                      </span>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -1842,9 +1863,7 @@ export default function Index() {
                     style={{ background: "var(--gf-gold)" }}
                   />
                   <p className="text-white/65 text-[14px] leading-relaxed max-w-xs font-montserrat">
-                    We meet your needs with flexibility and care at every step,
-                    adapting schedules and processes to your requirements while
-                    maintaining strict quality control.
+                    EU-certified organic and conventional product lines — grown on our own farmland in the Smolensk Region, processed in-house, and shipped wholesale to importers and distributors worldwide.
                   </p>
                 </div>
 
@@ -1862,8 +1881,8 @@ export default function Index() {
                     style={{ color: "var(--gf-gold)", flexShrink: 0 }}
                   />
                   <p className="text-white/75 text-[13px] leading-snug font-montserrat">
-                    Organic & Conventional options available —<br />
-                    we meet your needs with flexibility and care.
+                    Wholesale supply with export documentation —<br />
+                    organic &amp; conventional, FOB / DDP terms available.
                   </p>
                 </div>
               </div>
@@ -2111,8 +2130,7 @@ export default function Index() {
                     className="text-[12px] leading-relaxed font-montserrat mb-4"
                     style={{ color: "var(--gf-text-light)" }}
                   >
-                    We also supply a wide range of conventional grains, pulses
-                    and oilseeds. Consistent quality. Reliable supply.
+                    Stable export volumes of conventional grains, pulses and oilseeds. Standard packaging 25–50 kg bags and big bags. Export documentation, phytosanitary certificates, and FOB/DDP terms on request.
                   </p>
                 </div>
                 <button
