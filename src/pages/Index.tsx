@@ -1901,12 +1901,7 @@ export default function Index() {
                   color: "var(--gf-dark)",
                   fontWeight: 400,
                 }}
-              >
-                Healthy products —<br />
-                <span style={{ fontStyle: "italic", fontWeight: 400 }}>
-                  healthy planet
-                </span>
-              </h2>
+              >EU Certified Organic Products</h2>
 
               {/* Checkmarks */}
               <div className="space-y-3">
