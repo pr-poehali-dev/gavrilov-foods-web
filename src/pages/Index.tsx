@@ -2422,8 +2422,7 @@ export default function Index() {
                 TO EXPORT
               </h2>
               <p className="text-white/60 text-[14px] leading-relaxed mb-8 max-w-sm font-montserrat">
-                We control every stage of production to ensure consistent
-                quality, traceability and reliability for our partners.
+                From seed to container — we manage the full cycle in-house: cultivation, post-harvest storage, processing, packaging, and certified export to international markets.
               </p>
               {/* 4 pillars */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
@@ -2627,32 +2626,32 @@ export default function Index() {
                 {
                   num: "01",
                   title: "Farming",
-                  desc: "Cultivation of healthy and strong crops on fertile fields.",
+                  desc: "Precision field management with soil monitoring and crop rotation across our own land.",
                 },
                 {
                   num: "02",
                   title: "Harvesting",
-                  desc: "Timely harvesting with modern agricultural machinery.",
+                  desc: "Timely harvest using GPS-guided combine machinery to minimise field losses.",
                 },
                 {
                   num: "03",
-                  title: "Processing",
-                  desc: "Cleaning, sorting and quality control.",
+                  title: "Storage",
+                  desc: "Up to 10,000 MT capacity in temperature-controlled, ventilated grain facilities.",
                 },
                 {
                   num: "04",
-                  title: "Storage",
-                  desc: "Safe storage in clean and well-maintained facilities.",
+                  title: "Processing",
+                  desc: "Multi-stage cleaning, de-hulling, and optical sorting to meet EU/USDA specs.",
                 },
                 {
                   num: "05",
                   title: "Packaging",
-                  desc: "Flexible packaging solutions for different market needs.",
+                  desc: "Retail 200g–1kg, industrial 25–50 kg bags, and big bags up to 1,000 kg.",
                 },
                 {
                   num: "06",
                   title: "Export",
-                  desc: "Reliable logistics and global supply.",
+                  desc: "Full phytosanitary docs, refrigerated container loading, and DDP/FOB terms.",
                 },
               ].map((s, i) => (
                 <div key={i} className="flex flex-col">
@@ -2693,22 +2692,22 @@ export default function Index() {
             {[
               {
                 img: "https://cdn.poehali.dev/files/e43ef89f-fe22-4c5d-9966-3f78245a4cee.jpg", // packaging machine
-                title: "Advanced Packaging",
-                desc: "Modern equipment allows us to pack products from 200 g to 1000 g with high accuracy and product protection.",
-                btn: "Learn More",
+                title: "Processing & Packaging",
+                desc: "Automated sorting lines and multi-format packaging: retail pouches, 25–50 kg bags, and 1,000 kg big bags with moisture-barrier lining.",
+                btn: "Our Products",
                 target: "#products",
               },
               {
                 img: "https://cdn.poehali.dev/files/98d43280-321a-4078-bb4e-2cd8a7e71f5e.jpg", // packaged goods
-                title: "Flexible Solutions",
-                desc: "We offer a wide range of packaging formats and private label options to support your brand.",
-                btn: "Learn More",
+                title: "Export Standards & Docs",
+                desc: "We handle phytosanitary certificates, pesticide residue testing, and all market-specific documentation for EU, UK, and Middle East buyers.",
+                btn: "Private Label",
                 target: "#private-label",
               },
               {
                 img: "https://cdn.poehali.dev/files/91652dc2-54a9-47e7-8b5f-fb8ec843b284.jpg", // big bags storage
-                title: "Large Volumes",
-                desc: "Our storage facilities and strong production capacity ensure stable supply and consistent quality.",
+                title: "Container Logistics",
+                desc: "Up to 10,000 MT in storage. Refrigerated and standard container shipments with flexible Incoterms: EXW, FOB, CFR, DDP.",
                 btn: "Contact Us",
                 target: "#contact",
               },
