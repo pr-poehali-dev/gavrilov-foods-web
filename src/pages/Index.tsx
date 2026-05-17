@@ -2641,13 +2641,13 @@ export default function Index() {
                 },
                 {
                   num: "03",
-                  title: "Storage",
-                  desc: "Up to 10,000 MT capacity in temperature-controlled, ventilated grain facilities.",
+                  title: "Processing",
+                  desc: "Multi-stage cleaning, de-hulling, and optical sorting to meet EU/USDA specs.",
                 },
                 {
                   num: "04",
-                  title: "Processing",
-                  desc: "Multi-stage cleaning, de-hulling, and optical sorting to meet EU/USDA specs.",
+                  title: "Storage",
+                  desc: "Up to 10,000 MT capacity in temperature-controlled, ventilated grain facilities.",
                 },
                 {
                   num: "05",
