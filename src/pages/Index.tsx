@@ -5059,7 +5059,7 @@ export default function Index() {
                 marginBottom: 24,
               }}
             >
-              Send us your request
+              {t.contact.sendRequest}
             </h3>
 
             <div
@@ -5134,41 +5134,20 @@ export default function Index() {
                   {
                     label: t.contact.formProduct,
                     type: "select",
-                    placeholder: "Select product",
-                    opts: [
-                      "Buckwheat",
-                      "Green Buckwheat",
-                      "Buckwheat Flour",
-                      "Oat Flakes",
-                      "Red Lentils",
-                      "Yellow Peas",
-                      "Chickpeas",
-                      "Wheat",
-                    ],
+                    placeholder: t.contact.selectProduct,
+                    opts: t.contact.productOpts as string[],
                   },
                   {
                     label: t.contact.formPackaging,
                     type: "select",
-                    placeholder: "Select packaging",
-                    opts: [
-                      "250g – 5kg retail bags",
-                      "25 / 50 kg bags",
-                      "500–1000 kg Big Bags",
-                      "20 ft container",
-                      "40 ft container",
-                    ],
+                    placeholder: t.contact.selectPackaging,
+                    opts: t.contact.packagingOpts as string[],
                   },
                   {
                     label: t.contact.formVolume,
                     type: "select",
-                    placeholder: "Select volume",
-                    opts: [
-                      "1–5 MT",
-                      "5–20 MT",
-                      "20–100 MT",
-                      "100+ MT",
-                      "Full container (FCL)",
-                    ],
+                    placeholder: t.contact.selectVolume,
+                    opts: t.contact.volumeOpts as string[],
                   },
                   {
                     label: t.contact.formDestination,
@@ -5355,30 +5334,15 @@ export default function Index() {
                   lineHeight: 1.5,
                 }}
               >
-                I agree to the{" "}
-                <a
-                  href="/privacy-policy"
-                  target="_blank"
-                  style={{
-                    color: "var(--gf-gold)",
-                    textDecoration: "underline",
-                  }}
-                >
-                  Privacy Policy
-                </a>{" "}
-                and{" "}
-                <a
-                  href="/terms"
-                  target="_blank"
-                  style={{
-                    color: "var(--gf-gold)",
-                    textDecoration: "underline",
-                  }}
-                >
-                  Terms & Conditions
-                </a>{" "}
-                of Gavrilov Foods and consent to the processing of my personal
-                data for export inquiry purposes.
+                {t.contact.privacyText
+                  .replace("{privacyLink}", "§PRIVACY§")
+                  .replace("{termsLink}", "§TERMS§")
+                  .split(/(§PRIVACY§|§TERMS§)/)
+                  .map((part, i) => {
+                    if (part === "§PRIVACY§") return <a key={i} href="/privacy-policy" target="_blank" style={{ color: "var(--gf-gold)", textDecoration: "underline" }}>{t.contact.privacyLinkText}</a>;
+                    if (part === "§TERMS§") return <a key={i} href="/terms" target="_blank" style={{ color: "var(--gf-gold)", textDecoration: "underline" }}>{t.contact.termsLinkText}</a>;
+                    return part;
+                  })}
               </span>
             </div>
 
