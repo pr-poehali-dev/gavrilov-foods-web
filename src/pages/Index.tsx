@@ -4157,11 +4157,12 @@ export default function Index() {
           <div className="reveal mb-4">
             {/* Top: hero image with text overlay */}
             <div
+              className="gallery-hero-banner"
               style={{
                 position: "relative",
                 borderRadius: "10px 10px 0 0",
                 overflow: "hidden",
-                height: 200,
+                minHeight: 220,
               }}
             >
               <img
@@ -4179,7 +4180,7 @@ export default function Index() {
                   position: "absolute",
                   inset: 0,
                   background:
-                    "linear-gradient(to right, rgba(14,26,15,0.92) 0%, rgba(14,26,15,0.65) 55%, rgba(14,26,15,0.2) 100%)",
+                    "linear-gradient(to right, rgba(14,26,15,0.95) 0%, rgba(14,26,15,0.78) 55%, rgba(14,26,15,0.35) 100%)",
                 }}
               />
               <div
@@ -4188,19 +4189,22 @@ export default function Index() {
                   inset: 0,
                   display: "flex",
                   alignItems: "center",
-                  padding: "0 44px",
+                  padding: "24px 44px",
                 }}
               >
-                <div style={{ maxWidth: 560 }}>
+                <div style={{ maxWidth: 560, width: "100%" }}>
                   <h2
                     style={{
                       fontFamily: "Cormorant Garamond, serif",
-                      fontSize: "clamp(26px, 3vw, 40px)",
+                      fontSize: "clamp(22px, 3vw, 40px)",
                       fontWeight: 400,
                       color: "#fff",
                       lineHeight: 1.2,
-                      marginBottom: 8,
+                      marginBottom: 10,
+                      hyphens: "auto",
+                      wordBreak: "break-word",
                     }}
+                    lang="ru"
                   >
                     {t.gallery.h2a}{" "}
                     <span
@@ -4213,8 +4217,8 @@ export default function Index() {
                     style={{
                       fontFamily: "Montserrat",
                       fontSize: 13,
-                      color: "rgba(255,255,255,0.6)",
-                      lineHeight: 1.65,
+                      color: "rgba(255,255,255,0.75)",
+                      lineHeight: 1.55,
                       maxWidth: 440,
                     }}
                   >
@@ -4386,7 +4390,7 @@ export default function Index() {
                 display: "grid",
                 gridTemplateColumns: "repeat(5,1fr)",
                 gap: 4,
-                height: 200,
+                aspectRatio: "5 / 1",
               }}
             >
               {[
