@@ -547,6 +547,26 @@ div {
   }
 }
 
+/* Gallery — desktop only: smaller banner */
+@media (min-width: 901px) {
+  .gallery-hero-banner {
+    min-height: 150px !important;
+    height: 150px !important;
+  }
+  .gallery-hero-banner > div:last-child {
+    padding: 0 36px !important;
+  }
+  .gallery-hero-banner h2 {
+    font-size: 24px !important;
+    margin-bottom: 6px !important;
+    line-height: 1.15 !important;
+  }
+  .gallery-hero-banner p {
+    font-size: 12px !important;
+    line-height: 1.45 !important;
+  }
+}
+
 /* Gallery */
 @media (max-width: 900px) {
   /* Hero banner — taller, padding smaller, text fits */
