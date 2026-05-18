@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import Icon from "@/components/ui/icon";
+import { useLanguage } from "@/i18n/useLanguage";
 
 // Real farm photos — Gavrilov Organic Foods
 const HERO_IMG =
@@ -267,18 +268,41 @@ function Logo() {
   );
 }
 
+const LANG_LABELS: Record<string, string> = { en: "EN", ru: "RU", es: "ES" };
+const LANG_FLAGS: Record<string, string> = { en: "🇬🇧", ru: "🇷🇺", es: "🇲🇽" };
+
 export default function Index() {
   useScrollReveal();
+  const { lang, setLang, t } = useLanguage();
   const [mobileOpen, setMobileOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [agreed, setAgreed] = useState(false);
   const [antadOpen, setAntadOpen] = useState(false);
+  const [langOpen, setLangOpen] = useState(false);
+
+  const NAV_LINKS = [
+    { key: "about", href: "#about" },
+    { key: "products", href: "#products" },
+    { key: "organic", href: "#organic" },
+    { key: "export", href: "#export" },
+    { key: "certifications", href: "#certifications" },
+    { key: "privateLabel", href: "#private-label" },
+    { key: "gallery", href: "#gallery" },
+    { key: "contact", href: "#contact" },
+  ] as const;
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 60);
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
+  useEffect(() => {
+    if (!langOpen) return;
+    const close = () => setLangOpen(false);
+    document.addEventListener("click", close, { capture: true });
+    return () => document.removeEventListener("click", close, { capture: true });
+  }, [langOpen]);
 
   const scrollTo = (href: string) => {
     setMobileOpen(false);
@@ -307,23 +331,96 @@ export default function Index() {
 
           {/* Desktop nav */}
           <nav className="hidden lg:flex items-center gap-7">
-            {navLinks.map((l) => (
+            {NAV_LINKS.map((l) => (
               <button
-                key={l.label}
+                key={l.key}
                 onClick={() => scrollTo(l.href)}
                 className="nav-link font-montserrat text-[12px] font-medium tracking-[0.06em] uppercase text-white/75 hover:text-white transition-colors"
               >
-                {l.label}
+                {t.nav[l.key]}
               </button>
             ))}
           </nav>
 
           <div className="hidden lg:flex items-center gap-3">
+            {/* Language dropdown */}
+            <div style={{ position: "relative" }}>
+              <button
+                onClick={() => setLangOpen(!langOpen)}
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: 5,
+                  background: "rgba(255,255,255,0.07)",
+                  border: "1px solid rgba(255,255,255,0.15)",
+                  borderRadius: 5,
+                  padding: "5px 9px",
+                  cursor: "pointer",
+                  color: "rgba(255,255,255,0.75)",
+                  fontFamily: "Montserrat",
+                  fontWeight: 700,
+                  fontSize: 11,
+                  letterSpacing: "0.08em",
+                  transition: "border-color 0.2s",
+                }}
+                onMouseEnter={(e) => (e.currentTarget.style.borderColor = "rgba(201,151,58,0.5)")}
+                onMouseLeave={(e) => (e.currentTarget.style.borderColor = "rgba(255,255,255,0.15)")}
+              >
+                <span style={{ fontSize: 13 }}>{LANG_FLAGS[lang]}</span>
+                {LANG_LABELS[lang]}
+                <Icon name="ChevronDown" size={11} style={{ opacity: 0.6 }} />
+              </button>
+              {langOpen && (
+                <div
+                  style={{
+                    position: "absolute",
+                    top: "calc(100% + 6px)",
+                    right: 0,
+                    background: "rgba(14,26,15,0.98)",
+                    border: "1px solid rgba(201,151,58,0.25)",
+                    borderRadius: 6,
+                    overflow: "hidden",
+                    zIndex: 300,
+                    minWidth: 90,
+                    boxShadow: "0 8px 24px rgba(0,0,0,0.4)",
+                  }}
+                >
+                  {(["en", "ru", "es"] as const).map((l) => (
+                    <button
+                      key={l}
+                      onClick={() => { setLang(l); setLangOpen(false); }}
+                      style={{
+                        display: "flex",
+                        alignItems: "center",
+                        gap: 8,
+                        width: "100%",
+                        padding: "9px 14px",
+                        background: l === lang ? "rgba(201,151,58,0.12)" : "transparent",
+                        border: "none",
+                        cursor: "pointer",
+                        color: l === lang ? "var(--gf-gold)" : "rgba(255,255,255,0.7)",
+                        fontFamily: "Montserrat",
+                        fontWeight: 600,
+                        fontSize: 11,
+                        letterSpacing: "0.08em",
+                        textAlign: "left",
+                        transition: "background 0.15s",
+                      }}
+                      onMouseEnter={(e) => { if (l !== lang) e.currentTarget.style.background = "rgba(255,255,255,0.06)"; }}
+                      onMouseLeave={(e) => { if (l !== lang) e.currentTarget.style.background = "transparent"; }}
+                    >
+                      <span style={{ fontSize: 14 }}>{LANG_FLAGS[l]}</span>
+                      {LANG_LABELS[l]}
+                    </button>
+                  ))}
+                </div>
+              )}
+            </div>
             <button
               className="btn-gold text-[11px] py-2.5 px-5"
               onClick={() => scrollTo("#contact")}
             >
-              Request a Quote
+              {t.nav.requestQuote}
             </button>
           </div>
 
@@ -346,20 +443,47 @@ export default function Index() {
             }}
           >
             <div className="px-6 py-4 flex flex-col gap-4">
-              {navLinks.map((l) => (
+              {NAV_LINKS.map((l) => (
                 <button
-                  key={l.label}
+                  key={l.key}
                   onClick={() => scrollTo(l.href)}
                   className="text-left text-white/80 hover:text-white font-montserrat text-sm uppercase tracking-widest transition-colors"
                 >
-                  {l.label}
+                  {t.nav[l.key]}
                 </button>
               ))}
+              {/* Mobile lang switcher */}
+              <div style={{ display: "flex", gap: 8, paddingTop: 4 }}>
+                {(["en", "ru", "es"] as const).map((l) => (
+                  <button
+                    key={l}
+                    onClick={() => setLang(l)}
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                      gap: 5,
+                      padding: "5px 10px",
+                      borderRadius: 5,
+                      border: "1px solid",
+                      borderColor: l === lang ? "var(--gf-gold)" : "rgba(255,255,255,0.2)",
+                      background: l === lang ? "rgba(201,151,58,0.12)" : "transparent",
+                      color: l === lang ? "var(--gf-gold)" : "rgba(255,255,255,0.6)",
+                      fontFamily: "Montserrat",
+                      fontWeight: 700,
+                      fontSize: 11,
+                      cursor: "pointer",
+                    }}
+                  >
+                    <span style={{ fontSize: 13 }}>{LANG_FLAGS[l]}</span>
+                    {LANG_LABELS[l]}
+                  </button>
+                ))}
+              </div>
               <button
                 className="btn-gold mt-2"
                 onClick={() => scrollTo("#contact")}
               >
-                Request a Quote
+                {t.nav.requestQuote}
               </button>
             </div>
           </div>
@@ -656,7 +780,7 @@ export default function Index() {
                   marginBottom: 16,
                 }}
               >
-                Farm to Export
+                {t.hero.badge}
               </div>
 
               {/* H1 */}
@@ -671,13 +795,13 @@ export default function Index() {
                   marginBottom: 0,
                 }}
               >
-                EU Certified
+                {t.hero.h1a}
                 <br />
                 <span style={{ color: "var(--gf-gold)" }}>
-                  Organic & Conventional
+                  {t.hero.h1b}
                 </span>
                 <br />
-                Grain Supplier
+                {t.hero.h1c}
               </h1>
 
               {/* Underline */}
@@ -702,8 +826,7 @@ export default function Index() {
                   marginBottom: 24,
                 }}
               >
-                Reliable Russian grains, pulses & oilseeds for international
-                markets.
+                {t.hero.subtitle}
               </p>
 
               {/* 6 checkmarks in 2 cols */}
@@ -716,14 +839,7 @@ export default function Index() {
                   marginBottom: 28,
                 }}
               >
-                {[
-                  "EU Organic Certified",
-                  "Direct from Producer",
-                  "Flexible Logistics",
-                  "Full Export Support",
-                  "Bulk & Private Label",
-                  "Quality You Can Trust",
-                ].map((item, i) => (
+                {t.hero.checks.map((item, i) => (
                   <div
                     key={i}
                     style={{ display: "flex", alignItems: "center", gap: 8 }}
@@ -786,7 +902,7 @@ export default function Index() {
                       color: "var(--gf-gold)",
                     }}
                   >
-                    ANTAD Expo 2026 — Mexico
+                    {t.hero.antadTitle}
                   </div>
                   <div
                     style={{
@@ -796,7 +912,7 @@ export default function Index() {
                       marginTop: 1,
                     }}
                   >
-                    Available for B2B meetings
+                    {t.hero.antadSub}
                   </div>
                 </div>
                 <button
@@ -820,7 +936,7 @@ export default function Index() {
                     whiteSpace: "nowrap",
                   }}
                 >
-                  Meet Us
+                  {t.hero.antadBtn}
                 </button>
               </div>
 
@@ -842,7 +958,7 @@ export default function Index() {
                       ?.scrollIntoView({ behavior: "smooth" })
                   }
                 >
-                  View Products <Icon name="ArrowRight" size={16} />
+                  {t.hero.btnProducts} <Icon name="ArrowRight" size={16} />
                 </button>
                 <button
                   className="btn-outline-white"
@@ -857,7 +973,7 @@ export default function Index() {
                       ?.scrollIntoView({ behavior: "smooth" })
                   }
                 >
-                  Request a Quote
+                  {t.hero.btnQuote}
                 </button>
               </div>
             </div>
@@ -912,7 +1028,7 @@ export default function Index() {
                       marginBottom: 2,
                     }}
                   >
-                    EU Organic Certified
+                    {t.statsBar.euOrganic}
                   </div>
                   <div
                     style={{
@@ -922,31 +1038,19 @@ export default function Index() {
                       lineHeight: 1.4,
                     }}
                   >
-                    Full traceability
+                    {t.statsBar.euTrace}
                     <br />
-                    Farm → Processing → Export
+                    {t.statsBar.euChain}
                   </div>
                 </div>
               </div>
 
               {/* 4 stats */}
               {[
-                { icon: "Tractor", val: "10,000 ha", label: "Farmland" },
-                {
-                  icon: "Warehouse",
-                  val: "10,000 – 15,000 MT",
-                  label: "Annual Production",
-                },
-                {
-                  icon: "Ship",
-                  val: "5,000 – 10,000 MT",
-                  label: "Annual Export Volume",
-                },
-                {
-                  icon: "Globe",
-                  val: "EXPORT MARKETS",
-                  label: "Europe & China",
-                },
+                { icon: "Tractor", val: "10,000 ha", label: t.statsBar.farmland },
+                { icon: "Warehouse", val: "10,000 – 15,000 MT", label: t.statsBar.annualProd },
+                { icon: "Ship", val: "5,000 – 10,000 MT", label: t.statsBar.annualExport },
+                { icon: "Globe", val: t.statsBar.exportMarkets, label: t.statsBar.europeChina },
               ].map((s, i) => (
                 <div
                   key={i}
@@ -1009,7 +1113,7 @@ export default function Index() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="reveal-left">
-              <div className="section-label mb-6">About Us</div>
+              <div className="section-label mb-6">{t.about.sectionLabel}</div>
               <h2
                 className="font-cormorant font-light leading-tight mb-6"
                 style={{
@@ -1017,34 +1121,29 @@ export default function Index() {
                   color: "var(--gf-dark)",
                 }}
               >
-                From Farm to Export —<br />
+                {t.about.h2a}<br />
                 <span style={{ color: "var(--gf-gold)", fontStyle: "italic" }}>
-                  Full Control
+                  {t.about.h2b}
                 </span>{" "}
-                at Every Stage
+                {t.about.h2c}
               </h2>
               <p
                 className="text-[15px] leading-relaxed mb-5"
                 style={{ color: "var(--gf-text-light)" }}
               >
-                Gavrilov Foods is a vertically integrated agricultural company
-                based in the Smolensk Region, Russia. We own 10,000 hectares of
-                farmland, operate modern processing facilities and deliver
-                premium grains to importers worldwide.
+                {t.about.p1}
               </p>
               <p
                 className="text-[15px] leading-relaxed mb-8"
                 style={{ color: "var(--gf-text-light)" }}
               >
-                Every shipment is backed by full traceability, EU organic
-                certification options, and a dedicated export team that responds
-                within 24 hours.
+                {t.about.p2}
               </p>
               <div className="flex flex-wrap gap-6">
                 {[
-                  { icon: "MapPin", label: "Smolensk Region, Russia" },
-                  { icon: "Globe", label: "EU Export Documentation" },
-                  { icon: "Phone", label: "+7 903 790 17 95" },
+                  { icon: "MapPin", label: t.about.location },
+                  { icon: "Globe", label: t.about.euDocs },
+                  { icon: "Phone", label: t.about.phone },
                 ].map((item, i) => (
                   <div
                     key={i}
@@ -1083,10 +1182,10 @@ export default function Index() {
                     className="font-cormorant text-xl font-semibold"
                     style={{ color: "var(--gf-gold)" }}
                   >
-                    Modern Equipment
+                    {t.about.imgCaption}
                   </div>
                   <div className="text-white/60 text-xs mt-0.5 font-montserrat">
-                    Processing 200g – 1000kg formats
+                    {t.about.imgSub}
                   </div>
                 </div>
               </div>
