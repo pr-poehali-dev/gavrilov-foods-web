@@ -155,7 +155,7 @@ export const translations = {
       organicAvail: "Organic available",
       conventional: "Conventional",
       moqLabel: "MOQ",
-      moqValue: "from 1 MT",
+      moqValue: "from 22 MT",
       names: {
         BUCKWHEAT: "BUCKWHEAT",
         "GREEN BUCKWHEAT": "GREEN BUCKWHEAT",
@@ -772,7 +772,7 @@ export const translations = {
       organicAvail: "Органик доступен",
       conventional: "Традиционный",
       moqLabel: "МОК",
-      moqValue: "от 1 Т",
+      moqValue: "от 22 Т",
       names: {
         BUCKWHEAT: "ГРЕЧИХА",
         "GREEN BUCKWHEAT": "ЗЕЛЁНАЯ ГРЕЧИХА",
@@ -1407,7 +1407,7 @@ export const translations = {
       organicAvail: "Orgánico disponible",
       conventional: "Convencional",
       moqLabel: "Ped. mín.",
-      moqValue: "desde 1 MT",
+      moqValue: "desde 22 MT",
       names: {
         BUCKWHEAT: "TRIGO SARRACENO",
         "GREEN BUCKWHEAT": "TRIGO SARRACENO VERDE",
