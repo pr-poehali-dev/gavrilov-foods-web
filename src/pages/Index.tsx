@@ -5075,11 +5075,11 @@ export default function Index() {
                 style={{ display: "flex", flexDirection: "column", gap: 12 }}
               >
                 {[
-                  { label: t.contact.formName, type: "text", placeholder: "Your name" },
+                  { label: t.contact.formName, type: "text", placeholder: t.contact.formNamePlaceholder },
                   {
                     label: t.contact.formEmail,
                     type: "email",
-                    placeholder: "your@email.com",
+                    placeholder: t.contact.formEmailPlaceholder,
                   },
                   {
                     label: t.contact.formPhone,
