@@ -1393,13 +1393,13 @@ export default function Index() {
                       className="font-cormorant text-[28px] font-semibold leading-none"
                       style={{ color: "var(--gf-gold)" }}
                     >
-                      3+ regions
+                      {t.proofOfScale.card2.stat2}
                     </div>
                     <div
                       className="text-[12px] font-montserrat mt-0.5"
                       style={{ color: "var(--gf-text-light)" }}
                     >
-                      China, Europe, Serbia & growing
+                      {t.proofOfScale.card2.stat2sub}
                     </div>
                   </div>
                   <div>
@@ -1630,7 +1630,7 @@ export default function Index() {
                 className="text-[10px] font-bold uppercase tracking-widest mb-4 font-montserrat"
                 style={{ color: "var(--gf-gold)" }}
               >
-                Logistics & Infrastructure
+                {t.logistics.infraLabel}
               </div>
               <h2
                 className="font-cormorant font-light leading-tight mb-5"
@@ -1639,42 +1639,22 @@ export default function Index() {
                   color: "var(--gf-dark)",
                 }}
               >
-                From Farm to Global Delivery
+                {t.logistics.infraH2}
               </h2>
               <p
                 className="text-[14px] leading-relaxed mb-10 max-w-2xl font-montserrat"
                 style={{ color: "var(--gf-text-light)" }}
               >
-                From certified farmland to container loading — we own every
-                stage: cultivation on 10,000+ ha, post-harvest storage up to
-                10,000 MT, in-house processing, and certified export logistics
-                worldwide.
+                {t.logistics.infraP}
               </p>
 
               {/* 4 features */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-10">
-                {[
-                  {
-                    icon: "Warehouse",
-                    title: "10,000 MT Storage",
-                    desc: "Temperature-controlled grain facilities with ventilation and quality monitoring.",
-                  },
-                  {
-                    icon: "Factory",
-                    title: "In-House Processing",
-                    desc: "Multi-stage cleaning, de-hulling and optical sorting to EU/USDA specs.",
-                  },
-                  {
-                    icon: "ScanLine",
-                    title: "Full Traceability",
-                    desc: "Field-to-shipment documentation, lab testing and phytosanitary certification.",
-                  },
-                  {
-                    icon: "Container",
-                    title: "Container Logistics",
-                    desc: "20/40 ft refrigerated and dry containers. FOB, CFR, DDP terms available.",
-                  },
-                ].map((f, i) => (
+                {(t.logistics.infraFeatures as { title: string; desc: string }[]).map((f, i) => ({
+                  icon: ["Warehouse", "Factory", "ScanLine", "Container"][i],
+                  title: f.title,
+                  desc: f.desc,
+                })).map((f, i) => (
                   <div
                     key={i}
                     className="flex flex-col items-center text-center gap-2"
