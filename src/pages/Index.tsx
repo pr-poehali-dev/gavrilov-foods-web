@@ -272,6 +272,7 @@ export default function Index() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [agreed, setAgreed] = useState(false);
+  const [antadOpen, setAntadOpen] = useState(false);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 60);
@@ -400,6 +401,194 @@ export default function Index() {
         >
           <Icon name="MessageCircle" size={26} style={{ color: "#fff" }} />
         </a>
+
+        {/* ANTAD Expo sticky button */}
+        <button
+          onClick={() => setAntadOpen(true)}
+          title="ANTAD Expo 2026"
+          style={{
+            position: "fixed",
+            right: 20,
+            bottom: 86,
+            zIndex: 200,
+            display: "flex",
+            alignItems: "center",
+            gap: 7,
+            background: "var(--gf-dark)",
+            border: "1px solid rgba(201,151,58,0.45)",
+            borderRadius: 26,
+            padding: "9px 14px 9px 10px",
+            cursor: "pointer",
+            boxShadow: "0 4px 18px rgba(0,0,0,0.35)",
+            transition: "transform 0.2s, border-color 0.2s",
+          }}
+          onMouseEnter={(e) => {
+            (e.currentTarget as HTMLElement).style.transform = "scale(1.05)";
+            (e.currentTarget as HTMLElement).style.borderColor = "var(--gf-gold)";
+          }}
+          onMouseLeave={(e) => {
+            (e.currentTarget as HTMLElement).style.transform = "scale(1)";
+            (e.currentTarget as HTMLElement).style.borderColor = "rgba(201,151,58,0.45)";
+          }}
+        >
+          <span style={{ fontSize: 16, lineHeight: 1 }}>🇲🇽</span>
+          <span
+            style={{
+              fontFamily: "Montserrat",
+              fontWeight: 700,
+              fontSize: 10,
+              letterSpacing: "0.1em",
+              textTransform: "uppercase",
+              color: "var(--gf-gold)",
+              whiteSpace: "nowrap",
+            }}
+          >
+            ANTAD 2026
+          </span>
+        </button>
+
+        {/* ANTAD Popup */}
+        {antadOpen && (
+          <div
+            style={{
+              position: "fixed",
+              inset: 0,
+              zIndex: 500,
+              background: "rgba(0,0,0,0.55)",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              padding: "20px",
+            }}
+            onClick={() => setAntadOpen(false)}
+          >
+            <div
+              style={{
+                background: "var(--gf-dark)",
+                border: "1px solid rgba(201,151,58,0.3)",
+                borderRadius: 12,
+                padding: "36px 32px",
+                maxWidth: 440,
+                width: "100%",
+                position: "relative",
+              }}
+              onClick={(e) => e.stopPropagation()}
+            >
+              {/* Close */}
+              <button
+                onClick={() => setAntadOpen(false)}
+                style={{
+                  position: "absolute",
+                  top: 14,
+                  right: 16,
+                  background: "none",
+                  border: "none",
+                  cursor: "pointer",
+                  color: "rgba(255,255,255,0.4)",
+                  fontSize: 20,
+                  lineHeight: 1,
+                }}
+              >
+                ×
+              </button>
+
+              {/* Flag + label */}
+              <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 20 }}>
+                <span style={{ fontSize: 22 }}>🇲🇽</span>
+                <div>
+                  <div
+                    style={{
+                      fontFamily: "Montserrat",
+                      fontWeight: 700,
+                      fontSize: 10,
+                      letterSpacing: "0.18em",
+                      textTransform: "uppercase",
+                      color: "var(--gf-gold)",
+                    }}
+                  >
+                    ANTAD Expo 2026 · Mexico
+                  </div>
+                </div>
+              </div>
+
+              <h3
+                style={{
+                  fontFamily: "Cormorant Garamond, serif",
+                  fontSize: 28,
+                  fontWeight: 400,
+                  color: "#fff",
+                  lineHeight: 1.2,
+                  marginBottom: 16,
+                }}
+              >
+                Meet Us at ANTAD Expo 2026
+              </h3>
+
+              <p
+                style={{
+                  fontFamily: "Montserrat",
+                  fontSize: 13,
+                  color: "rgba(255,255,255,0.6)",
+                  lineHeight: 1.65,
+                  marginBottom: 20,
+                }}
+              >
+                We are available for meetings with:
+              </p>
+
+              <div style={{ display: "flex", flexDirection: "column", gap: 8, marginBottom: 28 }}>
+                {["Retail chains", "Importers", "Distributors", "Private Label buyers"].map((item, i) => (
+                  <div key={i} style={{ display: "flex", alignItems: "center", gap: 10 }}>
+                    <div
+                      style={{
+                        width: 6,
+                        height: 6,
+                        borderRadius: "50%",
+                        background: "var(--gf-gold)",
+                        flexShrink: 0,
+                      }}
+                    />
+                    <span
+                      style={{
+                        fontFamily: "Montserrat",
+                        fontSize: 13,
+                        color: "rgba(255,255,255,0.75)",
+                      }}
+                    >
+                      {item}
+                    </span>
+                  </div>
+                ))}
+              </div>
+
+              <a
+                href="https://wa.me/79037901795?text=Hello%2C%20I%20would%20like%20to%20schedule%20a%20meeting%20at%20ANTAD%20Expo%202026"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  gap: 8,
+                  width: "100%",
+                  background: "var(--gf-gold)",
+                  color: "#0e1a0f",
+                  fontFamily: "Montserrat",
+                  fontWeight: 700,
+                  fontSize: 12,
+                  letterSpacing: "0.12em",
+                  textTransform: "uppercase",
+                  textDecoration: "none",
+                  borderRadius: 6,
+                  padding: "14px 20px",
+                }}
+              >
+                <Icon name="MessageCircle" size={16} />
+                Schedule Meeting
+              </a>
+            </div>
+          </div>
+        )}
 
         {/* Main hero image block */}
         <div
@@ -569,6 +758,70 @@ export default function Index() {
                     </span>
                   </div>
                 ))}
+              </div>
+
+              {/* ANTAD badge */}
+              <div
+                className="animate-fade-up delay-300"
+                style={{
+                  display: "inline-flex",
+                  alignItems: "center",
+                  gap: 10,
+                  background: "rgba(201,151,58,0.08)",
+                  border: "1px solid rgba(201,151,58,0.35)",
+                  borderRadius: 6,
+                  padding: "8px 14px",
+                  marginBottom: 20,
+                }}
+              >
+                <span style={{ fontSize: 14 }}>🇲🇽</span>
+                <div>
+                  <div
+                    style={{
+                      fontFamily: "Montserrat",
+                      fontWeight: 700,
+                      fontSize: 10,
+                      letterSpacing: "0.14em",
+                      textTransform: "uppercase",
+                      color: "var(--gf-gold)",
+                    }}
+                  >
+                    ANTAD Expo 2026 — Mexico
+                  </div>
+                  <div
+                    style={{
+                      fontFamily: "Montserrat",
+                      fontSize: 10,
+                      color: "rgba(255,255,255,0.55)",
+                      marginTop: 1,
+                    }}
+                  >
+                    Available for B2B meetings
+                  </div>
+                </div>
+                <button
+                  onClick={() =>
+                    document
+                      .querySelector("#antad")
+                      ?.scrollIntoView({ behavior: "smooth" })
+                  }
+                  style={{
+                    fontFamily: "Montserrat",
+                    fontWeight: 700,
+                    fontSize: 10,
+                    letterSpacing: "0.1em",
+                    textTransform: "uppercase",
+                    color: "#0e1a0f",
+                    background: "var(--gf-gold)",
+                    border: "none",
+                    borderRadius: 4,
+                    padding: "5px 10px",
+                    cursor: "pointer",
+                    whiteSpace: "nowrap",
+                  }}
+                >
+                  Meet Us
+                </button>
               </div>
 
               {/* Buttons */}
@@ -4708,6 +4961,188 @@ export default function Index() {
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ═══════════════ ANTAD EXPO 2026 ═══════════════ */}
+      <section id="antad" style={{ background: "var(--gf-dark)", padding: "72px 0" }}>
+        <div className="max-w-7xl mx-auto px-6">
+          <div
+            className="reveal"
+            style={{
+              display: "grid",
+              gridTemplateColumns: "1fr auto",
+              gap: "48px",
+              alignItems: "center",
+            }}
+          >
+            {/* Left: text */}
+            <div>
+              <div
+                style={{
+                  display: "inline-flex",
+                  alignItems: "center",
+                  gap: 8,
+                  background: "rgba(201,151,58,0.1)",
+                  border: "1px solid rgba(201,151,58,0.25)",
+                  borderRadius: 4,
+                  padding: "5px 12px",
+                  marginBottom: 20,
+                }}
+              >
+                <span style={{ fontSize: 13 }}>🇲🇽</span>
+                <span
+                  style={{
+                    fontFamily: "Montserrat",
+                    fontWeight: 700,
+                    fontSize: 10,
+                    letterSpacing: "0.18em",
+                    textTransform: "uppercase",
+                    color: "var(--gf-gold)",
+                  }}
+                >
+                  ANTAD Expo 2026 · Mexico
+                </span>
+              </div>
+
+              <h2
+                style={{
+                  fontFamily: "Cormorant Garamond, serif",
+                  fontSize: "clamp(30px, 4vw, 52px)",
+                  fontWeight: 400,
+                  color: "#fff",
+                  lineHeight: 1.15,
+                  marginBottom: 16,
+                }}
+              >
+                Meet Us at ANTAD Expo 2026
+                <br />
+                <span style={{ color: "var(--gf-gold)", fontStyle: "italic" }}>— Mexico</span>
+              </h2>
+
+              <p
+                style={{
+                  fontFamily: "Montserrat",
+                  fontSize: 14,
+                  color: "rgba(255,255,255,0.6)",
+                  lineHeight: 1.7,
+                  maxWidth: 520,
+                  marginBottom: 28,
+                }}
+              >
+                We are actively meeting importers, distributors, wholesalers and retail chains during ANTAD Expo 2026.
+              </p>
+
+              <div
+                style={{
+                  display: "grid",
+                  gridTemplateColumns: "1fr 1fr",
+                  gap: "10px 32px",
+                  marginBottom: 32,
+                }}
+              >
+                {["Organic products", "Conventional grains", "Private label", "Bulk & retail supply"].map((item, i) => (
+                  <div key={i} style={{ display: "flex", alignItems: "center", gap: 10 }}>
+                    <div
+                      style={{
+                        width: 5,
+                        height: 5,
+                        borderRadius: "50%",
+                        background: "var(--gf-gold)",
+                        flexShrink: 0,
+                      }}
+                    />
+                    <span
+                      style={{
+                        fontFamily: "Montserrat",
+                        fontSize: 13,
+                        color: "rgba(255,255,255,0.65)",
+                      }}
+                    >
+                      {item}
+                    </span>
+                  </div>
+                ))}
+              </div>
+
+              <a
+                href="https://wa.me/79037901795?text=Hello%2C%20I%20would%20like%20to%20schedule%20a%20meeting%20at%20ANTAD%20Expo%202026"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  display: "inline-flex",
+                  alignItems: "center",
+                  gap: 8,
+                  background: "var(--gf-gold)",
+                  color: "#0e1a0f",
+                  fontFamily: "Montserrat",
+                  fontWeight: 700,
+                  fontSize: 12,
+                  letterSpacing: "0.12em",
+                  textTransform: "uppercase",
+                  textDecoration: "none",
+                  borderRadius: 6,
+                  padding: "14px 24px",
+                }}
+              >
+                <Icon name="MessageCircle" size={16} />
+                Schedule Meeting at ANTAD
+              </a>
+            </div>
+
+            {/* Right: info card */}
+            <div
+              style={{
+                background: "rgba(255,255,255,0.04)",
+                border: "1px solid rgba(201,151,58,0.2)",
+                borderRadius: 10,
+                padding: "32px 28px",
+                minWidth: 240,
+              }}
+            >
+              <div
+                style={{
+                  fontFamily: "Montserrat",
+                  fontWeight: 700,
+                  fontSize: 10,
+                  letterSpacing: "0.16em",
+                  textTransform: "uppercase",
+                  color: "var(--gf-gold)",
+                  marginBottom: 16,
+                }}
+              >
+                Let's discuss
+              </div>
+              {[
+                { icon: "Leaf", label: "Organic Supply" },
+                { icon: "Wheat", label: "Conventional Grains" },
+                { icon: "Tag", label: "Private Label" },
+                { icon: "Package", label: "Bulk & Retail" },
+                { icon: "Ship", label: "Export Logistics" },
+              ].map((item, i) => (
+                <div
+                  key={i}
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    gap: 10,
+                    marginBottom: 12,
+                  }}
+                >
+                  <Icon name={item.icon} size={15} style={{ color: "var(--gf-gold)", flexShrink: 0 }} />
+                  <span
+                    style={{
+                      fontFamily: "Montserrat",
+                      fontSize: 13,
+                      color: "rgba(255,255,255,0.7)",
+                    }}
+                  >
+                    {item.label}
+                  </span>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
