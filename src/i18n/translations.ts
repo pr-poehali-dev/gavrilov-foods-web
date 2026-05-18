@@ -786,8 +786,8 @@ export const translations = {
       moqLabel: "МОК",
       moqValue: "от 22 Т",
       names: {
-        BUCKWHEAT: "ГРЕЧИХА",
-        "GREEN BUCKWHEAT": "ЗЕЛЁНАЯ ГРЕЧИХА",
+        BUCKWHEAT: "ГРЕЧКА",
+        "GREEN BUCKWHEAT": "ЗЕЛЁНАЯ ГРЕЧКА",
         "BUCKWHEAT FLOUR": "ГРЕЧНЕВАЯ МУКА",
         "OAT FLAKES": "ОВСЯНЫЕ ХЛОПЬЯ",
         FLAXSEED: "СЕМЕНА ЛЬНА",
