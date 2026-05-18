@@ -1961,12 +1961,13 @@ export default function Index() {
                 <h3
                   className="font-cormorant font-semibold"
                   style={{
-                    fontSize: "clamp(20px, 5vw, 36px)",
-                    lineHeight: 1.2,
+                    fontSize: "clamp(16px, 4.2vw, 32px)",
+                    lineHeight: 1.25,
                     color: "var(--gf-dark)",
                     overflowWrap: "anywhere",
                     wordBreak: "break-word",
                     hyphens: "auto",
+                    maxWidth: "100%",
                   }}
                   lang="ru"
                 >
@@ -1975,11 +1976,15 @@ export default function Index() {
                 <p
                   className="font-montserrat"
                   style={{
-                    fontSize: 13,
-                    lineHeight: 1.6,
+                    fontSize: 12,
+                    lineHeight: 1.55,
                     color: "var(--gf-text-light)",
                     overflowWrap: "anywhere",
+                    wordBreak: "break-word",
+                    hyphens: "auto",
+                    maxWidth: "100%",
                   }}
+                  lang="ru"
                 >
                   {t.logistics.p}
                 </p>
