@@ -2632,7 +2632,7 @@ export default function Index() {
                   "linear-gradient(to right, rgba(14,26,15,0.98) 0%, rgba(14,26,15,0.88) 55%, rgba(14,26,15,0.55) 100%)",
               }}
             />
-            <div className="relative z-10 p-10 md:p-14 max-w-2xl">
+            <div className="relative z-10 p-6 md:p-14 max-w-2xl">
               <div className="flex items-center gap-3 mb-4">
                 <span
                   style={{
@@ -2655,7 +2655,7 @@ export default function Index() {
               <h2
                 className="font-cormorant font-bold text-white leading-none mb-5"
                 style={{
-                  fontSize: "clamp(44px, 7vw, 84px)",
+                  fontSize: "clamp(32px, 7vw, 84px)",
                   letterSpacing: "-0.01em",
                 }}
               >
@@ -2671,17 +2671,26 @@ export default function Index() {
                 {t.export.pillars.map((p, i) => {
                   const pillarIcons = ["Sprout", "FileCheck", "Package", "Container"];
                   return (
-                  <div key={i}>
-                    <Icon
-                      name={pillarIcons[i]}
-                      size={26}
+                  <div key={i} className="flex flex-col gap-2">
+                    <div
+                      className="flex items-center justify-center rounded-lg flex-shrink-0"
                       style={{
-                        color: "var(--gf-gold)",
-                        strokeWidth: 1.3,
-                        marginBottom: 8,
+                        width: 44,
+                        height: 44,
+                        background: "rgba(201,151,58,0.18)",
+                        border: "1px solid rgba(201,151,58,0.35)",
                       }}
-                    />
-                    <div className="font-montserrat font-bold text-[10px] uppercase tracking-widest text-white mb-1">
+                    >
+                      <Icon
+                        name={pillarIcons[i]}
+                        size={22}
+                        style={{
+                          color: "var(--gf-gold)",
+                          strokeWidth: 1.5,
+                        }}
+                      />
+                    </div>
+                    <div className="font-montserrat font-bold text-[10px] uppercase tracking-widest text-white">
                       {p.title}
                     </div>
                     <div className="text-white/70 text-[11px] font-montserrat leading-snug">
@@ -2837,14 +2846,14 @@ export default function Index() {
 
           {/* ── 6-step process ── */}
           <div
-            className="mb-10 reveal"
+            className="mb-10 reveal hidden md:block"
             style={{
               background: "var(--gf-cream)",
               borderRadius: 12,
               padding: "32px 28px",
             }}
           >
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+            <div className="grid grid-cols-3 lg:grid-cols-6 gap-6">
               {t.export.steps.map((s, i) => (
                 <div key={i} className="flex flex-col">
                   <div className="flex items-center gap-2 mb-2">
@@ -4640,13 +4649,7 @@ export default function Index() {
       <section id="antad" style={{ background: "var(--gf-dark)", padding: "72px 0" }}>
         <div className="max-w-7xl mx-auto px-6">
           <div
-            className="reveal"
-            style={{
-              display: "grid",
-              gridTemplateColumns: "1fr auto",
-              gap: "48px",
-              alignItems: "center",
-            }}
+            className="reveal grid grid-cols-1 md:grid-cols-[1fr_auto] gap-10 md:gap-12 items-center"
           >
             {/* Left: text */}
             <div>
@@ -4769,7 +4772,6 @@ export default function Index() {
                 border: "1px solid rgba(201,151,58,0.2)",
                 borderRadius: 10,
                 padding: "32px 28px",
-                minWidth: 240,
               }}
             >
               <div
