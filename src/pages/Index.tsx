@@ -633,7 +633,7 @@ export default function Index() {
                       color: "var(--gf-gold)",
                     }}
                   >
-                    ANTAD Expo 2026 · Mexico
+                    {t.antad.badge}
                   </div>
                 </div>
               </div>
@@ -648,7 +648,7 @@ export default function Index() {
                   marginBottom: 16,
                 }}
               >
-                Meet Us at ANTAD Expo 2026
+                {t.antad.popupTitle}
               </h3>
 
               <p
@@ -660,11 +660,11 @@ export default function Index() {
                   marginBottom: 20,
                 }}
               >
-                We are available for meetings with:
+                {t.antad.popupText}
               </p>
 
               <div style={{ display: "flex", flexDirection: "column", gap: 8, marginBottom: 28 }}>
-                {["Retail chains", "Importers", "Distributors", "Private Label buyers"].map((item, i) => (
+                {t.antad.popupItems.map((item, i) => (
                   <div key={i} style={{ display: "flex", alignItems: "center", gap: 10 }}>
                     <div
                       style={{
@@ -711,7 +711,7 @@ export default function Index() {
                 }}
               >
                 <Icon name="MessageCircle" size={16} />
-                Schedule Meeting
+                {t.antad.popupBtn}
               </a>
             </div>
           </div>
@@ -1221,7 +1221,7 @@ export default function Index() {
                   textTransform: "uppercase",
                 }}
               >
-                Proof of Scale
+                {t.proofOfScale.label}
               </span>
               <span
                 style={{
@@ -1239,13 +1239,13 @@ export default function Index() {
                 color: "var(--gf-dark)",
               }}
             >
-              Real numbers behind every shipment
+              {t.proofOfScale.h2}
             </h2>
             <p
               className="text-sm font-montserrat"
               style={{ color: "var(--gf-text-light)" }}
             >
-              Transparent volumes. Reliable supply. Global reach.
+              {t.proofOfScale.sub}
             </p>
           </div>
 
@@ -1278,7 +1278,7 @@ export default function Index() {
                     className="font-montserrat font-bold text-[12px] uppercase tracking-widest"
                     style={{ color: "var(--gf-dark)" }}
                   >
-                    Production
+                    {t.proofOfScale.card1.title}
                   </span>
                 </div>
                 <div className="space-y-3.5">
@@ -1287,13 +1287,13 @@ export default function Index() {
                       className="font-cormorant text-[28px] font-semibold leading-none"
                       style={{ color: "var(--gf-gold)" }}
                     >
-                      10,000 ha
+                      {t.proofOfScale.card1.stat1}
                     </div>
                     <div
                       className="text-[12px] font-montserrat mt-0.5"
                       style={{ color: "var(--gf-text-light)" }}
                     >
-                      own farmland – full field-to-shelf control
+                      {t.proofOfScale.card1.stat1sub}
                     </div>
                   </div>
                   <div>
@@ -1301,13 +1301,13 @@ export default function Index() {
                       className="font-cormorant text-[22px] font-semibold leading-none"
                       style={{ color: "var(--gf-gold)" }}
                     >
-                      10,000–15,000 MT
+                      {t.proofOfScale.card1.stat2}
                     </div>
                     <div
                       className="text-[12px] font-montserrat mt-0.5"
                       style={{ color: "var(--gf-text-light)" }}
                     >
-                      annual grain & pulse output
+                      {t.proofOfScale.card1.stat2sub}
                     </div>
                   </div>
                   <div>
@@ -1315,13 +1315,13 @@ export default function Index() {
                       className="font-cormorant text-[22px] font-semibold leading-none"
                       style={{ color: "var(--gf-gold)" }}
                     >
-                      200 MT / mo
+                      {t.proofOfScale.card1.stat3}
                     </div>
                     <div
                       className="text-[12px] font-montserrat mt-0.5"
                       style={{ color: "var(--gf-text-light)" }}
                     >
-                      processing capacity – groats, flour, flakes
+                      {t.proofOfScale.card1.stat3sub}
                     </div>
                   </div>
                   <div>
@@ -1329,13 +1329,13 @@ export default function Index() {
                       className="font-cormorant text-[22px] font-semibold leading-none"
                       style={{ color: "var(--gf-gold)" }}
                     >
-                      5,000 m²
+                      {t.proofOfScale.card1.stat4}
                     </div>
                     <div
                       className="text-[12px] font-montserrat mt-0.5"
                       style={{ color: "var(--gf-text-light)" }}
                     >
-                      own warehouse & storage facilities
+                      {t.proofOfScale.card1.stat4sub}
                     </div>
                   </div>
                 </div>
@@ -1384,7 +1384,7 @@ export default function Index() {
                     className="font-montserrat font-bold text-[12px] uppercase tracking-widest"
                     style={{ color: "var(--gf-dark)" }}
                   >
-                    Export
+                    {t.proofOfScale.card2.title}
                   </span>
                 </div>
                 <div className="space-y-3.5">
@@ -1407,13 +1407,13 @@ export default function Index() {
                       className="font-cormorant text-[22px] font-semibold leading-none"
                       style={{ color: "var(--gf-gold)" }}
                     >
-                      5,000–10,000 MT
+                      {t.proofOfScale.card2.stat1}
                     </div>
                     <div
                       className="text-[12px] font-montserrat mt-0.5"
                       style={{ color: "var(--gf-text-light)" }}
                     >
-                      annual export volume
+                      {t.proofOfScale.card2.stat1sub}
                     </div>
                   </div>
                 </div>
@@ -1465,7 +1465,7 @@ export default function Index() {
                     className="font-montserrat font-bold text-[12px] uppercase tracking-widest"
                     style={{ color: "var(--gf-dark)" }}
                   >
-                    Packaging
+                    {t.proofOfScale.card3.title}
                   </span>
                 </div>
                 <div className="space-y-3.5">
@@ -1474,13 +1474,13 @@ export default function Index() {
                       className="font-cormorant text-[28px] font-semibold leading-none"
                       style={{ color: "var(--gf-gold)" }}
                     >
-                      250 g – 5 kg
+                      {t.proofOfScale.card3.stat1}
                     </div>
                     <div
                       className="text-[12px] font-montserrat mt-0.5"
                       style={{ color: "var(--gf-text-light)" }}
                     >
-                      retail packs, private label available
+                      {t.proofOfScale.card3.stat1sub}
                     </div>
                   </div>
                   <div>
@@ -1488,13 +1488,13 @@ export default function Index() {
                       className="font-cormorant text-[22px] font-semibold leading-none"
                       style={{ color: "var(--gf-gold)" }}
                     >
-                      25 / 50 kg
+                      {t.proofOfScale.card3.stat2}
                     </div>
                     <div
                       className="text-[12px] font-montserrat mt-0.5"
                       style={{ color: "var(--gf-text-light)" }}
                     >
-                      standard bags for trade & distribution
+                      {t.proofOfScale.card3.stat2sub}
                     </div>
                   </div>
                   <div>
@@ -1502,13 +1502,13 @@ export default function Index() {
                       className="font-cormorant text-[22px] font-semibold leading-none"
                       style={{ color: "var(--gf-gold)" }}
                     >
-                      500–1,000 kg
+                      {t.proofOfScale.card3.stat3}
                     </div>
                     <div
                       className="text-[12px] font-montserrat mt-0.5"
                       style={{ color: "var(--gf-text-light)" }}
                     >
-                      big bags for bulk & industrial buyers
+                      {t.proofOfScale.card3.stat3sub}
                     </div>
                   </div>
                 </div>
@@ -1560,7 +1560,7 @@ export default function Index() {
                     className="font-montserrat font-bold text-[12px] uppercase tracking-widest"
                     style={{ color: "var(--gf-dark)" }}
                   >
-                    MOQ & Orders
+                    {t.proofOfScale.card4.title}
                   </span>
                 </div>
                 <div className="space-y-3.5">
@@ -1569,13 +1569,13 @@ export default function Index() {
                       className="font-cormorant text-[28px] font-semibold leading-none"
                       style={{ color: "var(--gf-gold)" }}
                     >
-                      1 MT
+                      {t.proofOfScale.card4.stat1}
                     </div>
                     <div
                       className="text-[12px] font-montserrat mt-0.5"
                       style={{ color: "var(--gf-text-light)" }}
                     >
-                      minimum order quantity
+                      {t.proofOfScale.card4.stat1sub}
                     </div>
                   </div>
                   <div>
@@ -1583,13 +1583,13 @@ export default function Index() {
                       className="font-cormorant text-[22px] font-semibold leading-none"
                       style={{ color: "var(--gf-gold)" }}
                     >
-                      20 / 40 ft
+                      {t.proofOfScale.card4.stat2}
                     </div>
                     <div
                       className="text-[12px] font-montserrat mt-0.5"
                       style={{ color: "var(--gf-text-light)" }}
                     >
-                      full container options available
+                      {t.proofOfScale.card4.stat2sub}
                     </div>
                   </div>
                 </div>
@@ -1708,7 +1708,7 @@ export default function Index() {
                     ?.scrollIntoView({ behavior: "smooth" })
                 }
               >
-                REQUEST A QUOTE
+                {t.logistics.btn}
               </button>
             </div>
           </div>
@@ -1743,7 +1743,7 @@ export default function Index() {
                   textTransform: "uppercase",
                 }}
               >
-                Our Products
+                {t.products.sectionLabel}
               </span>
               <span
                 style={{
@@ -1761,9 +1761,9 @@ export default function Index() {
                 color: "var(--gf-dark)",
               }}
             >
-              Wide range of grains, pulses
+              {t.products.h2.split('\n')[0]}
               <br />
-              and oilseeds for global markets
+              {t.products.h2.split('\n')[1]}
             </h2>
             <p
               className="text-sm"
@@ -1772,7 +1772,7 @@ export default function Index() {
                 fontFamily: "Montserrat",
               }}
             >
-              Carefully selected. Consistent quality. Flexible supply.
+              {t.products.sub}
             </p>
           </div>
 
@@ -1818,7 +1818,7 @@ export default function Index() {
                     className="font-montserrat font-bold text-[12px] tracking-wide mb-3"
                     style={{ color: "var(--gf-dark)" }}
                   >
-                    {p.name}
+                    {t.products.names[p.name as keyof typeof t.products.names] ?? p.name}
                   </div>
 
                   <div className="space-y-1.5">
@@ -1851,7 +1851,7 @@ export default function Index() {
                           fontFamily: "Montserrat",
                         }}
                       >
-                        {p.organic ? "Organic available" : "Conventional"}
+                        {p.organic ? t.products.organicAvail : t.products.conventional}
                       </span>
                     </div>
                     <div className="flex items-start gap-1.5">
@@ -1885,7 +1885,7 @@ export default function Index() {
                         className="text-[11px] font-montserrat"
                         style={{ color: "var(--gf-text-light)" }}
                       >
-                        MOQ{" "}
+                        {t.products.moqLabel}{" "}
                       </span>
                       <span
                         className="text-[12px] font-bold font-montserrat"
@@ -1919,41 +1919,12 @@ export default function Index() {
             style={{ background: "#fff", border: "1px solid rgba(0,0,0,0.06)" }}
           >
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-              {[
-                {
-                  icon: "ShieldCheck",
-                  title: "Premium Quality",
-                  desc: "Strict quality control at every stage",
-                },
-                {
-                  icon: "Package",
-                  title: "Flexible Packaging",
-                  desc: "Retail packs, bags, big bags and bulk",
-                },
-                {
-                  icon: "Tag",
-                  title: "Private Label",
-                  desc: "We produce under your brand",
-                },
-                {
-                  icon: "Truck",
-                  title: "Stable Supply",
-                  desc: "Reliable volumes and on-time delivery",
-                },
-                {
-                  icon: "FileText",
-                  title: "Document Support",
-                  desc: "Full export documentation support",
-                },
-                {
-                  icon: "DollarSign",
-                  title: "Competitive Prices",
-                  desc: "Best value for long-term partnerships",
-                },
-              ].map((f, i) => (
+              {t.products.features.map((f, i) => {
+                const icons = ["ShieldCheck", "Package", "Tag", "Truck", "FileText", "DollarSign"];
+                return (
                 <div key={i} className="flex flex-col items-start gap-2">
                   <Icon
-                    name={f.icon}
+                    name={icons[i]}
                     size={28}
                     style={{ color: "var(--gf-dark)", strokeWidth: 1.2 }}
                   />
@@ -1973,7 +1944,7 @@ export default function Index() {
                     {f.desc}
                   </div>
                 </div>
-              ))}
+              );})}
             </div>
           </div>
 
@@ -1992,7 +1963,7 @@ export default function Index() {
                   className="text-[10px] font-bold uppercase tracking-widest mb-3 font-montserrat"
                   style={{ color: "var(--gf-gold)" }}
                 >
-                  From Field to Shipment
+                  {t.logistics.label}
                 </div>
                 <h3
                   className="font-cormorant font-semibold leading-tight mb-4"
@@ -2001,7 +1972,7 @@ export default function Index() {
                     color: "var(--gf-dark)",
                   }}
                 >
-                  From Farm to Export — Full Supply Chain Control
+                  {t.logistics.h2}
                 </h3>
                 <p
                   className="text-[13px] leading-relaxed mb-6"
@@ -2010,9 +1981,7 @@ export default function Index() {
                     fontFamily: "Montserrat",
                   }}
                 >
-                  We control every step — from farming and processing to storage
-                  and delivery. This ensures consistent quality, traceability
-                  and reliability for our partners worldwide.
+                  {t.logistics.p}
                 </p>
               </div>
               <button
@@ -2023,45 +1992,27 @@ export default function Index() {
                     ?.scrollIntoView({ behavior: "smooth" })
                 }
               >
-                REQUEST A QUOTE
+                {t.logistics.btn}
               </button>
             </div>
 
             {/* Right: 4 image tiles */}
             <div className="grid grid-cols-2">
-              {[
-                {
-                  img: HERO_IMG,
-                  icon: "Wheat",
-                  label: "Our Fields",
-                  desc: "Carefully managed for quality and yield",
-                },
-                {
-                  img: FACTORY_IMG,
-                  icon: "Settings",
-                  label: "Processing",
-                  desc: "Modern equipment for cleaning and sorting",
-                },
-                {
-                  img: "https://cdn.poehali.dev/files/fa420cdb-c1a0-490e-a2ea-6b3197b248b7.jpg",
-                  icon: "Package",
-                  label: "Storage",
-                  desc: "Controlled storage capacity for stable supply",
-                },
-                {
-                  img: "https://ybvgdlhrldbkfqiccxxo.supabase.co/storage/v1/object/public/1/remaing.jpg",
-                  icon: "Truck",
-                  label: "Shipment",
-                  desc: "Export logistics & container shipments worldwide",
-                },
-              ].map((t, i) => (
+              {t.logistics.tiles.map((tile, i) => {
+                const tileData = {
+                  img: [HERO_IMG, FACTORY_IMG, "https://cdn.poehali.dev/files/fa420cdb-c1a0-490e-a2ea-6b3197b248b7.jpg", "https://ybvgdlhrldbkfqiccxxo.supabase.co/storage/v1/object/public/1/remaing.jpg"][i],
+                  icon: ["Wheat","Settings","Package","Truck"][i],
+                  label: tile.label,
+                  desc: tile.desc,
+                };
+                return (
                 <div
                   key={i}
                   className="relative aspect-square img-zoom overflow-hidden"
                 >
                   <img
-                    src={t.img}
-                    alt={t.label}
+                    src={tileData.img}
+                    alt={tileData.label}
                     className="w-full h-full object-cover"
                     style={{ opacity: 0.7 }}
                   />
@@ -2080,20 +2031,20 @@ export default function Index() {
                       }}
                     >
                       <Icon
-                        name={t.icon}
+                        name={tileData.icon}
                         size={13}
                         style={{ color: "var(--gf-gold)" }}
                       />
                     </div>
                     <div className="text-white font-bold text-[11px] uppercase tracking-wide font-montserrat">
-                      {t.label}
+                      {tileData.label}
                     </div>
                     <div className="text-white/60 text-[10px] font-montserrat leading-tight mt-0.5">
-                      {t.desc}
+                      {tileData.desc}
                     </div>
                   </div>
                 </div>
-              ))}
+              );})}
             </div>
           </div>
 
@@ -2118,7 +2069,7 @@ export default function Index() {
                   className="font-cormorant font-semibold text-2xl mb-1"
                   style={{ color: "var(--gf-dark)" }}
                 >
-                  Download Product Catalog
+                  {t.catalogCta.title}
                 </div>
                 <div
                   className="text-[13px]"
@@ -2127,8 +2078,7 @@ export default function Index() {
                     fontFamily: "Montserrat",
                   }}
                 >
-                  Get detailed specifications, packaging options, MOQ and
-                  availability.
+                  {t.catalogCta.sub}
                 </div>
               </div>
             </div>
@@ -2142,13 +2092,13 @@ export default function Index() {
                 style={{ textDecoration: "none", display: "inline-flex", alignItems: "center", gap: 8 }}
               >
                 <Icon name="Download" size={16} />
-                GET PRODUCT CATALOG
+                {t.catalogCta.btn}
               </a>
               <span
                 className="text-[10px] font-montserrat"
                 style={{ color: "var(--gf-text-light)" }}
               >
-                PDF • Updated regularly
+                {t.catalogCta.note}
               </span>
             </div>
           </div>
@@ -2191,17 +2141,17 @@ export default function Index() {
                     className="text-[10px] font-bold uppercase tracking-widest mb-4 font-montserrat"
                     style={{ color: "var(--gf-gold)" }}
                   >
-                    EU Organic Certified Supplier
+                    {t.organic.sectionLabel}
                   </div>
                   <h2
                     className="font-cormorant font-semibold text-white leading-tight mb-4"
                     style={{ fontSize: "clamp(32px, 3.5vw, 52px)" }}
                   >
-                    Organic &<br />
+                    {t.organic.h2a}<br />
                     <span
                       style={{ color: "var(--gf-gold)", fontStyle: "italic" }}
                     >
-                      Conventional Supply
+                      {t.organic.h2b}
                     </span>
                   </h2>
                   <div
@@ -2209,10 +2159,7 @@ export default function Index() {
                     style={{ background: "var(--gf-gold)" }}
                   />
                   <p className="text-white/65 text-[14px] leading-relaxed max-w-xs font-montserrat">
-                    EU-certified organic and conventional product lines — grown
-                    on our own farmland in the Smolensk Region, processed
-                    in-house, and shipped wholesale to importers and
-                    distributors worldwide.
+                    {t.organic.p}
                   </p>
                 </div>
 
@@ -2276,12 +2223,7 @@ export default function Index() {
 
               {/* Checkmarks */}
               <div className="space-y-3">
-                {[
-                  "EU Organic Certified",
-                  "Traceable from field to final product",
-                  "Sustainable farming practices",
-                  "Available in organic grains, pulses and oilseeds",
-                ].map((item, i) => (
+                {t.organic.checks.map((item, i) => (
                   <div key={i} className="flex items-center gap-3">
                     <div
                       className="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0"
@@ -2464,7 +2406,7 @@ export default function Index() {
                     className="font-montserrat font-bold text-[12px] uppercase tracking-wide mb-4"
                     style={{ color: "var(--gf-dark)" }}
                   >
-                    Conventional Range
+                    {t.organic.conventionalRange}
                   </div>
                   <Icon
                     name="Wheat"
@@ -2479,10 +2421,7 @@ export default function Index() {
                     className="text-[12px] leading-relaxed font-montserrat mb-4"
                     style={{ color: "var(--gf-text-light)" }}
                   >
-                    Stable export volumes of conventional grains, pulses and
-                    oilseeds. Standard packaging 25–50 kg bags and big bags.
-                    Export documentation, phytosanitary certificates, and
-                    FOB/DDP terms on request.
+                    {t.organic.conventionalText}
                   </p>
                 </div>
                 <button
@@ -2493,7 +2432,7 @@ export default function Index() {
                       ?.scrollIntoView({ behavior: "smooth" })
                   }
                 >
-                  View All Products <Icon name="ArrowRight" size={13} />
+                  {t.organic.viewProducts} <Icon name="ArrowRight" size={13} />
                 </button>
               </div>
             </div>
@@ -2520,15 +2459,14 @@ export default function Index() {
                       textTransform: "uppercase",
                     }}
                   >
-                    FULL SUPPLY CHAIN CONTROL
+                    {t.organic.supplyChainLabel}
                   </span>
                 </div>
                 <p
                   className="text-[13px] font-montserrat"
                   style={{ color: "var(--gf-text-light)" }}
                 >
-                  Full control of the supply chain ensures consistent quality,
-                  traceability and reliability.
+                  {t.organic.supplyChainSub}
                 </p>
               </div>
             </div>
@@ -2539,39 +2477,15 @@ export default function Index() {
                 className="p-6 grid grid-cols-3 sm:grid-cols-5 gap-4 items-start border-r"
                 style={{ borderColor: "rgba(0,0,0,0.06)" }}
               >
-                {[
-                  {
-                    icon: "Sun",
-                    title: "10,000 + ha",
-                    desc: "own farmland full control",
-                  },
-                  {
-                    icon: "Tractor",
-                    title: "Direct Farming",
-                    desc: "cultivated and harvested",
-                  },
-                  {
-                    icon: "Factory",
-                    title: "Modern",
-                    desc: "processing facilities",
-                  },
-                  {
-                    icon: "ScanLine",
-                    title: "Strict quality",
-                    desc: "control at every stage",
-                  },
-                  {
-                    icon: "Ship",
-                    title: "Reliable",
-                    desc: "export logistics & container shipments",
-                  },
-                ].map((f, i) => (
+                {t.organic.chainItems.map((f, i) => {
+                  const chainIcons = ["Sun", "Tractor", "Factory", "ScanLine", "Ship"];
+                  return (
                   <div
                     key={i}
                     className="flex flex-col items-center text-center gap-2"
                   >
                     <Icon
-                      name={f.icon}
+                      name={chainIcons[i]}
                       size={28}
                       style={{ color: "var(--gf-dark)", strokeWidth: 1.2 }}
                     />
@@ -2588,7 +2502,7 @@ export default function Index() {
                       {f.desc}
                     </div>
                   </div>
-                ))}
+                );})}
               </div>
 
               {/* Right: 5 image tiles — horizontal scroll on mobile */}
@@ -2601,35 +2515,20 @@ export default function Index() {
                   }}
                 >
                   {[
-                    {
-                      img: "https://cdn.poehali.dev/files/4b9c64c5-d74c-4850-9a9b-8aac0bae6ef5.jpg",
-                      label: "FARMLAND",
-                    },
-                    {
-                      img: "https://cdn.poehali.dev/files/dd72c0fc-a09c-42fb-aa5b-4f8d5bca901a.jpg",
-                      label: "CLEANING & PROCESSING",
-                    },
-                    {
-                      img: "https://cdn.poehali.dev/files/f11386c9-4001-4940-9b3c-a7cd36827549.jpg",
-                      label: "BIG BAG PACKAGING",
-                    },
-                    {
-                      img: "https://cdn.poehali.dev/files/6ebe549e-c65d-458a-9a25-7388c52a2e06.jpg",
-                      label: "LOADING & SHIPPING",
-                    },
-                    {
-                      img: "https://cdn.poehali.dev/files/0ef79656-d415-44e0-82f1-f24accc00604.jpg",
-                      label: "GLOBAL DELIVERY",
-                    },
-                  ].map((t, i) => (
+                    "https://cdn.poehali.dev/files/4b9c64c5-d74c-4850-9a9b-8aac0bae6ef5.jpg",
+                    "https://cdn.poehali.dev/files/dd72c0fc-a09c-42fb-aa5b-4f8d5bca901a.jpg",
+                    "https://cdn.poehali.dev/files/f11386c9-4001-4940-9b3c-a7cd36827549.jpg",
+                    "https://cdn.poehali.dev/files/6ebe549e-c65d-458a-9a25-7388c52a2e06.jpg",
+                    "https://cdn.poehali.dev/files/0ef79656-d415-44e0-82f1-f24accc00604.jpg",
+                  ].map((img, i) => (
                     <div
                       key={i}
                       className="relative img-zoom overflow-hidden"
                       style={{ height: 180 }}
                     >
                       <img
-                        src={t.img}
-                        alt={t.label}
+                        src={img}
+                        alt={t.organic.chainTiles[i]}
                         className="absolute inset-0 w-full h-full object-cover"
                       />
                       <div
@@ -2662,7 +2561,7 @@ export default function Index() {
                           className="text-white font-montserrat font-bold uppercase leading-tight text-center"
                           style={{ fontSize: 9, letterSpacing: "0.06em" }}
                         >
-                          {t.label}
+                          {t.organic.chainTiles[i]}
                         </div>
                       </div>
                     </div>
@@ -2693,14 +2592,13 @@ export default function Index() {
                   className="font-cormorant font-semibold text-xl mb-0.5"
                   style={{ color: "var(--gf-dark)" }}
                 >
-                  Documents
+                  {t.organic.documents}
                 </div>
                 <div
                   className="text-[12px] font-montserrat"
                   style={{ color: "var(--gf-text-light)" }}
                 >
-                  Get documentation, specifications and availability for organic
-                  products.
+                  {t.organic.documentsSub}
                 </div>
               </div>
             </div>
@@ -2719,7 +2617,7 @@ export default function Index() {
                 }}
               >
                 <Icon name="Download" size={16} />
-                Organic Certificate
+                {t.organic.certBtn}
               </a>
               <a
                 href="https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/bucket/d51dc65b-3784-485d-aff2-1df52727a8f8.pdf"
@@ -2735,7 +2633,7 @@ export default function Index() {
                 }}
               >
                 <Icon name="Download" size={16} />
-                Product Specification
+                {t.organic.specBtn}
               </a>
               <img
                 src={PRODUCTS_IMG}
@@ -2780,7 +2678,7 @@ export default function Index() {
                     textTransform: "uppercase",
                   }}
                 >
-                  FULL SUPPLY CHAIN
+                  {t.export.label}
                 </span>
                 <Icon
                   name="Leaf"
@@ -2795,42 +2693,21 @@ export default function Index() {
                   letterSpacing: "-0.01em",
                 }}
               >
-                FROM FIELD
+                {t.export.h2.split('\n')[0]}
                 <br />
-                TO EXPORT
+                {t.export.h2.split('\n')[1]}
               </h2>
               <p className="text-white/60 text-[14px] leading-relaxed mb-8 max-w-sm font-montserrat">
-                From seed to container — we manage the full cycle in-house:
-                cultivation, post-harvest storage, processing, packaging, and
-                certified export to international markets.
+                {t.export.p}
               </p>
               {/* 4 pillars */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-                {[
-                  {
-                    icon: "Sprout",
-                    title: "Advanced Cultivation",
-                    desc: "Precision farming, soil monitoring, and sustainable crop management",
-                  },
-                  {
-                    icon: "FileCheck",
-                    title: "Export Compliance",
-                    desc: "Phytosanitary certification, pesticide testing, and market-specific documentation",
-                  },
-                  {
-                    icon: "Package",
-                    title: "Processing & Packaging",
-                    desc: "Sorting, cleaning, and retail-ready packing to extend shelf life",
-                  },
-                  {
-                    icon: "Container",
-                    title: "Container Shipments",
-                    desc: "Refrigerated container logistics, route planning, and on-time delivery",
-                  },
-                ].map((p, i) => (
+                {t.export.pillars.map((p, i) => {
+                  const pillarIcons = ["Sprout", "FileCheck", "Package", "Container"];
+                  return (
                   <div key={i}>
                     <Icon
-                      name={p.icon}
+                      name={pillarIcons[i]}
                       size={26}
                       style={{
                         color: "var(--gf-gold)",
@@ -2845,7 +2722,7 @@ export default function Index() {
                       {p.desc}
                     </div>
                   </div>
-                ))}
+                );})}
               </div>
             </div>
           </div>
@@ -2871,7 +2748,7 @@ export default function Index() {
                   textTransform: "uppercase",
                 }}
               >
-                Our Activities
+                {t.export.activitiesLabel}
               </span>
               <span
                 style={{
@@ -3002,38 +2879,7 @@ export default function Index() {
             }}
           >
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-              {[
-                {
-                  num: "01",
-                  title: "Field",
-                  desc: "Precision field management with soil monitoring and crop rotation across our own land.",
-                },
-                {
-                  num: "02",
-                  title: "Harvesting",
-                  desc: "Timely harvest using GPS-guided combine machinery to minimise field losses.",
-                },
-                {
-                  num: "03",
-                  title: "Processing",
-                  desc: "Multi-stage cleaning, de-hulling, and optical sorting. Delivery on FOB / DDP / FCA / DAP terms.",
-                },
-                {
-                  num: "04",
-                  title: "Storage",
-                  desc: "Up to 10,000 MT capacity in temperature-controlled, ventilated grain facilities.",
-                },
-                {
-                  num: "05",
-                  title: "Packaging",
-                  desc: "Retail 200g–1kg, industrial 25–50 kg bags, and big bags up to 1,000 kg.",
-                },
-                {
-                  num: "06",
-                  title: "Export",
-                  desc: "Full phytosanitary docs, refrigerated container loading, and DDP/FOB terms.",
-                },
-              ].map((s, i) => (
+              {t.export.steps.map((s, i) => (
                 <div key={i} className="flex flex-col">
                   <div className="flex items-center gap-2 mb-2">
                     <span
@@ -3086,7 +2932,7 @@ export default function Index() {
                 >
                   <Icon name="Package" size={14} />
                   <span className="font-montserrat font-bold text-[10px] uppercase tracking-widest">
-                    Packaging Solutions
+                    {t.export.packagingLabel}
                   </span>
                 </div>
                 <h3
@@ -3097,26 +2943,23 @@ export default function Index() {
                     color: "var(--gf-dark)",
                   }}
                 >
-                  Quality Packaging.
+                  {t.export.packagingH3.split('\n')[0]}
                   <br />
-                  Product Protection.
+                  {t.export.packagingH3.split('\n')[1]}
                 </h3>
                 <p
                   className="font-montserrat text-[13px] leading-relaxed mb-6"
                   style={{ color: "var(--gf-text-light)", maxWidth: 360 }}
                 >
-                  We use modern equipment and high-quality materials to ensure
-                  safe packaging, accurate weight and long shelf life.
+                  {t.export.packagingP}
                 </p>
                 <div className="flex flex-wrap gap-4 mb-8">
-                  {[
-                    { icon: "Target", label: "High Accuracy" },
-                    { icon: "Shield", label: "Product Protection" },
-                    { icon: "ShieldCheck", label: "Quality Control" },
-                  ].map((f, i) => (
+                  {t.export.packagingFeatures.map((label, i) => {
+                    const pfIcons = ["Target", "Shield", "ShieldCheck"];
+                    return (
                     <div key={i} className="flex items-center gap-2">
                       <Icon
-                        name={f.icon}
+                        name={pfIcons[i]}
                         size={14}
                         style={{ color: "var(--gf-gold)" }}
                       />
@@ -3124,10 +2967,10 @@ export default function Index() {
                         className="font-montserrat text-[11px] font-bold uppercase tracking-wide"
                         style={{ color: "var(--gf-dark)" }}
                       >
-                        {f.label}
+                        {label}
                       </span>
                     </div>
-                  ))}
+                  );})}
                 </div>
                 <button
                   className="btn-gold text-[11px]"
@@ -3137,7 +2980,7 @@ export default function Index() {
                       ?.scrollIntoView({ behavior: "smooth" })
                   }
                 >
-                  Request Packaging Options <Icon name="ArrowRight" size={14} />
+                  {t.export.packagingBtn} <Icon name="ArrowRight" size={14} />
                 </button>
                 <div
                   className="mt-6 pt-5"
@@ -3147,7 +2990,7 @@ export default function Index() {
                     className="font-montserrat font-bold text-[10px] uppercase tracking-widest mb-1"
                     style={{ color: "var(--gf-text-light)" }}
                   >
-                    Packaging Range
+                    {t.export.packagingRange}
                   </div>
                   <div
                     className="font-cormorant text-[28px]"
@@ -3159,7 +3002,7 @@ export default function Index() {
                     className="font-montserrat text-[11px]"
                     style={{ color: "var(--gf-text-light)" }}
                   >
-                    Retail, wholesale and food service
+                    {t.export.packagingRangeSub}
                   </div>
                 </div>
               </div>
@@ -3203,7 +3046,7 @@ export default function Index() {
                   className="font-montserrat font-bold text-[11px] uppercase tracking-widest"
                   style={{ color: "var(--gf-gold)" }}
                 >
-                  Packaging Formats
+                  {t.export.packagingFormatsLabel}
                 </span>
                 <span
                   style={{
@@ -3218,7 +3061,7 @@ export default function Index() {
                 className="font-montserrat text-[12px]"
                 style={{ color: "var(--gf-text-light)" }}
               >
-                A wide range of packaging options to meet your market needs.
+                {t.export.packagingFormatsSub}
               </p>
             </div>
             <div className="grid grid-cols-3 md:grid-cols-6 gap-4">
@@ -3306,7 +3149,7 @@ export default function Index() {
                   marginRight: 4,
                 }}
               />
-              Other weights and formats are available upon request.
+              {t.export.packagingNote}
             </p>
           </div>
 
@@ -3325,20 +3168,16 @@ export default function Index() {
                 className="font-montserrat font-bold text-[11px] uppercase tracking-widest"
                 style={{ color: "var(--gf-text-light)" }}
               >
-                Why Partners Choose Us
+                {t.export.whyUs}
               </span>
             </div>
             <div className="grid grid-cols-2 md:grid-cols-5 gap-4 text-center">
-              {[
-                { icon: "Leaf", label: "Organic Certified" },
-                { icon: "Truck", label: "Reliable Supply" },
-                { icon: "Package", label: "Flexible Packaging" },
-                { icon: "Globe", label: "Global Delivery" },
-                { icon: "Headphones", label: "Dedicated Support" },
-              ].map((w, i) => (
+              {t.export.whyItems.map((label, i) => {
+                const whyIcons = ["Leaf", "Truck", "Package", "Globe", "Headphones"];
+                return (
                 <div key={i} className="flex flex-col items-center gap-2">
                   <Icon
-                    name={w.icon}
+                    name={whyIcons[i]}
                     size={26}
                     style={{ color: "var(--gf-dark)", strokeWidth: 1.1 }}
                   />
@@ -3346,10 +3185,11 @@ export default function Index() {
                     className="font-montserrat font-bold text-[10px] uppercase tracking-wide"
                     style={{ color: "var(--gf-dark)" }}
                   >
-                    {w.label}
+                    {label}
                   </span>
                 </div>
-              ))}
+                );
+              })}
             </div>
           </div>
 
@@ -3358,24 +3198,21 @@ export default function Index() {
             className="mt-8 py-5 px-6 flex flex-wrap justify-around gap-6 reveal"
             style={{ background: "var(--gf-dark)", borderRadius: 10 }}
           >
-            {[
-              { icon: "Leaf", label: "Organic & Conventional Supply" },
-              { icon: "ShieldCheck", label: "EU Organic Certified" },
-              { icon: "FileText", label: "Export Documentation Support" },
-              { icon: "Globe", label: "Reliable Global Delivery" },
-              { icon: "ClipboardList", label: "USDA Organic in Process" },
-            ].map((b, i) => (
+            {t.export.trustBar.map((label, i) => {
+              const trustIcons = ["Leaf", "ShieldCheck", "FileText", "Globe", "ClipboardList"];
+              return (
               <div key={i} className="flex items-center gap-2.5">
                 <Icon
-                  name={b.icon}
+                  name={trustIcons[i]}
                   size={18}
                   style={{ color: "var(--gf-gold)" }}
                 />
                 <span className="font-montserrat font-bold text-[11px] uppercase tracking-wider text-white">
-                  {b.label}
+                  {label}
                 </span>
               </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
@@ -3408,7 +3245,7 @@ export default function Index() {
                   textTransform: "uppercase",
                 }}
               >
-                Certifications
+                {t.certifications.sectionLabel}
               </span>
               <span
                 style={{
@@ -3426,7 +3263,7 @@ export default function Index() {
                 color: "var(--gf-dark)",
               }}
             >
-              Quality You Can Trust
+              {t.certifications.h2}
             </h2>
           </div>
 
@@ -3480,7 +3317,7 @@ export default function Index() {
                         color: "var(--gf-dark)",
                       }}
                     >
-                      EU Organic Certified
+                      {t.certifications.euTitle}
                     </div>
                     <div
                       style={{
@@ -3490,7 +3327,7 @@ export default function Index() {
                         marginTop: 1,
                       }}
                     >
-                      European Organic Certification
+                      {t.certifications.euSub}
                     </div>
                   </div>
                 </div>
@@ -3504,12 +3341,7 @@ export default function Index() {
                     marginBottom: 20,
                   }}
                 >
-                  {[
-                    "EU Organic Certified",
-                    "Traceable from field to final product",
-                    "Sustainable farming practices",
-                    "Available within our certified product range",
-                  ].map((item, i) => (
+                  {t.certifications.euChecks.map((item, i) => (
                     <div
                       key={i}
                       style={{ display: "flex", alignItems: "center", gap: 10 }}
@@ -3758,7 +3590,7 @@ export default function Index() {
                       color: "var(--gf-dark)",
                     }}
                   >
-                    USDA Organic / NOP Certification
+                    {t.certifications.usdaTitle}
                   </div>
                   <span
                     style={{
@@ -3774,7 +3606,7 @@ export default function Index() {
                       padding: "2px 8px",
                     }}
                   >
-                    Expected July 2026
+                    {t.certifications.usdaBadge}
                   </span>
                 </div>
                 <div
@@ -3786,9 +3618,7 @@ export default function Index() {
                     maxWidth: 560,
                   }}
                 >
-                  We are currently completing the USDA NOP certification
-                  process. Certification is expected by July 2026, enabling us
-                  to supply USDA Organic–labelled products to the US market.
+                  {t.certifications.usdaText}
                 </div>
               </div>
             </div>
@@ -3815,7 +3645,7 @@ export default function Index() {
                   textTransform: "uppercase",
                 }}
               >
-                From Field to Your Business
+                {t.certifications.fieldLabel}
               </span>
               <span
                 style={{
@@ -3839,32 +3669,12 @@ export default function Index() {
                 }}
               >
                 {[
-                  {
-                    img: "https://cdn.poehali.dev/files/82314d50-2676-4645-a5e6-e829f18b0d3b.jpg",
-                    num: 1,
-                    label: "Carefully selected organic fields",
-                  },
-                  {
-                    img: "https://cdn.poehali.dev/files/58745ea4-18ff-44b1-b480-4571abaed50e.jpg",
-                    num: 2,
-                    label: "Modern cleaning & processing",
-                  },
-                  {
-                    img: "https://cdn.poehali.dev/files/e43ef89f-fe22-4c5d-9966-3f78245a4cee.jpg",
-                    num: 3,
-                    label: "Quality packaging & labeling",
-                  },
-                  {
-                    img: "https://cdn.poehali.dev/files/0f193f1f-14c9-4f20-a6fb-9416edc6ee23.jpg",
-                    num: 4,
-                    label: "Reliable logistics & delivery",
-                  },
-                  {
-                    img: "https://cdn.poehali.dev/files/0f193f1f-14c9-4f20-a6fb-9416edc6ee23.jpg",
-                    num: 5,
-                    label: "Export-ready shipments",
-                  },
-                ].map((t, i) => (
+                  "https://cdn.poehali.dev/files/82314d50-2676-4645-a5e6-e829f18b0d3b.jpg",
+                  "https://cdn.poehali.dev/files/58745ea4-18ff-44b1-b480-4571abaed50e.jpg",
+                  "https://cdn.poehali.dev/files/e43ef89f-fe22-4c5d-9966-3f78245a4cee.jpg",
+                  "https://cdn.poehali.dev/files/0f193f1f-14c9-4f20-a6fb-9416edc6ee23.jpg",
+                  "https://cdn.poehali.dev/files/0f193f1f-14c9-4f20-a6fb-9416edc6ee23.jpg",
+                ].map((img, i) => (
                   <div
                     key={i}
                     style={{
@@ -3874,8 +3684,8 @@ export default function Index() {
                     }}
                   >
                     <img
-                      src={t.img}
-                      alt={t.label}
+                      src={img}
+                      alt={t.certifications.fieldTiles[i]}
                       style={{
                         width: "100%",
                         height: "100%",
@@ -3911,7 +3721,7 @@ export default function Index() {
                         color: "#0e1a0f",
                       }}
                     >
-                      {t.num}
+                      {i + 1}
                     </div>
                     {/* Label */}
                     <div
@@ -3931,7 +3741,7 @@ export default function Index() {
                           lineHeight: 1.3,
                         }}
                       >
-                        {t.label}
+                        {t.certifications.fieldTiles[i]}
                       </div>
                     </div>
                   </div>
@@ -3968,7 +3778,7 @@ export default function Index() {
                       textTransform: "uppercase",
                     }}
                   >
-                    Private Label
+                    {t.privateLabel.sectionLabel}
                   </span>
                   <span
                     style={{
@@ -3987,21 +3797,19 @@ export default function Index() {
                     fontWeight: 400,
                   }}
                 >
-                  Your Brand,
+                  {t.privateLabel.h2a}
                   <br />
                   <span
                     style={{ color: "var(--gf-gold)", fontStyle: "italic" }}
                   >
-                    Our Quality
+                    {t.privateLabel.h2b}
                   </span>
                 </h2>
                 <p
                   className="font-montserrat text-[14px] leading-relaxed mb-7"
                   style={{ color: "var(--gf-text-light)" }}
                 >
-                  Private label production for retailers, distributors and
-                  importers worldwide — from product selection and packaging
-                  design to certified, shelf-ready delivery.
+                  {t.privateLabel.p}
                 </p>
 
                 {/* 5 features */}
@@ -4058,36 +3866,16 @@ export default function Index() {
 
             {/* Right: 2x2 photo+info grid */}
             <div className="grid grid-cols-2 gap-3">
-              {[
-                {
-                  img: "https://cdn.poehali.dev/files/e43ef89f-fe22-4c5d-9966-3f78245a4cee.jpg", // packaging machine TEKO
-                  icon: "ShoppingBag",
-                  title: "Retail Packaging",
-                  size: "250 g – 5 kg",
-                  desc: "Custom design and printing options for your brand.",
-                },
-                {
-                  img: "https://cdn.poehali.dev/files/de1e27a0-f677-4f7c-b4f6-f54a3d8c5abc.jpg", // big bags in storage
-                  icon: "Package2",
-                  title: "Big Bags",
-                  size: "500 – 1,000 kg",
-                  desc: "Industrial bulk packaging for large volume supply.",
-                },
-                {
-                  img: "https://cdn.poehali.dev/files/6ebe549e-c65d-458a-9a25-7388c52a2e06.jpg", // container loading
-                  icon: "Container",
-                  title: "Container Shipments",
-                  size: "20 ft / 40 ft",
-                  desc: "Full container loading (FCL) for safe and efficient global delivery.",
-                },
-                {
-                  img: "https://cdn.poehali.dev/files/98d43280-321a-4078-bb4e-2cd8a7e71f5e.jpg", // packed goods on pallets
-                  icon: "Tag",
-                  title: "Private Label",
-                  size: "Concept → Shelf-ready",
-                  desc: "From product selection to ready-to-sell packaging.",
-                },
-              ].map((c, i) => (
+              {t.privateLabel.features.map((feat, i) => {
+                const plImgs = [
+                  "https://cdn.poehali.dev/files/e43ef89f-fe22-4c5d-9966-3f78245a4cee.jpg",
+                  "https://cdn.poehali.dev/files/de1e27a0-f677-4f7c-b4f6-f54a3d8c5abc.jpg",
+                  "https://cdn.poehali.dev/files/6ebe549e-c65d-458a-9a25-7388c52a2e06.jpg",
+                  "https://cdn.poehali.dev/files/98d43280-321a-4078-bb4e-2cd8a7e71f5e.jpg",
+                ];
+                const plIcons = ["ShoppingBag", "Package2", "Container", "Tag"];
+                const c = { img: plImgs[i], icon: plIcons[i], title: feat.title, size: feat.size, desc: feat.desc };
+                return (
                 <div
                   key={i}
                   style={{
@@ -4185,7 +3973,8 @@ export default function Index() {
                     </div>
                   </div>
                 </div>
-              ))}
+              );
+              })}
             </div>
           </div>
 
@@ -4226,38 +4015,16 @@ export default function Index() {
             </div>
 
             <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
-              {[
-                {
-                  icon: "Wheat",
-                  num: 1,
-                  title: "Product Selection",
-                  desc: "Choose from our wide range of grains, pulses and oilseeds.",
-                },
-                {
-                  icon: "Palette",
-                  num: 2,
-                  title: "Packaging & Design",
-                  desc: "We create packaging design that represents your brand.",
-                },
-                {
-                  icon: "ShieldCheck",
-                  num: 3,
-                  title: "Certification & Labeling",
-                  desc: "EU Organic certification available. All labeling requirements covered.",
-                },
-                {
-                  icon: "Factory",
-                  num: 4,
-                  title: "Production & Quality Control",
-                  desc: "Modern facilities and strict quality control at every stage.",
-                },
-                {
-                  icon: "Ship",
-                  num: 5,
-                  title: "Container Shipment",
-                  desc: "Full container loads delivered to your port on time.",
-                },
-              ].map((s, i) => (
+              {t.privateLabel.steps.map((stepTitle, i) => {
+                const plStepIcons = ["Wheat", "Palette", "ShieldCheck", "Factory", "Ship"];
+                const plStepDescs = [
+                  "Choose from our wide range of grains, pulses and oilseeds.",
+                  "We create packaging design that represents your brand.",
+                  "EU Organic certification available. All labeling requirements covered.",
+                  "Modern facilities and strict quality control at every stage.",
+                  "Full container loads delivered to your port on time.",
+                ];
+                return (
                 <div key={i} className="flex flex-col items-center text-center">
                   <div
                     style={{
@@ -4279,7 +4046,7 @@ export default function Index() {
                       }}
                     >
                       <Icon
-                        name={s.icon}
+                        name={plStepIcons[i]}
                         size={18}
                         style={{ color: "var(--gf-gold)" }}
                       />
@@ -4293,7 +4060,7 @@ export default function Index() {
                         lineHeight: 1,
                       }}
                     >
-                      {s.num}
+                      {i + 1}
                     </div>
                     {i < 4 && (
                       <Icon
@@ -4318,7 +4085,7 @@ export default function Index() {
                       marginBottom: 6,
                     }}
                   >
-                    {s.title}
+                    {stepTitle}
                   </div>
                   <div
                     style={{
@@ -4328,10 +4095,11 @@ export default function Index() {
                       lineHeight: 1.4,
                     }}
                   >
-                    {s.desc}
+                    {plStepDescs[i]}
                   </div>
                 </div>
-              ))}
+                );
+              })}
             </div>
           </div>
 
@@ -4491,7 +4259,7 @@ export default function Index() {
                       marginBottom: 2,
                     }}
                   >
-                    Get Product Specifications &amp; Pricing
+                    {t.privateLabel.ctaTitle}
                   </div>
                   <div
                     style={{
@@ -4500,8 +4268,7 @@ export default function Index() {
                       color: "var(--gf-text-light)",
                     }}
                   >
-                    Tell us about your needs and we will prepare a custom
-                    solution for your business.
+                    {t.privateLabel.ctaSub}
                   </div>
                 </div>
               </div>
@@ -4514,7 +4281,7 @@ export default function Index() {
                       ?.scrollIntoView({ behavior: "smooth" })
                   }
                 >
-                  Get Your Custom Offer <Icon name="ArrowRight" size={16} />
+                  {t.privateLabel.ctaBtn} <Icon name="ArrowRight" size={16} />
                 </button>
                 <div
                   className="font-montserrat text-[10px] text-right"
@@ -4581,11 +4348,11 @@ export default function Index() {
                       marginBottom: 8,
                     }}
                   >
-                    From Farm to Export —{" "}
+                    {t.gallery.h2a}{" "}
                     <span
                       style={{ color: "var(--gf-gold)", fontStyle: "italic" }}
                     >
-                      Full Control at Every Stage
+                      {t.gallery.h2b}
                     </span>
                   </h2>
                   <p
@@ -4597,8 +4364,7 @@ export default function Index() {
                       maxWidth: 440,
                     }}
                   >
-                    We own our farmland, control the entire production process
-                    and ensure reliable quality behind every shipment.
+                    {t.gallery.p}
                   </p>
                 </div>
               </div>
@@ -4616,24 +4382,9 @@ export default function Index() {
                 borderTop: "none",
               }}
             >
-              {[
-                { icon: "Wheat", val: "10,000 + ha", label: "Own Farmland" },
-                {
-                  icon: "Warehouse",
-                  val: "5,000 m²",
-                  label: "Warehouse Capacity",
-                },
-                {
-                  icon: "Settings",
-                  val: "Modern",
-                  label: "Processing Equipment",
-                },
-                {
-                  icon: "Globe",
-                  val: "Export-Ready",
-                  label: "Packaging & Logistics",
-                },
-              ].map((s, i) => (
+              {t.gallery.stats.map((s, i) => {
+                const statIcons = ["Wheat", "Warehouse", "Settings", "Globe"];
+                return (
                 <div
                   key={i}
                   style={{
@@ -4645,7 +4396,7 @@ export default function Index() {
                   }}
                 >
                   <Icon
-                    name={s.icon}
+                    name={statIcons[i]}
                     size={32}
                     style={{
                       color: "var(--gf-dark)",
@@ -4679,7 +4430,8 @@ export default function Index() {
                     </div>
                   </div>
                 </div>
-              ))}
+              );
+              })}
             </div>
           </div>
 
@@ -4696,33 +4448,7 @@ export default function Index() {
                 alignItems: "start",
               }}
             >
-              {[
-                {
-                  num: 1,
-                  title: "Own Farmland",
-                  desc: "Fertile fields and sustainable farming practices.",
-                },
-                {
-                  num: 2,
-                  title: "Harvesting",
-                  desc: "Modern machinery and experienced team.",
-                },
-                {
-                  num: 3,
-                  title: "Cleaning & Processing",
-                  desc: "Advanced cleaning, sorting and product processing.",
-                },
-                {
-                  num: 4,
-                  title: "Storage & Export Packaging",
-                  desc: "Safe storage and strong export packaging.",
-                },
-                {
-                  num: 5,
-                  title: "Container Loading & Export",
-                  desc: "Careful loading and on-time delivery to global markets.",
-                },
-              ].flatMap((s, i) => {
+              {t.gallery.steps.map((s, i) => ({ ...s, num: i + 1 })).flatMap((s, i) => {
                 const card = (
                   <div
                     key={`step-${i}`}
@@ -4997,33 +4723,9 @@ export default function Index() {
               borderRadius: 8,
             }}
           >
-            {[
-              {
-                icon: "Wheat",
-                title: "MOQ from 22 MT",
-                desc: "Flexible minimum order for any market.",
-              },
-              {
-                icon: "Package",
-                title: "Private Label Ready",
-                desc: "Custom packaging 250g – 1,000 kg big bags.",
-              },
-              {
-                icon: "Leaf",
-                title: "EU Organic Certified",
-                desc: "Certified organic for selected product categories.",
-              },
-              {
-                icon: "FileText",
-                title: "Export Docs",
-                desc: "Phytosanitary, lab tests, certificates of origin.",
-              },
-              {
-                icon: "Tractor",
-                title: "Own Farmland",
-                desc: "10,000+ ha — direct producer, no middlemen.",
-              },
-            ].map((t, i) => (
+            {t.gallery.trustItems.map((item, i) => {
+              const trustItemIcons = ["Wheat", "Package", "Leaf", "FileText", "Tractor"];
+              return (
               <div
                 key={i}
                 style={{
@@ -5035,7 +4737,7 @@ export default function Index() {
                 }}
               >
                 <Icon
-                  name={t.icon}
+                  name={trustItemIcons[i]}
                   size={26}
                   style={{
                     color: "var(--gf-dark)",
@@ -5053,7 +4755,7 @@ export default function Index() {
                       marginBottom: 3,
                     }}
                   >
-                    {t.title}
+                    {item.title}
                   </div>
                   <div
                     style={{
@@ -5063,11 +4765,12 @@ export default function Index() {
                       lineHeight: 1.4,
                     }}
                   >
-                    {t.desc}
+                    {item.desc}
                   </div>
                 </div>
               </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
@@ -5109,7 +4812,7 @@ export default function Index() {
                     color: "var(--gf-gold)",
                   }}
                 >
-                  ANTAD Expo 2026 · Mexico
+                  {t.antad.badge}
                 </span>
               </div>
 
@@ -5123,9 +4826,9 @@ export default function Index() {
                   marginBottom: 16,
                 }}
               >
-                Meet Us at ANTAD Expo 2026
+                {t.antad.h2a}
                 <br />
-                <span style={{ color: "var(--gf-gold)", fontStyle: "italic" }}>— Mexico</span>
+                <span style={{ color: "var(--gf-gold)", fontStyle: "italic" }}>{t.antad.h2b}</span>
               </h2>
 
               <p
@@ -5138,7 +4841,7 @@ export default function Index() {
                   marginBottom: 28,
                 }}
               >
-                We are actively meeting importers, distributors, wholesalers and retail chains during ANTAD Expo 2026.
+                {t.antad.p}
               </p>
 
               <div
@@ -5149,7 +4852,7 @@ export default function Index() {
                   marginBottom: 32,
                 }}
               >
-                {["Organic products", "Conventional grains", "Private label", "Bulk & retail supply"].map((item, i) => (
+                {t.antad.items.map((item, i) => (
                   <div key={i} style={{ display: "flex", alignItems: "center", gap: 10 }}>
                     <div
                       style={{
@@ -5194,7 +4897,7 @@ export default function Index() {
                 }}
               >
                 <Icon name="MessageCircle" size={16} />
-                Schedule Meeting at ANTAD
+                {t.antad.ctaBtn}
               </a>
             </div>
 
@@ -5219,15 +4922,11 @@ export default function Index() {
                   marginBottom: 16,
                 }}
               >
-                Let's discuss
+                {t.antad.discuss}
               </div>
-              {[
-                { icon: "Leaf", label: "Organic Supply" },
-                { icon: "Wheat", label: "Conventional Grains" },
-                { icon: "Tag", label: "Private Label" },
-                { icon: "Package", label: "Bulk & Retail" },
-                { icon: "Ship", label: "Export Logistics" },
-              ].map((item, i) => (
+              {t.antad.discussItems.map((label, i) => {
+                const discussIcons = ["Leaf", "Wheat", "Tag", "Package", "Ship"];
+                return (
                 <div
                   key={i}
                   style={{
@@ -5237,7 +4936,7 @@ export default function Index() {
                     marginBottom: 12,
                   }}
                 >
-                  <Icon name={item.icon} size={15} style={{ color: "var(--gf-gold)", flexShrink: 0 }} />
+                  <Icon name={discussIcons[i]} size={15} style={{ color: "var(--gf-gold)", flexShrink: 0 }} />
                   <span
                     style={{
                       fontFamily: "Montserrat",
@@ -5245,10 +4944,11 @@ export default function Index() {
                       color: "rgba(255,255,255,0.7)",
                     }}
                   >
-                    {item.label}
+                    {label}
                   </span>
                 </div>
-              ))}
+                );
+              })}
             </div>
           </div>
         </div>
