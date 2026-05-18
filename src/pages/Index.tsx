@@ -3626,7 +3626,7 @@ export default function Index() {
                     label: "Carefully selected organic fields",
                   },
                   {
-                    img: "https://cdn.poehali.dev/files/3bb96d82-4e91-49da-a437-a8e84c943f7e.jpg",
+                    img: "https://cdn.poehali.dev/files/58745ea4-18ff-44b1-b480-4571abaed50e.jpg",
                     num: 2,
                     label: "Modern cleaning & processing",
                   },
@@ -4593,7 +4593,7 @@ export default function Index() {
               {[
                 "https://cdn.poehali.dev/files/f587c14f-6edc-4915-9546-56750cc65d65.jpg", // buckwheat field
                 "https://cdn.poehali.dev/files/4e59b4e6-7b82-41a5-aa17-1e88022f4ea5.jpg", // green field
-                "https://cdn.poehali.dev/files/3bb96d82-4e91-49da-a437-a8e84c943f7e.jpg", // John Deere
+                "https://cdn.poehali.dev/files/58745ea4-18ff-44b1-b480-4571abaed50e.jpg", // processing facility
                 "https://cdn.poehali.dev/files/f11386c9-4001-4940-9b3c-a7cd36827549.jpg", // big bags
                 "https://cdn.poehali.dev/files/0f193f1f-14c9-4f20-a6fb-9416edc6ee23.jpg", // truck with big bags
               ].map((src, i) => (
