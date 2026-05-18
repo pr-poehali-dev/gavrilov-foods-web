@@ -7,7 +7,7 @@ const HERO_IMG =
 const PRODUCTS_IMG =
   "https://cdn.poehali.dev/files/f11386c9-4001-4940-9b3c-a7cd36827549.jpg"; // big bags in warehouse
 const FACTORY_IMG =
-  "https://cdn.poehali.dev/files/3bb96d82-4e91-49da-a437-a8e84c943f7e.jpg"; // processing equipment
+  "https://cdn.poehali.dev/files/5b1944a0-cdf4-423e-9034-5ec0f929385c.jpg"; // processing equipment
 
 const REF_CONTACT =
   "https://cdn.poehali.dev/files/943c789b-d4ed-418a-a36d-f3c15e7272ea.jpg"; // owner in field
@@ -218,7 +218,7 @@ const galleryImages = [
     label: "Products",
   },
   {
-    src: "https://cdn.poehali.dev/files/3bb96d82-4e91-49da-a437-a8e84c943f7e.jpg",
+    src: "https://cdn.poehali.dev/files/5b1944a0-cdf4-423e-9034-5ec0f929385c.jpg",
     label: "Processing",
   },
   {
