@@ -568,7 +568,7 @@ export const translations = {
       },
       card4: {
         title: "МОК и заказы",
-        stat1: "1 т",
+        stat1: "22 т",
         stat1sub: "минимальный заказ",
         stat2: "20 / 40 фут",
         stat2sub: "доступна загрузка полного контейнера",
