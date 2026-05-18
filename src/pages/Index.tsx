@@ -1871,7 +1871,7 @@ export default function Index() {
                         className="text-[12px] font-bold font-montserrat"
                         style={{ color: "var(--gf-gold)" }}
                       >
-                        {p.moq}
+                        {t.products.moqValue}
                       </span>
                     </div>
                     <div className="flex items-center gap-1">
