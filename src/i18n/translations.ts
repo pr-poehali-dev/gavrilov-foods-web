@@ -101,6 +101,15 @@ export const translations = {
       h2: "From Farm to Export — Full Supply Chain Control",
       p: "We control every step — from farming and processing to storage and delivery. This ensures consistent quality, traceability and reliability for our partners worldwide.",
       btn: "Request a Quote",
+      infraLabel: "Logistics & Infrastructure",
+      infraH2: "From Farm to Global Delivery",
+      infraP: "From certified farmland to container loading — we own every stage: cultivation on 10,000+ ha, post-harvest storage up to 10,000 MT, in-house processing, and certified export logistics worldwide.",
+      infraFeatures: [
+        { title: "10,000 MT Storage", desc: "Temperature-controlled grain facilities with ventilation and quality monitoring." },
+        { title: "In-House Processing", desc: "Multi-stage cleaning, de-hulling and optical sorting to EU/USDA specs." },
+        { title: "Full Traceability", desc: "Field-to-shipment documentation, lab testing and phytosanitary certification." },
+        { title: "Container Logistics", desc: "20/40 ft refrigerated and dry containers. FOB, CFR, DDP terms available." },
+      ],
       tiles: [
         {
           label: "Our Fields",
@@ -583,6 +592,15 @@ export const translations = {
       h2: "От фермы до экспорта — полный контроль цепочки поставок",
       p: "Мы контролируем каждый этап — от выращивания и переработки до хранения и доставки. Это обеспечивает стабильное качество, прослеживаемость и надёжность для наших партнёров по всему миру.",
       btn: "Запросить цену",
+      infraLabel: "Логистика и инфраструктура",
+      infraH2: "От фермы до глобальной доставки",
+      infraP: "От сертифицированных полей до погрузки в контейнер — мы владеем каждым этапом: выращивание на 10 000+ га, послеуборочное хранение до 10 000 MT, собственная переработка и сертифицированная экспортная логистика по всему миру.",
+      infraFeatures: [
+        { title: "Хранение 10 000 MT", desc: "Зернохранилища с контролем температуры, вентиляцией и мониторингом качества." },
+        { title: "Собственная переработка", desc: "Многоступенчатая очистка, шелушение и оптическая сортировка по стандартам ЕС/USDA." },
+        { title: "Полная прослеживаемость", desc: "Документация от поля до отгрузки, лабораторные испытания и фитосанитарная сертификация." },
+        { title: "Контейнерная логистика", desc: "Рефрижераторные и сухие контейнеры 20/40 фут. Условия FOB, CFR, DDP по запросу." },
+      ],
       tiles: [
         {
           label: "Наши поля",
