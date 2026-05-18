@@ -1287,7 +1287,7 @@ export const translations = {
       privateLabel: "Marca Propia",
       gallery: "Galería",
       contact: "Contacto",
-      requestQuote: "Solicitar Cotización",
+      requestQuote: "Cotización",
     },
     hero: {
       badge: "Del campo a la exportación",

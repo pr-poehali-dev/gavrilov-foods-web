@@ -420,7 +420,7 @@ export default function Index() {
               )}
             </div>
             <button
-              className="btn-gold text-[11px] py-2.5 px-5"
+              className="btn-gold text-[11px] py-2.5 px-5 whitespace-nowrap"
               onClick={() => scrollTo("#contact")}
             >
               {t.nav.requestQuote}
