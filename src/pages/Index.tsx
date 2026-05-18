@@ -2656,7 +2656,7 @@ export default function Index() {
                 {
                   num: "03",
                   title: "Processing",
-                  desc: "Multi-stage cleaning, de-hulling, and optical sorting to meet EU/USDA specs.",
+                  desc: "Multi-stage cleaning, de-hulling, and optical sorting. Delivery on FOB / DDP / FCA / DAP terms.",
                 },
                 {
                   num: "04",
