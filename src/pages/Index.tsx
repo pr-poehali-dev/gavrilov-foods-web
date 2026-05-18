@@ -4201,14 +4201,19 @@ export default function Index() {
                       color: "#fff",
                       lineHeight: 1.2,
                       marginBottom: 10,
-                      hyphens: "auto",
-                      wordBreak: "break-word",
+                      hyphens: "none",
+                      wordBreak: "normal",
+                      overflowWrap: "normal",
                     }}
-                    lang="ru"
                   >
-                    {t.gallery.h2a}{" "}
+                    {t.gallery.h2a}
+                    <br />
                     <span
-                      style={{ color: "var(--gf-gold)", fontStyle: "italic" }}
+                      style={{
+                        color: "var(--gf-gold)",
+                        fontStyle: "italic",
+                        fontWeight: 700,
+                      }}
                     >
                       {t.gallery.h2b}
                     </span>
