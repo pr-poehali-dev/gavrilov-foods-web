@@ -2586,7 +2586,7 @@ export default function Index() {
                   }}
                 >
                   <img
-                    src={PRODUCTS_IMG}
+                    src="https://cdn.poehali.dev/files/6d95a4e4-3a28-40a8-868f-f1e65151ade3.jpg"
                     alt="Big bags storage"
                     style={{
                       width: "100%",
@@ -2611,7 +2611,7 @@ export default function Index() {
                   }}
                 >
                   <img
-                    src="https://cdn.poehali.dev/files/da2cf99e-0ede-40d1-9533-e4434ebcdf01.jpg"
+                    src="https://cdn.poehali.dev/files/9f167f2e-35ae-452b-b29e-bd405a27f0ef.jpg"
                     alt="Grain warehouse"
                     style={{
                       width: "100%",
