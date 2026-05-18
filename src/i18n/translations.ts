@@ -88,7 +88,7 @@ export const translations = {
       },
       card4: {
         title: "MOQ & Orders",
-        stat1: "1 MT",
+        stat1: "22 MT",
         stat1sub: "minimum order quantity",
         stat2: "20 / 40 ft",
         stat2sub: "full container options available",
