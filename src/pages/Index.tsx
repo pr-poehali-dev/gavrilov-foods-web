@@ -297,12 +297,7 @@ export default function Index() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  useEffect(() => {
-    if (!langOpen) return;
-    const close = () => setLangOpen(false);
-    document.addEventListener("click", close, { capture: true });
-    return () => document.removeEventListener("click", close, { capture: true });
-  }, [langOpen]);
+
 
   const scrollTo = (href: string) => {
     setMobileOpen(false);
@@ -344,9 +339,16 @@ export default function Index() {
 
           <div className="hidden lg:flex items-center gap-3">
             {/* Language dropdown */}
-            <div style={{ position: "relative" }}>
+            <div
+              style={{ position: "relative" }}
+              onBlur={(e) => {
+                if (!e.currentTarget.contains(e.relatedTarget as Node)) {
+                  setLangOpen(false);
+                }
+              }}
+            >
               <button
-                onClick={() => setLangOpen(!langOpen)}
+                onClick={() => setLangOpen((v) => !v)}
                 style={{
                   display: "flex",
                   alignItems: "center",
@@ -388,7 +390,8 @@ export default function Index() {
                   {(["en", "ru", "es"] as const).map((l) => (
                     <button
                       key={l}
-                      onClick={() => { setLang(l); setLangOpen(false); }}
+                      tabIndex={0}
+                      onMouseDown={(e) => { e.preventDefault(); setLang(l); setLangOpen(false); }}
                       style={{
                         display: "flex",
                         alignItems: "center",
