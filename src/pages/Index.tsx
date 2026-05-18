@@ -5908,9 +5908,7 @@ export default function Index() {
                 fontSize: 12,
                 color: "rgba(255,255,255,0.3)",
               }}
-            >
-              © 2024 Gavrilov Foods
-            </div>
+            >© 2026 Gavrilov Foods</div>
             <div style={{ display: "flex", gap: 24 }}>
               <a
                 href="/privacy-policy"
