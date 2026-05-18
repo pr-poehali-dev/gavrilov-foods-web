@@ -103,12 +103,25 @@ export const translations = {
       btn: "Request a Quote",
       infraLabel: "Logistics & Infrastructure",
       infraH2: "From Farm to Global Delivery",
-      infraP: "From certified farmland to container loading — we own every stage: cultivation on 10,000+ ha, post-harvest storage up to 10,000 MT, in-house processing, and certified export logistics worldwide.",
+      infraP:
+        "From certified farmland to container loading — we own every stage: cultivation on 10,000+ ha, post-harvest storage up to 10,000 MT, in-house processing, and certified export logistics worldwide.",
       infraFeatures: [
-        { title: "10,000 MT Storage", desc: "Temperature-controlled grain facilities with ventilation and quality monitoring." },
-        { title: "In-House Processing", desc: "Multi-stage cleaning, de-hulling and optical sorting to EU/USDA specs." },
-        { title: "Full Traceability", desc: "Field-to-shipment documentation, lab testing and phytosanitary certification." },
-        { title: "Container Logistics", desc: "20/40 ft refrigerated and dry containers. FOB, CFR, DDP terms available." },
+        {
+          title: "10,000 MT Storage",
+          desc: "Temperature-controlled grain facilities with ventilation and quality monitoring.",
+        },
+        {
+          title: "In-House Processing",
+          desc: "Multi-stage cleaning, de-hulling and optical sorting to EU/USDA specs.",
+        },
+        {
+          title: "Full Traceability",
+          desc: "Field-to-shipment documentation, lab testing and phytosanitary certification.",
+        },
+        {
+          title: "Container Logistics",
+          desc: "20/40 ft refrigerated and dry containers. FOB, CFR, DDP terms available.",
+        },
       ],
       tiles: [
         {
@@ -594,12 +607,25 @@ export const translations = {
       btn: "Запросить цену",
       infraLabel: "Логистика и инфраструктура",
       infraH2: "От фермы до глобальной доставки",
-      infraP: "От сертифицированных полей до погрузки в контейнер — мы владеем каждым этапом: выращивание на 10 000+ га, послеуборочное хранение до 10 000 MT, собственная переработка и сертифицированная экспортная логистика по всему миру.",
+      infraP:
+        "От сертифицированных полей до погрузки в контейнер — мы владеем каждым этапом: выращивание на 10 000+ га, послеуборочное хранение до 10 000 MT, собственная переработка и сертифицированная экспортная логистика по всему миру.",
       infraFeatures: [
-        { title: "Хранение 10 000 MT", desc: "Зернохранилища с контролем температуры, вентиляцией и мониторингом качества." },
-        { title: "Собственная переработка", desc: "Многоступенчатая очистка, шелушение и оптическая сортировка по стандартам ЕС/USDA." },
-        { title: "Полная прослеживаемость", desc: "Документация от поля до отгрузки, лабораторные испытания и фитосанитарная сертификация." },
-        { title: "Контейнерная логистика", desc: "Рефрижераторные и сухие контейнеры 20/40 фут. Условия FOB, CFR, DDP по запросу." },
+        {
+          title: "Хранение 10 000 Т",
+          desc: "Зернохранилища с контролем температуры, вентиляцией и мониторингом качества.",
+        },
+        {
+          title: "Собственная переработка",
+          desc: "Многоступенчатая очистка, шелушение и оптическая сортировка по стандартам ЕС/USDA.",
+        },
+        {
+          title: "Полная прослеживаемость",
+          desc: "Документация от поля до отгрузки, лабораторные испытания и фитосанитарная сертификация.",
+        },
+        {
+          title: "Контейнерная логистика",
+          desc: "Рефрижераторные и сухие контейнеры 20/40 фут. Условия FOB, CFR, DDP по запросу.",
+        },
       ],
       tiles: [
         {
@@ -1103,12 +1129,25 @@ export const translations = {
       btn: "Solicitar Cotización",
       infraLabel: "Logística e Infraestructura",
       infraH2: "De la Granja a la Entrega Global",
-      infraP: "Desde los campos certificados hasta la carga en contenedor — somos dueños de cada etapa: cultivo en más de 10.000 ha, almacenamiento postcosecha hasta 10.000 MT, procesamiento propio y logística de exportación certificada en todo el mundo.",
+      infraP:
+        "Desde los campos certificados hasta la carga en contenedor — somos dueños de cada etapa: cultivo en más de 10.000 ha, almacenamiento postcosecha hasta 10.000 MT, procesamiento propio y logística de exportación certificada en todo el mundo.",
       infraFeatures: [
-        { title: "Almacenamiento 10.000 MT", desc: "Instalaciones de grano con control de temperatura, ventilación y monitoreo de calidad." },
-        { title: "Procesamiento Propio", desc: "Limpieza multietapa, descascarado y clasificación óptica según estándares UE/USDA." },
-        { title: "Trazabilidad Total", desc: "Documentación del campo al envío, análisis de laboratorio y certificación fitosanitaria." },
-        { title: "Logística de Contenedores", desc: "Contenedores refrigerados y secos de 20/40 pies. Condiciones FOB, CFR, DDP disponibles." },
+        {
+          title: "Almacenamiento 10.000 MT",
+          desc: "Instalaciones de grano con control de temperatura, ventilación y monitoreo de calidad.",
+        },
+        {
+          title: "Procesamiento Propio",
+          desc: "Limpieza multietapa, descascarado y clasificación óptica según estándares UE/USDA.",
+        },
+        {
+          title: "Trazabilidad Total",
+          desc: "Documentación del campo al envío, análisis de laboratorio y certificación fitosanitaria.",
+        },
+        {
+          title: "Logística de Contenedores",
+          desc: "Contenedores refrigerados y secos de 20/40 pies. Condiciones FOB, CFR, DDP disponibles.",
+        },
       ],
       tiles: [
         {
