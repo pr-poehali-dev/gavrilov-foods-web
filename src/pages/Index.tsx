@@ -1939,103 +1939,128 @@ export default function Index() {
             </div>
           </div>
 
-          {/* Supply chain block */}
+          {/* Supply chain block — stacked on mobile, side-by-side on desktop */}
           <div
-            className="mt-8 grid lg:grid-cols-2 gap-0 reveal"
-            style={{ border: "1px solid rgba(0,0,0,0.07)" }}
+            className="mt-8 reveal"
+            style={{
+              border: "1px solid rgba(0,0,0,0.07)",
+              borderRadius: 12,
+              overflow: "hidden",
+              background: "#fff",
+            }}
           >
-            {/* Left text */}
-            <div
-              className="p-8 flex flex-col justify-between"
-              style={{ background: "#fff" }}
-            >
-              <div>
+            {/* Top/Left: text — full width on mobile, fits any language */}
+            <div className="p-5 sm:p-6 md:p-8 lg:grid lg:grid-cols-2 lg:gap-0 lg:p-0">
+              <div className="lg:p-8 flex flex-col gap-3 lg:gap-4">
                 <div
-                  className="text-[10px] font-bold uppercase tracking-widest mb-3 font-montserrat"
-                  style={{ color: "var(--gf-gold)" }}
+                  className="font-montserrat font-bold uppercase tracking-widest"
+                  style={{ color: "var(--gf-gold)", fontSize: 10 }}
                 >
                   {t.logistics.label}
                 </div>
                 <h3
-                  className="font-cormorant font-semibold leading-tight mb-4"
+                  className="font-cormorant font-semibold"
                   style={{
-                    fontSize: "clamp(26px, 3vw, 38px)",
+                    fontSize: "clamp(20px, 5vw, 36px)",
+                    lineHeight: 1.2,
                     color: "var(--gf-dark)",
+                    overflowWrap: "anywhere",
+                    wordBreak: "break-word",
+                    hyphens: "auto",
                   }}
+                  lang="ru"
                 >
                   {t.logistics.h2}
                 </h3>
                 <p
-                  className="text-[13px] leading-relaxed mb-6"
+                  className="font-montserrat"
                   style={{
+                    fontSize: 13,
+                    lineHeight: 1.6,
                     color: "var(--gf-text-light)",
-                    fontFamily: "Montserrat",
+                    overflowWrap: "anywhere",
                   }}
                 >
                   {t.logistics.p}
                 </p>
-              </div>
-              <button
-                className="btn-outline-dark self-start"
-                onClick={() =>
-                  document
-                    .querySelector("#about")
-                    ?.scrollIntoView({ behavior: "smooth" })
-                }
-              >
-                {t.logistics.btn}
-              </button>
-            </div>
-
-            {/* Right: 4 image tiles */}
-            <div className="grid grid-cols-2">
-              {t.logistics.tiles.map((tile, i) => {
-                const tileData = {
-                  img: [HERO_IMG, FACTORY_IMG, "https://cdn.poehali.dev/files/fa420cdb-c1a0-490e-a2ea-6b3197b248b7.jpg", "https://ybvgdlhrldbkfqiccxxo.supabase.co/storage/v1/object/public/1/remaing.jpg"][i],
-                  icon: ["Wheat","Settings","Package","Truck"][i],
-                  label: tile.label,
-                  desc: tile.desc,
-                };
-                return (
-                <div
-                  key={i}
-                  className="relative aspect-square img-zoom overflow-hidden"
+                <button
+                  className="btn-outline-dark self-start mt-2"
+                  onClick={() =>
+                    document
+                      .querySelector("#about")
+                      ?.scrollIntoView({ behavior: "smooth" })
+                  }
                 >
-                  <img
-                    src={tileData.img}
-                    alt={tileData.label}
-                    className="w-full h-full object-cover"
-                    style={{ opacity: 0.7 }}
-                  />
-                  <div
-                    className="absolute inset-0 flex flex-col justify-end p-4"
-                    style={{
-                      background:
-                        "linear-gradient(to top, rgba(14,26,15,0.85) 0%, transparent 60%)",
-                    }}
-                  >
+                  {t.logistics.btn}
+                </button>
+              </div>
+
+              {/* Right: 4 image tiles — bright gold icons */}
+              <div className="grid grid-cols-2 mt-5 lg:mt-0">
+                {t.logistics.tiles.map((tile, i) => {
+                  const imgs = [
+                    HERO_IMG,
+                    FACTORY_IMG,
+                    "https://cdn.poehali.dev/files/fa420cdb-c1a0-490e-a2ea-6b3197b248b7.jpg",
+                    "https://cdn.poehali.dev/files/6d95a4e4-3a28-40a8-868f-f1e65151ade3.jpg",
+                  ];
+                  const icons = ["Wheat", "Settings", "Package", "Truck"];
+                  return (
                     <div
-                      className="w-7 h-7 rounded-full flex items-center justify-center mb-2"
-                      style={{
-                        background: "rgba(201,151,58,0.25)",
-                        border: "1px solid var(--gf-gold)",
-                      }}
+                      key={i}
+                      className="relative img-zoom overflow-hidden"
+                      style={{ aspectRatio: "1/1" }}
                     >
-                      <Icon
-                        name={tileData.icon}
-                        size={13}
-                        style={{ color: "var(--gf-gold)" }}
+                      <img
+                        src={imgs[i]}
+                        alt={tile.label}
+                        className="absolute inset-0 w-full h-full object-cover"
+                        style={{ opacity: 0.6 }}
                       />
+                      <div
+                        className="absolute inset-0"
+                        style={{ background: "rgba(14,26,15,0.55)" }}
+                      />
+                      <div
+                        className="absolute inset-0 flex flex-col justify-end p-3 md:p-4"
+                        style={{
+                          background:
+                            "linear-gradient(to top, rgba(14,26,15,0.95) 0%, rgba(14,26,15,0.4) 55%, transparent 100%)",
+                        }}
+                      >
+                        {/* BRIGHT solid gold icon */}
+                        <div
+                          className="flex items-center justify-center rounded-full mb-2 flex-shrink-0"
+                          style={{
+                            width: 40,
+                            height: 40,
+                            background: "var(--gf-gold)",
+                            boxShadow: "0 4px 12px rgba(201,151,58,0.5)",
+                          }}
+                        >
+                          <Icon
+                            name={icons[i]}
+                            size={20}
+                            style={{ color: "#0e1a0f", strokeWidth: 2.2 }}
+                          />
+                        </div>
+                        <div
+                          className="text-white font-bold uppercase font-montserrat leading-tight"
+                          style={{ fontSize: 11, letterSpacing: "0.04em" }}
+                        >
+                          {tile.label}
+                        </div>
+                        <div
+                          className="text-white/85 font-montserrat leading-tight mt-1 hidden sm:block"
+                          style={{ fontSize: 10 }}
+                        >
+                          {tile.desc}
+                        </div>
+                      </div>
                     </div>
-                    <div className="text-white font-bold text-[11px] uppercase tracking-wide font-montserrat">
-                      {tileData.label}
-                    </div>
-                    <div className="text-white/60 text-[10px] font-montserrat leading-tight mt-0.5">
-                      {tileData.desc}
-                    </div>
-                  </div>
-                </div>
-              );})}
+                  );
+                })}
+              </div>
             </div>
           </div>
 
@@ -2721,17 +2746,10 @@ export default function Index() {
             </div>
           </div>
 
-          {/* ── Our Activities ── */}
-          <div className="mb-10 reveal hidden md:block">
-            <div className="flex items-center justify-center gap-4 mb-6">
-              <span
-                style={{
-                  display: "block",
-                  width: 36,
-                  height: 1,
-                  background: "var(--gf-gold)",
-                }}
-              />
+          {/* ── Our Activities — square 2x2 on mobile, 4-in-row on desktop ── */}
+          <div className="mb-10 reveal">
+            <div className="flex items-center justify-center gap-4 mb-5">
+              <span style={{ display: "block", width: 36, height: 1, background: "var(--gf-gold)" }} />
               <span
                 style={{
                   color: "var(--gf-gold)",
@@ -2744,81 +2762,24 @@ export default function Index() {
               >
                 {t.export.activitiesLabel}
               </span>
-              <span
-                style={{
-                  display: "block",
-                  width: 36,
-                  height: 1,
-                  background: "var(--gf-gold)",
-                }}
-              />
+              <span style={{ display: "block", width: 36, height: 1, background: "var(--gf-gold)" }} />
             </div>
 
-            <div className="grid grid-cols-3 gap-3" style={{ height: 320 }}>
-              {/* Left — combine */}
-              <div
-                style={{
-                  borderRadius: 10,
-                  overflow: "hidden",
-                  position: "relative",
-                }}
-              >
-                <img
-                  src="https://cdn.poehali.dev/files/a6468418-4211-4d99-84c8-c706aca290f7.jpg"
-                  alt="Combine harvester"
-                  style={{
-                    width: "100%",
-                    height: "100%",
-                    objectFit: "cover",
-                    display: "block",
-                    transition: "transform 0.6s ease",
-                  }}
-                  onMouseEnter={(e) =>
-                    (e.currentTarget.style.transform = "scale(1.05)")
-                  }
-                  onMouseLeave={(e) =>
-                    (e.currentTarget.style.transform = "scale(1)")
-                  }
-                />
-              </div>
-              {/* Center — fields */}
-              <div
-                style={{
-                  borderRadius: 10,
-                  overflow: "hidden",
-                  position: "relative",
-                }}
-              >
-                <img
-                  src={HERO_IMG}
-                  alt="Fields"
-                  style={{
-                    width: "100%",
-                    height: "100%",
-                    objectFit: "cover",
-                    display: "block",
-                    transition: "transform 0.6s ease",
-                  }}
-                  onMouseEnter={(e) =>
-                    (e.currentTarget.style.transform = "scale(1.05)")
-                  }
-                  onMouseLeave={(e) =>
-                    (e.currentTarget.style.transform = "scale(1)")
-                  }
-                />
-              </div>
-              {/* Right — two stacked */}
-              <div className="grid grid-rows-2 gap-3" style={{ height: 320 }}>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+              {[
+                { src: "https://cdn.poehali.dev/files/a6468418-4211-4d99-84c8-c706aca290f7.jpg", alt: "Combine harvester" },
+                { src: HERO_IMG, alt: "Fields" },
+                { src: "https://cdn.poehali.dev/files/6d95a4e4-3a28-40a8-868f-f1e65151ade3.jpg", alt: "Big bags storage" },
+                { src: "https://cdn.poehali.dev/files/9f167f2e-35ae-452b-b29e-bd405a27f0ef.jpg", alt: "Grain warehouse" },
+              ].map((photo, i) => (
                 <div
-                  style={{
-                    borderRadius: 10,
-                    overflow: "hidden",
-                    position: "relative",
-                  }}
+                  key={i}
+                  className="img-zoom overflow-hidden"
+                  style={{ borderRadius: 10, aspectRatio: "1/1", position: "relative" }}
                 >
                   <img
-                    src="https://cdn.poehali.dev/files/6d95a4e4-3a28-40a8-868f-f1e65151ade3.jpg"
-                    alt="Big bags storage"
+                    src={photo.src}
+                    alt={photo.alt}
                     style={{
                       width: "100%",
                       height: "100%",
@@ -2826,40 +2787,11 @@ export default function Index() {
                       display: "block",
                       transition: "transform 0.6s ease",
                     }}
-                    onMouseEnter={(e) =>
-                      (e.currentTarget.style.transform = "scale(1.05)")
-                    }
-                    onMouseLeave={(e) =>
-                      (e.currentTarget.style.transform = "scale(1)")
-                    }
+                    onMouseEnter={(e) => (e.currentTarget.style.transform = "scale(1.05)")}
+                    onMouseLeave={(e) => (e.currentTarget.style.transform = "scale(1)")}
                   />
                 </div>
-                <div
-                  style={{
-                    borderRadius: 10,
-                    overflow: "hidden",
-                    position: "relative",
-                  }}
-                >
-                  <img
-                    src="https://cdn.poehali.dev/files/9f167f2e-35ae-452b-b29e-bd405a27f0ef.jpg"
-                    alt="Grain warehouse"
-                    style={{
-                      width: "100%",
-                      height: "100%",
-                      objectFit: "cover",
-                      display: "block",
-                      transition: "transform 0.6s ease",
-                    }}
-                    onMouseEnter={(e) =>
-                      (e.currentTarget.style.transform = "scale(1.05)")
-                    }
-                    onMouseLeave={(e) =>
-                      (e.currentTarget.style.transform = "scale(1)")
-                    }
-                  />
-                </div>
-              </div>
+              ))}
             </div>
           </div>
 
