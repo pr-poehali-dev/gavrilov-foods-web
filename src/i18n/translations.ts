@@ -1101,6 +1101,15 @@ export const translations = {
       h2: "De la Granja a la Exportación — Control Total de la Cadena de Suministro",
       p: "Controlamos cada paso — desde el cultivo y procesamiento hasta el almacenamiento y la entrega. Esto garantiza calidad constante, trazabilidad y confiabilidad para nuestros socios en todo el mundo.",
       btn: "Solicitar Cotización",
+      infraLabel: "Logística e Infraestructura",
+      infraH2: "De la Granja a la Entrega Global",
+      infraP: "Desde los campos certificados hasta la carga en contenedor — somos dueños de cada etapa: cultivo en más de 10.000 ha, almacenamiento postcosecha hasta 10.000 MT, procesamiento propio y logística de exportación certificada en todo el mundo.",
+      infraFeatures: [
+        { title: "Almacenamiento 10.000 MT", desc: "Instalaciones de grano con control de temperatura, ventilación y monitoreo de calidad." },
+        { title: "Procesamiento Propio", desc: "Limpieza multietapa, descascarado y clasificación óptica según estándares UE/USDA." },
+        { title: "Trazabilidad Total", desc: "Documentación del campo al envío, análisis de laboratorio y certificación fitosanitaria." },
+        { title: "Logística de Contenedores", desc: "Contenedores refrigerados y secos de 20/40 pies. Condiciones FOB, CFR, DDP disponibles." },
+      ],
       tiles: [
         {
           label: "Nuestros Campos",
