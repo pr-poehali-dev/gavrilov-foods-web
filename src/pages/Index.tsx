@@ -2962,7 +2962,7 @@ export default function Index() {
                     className="font-cormorant text-[28px]"
                     style={{ color: "var(--gf-gold)", fontWeight: 600 }}
                   >
-                    200 g – 1,000 kg
+                    {t.footer.packagingRangeLabel}
                   </div>
                   <div
                     className="font-montserrat text-[11px]"
@@ -3031,38 +3031,17 @@ export default function Index() {
               </p>
             </div>
             <div className="grid grid-cols-3 md:grid-cols-6 gap-4">
-              {[
-                {
-                  img: "https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/files/a84c41be-89d6-477d-bb1c-eccf7eb3ca68.jpg",
-                  label: "200 g",
-                  sub: "Doypack / Bag",
-                },
-                {
-                  img: "https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/files/a8ba908b-29b3-4909-a311-6f9d5b6f741d.jpg",
-                  label: "400 g",
-                  sub: "Doypack",
-                },
-                {
-                  img: "https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/files/ba5c8c80-9471-40fc-988a-9cc1602e35e0.jpg",
-                  label: "500 g",
-                  sub: "Block bottom bag",
-                },
-                {
-                  img: "https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/files/2eede8e6-7448-4a13-b590-b41f6117a889.jpg",
-                  label: "800 g",
-                  sub: "Gusseted bag",
-                },
-                {
-                  img: "https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/files/2c1a3bda-5c0e-4e53-a1de-3cac86529f89.jpg",
-                  label: "1,000 g",
-                  sub: "Block bottom bag",
-                },
-                {
-                  img: "https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/files/4e6eddb4-c469-4776-90e3-d1e1129c099c.jpg",
-                  label: "Big Bags",
-                  sub: "500 – 1,000 kg",
-                },
-              ].map((f, i) => (
+              {(t.footer.packagingFormats as { label: string; sub: string }[]).map((fmt, i) => {
+                const imgs = [
+                  "https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/files/a84c41be-89d6-477d-bb1c-eccf7eb3ca68.jpg",
+                  "https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/files/a8ba908b-29b3-4909-a311-6f9d5b6f741d.jpg",
+                  "https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/files/ba5c8c80-9471-40fc-988a-9cc1602e35e0.jpg",
+                  "https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/files/2eede8e6-7448-4a13-b590-b41f6117a889.jpg",
+                  "https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/files/2c1a3bda-5c0e-4e53-a1de-3cac86529f89.jpg",
+                  "https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/files/4e6eddb4-c469-4776-90e3-d1e1129c099c.jpg",
+                ];
+                const f = { img: imgs[i], label: fmt.label, sub: fmt.sub };
+                return (
                 <div
                   key={i}
                   className="flex flex-col items-center text-center gap-2 pb-3 px-2 pt-2"
@@ -3100,7 +3079,7 @@ export default function Index() {
                     {f.sub}
                   </div>
                 </div>
-              ))}
+              ); })}
             </div>
             <p
               className="text-center font-montserrat text-[11px] mt-4"
@@ -3359,14 +3338,9 @@ export default function Index() {
                       marginBottom: 8,
                     }}
                   >
-                    Organic available for:
+                    {t.certifications.organicAvailableFor}
                   </div>
-                  {[
-                    "Buckwheat",
-                    "Green Buckwheat",
-                    "Buckwheat Flour",
-                    "Oat Flakes",
-                  ].map((p, i) => (
+                  {(t.certifications.organicAvailableList as string[]).map((p, i) => (
                     <div
                       key={i}
                       style={{
@@ -3398,7 +3372,7 @@ export default function Index() {
                     marginBottom: 4,
                   }}
                 >
-                  Packaging & Supply
+                  {t.certifications.packagingSupplyTitle}
                 </div>
                 <div
                   style={{
@@ -3408,7 +3382,7 @@ export default function Index() {
                     marginBottom: 32,
                   }}
                 >
-                  Flexible solutions for different needs
+                  {t.certifications.packagingSupplySub}
                 </div>
 
                 <div
@@ -3419,32 +3393,10 @@ export default function Index() {
                     gap: 24,
                   }}
                 >
-                  {[
-                    {
-                      icon: "Package",
-                      title: "Retail Packaging",
-                      size: "250 g – 5 kg",
-                      desc: "Custom options available",
-                    },
-                    {
-                      icon: "Boxes",
-                      title: "Industrial Packaging",
-                      size: "25 kg / 50 kg bags",
-                      desc: "High quality packaging",
-                    },
-                    {
-                      icon: "Container",
-                      title: "Bulk Supply",
-                      size: "500 – 1,000 kg\nBig Bags",
-                      desc: "For large volume orders",
-                    },
-                    {
-                      icon: "Truck",
-                      title: "Container Shipping",
-                      size: "20 ft / 40 ft",
-                      desc: "Safe and secure delivery",
-                    },
-                  ].map((p, i) => (
+                  {(t.certifications.packagingSupplyItems as { title: string; size: string; desc: string }[]).map((p, i) => {
+                    const icons = ["Package", "Boxes", "Container", "Truck"];
+                    const item = { icon: icons[i], title: p.title, size: p.size, desc: p.desc };
+                    return (
                     <div
                       key={i}
                       style={{
@@ -3468,7 +3420,7 @@ export default function Index() {
                         }}
                       >
                         <Icon
-                          name={p.icon}
+                          name={item.icon}
                           size={24}
                           style={{ color: "var(--gf-dark)", strokeWidth: 1.1 }}
                         />
@@ -3483,7 +3435,7 @@ export default function Index() {
                           color: "var(--gf-dark)",
                         }}
                       >
-                        {p.title}
+                        {item.title}
                       </div>
                       <div
                         style={{
@@ -3495,7 +3447,7 @@ export default function Index() {
                           whiteSpace: "pre-line",
                         }}
                       >
-                        {p.size}
+                        {item.size}
                       </div>
                       <div
                         style={{
@@ -3505,10 +3457,10 @@ export default function Index() {
                           lineHeight: 1.4,
                         }}
                       >
-                        {p.desc}
+                        {item.desc}
                       </div>
                     </div>
-                  ))}
+                  ); })}
                 </div>
               </div>
             </div>
@@ -3780,19 +3732,10 @@ export default function Index() {
 
                 {/* 5 features */}
                 <div className="grid grid-cols-3 gap-x-5 gap-y-5 mb-8">
-                  {[
-                    {
-                      icon: "LayoutTemplate",
-                      label: "Custom packaging design",
-                    },
-                    { icon: "Tag", label: "Your brand, your label" },
-                    { icon: "Layers", label: "All product types available" },
-                    { icon: "Store", label: "Retail & wholesale volumes" },
-                    {
-                      icon: "Leaf",
-                      label: "EU Organic certification possible",
-                    },
-                  ].map((f, i) => (
+                  {(t.privateLabel.packagingDesignFeatures as string[]).map((label, i) => {
+                    const featureIcons = ["LayoutTemplate", "Tag", "Layers", "Store", "Leaf"];
+                    const f = { icon: featureIcons[i], label };
+                    return (
                     <div
                       key={i}
                       className="flex flex-col items-center text-center gap-1.5"
@@ -3813,7 +3756,7 @@ export default function Index() {
                         {f.label}
                       </span>
                     </div>
-                  ))}
+                  ); })}
                 </div>
               </div>
 
@@ -3825,7 +3768,7 @@ export default function Index() {
                     ?.scrollIntoView({ behavior: "smooth" })
                 }
               >
-                Request Private Label Proposal{" "}
+                {t.privateLabel.requestBtn}{" "}
                 <Icon name="ArrowRight" size={15} />
               </button>
             </div>
@@ -3968,7 +3911,7 @@ export default function Index() {
                   textTransform: "uppercase",
                 }}
               >
-                Our Private Label Process
+                {t.privateLabel.ourProcess}
               </span>
               <span
                 style={{
@@ -3983,13 +3926,7 @@ export default function Index() {
             <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
               {t.privateLabel.steps.map((stepTitle, i) => {
                 const plStepIcons = ["Wheat", "Palette", "ShieldCheck", "Factory", "Ship"];
-                const plStepDescs = [
-                  "Choose from our wide range of grains, pulses and oilseeds.",
-                  "We create packaging design that represents your brand.",
-                  "EU Organic certification available. All labeling requirements covered.",
-                  "Modern facilities and strict quality control at every stage.",
-                  "Full container loads delivered to your port on time.",
-                ];
+                const plStepDescs = t.privateLabel.stepDescs as string[];
                 return (
                 <div key={i} className="flex flex-col items-center text-center">
                   <div
@@ -4080,40 +4017,20 @@ export default function Index() {
                   color: "var(--gf-dark)",
                 }}
               >
-                Why Importers Trust Gavrilov Foods
+                {t.privateLabel.trustTitle}
               </h3>
             </div>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-              {[
-                {
-                  icon: "Wheat",
-                  val: "10,000 + ha",
-                  title: "Own Farmland",
-                  desc: "10,000+ ha of own certified farmland — full control from field to processing.",
-                  img: "https://cdn.poehali.dev/files/9e62a3ec-bd8c-4bf7-a996-eb835bef4401.jpg",
-                },
-                {
-                  icon: "ShieldCheck",
-                  val: "Strict",
-                  title: "Quality Control",
-                  desc: "In-house lab testing at every stage to meet international standards.",
-                  img: "https://cdn.poehali.dev/files/e43ef89f-fe22-4c5d-9966-3f78245a4cee.jpg",
-                },
-                {
-                  icon: "Tag",
-                  val: "Ready",
-                  title: "Private Label",
-                  desc: "Retail-ready packaging with custom design for your brand.",
-                  img: "https://cdn.poehali.dev/files/98d43280-321a-4078-bb4e-2cd8a7e71f5e.jpg",
-                },
-                {
-                  icon: "FileText",
-                  val: "Full",
-                  title: "Export Docs",
-                  desc: "Phytosanitary certificates, international experience with global markets.",
-                  img: "https://cdn.poehali.dev/files/6ebe549e-c65d-458a-9a25-7388c52a2e06.jpg",
-                },
-              ].map((c, i) => (
+              {(t.privateLabel.trustItems as { title: string; desc: string }[]).map((c, i) => {
+                const trustIcons = ["Wheat", "ShieldCheck", "Tag", "FileText"];
+                const trustImgs = [
+                  "https://cdn.poehali.dev/files/9e62a3ec-bd8c-4bf7-a996-eb835bef4401.jpg",
+                  "https://cdn.poehali.dev/files/e43ef89f-fe22-4c5d-9966-3f78245a4cee.jpg",
+                  "https://cdn.poehali.dev/files/98d43280-321a-4078-bb4e-2cd8a7e71f5e.jpg",
+                  "https://cdn.poehali.dev/files/6ebe549e-c65d-458a-9a25-7388c52a2e06.jpg",
+                ];
+                const item = { icon: trustIcons[i], img: trustImgs[i], title: c.title, desc: c.desc };
+                return (
                 <div
                   key={i}
                   style={{
@@ -4125,8 +4042,8 @@ export default function Index() {
                 >
                   <div style={{ height: 130, overflow: "hidden" }}>
                     <img
-                      src={c.img}
-                      alt={c.title}
+                      src={item.img}
+                      alt={item.title}
                       style={{
                         width: "100%",
                         height: "100%",
@@ -4152,7 +4069,7 @@ export default function Index() {
                       }}
                     >
                       <Icon
-                        name={c.icon}
+                        name={item.icon}
                         size={15}
                         style={{ color: "var(--gf-gold)", flexShrink: 0 }}
                       />
@@ -4166,7 +4083,7 @@ export default function Index() {
                           color: "var(--gf-dark)",
                         }}
                       >
-                        {c.title}
+                        {item.title}
                       </div>
                     </div>
                     <div
@@ -4177,11 +4094,11 @@ export default function Index() {
                         lineHeight: 1.5,
                       }}
                     >
-                      {c.desc}
+                      {item.desc}
                     </div>
                   </div>
                 </div>
-              ))}
+              ); })}
             </div>
           </div>
 
@@ -4256,13 +4173,14 @@ export default function Index() {
                   gavrilovfoods.export@gmail.com
                 </div>
               </div>
-               • {" "}
             </div>
           </div>
         </div>
       </section>
 
+
       {/* ═══════════════ GALLERY ═══════════════ */}
+               • 
       <section id="gallery" className="py-20" style={{ background: "#fff" }}>
         <div className="max-w-7xl mx-auto px-6">
           {/* ── Row 1: Hero banner ── */}
@@ -4590,7 +4508,7 @@ export default function Index() {
                   margin: 0,
                 }}
               >
-                Why Buyers Trust Gavrilov Foods
+                {t.privateLabel.whyBuyersTitle}
               </h3>
               <button
                 className="btn-gold"
@@ -4601,37 +4519,14 @@ export default function Index() {
                     ?.scrollIntoView({ behavior: "smooth" })
                 }
               >
-                Request a Quote <Icon name="ArrowRight" size={13} />
+                {t.privateLabel.whyBuyersBtn} <Icon name="ArrowRight" size={13} />
               </button>
             </div>
             <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
-              {[
-                {
-                  icon: "Wheat",
-                  title: "Own Farmland",
-                  desc: "10,000+ ha — full control from seed to harvest",
-                },
-                {
-                  icon: "ShieldCheck",
-                  title: "Quality Control",
-                  desc: "In-house lab testing at every stage",
-                },
-                {
-                  icon: "ScanLine",
-                  title: "Full Traceability",
-                  desc: "Transparent, field-to-shipment supply chain",
-                },
-                {
-                  icon: "Leaf",
-                  title: "EU Organic Certified",
-                  desc: "Certified organic products for selected categories",
-                },
-                {
-                  icon: "Globe",
-                  title: "Export Experience",
-                  desc: "International markets, phytosanitary docs, FCL",
-                },
-              ].map((t, i) => (
+              {(t.privateLabel.whyBuyersItems as { title: string; desc: string }[]).map((wb, i) => {
+                const whyBuyersIcons = ["Wheat", "ShieldCheck", "ScanLine", "Leaf", "Globe"];
+                const t2 = { icon: whyBuyersIcons[i], title: wb.title, desc: wb.desc };
+                return (
                 <div
                   key={i}
                   style={{
@@ -4642,7 +4537,7 @@ export default function Index() {
                   }}
                 >
                   <Icon
-                    name={t.icon}
+                    name={t2.icon}
                     size={18}
                     style={{
                       color: "var(--gf-gold)",
@@ -4661,7 +4556,7 @@ export default function Index() {
                       marginBottom: 4,
                     }}
                   >
-                    {t.title}
+                    {t2.title}
                   </div>
                   <div
                     style={{
@@ -4671,10 +4566,10 @@ export default function Index() {
                       lineHeight: 1.4,
                     }}
                   >
-                    {t.desc}
+                    {t2.desc}
                   </div>
                 </div>
-              ))}
+              ); })}
             </div>
           </div>
 
@@ -4966,10 +4861,10 @@ export default function Index() {
                 marginBottom: 12,
               }}
             >
-              Request
+              {t.contact.requestHeading}
               <br />
               <span style={{ color: "var(--gf-gold)", fontStyle: "italic" }}>
-                Request a Quote
+                {t.contact.requestHeadingItalic}
               </span>
             </h2>
             <div
@@ -4989,8 +4884,7 @@ export default function Index() {
                 maxWidth: 420,
               }}
             >
-              Tell us about your needs and our export team will send you a
-              competitive offer <strong>within 24 hours.</strong>
+              {t.contact.requestSubtitle}
             </p>
           </div>
         </div>
@@ -5014,27 +4908,27 @@ export default function Index() {
             {[
               {
                 icon: "Phone",
-                label: "Phone / WhatsApp",
+                label: t.contact.contactPhoneLabel,
                 value: "+7 903 790 17 95",
-                sub: "Mon – Fri: 9:00 – 18:00 (MSK)",
+                sub: t.contact.contactPhoneHours,
                 href: "tel:+79037901795",
               },
               {
                 icon: "Mail",
-                label: "Email",
+                label: t.contact.contactEmailLabel,
                 value: "gavrilovfoods.export@gmail.com",
-                sub: "We reply within 24 hours",
+                sub: t.contact.contactEmailNote,
                 href: "mailto:gavrilovfoods.export@gmail.com",
               },
               {
                 icon: "MapPin",
-                label: "Origin",
-                value: "Russia | EU Export Ready",
-                sub: "Phytosanitary & export documentation available",
+                label: t.contact.contactOriginLabel,
+                value: t.contact.contactOriginValue,
+                sub: t.contact.contactOriginNote,
               },
               {
                 icon: "Globe",
-                label: "Current Export Markets",
+                label: t.contact.contactMarketsLabel,
                 value: null,
                 sub: null,
                 markets: true,
@@ -5090,30 +4984,21 @@ export default function Index() {
                         gap: 3,
                       }}
                     >
-                      <div
-                        style={{
-                          fontFamily: "Montserrat",
-                          fontSize: 13,
-                          color: "var(--gf-dark)",
-                          display: "flex",
-                          alignItems: "center",
-                          gap: 6,
-                        }}
-                      >
-                        🇪🇺 Europe
-                      </div>
-                      <div
-                        style={{
-                          fontFamily: "Montserrat",
-                          fontSize: 13,
-                          color: "var(--gf-dark)",
-                          display: "flex",
-                          alignItems: "center",
-                          gap: 6,
-                        }}
-                      >
-                        🇨🇳 China
-                      </div>
+                      {(t.contact.contactMarkets as string[]).map((market, mi) => (
+                        <div
+                          key={mi}
+                          style={{
+                            fontFamily: "Montserrat",
+                            fontSize: 13,
+                            color: "var(--gf-dark)",
+                            display: "flex",
+                            alignItems: "center",
+                            gap: 6,
+                          }}
+                        >
+                          {market}
+                        </div>
+                      ))}
                     </div>
                   ) : (
                     <>
@@ -5190,21 +5075,21 @@ export default function Index() {
                 style={{ display: "flex", flexDirection: "column", gap: 12 }}
               >
                 {[
-                  { label: "Name *", type: "text", placeholder: "Your name" },
+                  { label: t.contact.formName, type: "text", placeholder: "Your name" },
                   {
-                    label: "Email *",
+                    label: t.contact.formEmail,
                     type: "email",
                     placeholder: "your@email.com",
                   },
                   {
-                    label: "Phone / WhatsApp *",
+                    label: t.contact.formPhone,
                     type: "tel",
-                    placeholder: "+1 000 000 0000",
+                    placeholder: t.contact.formPhonePlaceholder,
                   },
                   {
-                    label: "Company *",
+                    label: t.contact.formCompany,
                     type: "text",
-                    placeholder: "Company name",
+                    placeholder: t.contact.formCompanyPlaceholder,
                   },
                 ].map((f, i) => (
                   <div key={i}>
@@ -5247,7 +5132,7 @@ export default function Index() {
               >
                 {[
                   {
-                    label: "Product of Interest *",
+                    label: t.contact.formProduct,
                     type: "select",
                     placeholder: "Select product",
                     opts: [
@@ -5262,7 +5147,7 @@ export default function Index() {
                     ],
                   },
                   {
-                    label: "Packaging Type *",
+                    label: t.contact.formPackaging,
                     type: "select",
                     placeholder: "Select packaging",
                     opts: [
@@ -5274,7 +5159,7 @@ export default function Index() {
                     ],
                   },
                   {
-                    label: "Estimated Volume *",
+                    label: t.contact.formVolume,
                     type: "select",
                     placeholder: "Select volume",
                     opts: [
@@ -5286,9 +5171,9 @@ export default function Index() {
                     ],
                   },
                   {
-                    label: "Destination Country *",
+                    label: t.contact.formDestination,
                     type: "text",
-                    placeholder: "e.g. Germany, UAE, Brazil",
+                    placeholder: t.contact.formDestinationPlaceholder,
                   },
                 ].map((f, i) => (
                   <div key={i}>
@@ -5373,10 +5258,10 @@ export default function Index() {
                       marginBottom: 5,
                     }}
                   >
-                    Message *
+                    {t.contact.formMessage}
                   </label>
                   <textarea
-                    placeholder="Volume, packaging, destination country, any specific requirements..."
+                    placeholder={t.contact.formMessagePlaceholder}
                     rows={7}
                     style={{
                       width: "100%",
@@ -5402,15 +5287,13 @@ export default function Index() {
                     textAlign: "center",
                   }}
                 >
-                  {[
-                    { icon: "ShieldCheck", label: "Quality You Can Trust" },
-                    { icon: "Truck", label: "On-Time Delivery" },
-                    { icon: "DollarSign", label: "Competitive Prices" },
-                    { icon: "Handshake", label: "Long-term Partnership" },
-                  ].map((t, i) => (
+                  {(t.contact.trustIcons as string[]).map((label, i) => {
+                    const trustIconNames = ["ShieldCheck", "Truck", "DollarSign", "Handshake"];
+                    const ti = { icon: trustIconNames[i], label };
+                    return (
                     <div key={i}>
                       <Icon
-                        name={t.icon}
+                        name={ti.icon}
                         size={22}
                         style={{
                           color: "rgba(255,255,255,0.5)",
@@ -5426,10 +5309,10 @@ export default function Index() {
                           lineHeight: 1.3,
                         }}
                       >
-                        {t.label}
+                        {ti.label}
                       </div>
                     </div>
-                  ))}
+                  ); })}
                 </div>
               </div>
             </div>
@@ -5521,11 +5404,11 @@ export default function Index() {
                 disabled={!agreed}
                 title={
                   !agreed
-                    ? "Please accept the Privacy Policy and Terms to continue"
+                    ? t.contact.formPrivacyNote
                     : ""
                 }
               >
-                Request Export Offer <Icon name="ArrowRight" size={16} />
+                {t.contact.formSubmitBtn} <Icon name="ArrowRight" size={16} />
               </button>
               <a
                 href={agreed ? "https://wa.me/79037901795" : undefined}
@@ -5556,7 +5439,7 @@ export default function Index() {
                   size={18}
                   style={{ color: "#25D366" }}
                 />
-                WhatsApp Export Manager
+                {t.contact.whatsappExport}
               </a>
             </div>
           </div>
@@ -5571,34 +5454,10 @@ export default function Index() {
           }}
         >
           <div className="max-w-7xl mx-auto px-4 sm:px-6 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5">
-            {[
-              {
-                img: "https://cdn.poehali.dev/files/e0686aa0-2df7-454a-b318-5e843ea52142.png",
-                isImg: true,
-                title: "EU Organic Certified",
-                desc: "Certified organic products for global markets.",
-              },
-              {
-                icon: "Package",
-                title: "MOQ from 22 MT",
-                desc: "Flexible minimum order quantity from 1 MT.",
-              },
-              {
-                icon: "Tag",
-                title: "Private Label",
-                desc: "Custom packaging and private label solutions.",
-              },
-              {
-                icon: "FileText",
-                title: "Export Support",
-                desc: "Full documentation and logistics support at every step.",
-              },
-              {
-                icon: "Clock",
-                title: "Fast Response",
-                desc: "We reply within 24 hours on business days.",
-              },
-            ].map((b, i) => (
+            {(t.contact.featureBadges as { title: string; desc: string }[]).map((badge, i) => {
+              const badgeIcons = ["", "Package", "Tag", "FileText", "Clock"];
+              const badgeImg = "https://cdn.poehali.dev/files/e0686aa0-2df7-454a-b318-5e843ea52142.png";
+              return (
               <div
                 key={i}
                 style={{
@@ -5610,18 +5469,9 @@ export default function Index() {
                   gap: 10,
                 }}
               >
-                {b.isImg ? (
+                {i === 0 ? (
                   <img
-                    src={
-                      (
-                        b as {
-                          img: string;
-                          isImg: boolean;
-                          title: string;
-                          desc: string;
-                        }
-                      ).img
-                    }
+                    src={badgeImg}
                     alt="EU Organic"
                     style={{
                       width: 32,
@@ -5633,9 +5483,7 @@ export default function Index() {
                   />
                 ) : (
                   <Icon
-                    name={
-                      (b as { icon: string; title: string; desc: string }).icon
-                    }
+                    name={badgeIcons[i]}
                     size={24}
                     style={{
                       color: "var(--gf-dark)",
@@ -5656,7 +5504,7 @@ export default function Index() {
                       marginBottom: 3,
                     }}
                   >
-                    {b.title}
+                    {badge.title}
                   </div>
                   <div
                     style={{
@@ -5666,11 +5514,11 @@ export default function Index() {
                       lineHeight: 1.4,
                     }}
                   >
-                    {b.desc}
+                    {badge.desc}
                   </div>
                 </div>
               </div>
-            ))}
+              ); })}
           </div>
         </div>
 
@@ -5740,11 +5588,11 @@ export default function Index() {
                   marginBottom: 16,
                 }}
               >
-                Farm-to-export grain supplier
+                {t.footer.brandTagline}
                 <br />
-                Organic grains, pulses & oilseeds
+                {(t.footer.brandFeatures as string[])[0]}
                 <br />
-                EU-certified production
+                {(t.footer.brandFeatures as string[])[1]}
               </div>
               <div
                 style={{
@@ -5755,7 +5603,7 @@ export default function Index() {
                   marginBottom: 4,
                 }}
               >
-                Smolensk Region, Russia
+                {t.footer.brandLocation}
               </div>
               <div
                 style={{
@@ -5765,9 +5613,9 @@ export default function Index() {
                   marginBottom: 20,
                 }}
               >
-                Working with importers worldwide
+                {t.footer.brandMission.split('\n')[0]}
                 <br />
-                to deliver quality and value.
+                {t.footer.brandMission.split('\n')[1]}
               </div>
               {/* Social icons */}
               <div style={{ display: "flex", gap: 10 }}>
@@ -5825,21 +5673,12 @@ export default function Index() {
                   marginBottom: 16,
                 }}
               >
-                Quick Links
+                {t.footer.quickLinks}
               </div>
               <div
                 style={{ display: "flex", flexDirection: "column", gap: 10 }}
               >
-                {[
-                  "About Us",
-                  "Our Products",
-                  "Organic",
-                  "Export",
-                  "Certifications",
-                  "Private Label",
-                  "Gallery",
-                  "Contact",
-                ].map((l, i) => {
+                {(t.footer.quickLinksItems as string[]).map((l, i) => {
                   const hrefs = [
                     "#about",
                     "#products",
@@ -5892,51 +5731,37 @@ export default function Index() {
                   marginBottom: 16,
                 }}
               >
-                Export Markets
+                {t.footer.exportMarketsLabel}
               </div>
               <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
-                <div
-                  style={{
-                    display: "flex",
-                    alignItems: "center",
-                    gap: 10,
-                    padding: "8px 12px",
-                    background: "rgba(255,255,255,0.05)",
-                    borderRadius: 6,
-                  }}
-                >
-                  <span style={{ fontSize: 18 }}>🇪🇺</span>
-                  <span
+                {(t.footer.exportMarketsItems as string[]).map((market, mi) => {
+                  const flags = ["🇪🇺", "🇨🇳"];
+                  const names = ["Europe", "China"];
+                  return (
+                  <div
+                    key={mi}
                     style={{
-                      fontFamily: "Montserrat",
-                      fontSize: 13,
-                      color: "#fff",
+                      display: "flex",
+                      alignItems: "center",
+                      gap: 10,
+                      padding: "8px 12px",
+                      background: "rgba(255,255,255,0.05)",
+                      borderRadius: 6,
                     }}
                   >
-                    Europe
-                  </span>
-                </div>
-                <div
-                  style={{
-                    display: "flex",
-                    alignItems: "center",
-                    gap: 10,
-                    padding: "8px 12px",
-                    background: "rgba(255,255,255,0.05)",
-                    borderRadius: 6,
-                  }}
-                >
-                  <span style={{ fontSize: 18 }}>🇨🇳</span>
-                  <span
-                    style={{
-                      fontFamily: "Montserrat",
-                      fontSize: 13,
-                      color: "#fff",
-                    }}
-                  >
-                    China
-                  </span>
-                </div>
+                    <span style={{ fontSize: 18 }}>{flags[mi]}</span>
+                    <span
+                      style={{
+                        fontFamily: "Montserrat",
+                        fontSize: 13,
+                        color: "#fff",
+                      }}
+                    >
+                      {names[mi]}
+                    </span>
+                  </div>
+                  );
+                })}
               </div>
             </div>
 
@@ -5953,7 +5778,7 @@ export default function Index() {
                   marginBottom: 16,
                 }}
               >
-                Contact
+                {t.footer.contactLabel}
               </div>
               <div
                 style={{
@@ -6049,7 +5874,7 @@ export default function Index() {
                 }}
               >
                 <Icon name="MessageCircle" size={16} />
-                WhatsApp Export Manager
+                {t.footer.whatsappExport}
               </a>
               <a
                 href="/docs/catalog.pdf"
@@ -6072,7 +5897,7 @@ export default function Index() {
                 }}
               >
                 <Icon name="Download" size={15} />
-                Download Catalog PDF
+                {t.footer.downloadCatalog}
               </a>
             </div>
 
