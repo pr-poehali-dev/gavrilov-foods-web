@@ -18,7 +18,8 @@ export const translations = {
       h1a: "EU Certified",
       h1b: "Organic & Conventional",
       h1c: "Grain Supplier",
-      subtitle: "Reliable Russian grains, pulses & oilseeds for international markets.",
+      subtitle:
+        "Reliable Russian grains, pulses & oilseeds for international markets.",
       checks: [
         "EU Organic Certified",
         "Direct from Producer",
@@ -99,10 +100,22 @@ export const translations = {
       p: "We control every step — from farming and processing to storage and delivery. This ensures consistent quality, traceability and reliability for our partners worldwide.",
       btn: "Request a Quote",
       tiles: [
-        { label: "Our Fields", desc: "Carefully managed for quality and yield" },
-        { label: "Processing", desc: "Modern equipment for cleaning and sorting" },
-        { label: "Storage", desc: "Controlled storage capacity for stable supply" },
-        { label: "Shipment", desc: "Export logistics & container shipments worldwide" },
+        {
+          label: "Our Fields",
+          desc: "Carefully managed for quality and yield",
+        },
+        {
+          label: "Processing",
+          desc: "Modern equipment for cleaning and sorting",
+        },
+        {
+          label: "Storage",
+          desc: "Controlled storage capacity for stable supply",
+        },
+        {
+          label: "Shipment",
+          desc: "Export logistics & container shipments worldwide",
+        },
       ],
     },
     catalogCta: {
@@ -131,8 +144,14 @@ export const translations = {
         WHEAT: "WHEAT",
       },
       features: [
-        { title: "Premium Quality", desc: "Strict quality control at every stage" },
-        { title: "Flexible Packaging", desc: "Retail packs, bags, big bags and bulk" },
+        {
+          title: "Premium Quality",
+          desc: "Strict quality control at every stage",
+        },
+        {
+          title: "Flexible Packaging",
+          desc: "Retail packs, bags, big bags and bulk",
+        },
         { title: "Private Label", desc: "We produce under your brand" },
         { title: "EU Organic", desc: "Certified organic range available" },
         { title: "Fast Response", desc: "Reply within 24 hours" },
@@ -160,10 +179,12 @@ export const translations = {
       ],
       organicRange: "Organic Range",
       conventionalRange: "Conventional Range",
-      conventionalText: "Stable export volumes of conventional grains, pulses and oilseeds. Standard packaging 25–50kg bags and big bags. Export documentation, phytosanitary certificates, and FOB/DDP terms on request.",
+      conventionalText:
+        "Stable export volumes of conventional grains, pulses and oilseeds. Standard packaging 25–50kg bags and big bags. Export documentation, phytosanitary certificates, and FOB/DDP terms on request.",
       viewProducts: "View All Products",
       supplyChainLabel: "FULL SUPPLY CHAIN CONTROL",
-      supplyChainSub: "Full control of the supply chain ensures consistent quality, traceability and reliability.",
+      supplyChainSub:
+        "Full control of the supply chain ensures consistent quality, traceability and reliability.",
       chainItems: [
         { title: "10,000 + ha", desc: "own farmland full control" },
         { title: "Direct Farming", desc: "cultivated and harvested" },
@@ -179,7 +200,8 @@ export const translations = {
         "GLOBAL DELIVERY",
       ],
       documents: "Documents",
-      documentsSub: "Get documentation, specifications and availability for organic products.",
+      documentsSub:
+        "Get documentation, specifications and availability for organic products.",
       certBtn: "Organic Certificate",
       specBtn: "Product Specification",
     },
@@ -188,32 +210,80 @@ export const translations = {
       h2: "FROM FIELD\nTO EXPORT",
       p: "From seed to container — we manage the full cycle in-house: cultivation, post-harvest storage, processing, packaging, and certified export to international markets.",
       pillars: [
-        { title: "Advanced Cultivation", desc: "Precision farming, soil monitoring, and sustainable crop management" },
-        { title: "Export Compliance", desc: "Phytosanitary certification, pesticide testing, and market-specific documentation" },
-        { title: "Processing & Packaging", desc: "Sorting, cleaning, and retail-ready packing to extend shelf life" },
-        { title: "Container Shipments", desc: "Refrigerated container logistics, route planning, and on-time delivery" },
+        {
+          title: "Advanced Cultivation",
+          desc: "Precision farming, soil monitoring, and sustainable crop management",
+        },
+        {
+          title: "Export Compliance",
+          desc: "Phytosanitary certification, pesticide testing, and market-specific documentation",
+        },
+        {
+          title: "Processing & Packaging",
+          desc: "Sorting, cleaning, and retail-ready packing to extend shelf life",
+        },
+        {
+          title: "Container Shipments",
+          desc: "Refrigerated container logistics, route planning, and on-time delivery",
+        },
       ],
       activitiesLabel: "Our Activities",
       steps: [
-        { num: "01", title: "Field", desc: "Precision field management with soil monitoring and crop rotation across our own land." },
-        { num: "02", title: "Harvesting", desc: "Timely harvest using GPS-guided combine machinery to minimise field losses." },
-        { num: "03", title: "Processing", desc: "Multi-stage cleaning, de-hulling, and optical sorting. Delivery on FOB / DDP / FCA / DAP terms." },
-        { num: "04", title: "Storage", desc: "Up to 10,000 MT capacity in temperature-controlled, ventilated grain facilities." },
-        { num: "05", title: "Packaging", desc: "Retail 200g–1kg, industrial 25–50kg bags, and big bags up to 1,000kg." },
-        { num: "06", title: "Export", desc: "Full phytosanitary docs, refrigerated container loading, and DDP/FOB terms." },
+        {
+          num: "01",
+          title: "Field",
+          desc: "Precision field management with soil monitoring and crop rotation across our own land.",
+        },
+        {
+          num: "02",
+          title: "Harvesting",
+          desc: "Timely harvest using GPS-guided combine machinery to minimise field losses.",
+        },
+        {
+          num: "03",
+          title: "Processing",
+          desc: "Multi-stage cleaning, de-hulling, and optical sorting. Delivery on FOB / DDP / FCA / DAP terms.",
+        },
+        {
+          num: "04",
+          title: "Storage",
+          desc: "Up to 10,000 MT capacity in temperature-controlled, ventilated grain facilities.",
+        },
+        {
+          num: "05",
+          title: "Packaging",
+          desc: "Retail 200g–1kg, industrial 25–50kg bags, and big bags up to 1,000kg.",
+        },
+        {
+          num: "06",
+          title: "Export",
+          desc: "Full phytosanitary docs, refrigerated container loading, and DDP/FOB terms.",
+        },
       ],
       packagingLabel: "Packaging Solutions",
       packagingH3: "Quality Packaging.\nProduct Protection.",
-      packagingP: "We use modern equipment and high-quality materials to ensure safe packaging, accurate weight and long shelf life.",
-      packagingFeatures: ["High Accuracy", "Product Protection", "Quality Control"],
+      packagingP:
+        "We use modern equipment and high-quality materials to ensure safe packaging, accurate weight and long shelf life.",
+      packagingFeatures: [
+        "High Accuracy",
+        "Product Protection",
+        "Quality Control",
+      ],
       packagingRange: "Packaging Range",
       packagingRangeSub: "Retail, wholesale and food service",
       packagingBtn: "Request Packaging Options",
       packagingFormatsLabel: "Packaging Formats",
-      packagingFormatsSub: "A wide range of packaging options to meet your market needs.",
+      packagingFormatsSub:
+        "A wide range of packaging options to meet your market needs.",
       packagingNote: "Other weights and formats are available upon request.",
       whyUs: "Why Partners Choose Us",
-      whyItems: ["Organic Certified", "Reliable Supply", "Flexible Packaging", "Global Delivery", "Dedicated Support"],
+      whyItems: [
+        "Organic Certified",
+        "Reliable Supply",
+        "Flexible Packaging",
+        "Global Delivery",
+        "Dedicated Support",
+      ],
       trustBar: [
         "Organic & Conventional Supply",
         "EU Organic Certified",
@@ -236,7 +306,8 @@ export const translations = {
       organicRange: "Organic Range",
       usdaTitle: "USDA Organic / NOP Certification",
       usdaBadge: "Expected July 2026",
-      usdaText: "We are currently completing the USDA NOP certification process. Certification is expected by July 2026, enabling us to supply USDA Organic–labelled products to the US market.",
+      usdaText:
+        "We are currently completing the USDA NOP certification process. Certification is expected by July 2026, enabling us to supply USDA Organic–labelled products to the US market.",
       fieldLabel: "From Field to Your Business",
       fieldTiles: [
         "Carefully selected organic fields",
@@ -252,21 +323,53 @@ export const translations = {
       h2b: "Our Production.",
       p: "We offer complete private label solutions — from product selection and packaging design to certified production and export-ready delivery.",
       features: [
-        { title: "Retail Packaging", size: "250g – 5kg", desc: "Custom design and printing options for your brand." },
-        { title: "Big Bags", size: "500 – 1,000kg", desc: "Industrial bulk packaging for large volume supply." },
-        { title: "Container Shipments", size: "20ft / 40ft", desc: "Full container loading (FCL) for safe and efficient global delivery." },
-        { title: "Private Label", size: "Concept → Shelf-ready", desc: "From product selection to ready-to-sell packaging." },
+        {
+          title: "Retail Packaging",
+          size: "250g – 5kg",
+          desc: "Custom design and printing options for your brand.",
+        },
+        {
+          title: "Big Bags",
+          size: "500 – 1,000kg",
+          desc: "Industrial bulk packaging for large volume supply.",
+        },
+        {
+          title: "Container Shipments",
+          size: "20ft / 40ft",
+          desc: "Full container loading (FCL) for safe and efficient global delivery.",
+        },
+        {
+          title: "Private Label",
+          size: "Concept → Shelf-ready",
+          desc: "From product selection to ready-to-sell packaging.",
+        },
       ],
-      steps: ["Product Selection", "Packaging & Design", "Certification & Labeling", "Production & QC", "Container Shipment"],
+      steps: [
+        "Product Selection",
+        "Packaging & Design",
+        "Certification & Labeling",
+        "Production & QC",
+        "Container Shipment",
+      ],
       moqRow: [
-        { title: "MOQ from 22 MT", desc: "Flexible minimum order for any market." },
-        { title: "Private Label Ready", desc: "Custom packaging 250g – 1,000kg big bags." },
-        { title: "EU Organic Option", desc: "Certified organic range on request." },
+        {
+          title: "MOQ from 22 MT",
+          desc: "Flexible minimum order for any market.",
+        },
+        {
+          title: "Private Label Ready",
+          desc: "Custom packaging 250g – 1,000kg big bags.",
+        },
+        {
+          title: "EU Organic Option",
+          desc: "Certified organic range on request.",
+        },
         { title: "Reply in 24h", desc: "Dedicated export manager." },
         { title: "Global Delivery", desc: "FCL worldwide, FOB/DDP/FCA/DAP." },
       ],
       ctaTitle: "Get Product Specifications & Pricing",
-      ctaSub: "Tell us about your needs and we will prepare a custom solution for your business.",
+      ctaSub:
+        "Tell us about your needs and we will prepare a custom solution for your business.",
       ctaBtn: "Get Your Custom Offer",
     },
     gallery: {
@@ -281,16 +384,37 @@ export const translations = {
         { val: "Export-Ready", label: "Packaging & Logistics" },
       ],
       steps: [
-        { title: "Own Farmland", desc: "Fertile fields and sustainable farming practices." },
+        {
+          title: "Own Farmland",
+          desc: "Fertile fields and sustainable farming practices.",
+        },
         { title: "Harvesting", desc: "Modern machinery and experienced team." },
-        { title: "Cleaning & Processing", desc: "Advanced cleaning, sorting and product processing." },
-        { title: "Storage & Export Packaging", desc: "Safe storage and strong export packaging." },
-        { title: "Container Loading & Export", desc: "Careful loading and on-time delivery to global markets." },
+        {
+          title: "Cleaning & Processing",
+          desc: "Advanced cleaning, sorting and product processing.",
+        },
+        {
+          title: "Storage & Export Packaging",
+          desc: "Safe storage and strong export packaging.",
+        },
+        {
+          title: "Container Loading & Export",
+          desc: "Careful loading and on-time delivery to global markets.",
+        },
       ],
       trustItems: [
-        { title: "MOQ from 22 MT", desc: "Flexible minimum order for any market." },
-        { title: "Private Label Ready", desc: "Custom packaging 250g – 1,000kg big bags." },
-        { title: "EU Organic Option", desc: "Certified organic range on request." },
+        {
+          title: "MOQ from 22 MT",
+          desc: "Flexible minimum order for any market.",
+        },
+        {
+          title: "Private Label Ready",
+          desc: "Custom packaging 250g – 1,000kg big bags.",
+        },
+        {
+          title: "EU Organic Option",
+          desc: "Certified organic range on request.",
+        },
         { title: "Reply in 24h", desc: "Dedicated export manager." },
         { title: "Global Delivery", desc: "FCL worldwide, FOB/DDP/FCA/DAP." },
       ],
@@ -300,13 +424,29 @@ export const translations = {
       h2a: "Meet Us at ANTAD Expo 2026",
       h2b: "— Mexico",
       p: "We are actively meeting importers, distributors, wholesalers and retail chains during ANTAD Expo 2026.",
-      items: ["Organic products", "Conventional grains", "Private label", "Bulk & retail supply"],
+      items: [
+        "Organic products",
+        "Conventional grains",
+        "Private label",
+        "Bulk & retail supply",
+      ],
       ctaBtn: "Schedule Meeting at ANTAD",
       discuss: "Let's discuss",
-      discussItems: ["Organic Supply", "Conventional Grains", "Private Label", "Bulk & Retail", "Export Logistics"],
+      discussItems: [
+        "Organic Supply",
+        "Conventional Grains",
+        "Private Label",
+        "Bulk & Retail",
+        "Export Logistics",
+      ],
       popupTitle: "Meet Us at ANTAD Expo 2026",
       popupText: "We are available for meetings with:",
-      popupItems: ["Retail chains", "Importers", "Distributors", "Private Label buyers"],
+      popupItems: [
+        "Retail chains",
+        "Importers",
+        "Distributors",
+        "Private Label buyers",
+      ],
       popupBtn: "Schedule Meeting",
     },
     contact: {
@@ -331,7 +471,8 @@ export const translations = {
       whatsappBtn: "Write on WhatsApp",
     },
     footer: {
-      tagline: "Premium grain export from Russia.\nEU certified. Reliable. Direct from producer.",
+      tagline:
+        "Premium grain export from Russia.\nEU certified. Reliable. Direct from producer.",
       company: "Company",
       links: ["About", "Products", "Organic", "Certifications", "Gallery"],
       export: "Export",
@@ -355,9 +496,10 @@ export const translations = {
     hero: {
       badge: "От поля — к экспорту",
       h1a: "Сертифицированный ЕС",
-      h1b: "Органический и традиционный",
+      h1b: "Органический традиционный",
       h1c: "поставщик зерна",
-      subtitle: "Надёжные российские зерновые, бобовые и масличные культуры для международных рынков.",
+      subtitle:
+        "Надёжные российские зерновые, бобовые и масличные культуры для международных рынков.",
       checks: [
         "Сертификат органик ЕС",
         "Прямо от производителя",
@@ -438,10 +580,22 @@ export const translations = {
       p: "Мы контролируем каждый этап — от выращивания и переработки до хранения и доставки. Это обеспечивает стабильное качество, прослеживаемость и надёжность для наших партнёров по всему миру.",
       btn: "Запросить цену",
       tiles: [
-        { label: "Наши поля", desc: "Бережное управление для качества и урожайности" },
-        { label: "Переработка", desc: "Современное оборудование для очистки и сортировки" },
-        { label: "Хранение", desc: "Контролируемый склад для стабильных поставок" },
-        { label: "Отгрузка", desc: "Экспортная логистика и контейнерные отправки по всему миру" },
+        {
+          label: "Наши поля",
+          desc: "Бережное управление для качества и урожайности",
+        },
+        {
+          label: "Переработка",
+          desc: "Современное оборудование для очистки и сортировки",
+        },
+        {
+          label: "Хранение",
+          desc: "Контролируемый склад для стабильных поставок",
+        },
+        {
+          label: "Отгрузка",
+          desc: "Экспортная логистика и контейнерные отправки по всему миру",
+        },
       ],
     },
     catalogCta: {
@@ -470,12 +624,21 @@ export const translations = {
         WHEAT: "ПШЕНИЦА",
       },
       features: [
-        { title: "Высокое качество", desc: "Строгий контроль качества на каждом этапе" },
+        {
+          title: "Высокое качество",
+          desc: "Строгий контроль качества на каждом этапе",
+        },
         { title: "Гибкая упаковка", desc: "Розница, мешки, биг-бэги и навал" },
         { title: "Частная марка", desc: "Производим под вашим брендом" },
-        { title: "Органик ЕС", desc: "Сертифицированный органический ассортимент" },
+        {
+          title: "Органик ЕС",
+          desc: "Сертифицированный органический ассортимент",
+        },
         { title: "Быстрый ответ", desc: "Ответ в течение 24 часов" },
-        { title: "Доставка по всему миру", desc: "Полные контейнеры (FCL) по всему миру" },
+        {
+          title: "Доставка по всему миру",
+          desc: "Полные контейнеры (FCL) по всему миру",
+        },
       ],
       supplyChain: {
         label: "От поля до отгрузки",
@@ -499,16 +662,24 @@ export const translations = {
       ],
       organicRange: "Органический ассортимент",
       conventionalRange: "Традиционный ассортимент",
-      conventionalText: "Стабильные объёмы экспорта традиционных зерновых, бобовых и масличных. Стандартная упаковка — мешки 25–50 кг и биг-бэги. Экспортная документация, фитосанитарные сертификаты, условия FOB/DDP по запросу.",
+      conventionalText:
+        "Стабильные объёмы экспорта традиционных зерновых, бобовых и масличных. Стандартная упаковка — мешки 25–50 кг и биг-бэги. Экспортная документация, фитосанитарные сертификаты, условия FOB/DDP по запросу.",
       viewProducts: "Все продукты",
       supplyChainLabel: "ПОЛНЫЙ КОНТРОЛЬ ЦЕПОЧКИ ПОСТАВОК",
-      supplyChainSub: "Полный контроль цепочки поставок обеспечивает стабильное качество, прослеживаемость и надёжность.",
+      supplyChainSub:
+        "Полный контроль цепочки поставок обеспечивает стабильное качество, прослеживаемость и надёжность.",
       chainItems: [
         { title: "10 000+ га", desc: "собственная пашня, полный контроль" },
-        { title: "Прямое земледелие", desc: "выращено и убрано собственными силами" },
+        {
+          title: "Прямое земледелие",
+          desc: "выращено и убрано собственными силами",
+        },
         { title: "Современная", desc: "переработка" },
         { title: "Строгий контроль", desc: "качества на каждом этапе" },
-        { title: "Надёжная", desc: "экспортная логистика и контейнерные отправки" },
+        {
+          title: "Надёжная",
+          desc: "экспортная логистика и контейнерные отправки",
+        },
       ],
       chainTiles: [
         "ПАШНЯ",
@@ -518,7 +689,8 @@ export const translations = {
         "ДОСТАВКА ПО ВСЕМУ МИРУ",
       ],
       documents: "Документы",
-      documentsSub: "Получите документацию, характеристики и наличие органических продуктов.",
+      documentsSub:
+        "Получите документацию, характеристики и наличие органических продуктов.",
       certBtn: "Сертификат органик",
       specBtn: "Спецификация продукции",
     },
@@ -527,32 +699,80 @@ export const translations = {
       h2: "ОТ ПОЛЯ —\nК ЭКСПОРТУ",
       p: "От семени до контейнера — мы управляем полным циклом собственными силами: выращивание, послеуборочное хранение, переработка, упаковка и сертифицированный экспорт на международные рынки.",
       pillars: [
-        { title: "Передовое земледелие", desc: "Точное земледелие, мониторинг почвы и устойчивое управление посевами" },
-        { title: "Соответствие экспортным требованиям", desc: "Фитосанитарная сертификация, тестирование на пестициды и рыночная документация" },
-        { title: "Переработка и упаковка", desc: "Сортировка, очистка и готовая к продаже упаковка для увеличения срока хранения" },
-        { title: "Контейнерные отправки", desc: "Рефрижераторная контейнерная логистика, планирование маршрутов и своевременная доставка" },
+        {
+          title: "Передовое земледелие",
+          desc: "Точное земледелие, мониторинг почвы и устойчивое управление посевами",
+        },
+        {
+          title: "Соответствие экспортным требованиям",
+          desc: "Фитосанитарная сертификация, тестирование на пестициды и рыночная документация",
+        },
+        {
+          title: "Переработка и упаковка",
+          desc: "Сортировка, очистка и готовая к продаже упаковка для увеличения срока хранения",
+        },
+        {
+          title: "Контейнерные отправки",
+          desc: "Рефрижераторная контейнерная логистика, планирование маршрутов и своевременная доставка",
+        },
       ],
       activitiesLabel: "Наша деятельность",
       steps: [
-        { num: "01", title: "Поле", desc: "Точное управление полем с мониторингом почвы и севооборотом на собственных землях." },
-        { num: "02", title: "Уборка", desc: "Своевременная уборка с помощью GPS-комбайнов для минимизации потерь." },
-        { num: "03", title: "Переработка", desc: "Многоступенчатая очистка, шелушение и оптическая сортировка. Поставка на условиях FOB / DDP / FCA / DAP." },
-        { num: "04", title: "Хранение", desc: "До 10 000 т ёмкости в вентилируемых зернохранилищах с контролем температуры." },
-        { num: "05", title: "Упаковка", desc: "Розница 200 г–1 кг, промышленные мешки 25–50 кг и биг-бэги до 1 000 кг." },
-        { num: "06", title: "Экспорт", desc: "Полный пакет фитосанитарных документов, загрузка рефконтейнеров, условия DDP/FOB." },
+        {
+          num: "01",
+          title: "Поле",
+          desc: "Точное управление полем с мониторингом почвы и севооборотом на собственных землях.",
+        },
+        {
+          num: "02",
+          title: "Уборка",
+          desc: "Своевременная уборка с помощью GPS-комбайнов для минимизации потерь.",
+        },
+        {
+          num: "03",
+          title: "Переработка",
+          desc: "Многоступенчатая очистка, шелушение и оптическая сортировка. Поставка на условиях FOB / DDP / FCA / DAP.",
+        },
+        {
+          num: "04",
+          title: "Хранение",
+          desc: "До 10 000 т ёмкости в вентилируемых зернохранилищах с контролем температуры.",
+        },
+        {
+          num: "05",
+          title: "Упаковка",
+          desc: "Розница 200 г–1 кг, промышленные мешки 25–50 кг и биг-бэги до 1 000 кг.",
+        },
+        {
+          num: "06",
+          title: "Экспорт",
+          desc: "Полный пакет фитосанитарных документов, загрузка рефконтейнеров, условия DDP/FOB.",
+        },
       ],
       packagingLabel: "Решения по упаковке",
       packagingH3: "Качественная упаковка.\nЗащита продукта.",
-      packagingP: "Мы используем современное оборудование и высококачественные материалы для обеспечения безопасной упаковки, точного веса и длительного срока хранения.",
-      packagingFeatures: ["Высокая точность", "Защита продукта", "Контроль качества"],
+      packagingP:
+        "Мы используем современное оборудование и высококачественные материалы для обеспечения безопасной упаковки, точного веса и длительного срока хранения.",
+      packagingFeatures: [
+        "Высокая точность",
+        "Защита продукта",
+        "Контроль качества",
+      ],
       packagingRange: "Диапазон упаковки",
       packagingRangeSub: "Розница, опт и HoReCa",
       packagingBtn: "Запросить варианты упаковки",
       packagingFormatsLabel: "Форматы упаковки",
-      packagingFormatsSub: "Широкий спектр вариантов упаковки для любых рынков.",
+      packagingFormatsSub:
+        "Широкий спектр вариантов упаковки для любых рынков.",
       packagingNote: "Другие веса и форматы доступны по запросу.",
       whyUs: "Почему партнёры выбирают нас",
-      whyItems: ["Органическая сертификация", "Надёжные поставки", "Гибкая упаковка", "Глобальная доставка", "Персональная поддержка"],
+      whyItems: [
+        "Органическая сертификация",
+        "Надёжные поставки",
+        "Гибкая упаковка",
+        "Глобальная доставка",
+        "Персональная поддержка",
+      ],
       trustBar: [
         "Органик и традиционные поставки",
         "Сертификат органик ЕС",
@@ -575,7 +795,8 @@ export const translations = {
       organicRange: "Органический ассортимент",
       usdaTitle: "Сертификация USDA Organic / NOP",
       usdaBadge: "Ожидается в июле 2026",
-      usdaText: "В настоящее время мы завершаем процесс сертификации USDA NOP. Сертификация ожидается в июле 2026 года, что позволит нам поставлять продукты с маркировкой USDA Organic на рынок США.",
+      usdaText:
+        "В настоящее время мы завершаем процесс сертификации USDA NOP. Сертификация ожидается в июле 2026 года, что позволит нам поставлять продукты с маркировкой USDA Organic на рынок США.",
       fieldLabel: "От поля — к вашему бизнесу",
       fieldTiles: [
         "Тщательно отобранные органические поля",
@@ -591,21 +812,56 @@ export const translations = {
       h2b: "Наше производство.",
       p: "Мы предлагаем полные решения для частной марки — от выбора продукта и разработки упаковки до сертифицированного производства и доставки, готовой к экспорту.",
       features: [
-        { title: "Розничная упаковка", size: "250 г – 5 кг", desc: "Индивидуальный дизайн и варианты печати для вашего бренда." },
-        { title: "Биг-бэги", size: "500 – 1 000 кг", desc: "Промышленная оптовая упаковка для больших объёмов поставок." },
-        { title: "Контейнерные отправки", size: "20 / 40 фут", desc: "Полная контейнерная загрузка (FCL) для безопасной и эффективной глобальной доставки." },
-        { title: "Частная марка", size: "Концепция → Готово к продаже", desc: "От выбора продукта до упаковки, готовой к продаже." },
+        {
+          title: "Розничная упаковка",
+          size: "250 г – 5 кг",
+          desc: "Индивидуальный дизайн и варианты печати для вашего бренда.",
+        },
+        {
+          title: "Биг-бэги",
+          size: "500 – 1 000 кг",
+          desc: "Промышленная оптовая упаковка для больших объёмов поставок.",
+        },
+        {
+          title: "Контейнерные отправки",
+          size: "20 / 40 фут",
+          desc: "Полная контейнерная загрузка (FCL) для безопасной и эффективной глобальной доставки.",
+        },
+        {
+          title: "Частная марка",
+          size: "Концепция → Готово к продаже",
+          desc: "От выбора продукта до упаковки, готовой к продаже.",
+        },
       ],
-      steps: ["Выбор продукта", "Упаковка и дизайн", "Сертификация и маркировка", "Производство и контроль качества", "Контейнерная отправка"],
+      steps: [
+        "Выбор продукта",
+        "Упаковка и дизайн",
+        "Сертификация и маркировка",
+        "Производство и контроль качества",
+        "Контейнерная отправка",
+      ],
       moqRow: [
-        { title: "МОК от 22 т", desc: "Гибкий минимальный заказ для любого рынка." },
-        { title: "Готово для частной марки", desc: "Упаковка на заказ 250 г – 1 000 кг биг-бэги." },
-        { title: "Вариант органик ЕС", desc: "Сертифицированный органический ассортимент по запросу." },
+        {
+          title: "МОК от 22 т",
+          desc: "Гибкий минимальный заказ для любого рынка.",
+        },
+        {
+          title: "Готово для частной марки",
+          desc: "Упаковка на заказ 250 г – 1 000 кг биг-бэги.",
+        },
+        {
+          title: "Вариант органик ЕС",
+          desc: "Сертифицированный органический ассортимент по запросу.",
+        },
         { title: "Ответ за 24 ч", desc: "Выделенный менеджер по экспорту." },
-        { title: "Глобальная доставка", desc: "FCL по всему миру, FOB/DDP/FCA/DAP." },
+        {
+          title: "Глобальная доставка",
+          desc: "FCL по всему миру, FOB/DDP/FCA/DAP.",
+        },
       ],
       ctaTitle: "Получить спецификации и цены",
-      ctaSub: "Расскажите нам о ваших потребностях, и мы подготовим индивидуальное решение для вашего бизнеса.",
+      ctaSub:
+        "Расскажите нам о ваших потребностях, и мы подготовим индивидуальное решение для вашего бизнеса.",
       ctaBtn: "Получить индивидуальное предложение",
     },
     gallery: {
@@ -620,18 +876,45 @@ export const translations = {
         { val: "Готово к экспорту", label: "Упаковка и логистика" },
       ],
       steps: [
-        { title: "Собственная пашня", desc: "Плодородные поля и устойчивые методы земледелия." },
-        { title: "Уборка урожая", desc: "Современная техника и опытная команда." },
-        { title: "Очистка и переработка", desc: "Современная очистка, сортировка и переработка." },
-        { title: "Хранение и экспортная упаковка", desc: "Надёжное хранение и прочная экспортная упаковка." },
-        { title: "Погрузка в контейнер и экспорт", desc: "Бережная погрузка и своевременная доставка на мировые рынки." },
+        {
+          title: "Собственная пашня",
+          desc: "Плодородные поля и устойчивые методы земледелия.",
+        },
+        {
+          title: "Уборка урожая",
+          desc: "Современная техника и опытная команда.",
+        },
+        {
+          title: "Очистка и переработка",
+          desc: "Современная очистка, сортировка и переработка.",
+        },
+        {
+          title: "Хранение и экспортная упаковка",
+          desc: "Надёжное хранение и прочная экспортная упаковка.",
+        },
+        {
+          title: "Погрузка в контейнер и экспорт",
+          desc: "Бережная погрузка и своевременная доставка на мировые рынки.",
+        },
       ],
       trustItems: [
-        { title: "МОК от 22 т", desc: "Гибкий минимальный заказ для любого рынка." },
-        { title: "Готово для частной марки", desc: "Упаковка на заказ 250 г – 1 000 кг биг-бэги." },
-        { title: "Вариант органик ЕС", desc: "Сертифицированный органический ассортимент по запросу." },
+        {
+          title: "МОК от 22 т",
+          desc: "Гибкий минимальный заказ для любого рынка.",
+        },
+        {
+          title: "Готово для частной марки",
+          desc: "Упаковка на заказ 250 г – 1 000 кг биг-бэги.",
+        },
+        {
+          title: "Вариант органик ЕС",
+          desc: "Сертифицированный органический ассортимент по запросу.",
+        },
         { title: "Ответ за 24 ч", desc: "Выделенный менеджер по экспорту." },
-        { title: "Глобальная доставка", desc: "FCL по всему миру, FOB/DDP/FCA/DAP." },
+        {
+          title: "Глобальная доставка",
+          desc: "FCL по всему миру, FOB/DDP/FCA/DAP.",
+        },
       ],
     },
     antad: {
@@ -639,13 +922,29 @@ export const translations = {
       h2a: "Встретьтесь с нами на ANTAD Expo 2026",
       h2b: "— Мексика",
       p: "На ANTAD Expo 2026 мы активно проводим встречи с импортёрами, дистрибьюторами, оптовиками и торговыми сетями.",
-      items: ["Органические продукты", "Традиционное зерно", "Частная марка", "Оптовые и розничные поставки"],
+      items: [
+        "Органические продукты",
+        "Традиционное зерно",
+        "Частная марка",
+        "Оптовые и розничные поставки",
+      ],
       ctaBtn: "Запланировать встречу на ANTAD",
       discuss: "Обсудим",
-      discussItems: ["Органические поставки", "Традиционное зерно", "Частная марка", "Опт и розница", "Экспортная логистика"],
+      discussItems: [
+        "Органические поставки",
+        "Традиционное зерно",
+        "Частная марка",
+        "Опт и розница",
+        "Экспортная логистика",
+      ],
       popupTitle: "Встретьтесь с нами на ANTAD Expo 2026",
       popupText: "Мы доступны для встреч с:",
-      popupItems: ["Торговыми сетями", "Импортёрами", "Дистрибьюторами", "Покупателями частной марки"],
+      popupItems: [
+        "Торговыми сетями",
+        "Импортёрами",
+        "Дистрибьюторами",
+        "Покупателями частной марки",
+      ],
       popupBtn: "Запланировать встречу",
     },
     contact: {
@@ -670,7 +969,8 @@ export const translations = {
       whatsappBtn: "Написать в WhatsApp",
     },
     footer: {
-      tagline: "Премиальный экспорт зерна из России.\nСертификат ЕС. Надёжно. Прямо от производителя.",
+      tagline:
+        "Премиальный экспорт зерна из России.\nСертификат ЕС. Надёжно. Прямо от производителя.",
       company: "Компания",
       links: ["О нас", "Продукты", "Органик", "Сертификаты", "Галерея"],
       export: "Экспорт",
@@ -696,7 +996,8 @@ export const translations = {
       h1a: "Proveedor Certificado UE",
       h1b: "Orgánico y Convencional",
       h1c: "de Granos",
-      subtitle: "Granos, legumbres y oleaginosas rusas confiables para mercados internacionales.",
+      subtitle:
+        "Granos, legumbres y oleaginosas rusas confiables para mercados internacionales.",
       checks: [
         "Certificado Orgánico UE",
         "Directo del Productor",
@@ -777,10 +1078,22 @@ export const translations = {
       p: "Controlamos cada paso — desde el cultivo y procesamiento hasta el almacenamiento y la entrega. Esto garantiza calidad constante, trazabilidad y confiabilidad para nuestros socios en todo el mundo.",
       btn: "Solicitar Cotización",
       tiles: [
-        { label: "Nuestros Campos", desc: "Gestión cuidadosa para calidad y rendimiento" },
-        { label: "Procesamiento", desc: "Equipos modernos para limpieza y clasificación" },
-        { label: "Almacenamiento", desc: "Capacidad controlada para suministro estable" },
-        { label: "Envío", desc: "Logística de exportación y envíos en contenedor a todo el mundo" },
+        {
+          label: "Nuestros Campos",
+          desc: "Gestión cuidadosa para calidad y rendimiento",
+        },
+        {
+          label: "Procesamiento",
+          desc: "Equipos modernos para limpieza y clasificación",
+        },
+        {
+          label: "Almacenamiento",
+          desc: "Capacidad controlada para suministro estable",
+        },
+        {
+          label: "Envío",
+          desc: "Logística de exportación y envíos en contenedor a todo el mundo",
+        },
       ],
     },
     catalogCta: {
@@ -814,7 +1127,10 @@ export const translations = {
         { title: "Marca Propia", desc: "Producimos bajo su marca" },
         { title: "Orgánico UE", desc: "Gama orgánica certificada disponible" },
         { title: "Respuesta Rápida", desc: "Respuesta en 24 horas" },
-        { title: "Entrega Global", desc: "Contenedores completos (FCL) a todo el mundo" },
+        {
+          title: "Entrega Global",
+          desc: "Contenedores completos (FCL) a todo el mundo",
+        },
       ],
       supplyChain: {
         label: "Del Campo al Envío",
@@ -838,10 +1154,12 @@ export const translations = {
       ],
       organicRange: "Gama Orgánica",
       conventionalRange: "Gama Convencional",
-      conventionalText: "Volúmenes estables de exportación de granos convencionales, legumbres y oleaginosas. Envase estándar en sacos de 25–50kg y big bags. Documentación de exportación, certificados fitosanitarios y condiciones FOB/DDP disponibles a pedido.",
+      conventionalText:
+        "Volúmenes estables de exportación de granos convencionales, legumbres y oleaginosas. Envase estándar en sacos de 25–50kg y big bags. Documentación de exportación, certificados fitosanitarios y condiciones FOB/DDP disponibles a pedido.",
       viewProducts: "Ver Todos los Productos",
       supplyChainLabel: "CONTROL TOTAL DE LA CADENA DE SUMINISTRO",
-      supplyChainSub: "El control total de la cadena de suministro garantiza calidad constante, trazabilidad y confiabilidad.",
+      supplyChainSub:
+        "El control total de la cadena de suministro garantiza calidad constante, trazabilidad y confiabilidad.",
       chainItems: [
         { title: "10.000+ ha", desc: "tierras propias, control total" },
         { title: "Agricultura Directa", desc: "cultivado y cosechado" },
@@ -857,7 +1175,8 @@ export const translations = {
         "ENTREGA GLOBAL",
       ],
       documents: "Documentos",
-      documentsSub: "Obtenga documentación, especificaciones y disponibilidad de productos orgánicos.",
+      documentsSub:
+        "Obtenga documentación, especificaciones y disponibilidad de productos orgánicos.",
       certBtn: "Certificado Orgánico",
       specBtn: "Especificación del Producto",
     },
@@ -866,32 +1185,80 @@ export const translations = {
       h2: "DEL CAMPO\nA LA EXPORTACIÓN",
       p: "De la semilla al contenedor — gestionamos el ciclo completo internamente: cultivo, almacenamiento poscosecha, procesamiento, envasado y exportación certificada a mercados internacionales.",
       pillars: [
-        { title: "Cultivo Avanzado", desc: "Agricultura de precisión, monitoreo del suelo y gestión sostenible de cultivos" },
-        { title: "Cumplimiento de Exportación", desc: "Certificación fitosanitaria, análisis de pesticidas y documentación específica por mercado" },
-        { title: "Procesamiento y Envasado", desc: "Clasificación, limpieza y envasado listo para venta para ampliar la vida útil" },
-        { title: "Envíos en Contenedor", desc: "Logística de contenedores refrigerados, planificación de rutas y entrega puntual" },
+        {
+          title: "Cultivo Avanzado",
+          desc: "Agricultura de precisión, monitoreo del suelo y gestión sostenible de cultivos",
+        },
+        {
+          title: "Cumplimiento de Exportación",
+          desc: "Certificación fitosanitaria, análisis de pesticidas y documentación específica por mercado",
+        },
+        {
+          title: "Procesamiento y Envasado",
+          desc: "Clasificación, limpieza y envasado listo para venta para ampliar la vida útil",
+        },
+        {
+          title: "Envíos en Contenedor",
+          desc: "Logística de contenedores refrigerados, planificación de rutas y entrega puntual",
+        },
       ],
       activitiesLabel: "Nuestras Actividades",
       steps: [
-        { num: "01", title: "Campo", desc: "Gestión precisa del campo con monitoreo del suelo y rotación de cultivos en terrenos propios." },
-        { num: "02", title: "Cosecha", desc: "Cosecha oportuna con cosechadoras guiadas por GPS para minimizar pérdidas." },
-        { num: "03", title: "Procesamiento", desc: "Limpieza multietapa, descascarado y clasificación óptica. Entrega en condiciones FOB / DDP / FCA / DAP." },
-        { num: "04", title: "Almacenamiento", desc: "Hasta 10.000 TM de capacidad en silos ventilados con control de temperatura." },
-        { num: "05", title: "Envasado", desc: "Retail 200g–1kg, sacos industriales 25–50kg y big bags hasta 1.000kg." },
-        { num: "06", title: "Exportación", desc: "Documentación fitosanitaria completa, carga en contenedores refrigerados y condiciones DDP/FOB." },
+        {
+          num: "01",
+          title: "Campo",
+          desc: "Gestión precisa del campo con monitoreo del suelo y rotación de cultivos en terrenos propios.",
+        },
+        {
+          num: "02",
+          title: "Cosecha",
+          desc: "Cosecha oportuna con cosechadoras guiadas por GPS para minimizar pérdidas.",
+        },
+        {
+          num: "03",
+          title: "Procesamiento",
+          desc: "Limpieza multietapa, descascarado y clasificación óptica. Entrega en condiciones FOB / DDP / FCA / DAP.",
+        },
+        {
+          num: "04",
+          title: "Almacenamiento",
+          desc: "Hasta 10.000 TM de capacidad en silos ventilados con control de temperatura.",
+        },
+        {
+          num: "05",
+          title: "Envasado",
+          desc: "Retail 200g–1kg, sacos industriales 25–50kg y big bags hasta 1.000kg.",
+        },
+        {
+          num: "06",
+          title: "Exportación",
+          desc: "Documentación fitosanitaria completa, carga en contenedores refrigerados y condiciones DDP/FOB.",
+        },
       ],
       packagingLabel: "Soluciones de Envasado",
       packagingH3: "Envasado de Calidad.\nProtección del Producto.",
-      packagingP: "Utilizamos equipos modernos y materiales de alta calidad para garantizar un envasado seguro, peso exacto y larga vida útil.",
-      packagingFeatures: ["Alta Precisión", "Protección del Producto", "Control de Calidad"],
+      packagingP:
+        "Utilizamos equipos modernos y materiales de alta calidad para garantizar un envasado seguro, peso exacto y larga vida útil.",
+      packagingFeatures: [
+        "Alta Precisión",
+        "Protección del Producto",
+        "Control de Calidad",
+      ],
       packagingRange: "Rango de Envasado",
       packagingRangeSub: "Minoristas, mayoristas y food service",
       packagingBtn: "Solicitar Opciones de Envasado",
       packagingFormatsLabel: "Formatos de Envasado",
-      packagingFormatsSub: "Una amplia gama de opciones de envasado para satisfacer las necesidades de su mercado.",
+      packagingFormatsSub:
+        "Una amplia gama de opciones de envasado para satisfacer las necesidades de su mercado.",
       packagingNote: "Otros pesos y formatos disponibles a pedido.",
       whyUs: "Por qué los socios nos eligen",
-      whyItems: ["Certificación Orgánica", "Suministro Confiable", "Envasado Flexible", "Entrega Global", "Soporte Dedicado"],
+      whyItems: [
+        "Certificación Orgánica",
+        "Suministro Confiable",
+        "Envasado Flexible",
+        "Entrega Global",
+        "Soporte Dedicado",
+      ],
       trustBar: [
         "Suministro Orgánico y Convencional",
         "Certificado Orgánico UE",
@@ -914,7 +1281,8 @@ export const translations = {
       organicRange: "Gama Orgánica",
       usdaTitle: "Certificación USDA Organic / NOP",
       usdaBadge: "Prevista para julio de 2026",
-      usdaText: "Actualmente estamos completando el proceso de certificación USDA NOP. Se espera la certificación para julio de 2026, lo que nos permitirá suministrar productos con etiqueta USDA Organic al mercado estadounidense.",
+      usdaText:
+        "Actualmente estamos completando el proceso de certificación USDA NOP. Se espera la certificación para julio de 2026, lo que nos permitirá suministrar productos con etiqueta USDA Organic al mercado estadounidense.",
       fieldLabel: "Del Campo a su Negocio",
       fieldTiles: [
         "Campos orgánicos cuidadosamente seleccionados",
@@ -930,21 +1298,53 @@ export const translations = {
       h2b: "Nuestra Producción.",
       p: "Ofrecemos soluciones completas de marca propia — desde la selección del producto y el diseño del envase hasta la producción certificada y la entrega lista para exportar.",
       features: [
-        { title: "Envasado Minorista", size: "250g – 5kg", desc: "Opciones de diseño e impresión personalizados para su marca." },
-        { title: "Big Bags", size: "500 – 1.000kg", desc: "Envasado industrial a granel para suministro de gran volumen." },
-        { title: "Envíos en Contenedor", size: "20 / 40 pies", desc: "Carga completa de contenedor (FCL) para entrega global segura y eficiente." },
-        { title: "Marca Propia", size: "Concepto → Listo para venta", desc: "Desde la selección del producto hasta el envasado listo para vender." },
+        {
+          title: "Envasado Minorista",
+          size: "250g – 5kg",
+          desc: "Opciones de diseño e impresión personalizados para su marca.",
+        },
+        {
+          title: "Big Bags",
+          size: "500 – 1.000kg",
+          desc: "Envasado industrial a granel para suministro de gran volumen.",
+        },
+        {
+          title: "Envíos en Contenedor",
+          size: "20 / 40 pies",
+          desc: "Carga completa de contenedor (FCL) para entrega global segura y eficiente.",
+        },
+        {
+          title: "Marca Propia",
+          size: "Concepto → Listo para venta",
+          desc: "Desde la selección del producto hasta el envasado listo para vender.",
+        },
       ],
-      steps: ["Selección del Producto", "Envasado y Diseño", "Certificación y Etiquetado", "Producción y CQ", "Envío en Contenedor"],
+      steps: [
+        "Selección del Producto",
+        "Envasado y Diseño",
+        "Certificación y Etiquetado",
+        "Producción y CQ",
+        "Envío en Contenedor",
+      ],
       moqRow: [
-        { title: "Ped. mín. desde 22 TM", desc: "Pedido mínimo flexible para cualquier mercado." },
-        { title: "Listo para Marca Propia", desc: "Envase personalizado 250g – 1.000kg big bags." },
-        { title: "Opción Orgánico UE", desc: "Gama orgánica certificada a pedido." },
+        {
+          title: "Ped. mín. desde 22 TM",
+          desc: "Pedido mínimo flexible para cualquier mercado.",
+        },
+        {
+          title: "Listo para Marca Propia",
+          desc: "Envase personalizado 250g – 1.000kg big bags.",
+        },
+        {
+          title: "Opción Orgánico UE",
+          desc: "Gama orgánica certificada a pedido.",
+        },
         { title: "Respuesta en 24h", desc: "Gestor de exportación dedicado." },
         { title: "Entrega Global", desc: "FCL mundial, FOB/DDP/FCA/DAP." },
       ],
       ctaTitle: "Obtener Especificaciones y Precios",
-      ctaSub: "Cuéntenos sus necesidades y prepararemos una solución personalizada para su negocio.",
+      ctaSub:
+        "Cuéntenos sus necesidades y prepararemos una solución personalizada para su negocio.",
       ctaBtn: "Obtener Oferta Personalizada",
     },
     gallery: {
@@ -959,16 +1359,40 @@ export const translations = {
         { val: "Listo para Exportar", label: "Envasado y Logística" },
       ],
       steps: [
-        { title: "Tierras Propias", desc: "Campos fértiles y prácticas agrícolas sostenibles." },
-        { title: "Cosecha", desc: "Maquinaria moderna y equipo con experiencia." },
-        { title: "Limpieza y Procesamiento", desc: "Limpieza, clasificación y procesamiento avanzados." },
-        { title: "Almacenamiento y Envasado para Exportación", desc: "Almacenamiento seguro y envasado sólido para exportación." },
-        { title: "Carga en Contenedor y Exportación", desc: "Carga cuidadosa y entrega puntual a mercados globales." },
+        {
+          title: "Tierras Propias",
+          desc: "Campos fértiles y prácticas agrícolas sostenibles.",
+        },
+        {
+          title: "Cosecha",
+          desc: "Maquinaria moderna y equipo con experiencia.",
+        },
+        {
+          title: "Limpieza y Procesamiento",
+          desc: "Limpieza, clasificación y procesamiento avanzados.",
+        },
+        {
+          title: "Almacenamiento y Envasado para Exportación",
+          desc: "Almacenamiento seguro y envasado sólido para exportación.",
+        },
+        {
+          title: "Carga en Contenedor y Exportación",
+          desc: "Carga cuidadosa y entrega puntual a mercados globales.",
+        },
       ],
       trustItems: [
-        { title: "Ped. mín. desde 22 TM", desc: "Pedido mínimo flexible para cualquier mercado." },
-        { title: "Listo para Marca Propia", desc: "Envase personalizado 250g – 1.000kg big bags." },
-        { title: "Opción Orgánico UE", desc: "Gama orgánica certificada a pedido." },
+        {
+          title: "Ped. mín. desde 22 TM",
+          desc: "Pedido mínimo flexible para cualquier mercado.",
+        },
+        {
+          title: "Listo para Marca Propia",
+          desc: "Envase personalizado 250g – 1.000kg big bags.",
+        },
+        {
+          title: "Opción Orgánico UE",
+          desc: "Gama orgánica certificada a pedido.",
+        },
         { title: "Respuesta en 24h", desc: "Gestor de exportación dedicado." },
         { title: "Entrega Global", desc: "FCL mundial, FOB/DDP/FCA/DAP." },
       ],
@@ -978,13 +1402,29 @@ export const translations = {
       h2a: "Encuéntrenos en ANTAD Expo 2026",
       h2b: "— México",
       p: "Estamos activamente disponibles para reuniones con importadores, distribuidores, mayoristas y cadenas minoristas durante ANTAD Expo 2026.",
-      items: ["Productos orgánicos", "Granos convencionales", "Marca propia", "Suministro a granel y minorista"],
+      items: [
+        "Productos orgánicos",
+        "Granos convencionales",
+        "Marca propia",
+        "Suministro a granel y minorista",
+      ],
       ctaBtn: "Programar Reunión en ANTAD",
       discuss: "Hablemos de",
-      discussItems: ["Suministro Orgánico", "Granos Convencionales", "Marca Propia", "Granel y Minorista", "Logística de Exportación"],
+      discussItems: [
+        "Suministro Orgánico",
+        "Granos Convencionales",
+        "Marca Propia",
+        "Granel y Minorista",
+        "Logística de Exportación",
+      ],
       popupTitle: "Encuéntrenos en ANTAD Expo 2026",
       popupText: "Estamos disponibles para reuniones con:",
-      popupItems: ["Cadenas minoristas", "Importadores", "Distribuidores", "Compradores de marca propia"],
+      popupItems: [
+        "Cadenas minoristas",
+        "Importadores",
+        "Distribuidores",
+        "Compradores de marca propia",
+      ],
       popupBtn: "Programar Reunión",
     },
     contact: {
@@ -1009,9 +1449,16 @@ export const translations = {
       whatsappBtn: "Escribir por WhatsApp",
     },
     footer: {
-      tagline: "Exportación premium de granos desde Rusia.\nCertificado UE. Confiable. Directo del productor.",
+      tagline:
+        "Exportación premium de granos desde Rusia.\nCertificado UE. Confiable. Directo del productor.",
       company: "Empresa",
-      links: ["Nosotros", "Productos", "Orgánico", "Certificaciones", "Galería"],
+      links: [
+        "Nosotros",
+        "Productos",
+        "Orgánico",
+        "Certificaciones",
+        "Galería",
+      ],
       export: "Exportación",
       exportLinks: ["Mercados de Exportación", "Marca Propia", "Contacto"],
       rights: "Todos los derechos reservados.",
