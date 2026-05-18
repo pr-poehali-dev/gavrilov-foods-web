@@ -995,7 +995,7 @@ export default function Index() {
                   }}
                 />
                 <img
-                  src="https://cdn.poehali.dev/files/4b5a57a3-7cdf-406e-8457-7140c7ed102e.jpg"
+                  src="https://cdn.poehali.dev/files/7722b13d-db60-4579-9108-cad1b37de41d.jpg"
                   alt="Own farmland"
                   className="w-full h-full object-cover"
                   style={{
