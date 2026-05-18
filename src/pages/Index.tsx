@@ -2157,8 +2157,7 @@ export default function Index() {
                     style={{ color: "var(--gf-gold)", flexShrink: 0 }}
                   />
                   <p className="text-white/75 text-[13px] leading-snug font-montserrat">
-                    Wholesale supply with export documentation —<br />
-                    organic &amp; conventional, FOB / DDP terms available.
+                    {t.organic.wholesaleNote}
                   </p>
                 </div>
               </div>
@@ -2178,7 +2177,7 @@ export default function Index() {
                     textTransform: "uppercase",
                   }}
                 >
-                  Certified Organic
+                  {t.organic.certifiedOrganic}
                 </span>
                 <span
                   style={{
@@ -2198,7 +2197,7 @@ export default function Index() {
                   fontWeight: 400,
                 }}
               >
-                EU Certified Organic Products
+                {t.organic.euCertifiedTitle}
               </h2>
 
               {/* Checkmarks */}
@@ -2243,13 +2242,13 @@ export default function Index() {
                     className="font-montserrat font-bold text-[13px] uppercase tracking-wide mb-0.5"
                     style={{ color: "var(--gf-dark)" }}
                   >
-                    EU Organic Certified
+                    {t.organic.euCertifiedBadge}
                   </div>
                   <div
                     className="text-[12px] font-montserrat"
                     style={{ color: "var(--gf-text-light)" }}
                   >
-                    Available in organic grains, pulses and oilseeds
+                    {t.organic.euCertifiedSub}
                   </div>
                 </div>
               </div>
@@ -2277,7 +2276,7 @@ export default function Index() {
                   textTransform: "uppercase",
                 }}
               >
-                Our Organic Products
+                {t.organic.ourOrganicProducts}
               </span>
               <span
                 style={{
@@ -2291,28 +2290,15 @@ export default function Index() {
 
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
               {/* 4 organic product cards */}
-              {[
-                {
-                  name: "BUCKWHEAT",
-                  packaging: "25 kg / 50 kg / Big Bag",
-                  img: "https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/files/49906ef7-211c-4d64-beae-004e3518ef74.jpg",
-                },
-                {
-                  name: "GREEN BUCKWHEAT",
-                  packaging: "25 kg / 50 kg / Big Bag",
-                  img: "https://cdn.poehali.dev/files/72e6e07c-de60-4be9-8cd7-78cfed2c6de0.png",
-                },
-                {
-                  name: "BUCKWHEAT FLOUR",
-                  packaging: "25 kg bags",
-                  img: "https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/files/5aa6f984-f5f5-4f4e-afe2-85e236e0a871.jpg",
-                },
-                {
-                  name: "OAT FLAKES",
-                  packaging: "25 kg / 50 kg / Big Bag",
-                  img: "https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/files/4e313381-f7ae-4934-8263-19f31994775f.jpg",
-                },
-              ].map((p, i) => (
+              {(t.organic.organicProducts as { name: string; packaging: string }[]).map((prod, i) => {
+                const imgs = [
+                  "https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/files/49906ef7-211c-4d64-beae-004e3518ef74.jpg",
+                  "https://cdn.poehali.dev/files/72e6e07c-de60-4be9-8cd7-78cfed2c6de0.png",
+                  "https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/files/5aa6f984-f5f5-4f4e-afe2-85e236e0a871.jpg",
+                  "https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/files/4e313381-f7ae-4934-8263-19f31994775f.jpg",
+                ];
+                const p = { name: prod.name, packaging: prod.packaging, img: imgs[i] };
+                return (
                 <div
                   key={i}
                   className="product-card bg-white"
@@ -2347,7 +2333,7 @@ export default function Index() {
                         className="text-[11px] font-montserrat"
                         style={{ color: "var(--gf-text-light)" }}
                       >
-                        Organic
+                        {t.organic.organicLabel}
                       </span>
                     </div>
                     <div className="flex items-center gap-1.5 mb-2">
@@ -2367,11 +2353,11 @@ export default function Index() {
                       className="text-[11px] font-bold font-montserrat"
                       style={{ color: "var(--gf-gold)" }}
                     >
-                      MOQ from 22 MT
+                      {t.organic.moqLabel}
                     </div>
                   </div>
                 </div>
-              ))}
+              ); })}
 
               {/* 5th: Conventional range card */}
               <div
