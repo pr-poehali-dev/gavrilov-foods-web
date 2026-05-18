@@ -1649,7 +1649,7 @@ export default function Index() {
               </p>
 
               {/* 4 features */}
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-10">
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-10">
                 {(t.logistics.infraFeatures as { title: string; desc: string }[]).map((f, i) => ({
                   icon: ["Warehouse", "Factory", "ScanLine", "Container"][i],
                   title: f.title,
@@ -1657,21 +1657,32 @@ export default function Index() {
                 })).map((f, i) => (
                   <div
                     key={i}
-                    className="flex flex-col items-center text-center gap-2"
+                    className="flex flex-col items-center text-center gap-2 min-w-0"
                   >
-                    <Icon
-                      name={f.icon}
-                      size={40}
-                      style={{ color: "var(--gf-dark)", strokeWidth: 1 }}
-                    />
                     <div
-                      className="font-montserrat font-bold text-[11px] uppercase tracking-wider"
-                      style={{ color: "var(--gf-dark)" }}
+                      className="flex items-center justify-center rounded-xl flex-shrink-0"
+                      style={{
+                        width: 52,
+                        height: 52,
+                        background: "rgba(14,26,15,0.07)",
+                        border: "1px solid rgba(14,26,15,0.12)",
+                      }}
+                    >
+                      <Icon
+                        name={f.icon}
+                        size={26}
+                        style={{ color: "var(--gf-dark)", strokeWidth: 1.2 }}
+                      />
+                    </div>
+                    <div
+                      className="font-montserrat font-bold text-[10px] uppercase tracking-wider leading-tight"
+                      style={{ color: "var(--gf-dark)", wordBreak: "break-word", hyphens: "auto" }}
+                      lang="ru"
                     >
                       {f.title}
                     </div>
                     <div
-                      className="text-[11px] leading-relaxed font-montserrat"
+                      className="text-[10px] leading-relaxed font-montserrat"
                       style={{ color: "var(--gf-text-light)" }}
                     >
                       {f.desc}
@@ -2629,11 +2640,11 @@ export default function Index() {
               className="absolute inset-0"
               style={{
                 background:
-                  "linear-gradient(to right, rgba(14,26,15,0.98) 0%, rgba(14,26,15,0.88) 55%, rgba(14,26,15,0.55) 100%)",
+                  "linear-gradient(to bottom, rgba(14,26,15,0.97) 0%, rgba(14,26,15,0.92) 60%, rgba(14,26,15,0.75) 100%)",
               }}
             />
-            <div className="relative z-10 p-6 md:p-14 max-w-2xl">
-              <div className="flex items-center gap-3 mb-4">
+            <div className="relative z-10 p-6 md:p-14">
+              <div className="flex items-center gap-3 mb-3">
                 <span
                   style={{
                     color: "var(--gf-gold)",
@@ -2653,48 +2664,56 @@ export default function Index() {
                 />
               </div>
               <h2
-                className="font-cormorant font-bold text-white leading-none mb-5"
+                className="font-cormorant font-bold text-white leading-tight mb-4"
                 style={{
-                  fontSize: "clamp(32px, 7vw, 84px)",
+                  fontSize: "clamp(26px, 5vw, 84px)",
                   letterSpacing: "-0.01em",
+                  maxWidth: "100%",
+                  wordBreak: "break-word",
+                  hyphens: "auto",
                 }}
+                lang="ru"
               >
                 {t.export.h2.split('\n')[0]}
                 <br />
-                {t.export.h2.split('\n')[1]}
+                <span style={{ fontSize: "clamp(22px, 4vw, 68px)" }}>
+                  {t.export.h2.split('\n')[1]}
+                </span>
               </h2>
-              <p className="text-white/60 text-[14px] leading-relaxed mb-8 max-w-sm font-montserrat">
+              <p className="text-white/70 text-[13px] md:text-[14px] leading-relaxed mb-6 font-montserrat" style={{ maxWidth: 560 }}>
                 {t.export.p}
               </p>
               {/* 4 pillars */}
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-6">
                 {t.export.pillars.map((p, i) => {
                   const pillarIcons = ["Sprout", "FileCheck", "Package", "Container"];
                   return (
-                  <div key={i} className="flex flex-col gap-2">
+                  <div key={i} className="flex items-start gap-3">
                     <div
                       className="flex items-center justify-center rounded-lg flex-shrink-0"
                       style={{
-                        width: 44,
-                        height: 44,
-                        background: "rgba(201,151,58,0.18)",
-                        border: "1px solid rgba(201,151,58,0.35)",
+                        width: 40,
+                        height: 40,
+                        background: "rgba(201,151,58,0.22)",
+                        border: "1px solid rgba(201,151,58,0.45)",
                       }}
                     >
                       <Icon
                         name={pillarIcons[i]}
-                        size={22}
+                        size={20}
                         style={{
                           color: "var(--gf-gold)",
                           strokeWidth: 1.5,
                         }}
                       />
                     </div>
-                    <div className="font-montserrat font-bold text-[10px] uppercase tracking-widest text-white">
-                      {p.title}
-                    </div>
-                    <div className="text-white/70 text-[11px] font-montserrat leading-snug">
-                      {p.desc}
+                    <div className="flex flex-col gap-0.5 min-w-0">
+                      <div className="font-montserrat font-bold text-[10px] uppercase tracking-wide text-white leading-tight">
+                        {p.title}
+                      </div>
+                      <div className="text-white/60 text-[10px] font-montserrat leading-snug hidden md:block">
+                        {p.desc}
+                      </div>
                     </div>
                   </div>
                 );})}
@@ -2703,7 +2722,7 @@ export default function Index() {
           </div>
 
           {/* ── Our Activities ── */}
-          <div className="mb-10 reveal">
+          <div className="mb-10 reveal hidden md:block">
             <div className="flex items-center justify-center gap-4 mb-6">
               <span
                 style={{
