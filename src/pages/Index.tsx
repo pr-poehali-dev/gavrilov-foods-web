@@ -1356,7 +1356,6 @@ export default function Index() {
                 REQUEST A QUOTE
               </button>
             </div>
-
           </div>
         </div>
       </section>
@@ -2090,7 +2089,7 @@ export default function Index() {
                       className="text-[11px] font-bold font-montserrat"
                       style={{ color: "var(--gf-gold)" }}
                     >
-                      MOQ from 1 MT
+                      MOQ from 22 MT
                     </div>
                   </div>
                 </div>
@@ -2732,12 +2731,22 @@ export default function Index() {
                 </div>
                 <h3
                   className="font-cormorant leading-tight mb-4"
-                  style={{ fontSize: "clamp(28px, 3vw, 44px)", fontWeight: 400, color: "var(--gf-dark)" }}
+                  style={{
+                    fontSize: "clamp(28px, 3vw, 44px)",
+                    fontWeight: 400,
+                    color: "var(--gf-dark)",
+                  }}
                 >
-                  Quality Packaging.<br />Product Protection.
+                  Quality Packaging.
+                  <br />
+                  Product Protection.
                 </h3>
-                <p className="font-montserrat text-[13px] leading-relaxed mb-6" style={{ color: "var(--gf-text-light)", maxWidth: 360 }}>
-                  We use modern equipment and high-quality materials to ensure safe packaging, accurate weight and long shelf life.
+                <p
+                  className="font-montserrat text-[13px] leading-relaxed mb-6"
+                  style={{ color: "var(--gf-text-light)", maxWidth: 360 }}
+                >
+                  We use modern equipment and high-quality materials to ensure
+                  safe packaging, accurate weight and long shelf life.
                 </p>
                 <div className="flex flex-wrap gap-4 mb-8">
                   {[
@@ -2746,21 +2755,52 @@ export default function Index() {
                     { icon: "ShieldCheck", label: "Quality Control" },
                   ].map((f, i) => (
                     <div key={i} className="flex items-center gap-2">
-                      <Icon name={f.icon} size={14} style={{ color: "var(--gf-gold)" }} />
-                      <span className="font-montserrat text-[11px] font-bold uppercase tracking-wide" style={{ color: "var(--gf-dark)" }}>{f.label}</span>
+                      <Icon
+                        name={f.icon}
+                        size={14}
+                        style={{ color: "var(--gf-gold)" }}
+                      />
+                      <span
+                        className="font-montserrat text-[11px] font-bold uppercase tracking-wide"
+                        style={{ color: "var(--gf-dark)" }}
+                      >
+                        {f.label}
+                      </span>
                     </div>
                   ))}
                 </div>
                 <button
                   className="btn-gold text-[11px]"
-                  onClick={() => document.querySelector("#contact")?.scrollIntoView({ behavior: "smooth" })}
+                  onClick={() =>
+                    document
+                      .querySelector("#contact")
+                      ?.scrollIntoView({ behavior: "smooth" })
+                  }
                 >
                   Request Packaging Options <Icon name="ArrowRight" size={14} />
                 </button>
-                <div className="mt-6 pt-5" style={{ borderTop: "1px solid rgba(0,0,0,0.06)" }}>
-                  <div className="font-montserrat font-bold text-[10px] uppercase tracking-widest mb-1" style={{ color: "var(--gf-text-light)" }}>Packaging Range</div>
-                  <div className="font-cormorant text-[28px]" style={{ color: "var(--gf-gold)", fontWeight: 600 }}>200 g – 1,000 kg</div>
-                  <div className="font-montserrat text-[11px]" style={{ color: "var(--gf-text-light)" }}>Retail, wholesale and food service</div>
+                <div
+                  className="mt-6 pt-5"
+                  style={{ borderTop: "1px solid rgba(0,0,0,0.06)" }}
+                >
+                  <div
+                    className="font-montserrat font-bold text-[10px] uppercase tracking-widest mb-1"
+                    style={{ color: "var(--gf-text-light)" }}
+                  >
+                    Packaging Range
+                  </div>
+                  <div
+                    className="font-cormorant text-[28px]"
+                    style={{ color: "var(--gf-gold)", fontWeight: 600 }}
+                  >
+                    200 g – 1,000 kg
+                  </div>
+                  <div
+                    className="font-montserrat text-[11px]"
+                    style={{ color: "var(--gf-text-light)" }}
+                  >
+                    Retail, wholesale and food service
+                  </div>
                 </div>
               </div>
               {/* Right: photo */}
@@ -2768,7 +2808,12 @@ export default function Index() {
                 <img
                   src="https://cdn.poehali.dev/files/e43ef89f-fe22-4c5d-9966-3f78245a4cee.jpg"
                   alt="Packaging equipment"
-                  style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
+                  style={{
+                    width: "100%",
+                    height: "100%",
+                    objectFit: "cover",
+                    display: "block",
+                  }}
                 />
               </div>
             </div>
@@ -2786,32 +2831,121 @@ export default function Index() {
           >
             <div className="text-center mb-6">
               <div className="flex items-center justify-center gap-4 mb-2">
-                <span style={{ display: "block", width: 36, height: 1, background: "var(--gf-gold)" }} />
-                <span className="font-montserrat font-bold text-[11px] uppercase tracking-widest" style={{ color: "var(--gf-gold)" }}>Packaging Formats</span>
-                <span style={{ display: "block", width: 36, height: 1, background: "var(--gf-gold)" }} />
+                <span
+                  style={{
+                    display: "block",
+                    width: 36,
+                    height: 1,
+                    background: "var(--gf-gold)",
+                  }}
+                />
+                <span
+                  className="font-montserrat font-bold text-[11px] uppercase tracking-widest"
+                  style={{ color: "var(--gf-gold)" }}
+                >
+                  Packaging Formats
+                </span>
+                <span
+                  style={{
+                    display: "block",
+                    width: 36,
+                    height: 1,
+                    background: "var(--gf-gold)",
+                  }}
+                />
               </div>
-              <p className="font-montserrat text-[12px]" style={{ color: "var(--gf-text-light)" }}>A wide range of packaging options to meet your market needs.</p>
+              <p
+                className="font-montserrat text-[12px]"
+                style={{ color: "var(--gf-text-light)" }}
+              >
+                A wide range of packaging options to meet your market needs.
+              </p>
             </div>
             <div className="grid grid-cols-3 md:grid-cols-6 gap-4">
               {[
-                { img: "https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/files/a84c41be-89d6-477d-bb1c-eccf7eb3ca68.jpg", label: "200 g", sub: "Doypack / Bag" },
-                { img: "https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/files/a8ba908b-29b3-4909-a311-6f9d5b6f741d.jpg", label: "400 g", sub: "Doypack" },
-                { img: "https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/files/ba5c8c80-9471-40fc-988a-9cc1602e35e0.jpg", label: "500 g", sub: "Block bottom bag" },
-                { img: "https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/files/2eede8e6-7448-4a13-b590-b41f6117a889.jpg", label: "800 g", sub: "Gusseted bag" },
-                { img: "https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/files/2c1a3bda-5c0e-4e53-a1de-3cac86529f89.jpg", label: "1,000 g", sub: "Block bottom bag" },
-                { img: "https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/files/4e6eddb4-c469-4776-90e3-d1e1129c099c.jpg", label: "Big Bags", sub: "500 – 1,000 kg" },
+                {
+                  img: "https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/files/a84c41be-89d6-477d-bb1c-eccf7eb3ca68.jpg",
+                  label: "200 g",
+                  sub: "Doypack / Bag",
+                },
+                {
+                  img: "https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/files/a8ba908b-29b3-4909-a311-6f9d5b6f741d.jpg",
+                  label: "400 g",
+                  sub: "Doypack",
+                },
+                {
+                  img: "https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/files/ba5c8c80-9471-40fc-988a-9cc1602e35e0.jpg",
+                  label: "500 g",
+                  sub: "Block bottom bag",
+                },
+                {
+                  img: "https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/files/2eede8e6-7448-4a13-b590-b41f6117a889.jpg",
+                  label: "800 g",
+                  sub: "Gusseted bag",
+                },
+                {
+                  img: "https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/files/2c1a3bda-5c0e-4e53-a1de-3cac86529f89.jpg",
+                  label: "1,000 g",
+                  sub: "Block bottom bag",
+                },
+                {
+                  img: "https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/files/4e6eddb4-c469-4776-90e3-d1e1129c099c.jpg",
+                  label: "Big Bags",
+                  sub: "500 – 1,000 kg",
+                },
               ].map((f, i) => (
-                <div key={i} className="flex flex-col items-center text-center gap-2 pb-3 px-2 pt-2" style={{ background: "var(--gf-cream)", borderRadius: 8 }}>
-                  <div style={{ height: 100, width: "100%", overflow: "hidden", borderRadius: 6 }}>
-                    <img src={f.img} alt={f.label} style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
+                <div
+                  key={i}
+                  className="flex flex-col items-center text-center gap-2 pb-3 px-2 pt-2"
+                  style={{ background: "var(--gf-cream)", borderRadius: 8 }}
+                >
+                  <div
+                    style={{
+                      height: 100,
+                      width: "100%",
+                      overflow: "hidden",
+                      borderRadius: 6,
+                    }}
+                  >
+                    <img
+                      src={f.img}
+                      alt={f.label}
+                      style={{
+                        width: "100%",
+                        height: "100%",
+                        objectFit: "cover",
+                        display: "block",
+                      }}
+                    />
                   </div>
-                  <div className="font-cormorant font-semibold text-[18px]" style={{ color: "var(--gf-gold)" }}>{f.label}</div>
-                  <div className="font-montserrat text-[10px]" style={{ color: "var(--gf-text-light)" }}>{f.sub}</div>
+                  <div
+                    className="font-cormorant font-semibold text-[18px]"
+                    style={{ color: "var(--gf-gold)" }}
+                  >
+                    {f.label}
+                  </div>
+                  <div
+                    className="font-montserrat text-[10px]"
+                    style={{ color: "var(--gf-text-light)" }}
+                  >
+                    {f.sub}
+                  </div>
                 </div>
               ))}
             </div>
-            <p className="text-center font-montserrat text-[11px] mt-4" style={{ color: "var(--gf-text-light)" }}>
-              <Icon name="Leaf" size={11} style={{ color: "var(--gf-gold)", display: "inline", marginRight: 4 }} />
+            <p
+              className="text-center font-montserrat text-[11px] mt-4"
+              style={{ color: "var(--gf-text-light)" }}
+            >
+              <Icon
+                name="Leaf"
+                size={11}
+                style={{
+                  color: "var(--gf-gold)",
+                  display: "inline",
+                  marginRight: 4,
+                }}
+              />
               Other weights and formats are available upon request.
             </p>
           </div>
@@ -2828,14 +2962,34 @@ export default function Index() {
             <div className="grid md:grid-cols-2 gap-0">
               {/* Left */}
               <div style={{ padding: "28px 24px" }}>
-                <div className="font-montserrat font-bold text-[10px] uppercase tracking-widest mb-3" style={{ color: "var(--gf-gold)" }}>Private Label</div>
-                <h3 className="font-cormorant text-white leading-tight mb-4" style={{ fontSize: "clamp(28px, 3vw, 42px)", fontWeight: 400 }}>
-                  Build Your Brand<br />
-                  <span style={{ color: "var(--gf-gold)", fontStyle: "italic" }}>With Us</span>
+                <div
+                  className="font-montserrat font-bold text-[10px] uppercase tracking-widest mb-3"
+                  style={{ color: "var(--gf-gold)" }}
+                >
+                  Private Label
+                </div>
+                <h3
+                  className="font-cormorant text-white leading-tight mb-4"
+                  style={{
+                    fontSize: "clamp(28px, 3vw, 42px)",
+                    fontWeight: 400,
+                  }}
+                >
+                  Build Your Brand
+                  <br />
+                  <span
+                    style={{ color: "var(--gf-gold)", fontStyle: "italic" }}
+                  >
+                    With Us
+                  </span>
                 </h3>
-                <p className="font-montserrat text-[13px] leading-relaxed mb-6 text-left" style={{ color: "rgba(255,255,255,0.6)", maxWidth: 360 }}>We offer private label solutions 
-with flexible design options 
-to help your brand stand out.</p>
+                <p
+                  className="font-montserrat text-[13px] leading-relaxed mb-6 text-left"
+                  style={{ color: "rgba(255,255,255,0.6)", maxWidth: 360 }}
+                >
+                  We offer private label solutions with flexible design options
+                  to help your brand stand out.
+                </p>
                 <div className="space-y-3 mb-8">
                   {[
                     "Custom label design",
@@ -2844,14 +2998,27 @@ to help your brand stand out.</p>
                     "MOQ from 1 pallet",
                   ].map((item, i) => (
                     <div key={i} className="flex items-center gap-3">
-                      <Icon name="Check" size={12} style={{ color: "var(--gf-gold)", flexShrink: 0 }} />
-                      <span className="font-montserrat text-[12px]" style={{ color: "rgba(255,255,255,0.7)" }}>{item}</span>
+                      <Icon
+                        name="Check"
+                        size={12}
+                        style={{ color: "var(--gf-gold)", flexShrink: 0 }}
+                      />
+                      <span
+                        className="font-montserrat text-[12px]"
+                        style={{ color: "rgba(255,255,255,0.7)" }}
+                      >
+                        {item}
+                      </span>
                     </div>
                   ))}
                 </div>
                 <button
                   className="btn-gold text-[11px]"
-                  onClick={() => document.querySelector("#private-label")?.scrollIntoView({ behavior: "smooth" })}
+                  onClick={() =>
+                    document
+                      .querySelector("#private-label")
+                      ?.scrollIntoView({ behavior: "smooth" })
+                  }
                 >
                   Learn More <Icon name="ArrowRight" size={14} />
                 </button>
@@ -2862,21 +3029,56 @@ to help your brand stand out.</p>
                 style={{ background: "rgba(255,255,255,0.04)", minHeight: 220 }}
               >
                 {[
-                  { img: "https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/files/de6c1f7c-3135-4231-83fa-3da2076641e3.jpg", height: 170, opacity: 0.75 },
-                  { img: "https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/files/89914c63-13fb-4318-9106-820bfc590cf1.jpg", height: 210, opacity: 1 },
-                  { img: "https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/files/d44f8721-c347-4447-83b4-9db4db694851.jpg", height: 155, opacity: 0.7 },
+                  {
+                    img: "https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/files/de6c1f7c-3135-4231-83fa-3da2076641e3.jpg",
+                    height: 170,
+                    opacity: 0.75,
+                  },
+                  {
+                    img: "https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/files/89914c63-13fb-4318-9106-820bfc590cf1.jpg",
+                    height: 210,
+                    opacity: 1,
+                  },
+                  {
+                    img: "https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/files/d44f8721-c347-4447-83b4-9db4db694851.jpg",
+                    height: 155,
+                    opacity: 0.7,
+                  },
                 ].map((b, i) => (
                   <div
                     key={i}
-                    style={{ width: 110, height: b.height, opacity: b.opacity, borderRadius: 8, overflow: "hidden", position: "relative", flexShrink: 0 }}
+                    style={{
+                      width: 110,
+                      height: b.height,
+                      opacity: b.opacity,
+                      borderRadius: 8,
+                      overflow: "hidden",
+                      position: "relative",
+                      flexShrink: 0,
+                    }}
                   >
                     <img
                       src={b.img}
                       alt="Gavrilov packaging"
-                      style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
+                      style={{
+                        width: "100%",
+                        height: "100%",
+                        objectFit: "cover",
+                        display: "block",
+                      }}
                     />
                     {/* Logo overlay */}
-                    <div style={{ position: "absolute", inset: 0, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", background: "rgba(255,255,255,0.15)" }}>
+                    <div
+                      style={{
+                        position: "absolute",
+                        inset: 0,
+                        display: "flex",
+                        flexDirection: "column",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        background: "rgba(255,255,255,0.15)",
+                      }}
+                    >
                       <img
                         src="https://cdn.poehali.dev/files/a56e28f6-f68e-47b5-85b3-96e8100cf00e.png"
                         alt="Gavrilov Organic Foods"
@@ -2900,7 +3102,12 @@ to help your brand stand out.</p>
             }}
           >
             <div className="text-center mb-5">
-              <span className="font-montserrat font-bold text-[11px] uppercase tracking-widest" style={{ color: "var(--gf-text-light)" }}>Why Partners Choose Us</span>
+              <span
+                className="font-montserrat font-bold text-[11px] uppercase tracking-widest"
+                style={{ color: "var(--gf-text-light)" }}
+              >
+                Why Partners Choose Us
+              </span>
             </div>
             <div className="grid grid-cols-2 md:grid-cols-5 gap-4 text-center">
               {[
@@ -2911,8 +3118,17 @@ to help your brand stand out.</p>
                 { icon: "Headphones", label: "Dedicated Support" },
               ].map((w, i) => (
                 <div key={i} className="flex flex-col items-center gap-2">
-                  <Icon name={w.icon} size={26} style={{ color: "var(--gf-dark)", strokeWidth: 1.1 }} />
-                  <span className="font-montserrat font-bold text-[10px] uppercase tracking-wide" style={{ color: "var(--gf-dark)" }}>{w.label}</span>
+                  <Icon
+                    name={w.icon}
+                    size={26}
+                    style={{ color: "var(--gf-dark)", strokeWidth: 1.1 }}
+                  />
+                  <span
+                    className="font-montserrat font-bold text-[10px] uppercase tracking-wide"
+                    style={{ color: "var(--gf-dark)" }}
+                  >
+                    {w.label}
+                  </span>
                 </div>
               ))}
             </div>
@@ -3293,69 +3509,69 @@ to help your brand stand out.</p>
             }}
           >
             <div className="flex flex-col sm:flex-row sm:items-center gap-5">
-            <img
-              src="https://cdn.poehali.dev/files/138b276f-d17d-42ca-ac90-e76889009b9a.png"
-              alt="USDA Organic"
-              style={{
-                width: 72,
-                height: 72,
-                objectFit: "contain",
-                flexShrink: 0,
-                opacity: 0.55,
-              }}
-            />
-            <div style={{ flex: 1 }}>
-              <div
+              <img
+                src="https://cdn.poehali.dev/files/138b276f-d17d-42ca-ac90-e76889009b9a.png"
+                alt="USDA Organic"
                 style={{
-                  display: "flex",
-                  alignItems: "center",
-                  gap: 10,
-                  marginBottom: 6,
+                  width: 72,
+                  height: 72,
+                  objectFit: "contain",
+                  flexShrink: 0,
+                  opacity: 0.55,
                 }}
-              >
+              />
+              <div style={{ flex: 1 }}>
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    gap: 10,
+                    marginBottom: 6,
+                  }}
+                >
+                  <div
+                    style={{
+                      fontFamily: "Montserrat",
+                      fontWeight: 700,
+                      fontSize: 13,
+                      textTransform: "uppercase",
+                      letterSpacing: "0.06em",
+                      color: "var(--gf-dark)",
+                    }}
+                  >
+                    USDA Organic / NOP Certification
+                  </div>
+                  <span
+                    style={{
+                      fontFamily: "Montserrat",
+                      fontSize: 10,
+                      fontWeight: 700,
+                      letterSpacing: "0.1em",
+                      textTransform: "uppercase",
+                      color: "#b07d2a",
+                      background: "rgba(176,125,42,0.10)",
+                      border: "1px solid rgba(176,125,42,0.25)",
+                      borderRadius: 4,
+                      padding: "2px 8px",
+                    }}
+                  >
+                    Expected July 2026
+                  </span>
+                </div>
                 <div
                   style={{
                     fontFamily: "Montserrat",
-                    fontWeight: 700,
-                    fontSize: 13,
-                    textTransform: "uppercase",
-                    letterSpacing: "0.06em",
-                    color: "var(--gf-dark)",
+                    fontSize: 12,
+                    color: "var(--gf-text-light)",
+                    lineHeight: 1.6,
+                    maxWidth: 560,
                   }}
                 >
-                  USDA Organic / NOP Certification
+                  We are currently completing the USDA NOP certification
+                  process. Certification is expected by July 2026, enabling us
+                  to supply USDA Organic–labelled products to the US market.
                 </div>
-                <span
-                  style={{
-                    fontFamily: "Montserrat",
-                    fontSize: 10,
-                    fontWeight: 700,
-                    letterSpacing: "0.1em",
-                    textTransform: "uppercase",
-                    color: "#b07d2a",
-                    background: "rgba(176,125,42,0.10)",
-                    border: "1px solid rgba(176,125,42,0.25)",
-                    borderRadius: 4,
-                    padding: "2px 8px",
-                  }}
-                >
-                  Expected July 2026
-                </span>
               </div>
-              <div
-                style={{
-                  fontFamily: "Montserrat",
-                  fontSize: 12,
-                  color: "var(--gf-text-light)",
-                  lineHeight: 1.6,
-                  maxWidth: 560,
-                }}
-              >
-                We are currently completing the USDA NOP certification process.
-                Certification is expected by July 2026, enabling us to supply
-                USDA Organic–labelled products to the US market.
-              </div>
-            </div>
             </div>
           </div>
 
@@ -3394,106 +3610,114 @@ to help your brand stand out.</p>
 
             {/* 5-image strip with numbered labels */}
             <div className="overflow-x-auto -mx-2 px-2">
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(5, minmax(140px, 1fr))", gap: 8, height: 220, minWidth: 600 }}>
-              {[
-                {
-                  img: "https://cdn.poehali.dev/files/82314d50-2676-4645-a5e6-e829f18b0d3b.jpg",
-                  num: 1,
-                  label: "Carefully selected organic fields",
-                },
-                {
-                  img: "https://cdn.poehali.dev/files/3bb96d82-4e91-49da-a437-a8e84c943f7e.jpg",
-                  num: 2,
-                  label: "Modern cleaning & processing",
-                },
-                {
-                  img: "https://cdn.poehali.dev/files/e43ef89f-fe22-4c5d-9966-3f78245a4cee.jpg",
-                  num: 3,
-                  label: "Quality packaging & labeling",
-                },
-                {
-                  img: "https://cdn.poehali.dev/files/0f193f1f-14c9-4f20-a6fb-9416edc6ee23.jpg",
-                  num: 4,
-                  label: "Reliable logistics & delivery",
-                },
-                {
-                  img: "https://cdn.poehali.dev/files/0f193f1f-14c9-4f20-a6fb-9416edc6ee23.jpg",
-                  num: 5,
-                  label: "Export-ready shipments",
-                },
-              ].map((t, i) => (
-                <div
-                  key={i}
-                  style={{
-                    position: "relative",
-                    borderRadius: 8,
-                    overflow: "hidden",
-                  }}
-                >
-                  <img
-                    src={t.img}
-                    alt={t.label}
-                    style={{
-                      width: "100%",
-                      height: "100%",
-                      objectFit: "cover",
-                      display: "block",
-                    }}
-                  />
-                  {/* Dark overlay */}
+              <div
+                style={{
+                  display: "grid",
+                  gridTemplateColumns: "repeat(5, minmax(140px, 1fr))",
+                  gap: 8,
+                  height: 220,
+                  minWidth: 600,
+                }}
+              >
+                {[
+                  {
+                    img: "https://cdn.poehali.dev/files/82314d50-2676-4645-a5e6-e829f18b0d3b.jpg",
+                    num: 1,
+                    label: "Carefully selected organic fields",
+                  },
+                  {
+                    img: "https://cdn.poehali.dev/files/3bb96d82-4e91-49da-a437-a8e84c943f7e.jpg",
+                    num: 2,
+                    label: "Modern cleaning & processing",
+                  },
+                  {
+                    img: "https://cdn.poehali.dev/files/e43ef89f-fe22-4c5d-9966-3f78245a4cee.jpg",
+                    num: 3,
+                    label: "Quality packaging & labeling",
+                  },
+                  {
+                    img: "https://cdn.poehali.dev/files/0f193f1f-14c9-4f20-a6fb-9416edc6ee23.jpg",
+                    num: 4,
+                    label: "Reliable logistics & delivery",
+                  },
+                  {
+                    img: "https://cdn.poehali.dev/files/0f193f1f-14c9-4f20-a6fb-9416edc6ee23.jpg",
+                    num: 5,
+                    label: "Export-ready shipments",
+                  },
+                ].map((t, i) => (
                   <div
+                    key={i}
                     style={{
-                      position: "absolute",
-                      inset: 0,
-                      background:
-                        "linear-gradient(to top, rgba(14,26,15,0.85) 0%, rgba(14,26,15,0.1) 60%)",
-                    }}
-                  />
-                  {/* Number badge */}
-                  <div
-                    style={{
-                      position: "absolute",
-                      top: 10,
-                      left: 10,
-                      width: 28,
-                      height: 28,
-                      borderRadius: "50%",
-                      background: "var(--gf-gold)",
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "center",
-                      fontFamily: "Montserrat",
-                      fontWeight: 700,
-                      fontSize: 13,
-                      color: "#0e1a0f",
+                      position: "relative",
+                      borderRadius: 8,
+                      overflow: "hidden",
                     }}
                   >
-                    {t.num}
-                  </div>
-                  {/* Label */}
-                  <div
-                    style={{
-                      position: "absolute",
-                      bottom: 10,
-                      left: 10,
-                      right: 10,
-                    }}
-                  >
+                    <img
+                      src={t.img}
+                      alt={t.label}
+                      style={{
+                        width: "100%",
+                        height: "100%",
+                        objectFit: "cover",
+                        display: "block",
+                      }}
+                    />
+                    {/* Dark overlay */}
                     <div
                       style={{
-                        color: "#fff",
+                        position: "absolute",
+                        inset: 0,
+                        background:
+                          "linear-gradient(to top, rgba(14,26,15,0.85) 0%, rgba(14,26,15,0.1) 60%)",
+                      }}
+                    />
+                    {/* Number badge */}
+                    <div
+                      style={{
+                        position: "absolute",
+                        top: 10,
+                        left: 10,
+                        width: 28,
+                        height: 28,
+                        borderRadius: "50%",
+                        background: "var(--gf-gold)",
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
                         fontFamily: "Montserrat",
-                        fontSize: 10,
-                        fontWeight: 600,
-                        lineHeight: 1.3,
+                        fontWeight: 700,
+                        fontSize: 13,
+                        color: "#0e1a0f",
                       }}
                     >
-                      {t.label}
+                      {t.num}
+                    </div>
+                    {/* Label */}
+                    <div
+                      style={{
+                        position: "absolute",
+                        bottom: 10,
+                        left: 10,
+                        right: 10,
+                      }}
+                    >
+                      <div
+                        style={{
+                          color: "#fff",
+                          fontFamily: "Montserrat",
+                          fontSize: 10,
+                          fontWeight: 600,
+                          lineHeight: 1.3,
+                        }}
+                      >
+                        {t.label}
+                      </div>
                     </div>
                   </div>
-                </div>
-              ))}
-            </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
@@ -4073,13 +4297,17 @@ to help your brand stand out.</p>
                 >
                   Get Your Custom Offer <Icon name="ArrowRight" size={16} />
                 </button>
-                <div className="font-montserrat text-[10px] text-right" style={{ color: "var(--gf-text-light)" }}>
+                <div
+                  className="font-montserrat text-[10px] text-right"
+                  style={{ color: "var(--gf-text-light)" }}
+                >
                   gavrilovfoods.export@gmail.com
                 </div>
               </div>
-                  •                </div>
+               • {" "}
             </div>
           </div>
+        </div>
       </section>
 
       {/* ═══════════════ GALLERY ═══════════════ */}
@@ -4553,7 +4781,7 @@ to help your brand stand out.</p>
             {[
               {
                 icon: "Wheat",
-                title: "MOQ from 1 MT",
+                title: "MOQ from 22 MT",
                 desc: "Flexible minimum order for any market.",
               },
               {
@@ -5285,7 +5513,7 @@ to help your brand stand out.</p>
               },
               {
                 icon: "Package",
-                title: "MOQ from 1 MT",
+                title: "MOQ from 22 MT",
                 desc: "Flexible minimum order quantity from 1 MT.",
               },
               {
