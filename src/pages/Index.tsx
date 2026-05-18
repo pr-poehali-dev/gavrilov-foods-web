@@ -1941,41 +1941,40 @@ export default function Index() {
 
           {/* Supply chain block */}
           <div
-            className="mt-8 reveal"
-            style={{ border: "1px solid rgba(0,0,0,0.07)", borderRadius: 12, overflow: "hidden" }}
+            className="mt-8 grid lg:grid-cols-2 gap-0 reveal"
+            style={{ border: "1px solid rgba(0,0,0,0.07)" }}
           >
-            {/* Left text — full width on mobile */}
+            {/* Left text */}
             <div
-              className="p-6 md:p-8 flex flex-col gap-4"
+              className="p-8 flex flex-col justify-between"
               style={{ background: "#fff" }}
             >
-              <div
-                className="text-[10px] font-bold uppercase tracking-widest font-montserrat"
-                style={{ color: "var(--gf-gold)" }}
-              >
-                {t.logistics.label}
+              <div>
+                <div
+                  className="text-[10px] font-bold uppercase tracking-widest mb-3 font-montserrat"
+                  style={{ color: "var(--gf-gold)" }}
+                >
+                  {t.logistics.label}
+                </div>
+                <h3
+                  className="font-cormorant font-semibold leading-tight mb-4"
+                  style={{
+                    fontSize: "clamp(26px, 3vw, 38px)",
+                    color: "var(--gf-dark)",
+                  }}
+                >
+                  {t.logistics.h2}
+                </h3>
+                <p
+                  className="text-[13px] leading-relaxed mb-6"
+                  style={{
+                    color: "var(--gf-text-light)",
+                    fontFamily: "Montserrat",
+                  }}
+                >
+                  {t.logistics.p}
+                </p>
               </div>
-              <h3
-                className="font-cormorant font-semibold leading-snug"
-                style={{
-                  fontSize: "clamp(22px, 4vw, 38px)",
-                  color: "var(--gf-dark)",
-                  hyphens: "auto",
-                  wordBreak: "break-word",
-                }}
-                lang="ru"
-              >
-                {t.logistics.h2}
-              </h3>
-              <p
-                className="text-[13px] leading-relaxed"
-                style={{
-                  color: "var(--gf-text-light)",
-                  fontFamily: "Montserrat",
-                }}
-              >
-                {t.logistics.p}
-              </p>
               <button
                 className="btn-outline-dark self-start"
                 onClick={() =>
@@ -1988,59 +1987,51 @@ export default function Index() {
               </button>
             </div>
 
-            {/* Right: 4 image tiles — 2x2 grid, always visible */}
+            {/* Right: 4 image tiles */}
             <div className="grid grid-cols-2">
               {t.logistics.tiles.map((tile, i) => {
-                const imgs = [
-                  HERO_IMG,
-                  FACTORY_IMG,
-                  "https://cdn.poehali.dev/files/fa420cdb-c1a0-490e-a2ea-6b3197b248b7.jpg",
-                  "https://cdn.poehali.dev/files/6d95a4e4-3a28-40a8-868f-f1e65151ade3.jpg",
-                ];
-                const icons = ["Wheat", "Settings", "Package", "Truck"];
+                const tileData = {
+                  img: [HERO_IMG, FACTORY_IMG, "https://cdn.poehali.dev/files/fa420cdb-c1a0-490e-a2ea-6b3197b248b7.jpg", "https://ybvgdlhrldbkfqiccxxo.supabase.co/storage/v1/object/public/1/remaing.jpg"][i],
+                  icon: ["Wheat","Settings","Package","Truck"][i],
+                  label: tile.label,
+                  desc: tile.desc,
+                };
                 return (
                 <div
                   key={i}
-                  className="relative img-zoom overflow-hidden"
-                  style={{ aspectRatio: "1/1" }}
+                  className="relative aspect-square img-zoom overflow-hidden"
                 >
                   <img
-                    src={imgs[i]}
-                    alt={tile.label}
-                    className="absolute inset-0 w-full h-full object-cover"
-                    style={{ opacity: 0.75 }}
-                  />
-                  {/* strong dark overlay for contrast */}
-                  <div
-                    className="absolute inset-0"
-                    style={{ background: "rgba(14,26,15,0.45)" }}
+                    src={tileData.img}
+                    alt={tileData.label}
+                    className="w-full h-full object-cover"
+                    style={{ opacity: 0.7 }}
                   />
                   <div
-                    className="absolute inset-0 flex flex-col justify-end p-3 md:p-4"
+                    className="absolute inset-0 flex flex-col justify-end p-4"
                     style={{
-                      background: "linear-gradient(to top, rgba(14,26,15,0.92) 0%, rgba(14,26,15,0.3) 60%, transparent 100%)",
+                      background:
+                        "linear-gradient(to top, rgba(14,26,15,0.85) 0%, transparent 60%)",
                     }}
                   >
-                    {/* icon — bright gold circle */}
                     <div
-                      className="flex items-center justify-center rounded-full mb-2 flex-shrink-0"
+                      className="w-7 h-7 rounded-full flex items-center justify-center mb-2"
                       style={{
-                        width: 34,
-                        height: 34,
-                        background: "var(--gf-gold)",
+                        background: "rgba(201,151,58,0.25)",
+                        border: "1px solid var(--gf-gold)",
                       }}
                     >
                       <Icon
-                        name={icons[i]}
-                        size={16}
-                        style={{ color: "#0e1a0f", strokeWidth: 2 }}
+                        name={tileData.icon}
+                        size={13}
+                        style={{ color: "var(--gf-gold)" }}
                       />
                     </div>
-                    <div className="text-white font-bold text-[11px] md:text-[12px] uppercase tracking-wide font-montserrat leading-tight">
-                      {tile.label}
+                    <div className="text-white font-bold text-[11px] uppercase tracking-wide font-montserrat">
+                      {tileData.label}
                     </div>
-                    <div className="text-white/80 text-[10px] font-montserrat leading-tight mt-1 hidden sm:block">
-                      {tile.desc}
+                    <div className="text-white/60 text-[10px] font-montserrat leading-tight mt-0.5">
+                      {tileData.desc}
                     </div>
                   </div>
                 </div>
@@ -2731,9 +2722,16 @@ export default function Index() {
           </div>
 
           {/* ── Our Activities ── */}
-          <div className="mb-10 reveal">
-            <div className="flex items-center justify-center gap-4 mb-5">
-              <span style={{ display: "block", width: 36, height: 1, background: "var(--gf-gold)" }} />
+          <div className="mb-10 reveal hidden md:block">
+            <div className="flex items-center justify-center gap-4 mb-6">
+              <span
+                style={{
+                  display: "block",
+                  width: 36,
+                  height: 1,
+                  background: "var(--gf-gold)",
+                }}
+              />
               <span
                 style={{
                   color: "var(--gf-gold)",
@@ -2746,25 +2744,81 @@ export default function Index() {
               >
                 {t.export.activitiesLabel}
               </span>
-              <span style={{ display: "block", width: 36, height: 1, background: "var(--gf-gold)" }} />
+              <span
+                style={{
+                  display: "block",
+                  width: 36,
+                  height: 1,
+                  background: "var(--gf-gold)",
+                }}
+              />
             </div>
 
-            {/* 2x2 square grid on mobile, 4-col on desktop */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
-              {[
-                { src: "https://cdn.poehali.dev/files/a6468418-4211-4d99-84c8-c706aca290f7.jpg", alt: "Combine harvester" },
-                { src: HERO_IMG, alt: "Fields" },
-                { src: "https://cdn.poehali.dev/files/6d95a4e4-3a28-40a8-868f-f1e65151ade3.jpg", alt: "Big bags storage" },
-                { src: "https://cdn.poehali.dev/files/9f167f2e-35ae-452b-b29e-bd405a27f0ef.jpg", alt: "Grain warehouse" },
-              ].map((photo, i) => (
+            <div className="grid grid-cols-3 gap-3" style={{ height: 320 }}>
+              {/* Left — combine */}
+              <div
+                style={{
+                  borderRadius: 10,
+                  overflow: "hidden",
+                  position: "relative",
+                }}
+              >
+                <img
+                  src="https://cdn.poehali.dev/files/a6468418-4211-4d99-84c8-c706aca290f7.jpg"
+                  alt="Combine harvester"
+                  style={{
+                    width: "100%",
+                    height: "100%",
+                    objectFit: "cover",
+                    display: "block",
+                    transition: "transform 0.6s ease",
+                  }}
+                  onMouseEnter={(e) =>
+                    (e.currentTarget.style.transform = "scale(1.05)")
+                  }
+                  onMouseLeave={(e) =>
+                    (e.currentTarget.style.transform = "scale(1)")
+                  }
+                />
+              </div>
+              {/* Center — fields */}
+              <div
+                style={{
+                  borderRadius: 10,
+                  overflow: "hidden",
+                  position: "relative",
+                }}
+              >
+                <img
+                  src={HERO_IMG}
+                  alt="Fields"
+                  style={{
+                    width: "100%",
+                    height: "100%",
+                    objectFit: "cover",
+                    display: "block",
+                    transition: "transform 0.6s ease",
+                  }}
+                  onMouseEnter={(e) =>
+                    (e.currentTarget.style.transform = "scale(1.05)")
+                  }
+                  onMouseLeave={(e) =>
+                    (e.currentTarget.style.transform = "scale(1)")
+                  }
+                />
+              </div>
+              {/* Right — two stacked */}
+              <div className="grid grid-rows-2 gap-3" style={{ height: 320 }}>
                 <div
-                  key={i}
-                  className="img-zoom overflow-hidden"
-                  style={{ borderRadius: 10, aspectRatio: "1/1", position: "relative" }}
+                  style={{
+                    borderRadius: 10,
+                    overflow: "hidden",
+                    position: "relative",
+                  }}
                 >
                   <img
-                    src={photo.src}
-                    alt={photo.alt}
+                    src="https://cdn.poehali.dev/files/6d95a4e4-3a28-40a8-868f-f1e65151ade3.jpg"
+                    alt="Big bags storage"
                     style={{
                       width: "100%",
                       height: "100%",
@@ -2772,11 +2826,40 @@ export default function Index() {
                       display: "block",
                       transition: "transform 0.6s ease",
                     }}
-                    onMouseEnter={(e) => (e.currentTarget.style.transform = "scale(1.05)")}
-                    onMouseLeave={(e) => (e.currentTarget.style.transform = "scale(1)")}
+                    onMouseEnter={(e) =>
+                      (e.currentTarget.style.transform = "scale(1.05)")
+                    }
+                    onMouseLeave={(e) =>
+                      (e.currentTarget.style.transform = "scale(1)")
+                    }
                   />
                 </div>
-              ))}
+                <div
+                  style={{
+                    borderRadius: 10,
+                    overflow: "hidden",
+                    position: "relative",
+                  }}
+                >
+                  <img
+                    src="https://cdn.poehali.dev/files/9f167f2e-35ae-452b-b29e-bd405a27f0ef.jpg"
+                    alt="Grain warehouse"
+                    style={{
+                      width: "100%",
+                      height: "100%",
+                      objectFit: "cover",
+                      display: "block",
+                      transition: "transform 0.6s ease",
+                    }}
+                    onMouseEnter={(e) =>
+                      (e.currentTarget.style.transform = "scale(1.05)")
+                    }
+                    onMouseLeave={(e) =>
+                      (e.currentTarget.style.transform = "scale(1)")
+                    }
+                  />
+                </div>
+              </div>
             </div>
           </div>
 
