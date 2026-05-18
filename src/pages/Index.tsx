@@ -2031,16 +2031,17 @@ export default function Index() {
               </div>
             </div>
             <div className="flex flex-col items-center gap-1 flex-shrink-0">
-              <button
+              <a
+                href="https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/bucket/aa3adcbf-29da-4c95-9a3f-542947fe7ae7.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                download
                 className="btn-gold"
-                onClick={() =>
-                  document
-                    .querySelector("#contact")
-                    ?.scrollIntoView({ behavior: "smooth" })
-                }
+                style={{ textDecoration: "none", display: "inline-flex", alignItems: "center", gap: 8 }}
               >
+                <Icon name="Download" size={16} />
                 GET PRODUCT CATALOG
-              </button>
+              </a>
               <span
                 className="text-[10px] font-montserrat"
                 style={{ color: "var(--gf-text-light)" }}
@@ -2603,7 +2604,9 @@ export default function Index() {
             </div>
             <div className="flex items-center gap-4 flex-shrink-0 flex-wrap">
               <a
-                href="/docs/organic-cert.pdf"
+                href="https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/bucket/90d652c1-a4f3-4634-b1a8-9e8d18add35f.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
                 download
                 className="btn-gold"
                 style={{
@@ -2617,7 +2620,9 @@ export default function Index() {
                 Organic Certificate
               </a>
               <a
-                href="/docs/product-specification.pdf"
+                href="https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/bucket/d51dc65b-3784-485d-aff2-1df52727a8f8.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
                 download
                 className="btn-gold"
                 style={{
