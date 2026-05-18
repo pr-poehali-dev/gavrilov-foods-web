@@ -2250,7 +2250,7 @@ export default function Index() {
                       label: "FARMLAND",
                     },
                     {
-                      img: "https://cdn.poehali.dev/files/3bb96d82-4e91-49da-a437-a8e84c943f7e.jpg",
+                      img: "https://cdn.poehali.dev/files/dd72c0fc-a09c-42fb-aa5b-4f8d5bca901a.jpg",
                       label: "CLEANING & PROCESSING",
                     },
                     {
