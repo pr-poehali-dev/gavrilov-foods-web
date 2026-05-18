@@ -2658,7 +2658,7 @@ export default function Index() {
           {/* ── Hero banner: full-width image + overlay text ── */}
           <div
             className="relative overflow-hidden mb-10 reveal"
-            style={{ borderRadius: 12, minHeight: 340 }}
+            style={{ borderRadius: 12 }}
           >
             <img
               src={HERO_IMG}
@@ -2673,13 +2673,13 @@ export default function Index() {
                   "linear-gradient(to bottom, rgba(14,26,15,0.97) 0%, rgba(14,26,15,0.92) 60%, rgba(14,26,15,0.75) 100%)",
               }}
             />
-            <div className="relative z-10 p-6 md:p-14">
+            <div className="relative z-10 px-5 py-6 md:p-14">
               <div className="flex items-center gap-3 mb-3">
                 <span
                   style={{
                     color: "var(--gf-gold)",
-                    fontSize: "10px",
-                    letterSpacing: "0.22em",
+                    fontSize: "9px",
+                    letterSpacing: "0.2em",
                     fontFamily: "Montserrat",
                     fontWeight: 700,
                     textTransform: "uppercase",
@@ -2689,14 +2689,15 @@ export default function Index() {
                 </span>
                 <Icon
                   name="Leaf"
-                  size={14}
+                  size={12}
                   style={{ color: "var(--gf-gold)" }}
                 />
               </div>
               <h2
-                className="font-cormorant font-bold text-white leading-tight mb-4"
+                className="font-cormorant font-bold text-white mb-3"
                 style={{
-                  fontSize: "clamp(26px, 5vw, 84px)",
+                  fontSize: "clamp(18px, 4.5vw, 72px)",
+                  lineHeight: 1.15,
                   letterSpacing: "-0.01em",
                   maxWidth: "100%",
                   wordBreak: "break-word",
@@ -2705,12 +2706,16 @@ export default function Index() {
                 lang="ru"
               >
                 {t.export.h2.split('\n')[0]}
-                <br />
-                <span style={{ fontSize: "clamp(22px, 4vw, 68px)" }}>
-                  {t.export.h2.split('\n')[1]}
-                </span>
+                {t.export.h2.split('\n')[1] && (
+                  <>
+                    <br />
+                    <span style={{ fontSize: "0.85em" }}>
+                      {t.export.h2.split('\n')[1]}
+                    </span>
+                  </>
+                )}
               </h2>
-              <p className="text-white/70 text-[13px] md:text-[14px] leading-relaxed mb-6 font-montserrat" style={{ maxWidth: 560 }}>
+              <p className="text-white/75 text-[12px] md:text-[14px] leading-relaxed mb-5 font-montserrat" style={{ maxWidth: 560 }}>
                 {t.export.p}
               </p>
               {/* 4 pillars */}
