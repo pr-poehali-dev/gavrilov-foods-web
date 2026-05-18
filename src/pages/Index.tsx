@@ -1393,13 +1393,13 @@ export default function Index() {
                       className="font-cormorant text-[28px] font-semibold leading-none"
                       style={{ color: "var(--gf-gold)" }}
                     >
-                      3+ regions
+                      {t.proofOfScale.card2.stat2}
                     </div>
                     <div
                       className="text-[12px] font-montserrat mt-0.5"
                       style={{ color: "var(--gf-text-light)" }}
                     >
-                      China, Europe, Serbia & growing
+                      {t.proofOfScale.card2.stat2sub}
                     </div>
                   </div>
                   <div>

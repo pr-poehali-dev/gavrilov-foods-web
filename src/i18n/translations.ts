@@ -76,6 +76,8 @@ export const translations = {
         title: "Export",
         stat1: "5,000–10,000 MT",
         stat1sub: "annual export volume",
+        stat2: "3+ regions",
+        stat2sub: "China, Europe, Serbia & growing",
       },
       card3: {
         title: "Packaging",
@@ -556,6 +558,8 @@ export const translations = {
         title: "Экспорт",
         stat1: "5 000–10 000 т",
         stat1sub: "годовой объём экспорта",
+        stat2: "3+ региона",
+        stat2sub: "Китай, Европа, Сербия и далее",
       },
       card3: {
         title: "Упаковка",
@@ -1054,6 +1058,8 @@ export const translations = {
         title: "Exportación",
         stat1: "5.000–10.000 TM",
         stat1sub: "volumen anual de exportación",
+        stat2: "3+ regiones",
+        stat2sub: "China, Europa, Serbia y creciendo",
       },
       card3: {
         title: "Envasado",
