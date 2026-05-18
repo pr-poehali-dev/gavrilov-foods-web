@@ -4594,7 +4594,7 @@ export default function Index() {
                 "https://cdn.poehali.dev/files/f587c14f-6edc-4915-9546-56750cc65d65.jpg", // buckwheat field
                 "https://cdn.poehali.dev/files/4e59b4e6-7b82-41a5-aa17-1e88022f4ea5.jpg", // green field
                 "https://cdn.poehali.dev/files/58745ea4-18ff-44b1-b480-4571abaed50e.jpg", // processing facility
-                "https://cdn.poehali.dev/files/f11386c9-4001-4940-9b3c-a7cd36827549.jpg", // big bags
+                "https://cdn.poehali.dev/files/6d95a4e4-3a28-40a8-868f-f1e65151ade3.jpg", // big bags storage
                 "https://cdn.poehali.dev/files/0f193f1f-14c9-4f20-a6fb-9416edc6ee23.jpg", // truck with big bags
               ].map((src, i) => (
                 <div key={i} style={{ borderRadius: 6, overflow: "hidden" }}>
@@ -5617,8 +5617,8 @@ export default function Index() {
         >
           {[
             "https://cdn.poehali.dev/files/943c789b-d4ed-418a-a36d-f3c15e7272ea.jpg", // owner in field
-            "https://cdn.poehali.dev/files/3bb96d82-4e91-49da-a437-a8e84c943f7e.jpg", // John Deere
-            "https://cdn.poehali.dev/files/de1e27a0-f677-4f7c-b4f6-f54a3d8c5abc.jpg", // big bags
+            "https://cdn.poehali.dev/files/e9c61409-13fb-4c7a-91bf-0b7e85bbb328.jpg", // processing facility
+            "https://cdn.poehali.dev/files/8342efe6-766d-48cb-a2c1-e34bb5840c42.jpg", // big bags storage
             "https://cdn.poehali.dev/files/67bac509-ee17-498f-b58e-8f09c4af0a50.jpg", // truck with big bags
           ].map((src, i) => (
             <div key={i} style={{ overflow: "hidden" }}>
